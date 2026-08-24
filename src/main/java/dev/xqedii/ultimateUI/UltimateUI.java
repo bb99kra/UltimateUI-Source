@@ -538,9 +538,17 @@ public class UltimateUI extends JavaPlugin implements CommandExecutor, TabComple
 
    private boolean verifyPacketEventsRuntime() {
       try {
-         Class.forName("io.github.retrooper.packetevents.util.mappings.SynchronizedRegistriesHandler", true, this.getClassLoader());
-         return true;
+         try {
+            Class.forName("io.github.retrooper.packetevents.util.mappings.SynchronizedRegistriesHandler", true, this.getClassLoader());
+            return true;
+         } catch (Throwable ignored) {
+            Class.forName("com.github.retrooper.packetevents.util.mappings.SynchronizedRegistriesHandler", true, this.getClassLoader());
+            return true;
+         }
       } catch (Throwable var2) {
+         if (PacketEvents.getAPI() != null) {
+            return true;
+         }
          this.getLogger().severe("PacketEvents runtime verification failed (likely dependency mismatch in deployed jar).");
          var2.printStackTrace();
          return false;

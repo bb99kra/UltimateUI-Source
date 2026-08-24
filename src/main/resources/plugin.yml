@@ -1,9 +1,11 @@
 name: UltimateUI
-version: 1.2.1
+version: 1.2.3
 main: dev.xqedii.ultimateUI.UltimateUI
 api-version: '1.20'
 folia-supported: true
 authors: [ Xqedii ]
+depend:
+  - packetevents
 softdepend:
   - PlaceholderAPI
   - ItemsAdder
