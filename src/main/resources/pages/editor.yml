@@ -1,0 +1,2108 @@
+name: editor
+screen:
+  width: 1920
+  height: 1080
+  offsetX: 0
+  offsetY: 14
+  preview:
+    defaultZoom: 0.8
+  hitboxOffsetX: -2
+  hitboxOffsetY: -17
+  cursorLayer: 9900
+  cursorSize: 10
+  cursorSpeed: 1.0
+  cursorUnicode: 
+blocks:
+  - type: block
+    id: background
+    layer: 0.0
+    opacity: 255
+    color: 080808
+    position:
+      x: -1920/2
+      y: -1080/2
+    size:
+      width: 1920*2
+      height: 1080*2
+    unicode: 
+  - type: block
+    id: navbar
+    layer: 9200.0
+    opacity: 255
+    color: 0f0f0f
+    position:
+      x: -1920/2
+      y: 0
+    size:
+      width: 1920*2
+      height: 53
+    outline:
+      size: 1
+      color: 141414
+    unicode: 
+  - type: text
+    enabled: true
+    id: block_align
+    refreshopacity: true
+    layer: 9100.0
+    opacity: 255
+    color: ffffff
+    position:
+      x: 0
+      y: 0
+    size:
+      width: 64
+      height: 64
+    text: 
+    children:
+      - type: grid_block
+        direction: row
+        gap: -30
+        position:
+          x: -73
+          y: -5
+        children:
+          - type: text
+            id: align_lr_left
+            layer: 9101.0
+            opacity: 255
+            color: ffffff
+            align: left
+            size:
+              width: 64
+              height: 64
+            text: <#ffffff>
+            children:
+              - type: hitbox
+                id: align_lr_left_hitbox
+                layer: 9102.0
+                opacity: 0
+                color: ff0000
+                position:
+                  x: 0
+                  y: -23+15
+                size:
+                  width: 31
+                  height: 31
+                unicode: 
+          - type: text
+            id: align_lr_center
+            layer: 9101.0
+            opacity: 255
+            color: ffffff
+            align: left
+            size:
+              width: 64
+              height: 64
+            text: <#ffffff>
+            children:
+              - type: hitbox
+                id: align_lr_center_hitbox
+                layer: 9102.0
+                opacity: 0
+                color: ff0000
+                position:
+                  x: 0
+                  y: -23+15
+                size:
+                  width: 31
+                  height: 31
+                unicode: 
+          - type: text
+            id: align_lr_right
+            layer: 9101.0
+            opacity: 255
+            color: ffffff
+            align: left
+            size:
+              width: 64
+              height: 64
+            text: <#ffffff>
+            children:
+              - type: hitbox
+                id: align_lr_right_hitbox
+                layer: 9102.0
+                opacity: 0
+                color: ff0000
+                position:
+                  x: 0
+                  y: -23+15
+                size:
+                  width: 31
+                  height: 31
+                unicode: 
+          - type: block
+            layer: 9101.0
+            opacity: 0
+            color: ffffff
+            align: left
+            size:
+              width: 39
+              height: 0
+            unicode: 
+          - type: text
+            id: align_tb_top
+            layer: 9101.0
+            opacity: 255
+            color: ffffff
+            align: left
+            size:
+              width: 64
+              height: 64
+            text: <#ffffff>
+            children:
+              - type: hitbox
+                id: align_tb_top_hitbox
+                layer: 9102.0
+                opacity: 0
+                color: ff0000
+                position:
+                  x: 0
+                  y: -23+15
+                size:
+                  width: 31
+                  height: 31
+                unicode: 
+          - type: text
+            id: align_tb_center
+            layer: 9101.0
+            opacity: 255
+            color: ffffff
+            align: left
+            size:
+              width: 64
+              height: 64
+            text: <#ffffff>
+            children:
+              - type: hitbox
+                id: align_tb_center_hitbox
+                layer: 9102.0
+                opacity: 0
+                color: ff0000
+                position:
+                  x: 0
+                  y: -23+15
+                size:
+                  width: 31
+                  height: 31
+                unicode: 
+          - type: text
+            id: align_tb_bottom
+            layer: 9101.0
+            opacity: 255
+            color: ffffff
+            align: left
+            size:
+              width: 64
+              height: 64
+            text: <#ffffff>
+            children:
+              - type: hitbox
+                id: align_tb_bottom_hitbox
+                layer: 9102.0
+                opacity: 0
+                color: ff0000
+                position:
+                  x: 0
+                  y: -23+15
+                size:
+                  width: 31
+                  height: 31
+                unicode: 
+  - type: block_rounded
+    enabled: true
+    id: colorpicker_ui
+    refreshopacity: true
+    layer: 9200.0+500
+    opacity: 255
+    color: 0f0f0f
+    position:
+      x: 100
+      y: 634
+    size:
+      width: 254
+      height: 383
+    rounding:
+      unicode: <#0f0f0f>
+    unicode: 
+    children:
+      - type: text
+        layer: 9201.0+500
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 15
+          y: 264
+        size:
+          width: 64
+          height: 64
+        text: <#ffffff>
+      - type: text
+        id: colorpicker_maincolor
+        layer: 9202.0+500
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 15
+          y: 264
+        size:
+          width: 64
+          height: 64
+        text: <#ff0000>
+        children:
+          - type: text
+            id: colorpicker_colorchange1
+            refreshopacity: true
+            layer: 9205.0+500
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: (0+0)-9
+              y: 0+9
+            size:
+              width: 64
+              height: 64
+            text: <#ffffff>
+            children:
+              - type: text
+                id: colorpicker_colorchange1_core
+                layer: 9204.0+500
+                opacity: 255
+                color: ffffff
+                align: left
+                position:
+                  x: 0
+                  y: 0
+                size:
+                  width: 64
+                  height: 64
+                text: <#ff0000>
+              - type: hitbox
+                id: colorpicker_colorchange1_hitbox
+                layer: 9207.0+500
+                opacity: 0
+                color: 9e00ff
+                position:
+                  x: 0
+                  y: -11
+                size:
+                  width: 19
+                  height: 19
+                unicode: 
+      - type: text
+        layer: 9202.0+500
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 210+15
+          y: 264
+        size:
+          width: 64
+          height: 64
+        text: <#ffffff>
+        children:
+          - type: text
+            id: colorpicker_colorchange2
+            layer: 9202.0+500
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 0
+              y: (-256+5)+252
+            size:
+              width: 64
+              height: 64
+            text: <#ffffff>
+            children:
+              - type: hitbox
+                id: colorpicker_colorchange2_hitbox
+                layer: 9207.0+500
+                opacity: 0
+                color: 9e00ff
+                position:
+                  x: 0
+                  y: -3
+                size:
+                  width: 14
+                  height: 16
+                unicode: 
+      - type: rounded
+        id: colorpicker_colordisplay
+        layer: 9202.0+500
+        opacity: 255
+        color: ff0008
+        position:
+          x: 15
+          y: 285
+        size:
+          width: 210-30
+          height: 38
+        unicode: 
+      - type: rounded
+        id: colorselector_colorpicker
+        layer: 9202.0+500
+        opacity: 255
+        color: 141414
+        position:
+          x: 202
+          y: 285
+        size:
+          width: 38
+          height: 38
+        unicode: 
+        children:
+          - type: text
+            layer: 9205.0+500
+            opacity: 255
+            align: left
+            position:
+              x: 9
+              y: 20
+            size:
+              width: 64
+              height: 64
+            text: 
+      - type: rounded
+        layer: 9202.0+500
+        opacity: 255
+        color: 141414
+        position:
+          x: 15
+          y: 330
+        size:
+          width: 254-30
+          height: 38
+        unicode: 
+        children:
+          - type: text
+            layer: 9205.0+500
+            opacity: 255
+            color: 5c5c5c
+            align: left
+            position:
+              x: 22
+              y: 14
+            size:
+              width: 82
+              height: 82
+            text: "HEX"
+          - type: rounded
+            id: colorpicker_hexcolor_box
+            layer: 9202.0+500
+            opacity: 255
+            color: 1a1a1a
+            position:
+              x: 65
+              y: 0
+            size:
+              width: 159
+              height: 38
+            unicode: 
+            children:
+              - type: text
+                id: colorpicker_hexcolor
+                layer: 9205.0+500
+                opacity: 255
+                color: 999999
+                align: left
+                position:
+                  x: 16
+                  y: 14
+                size:
+                  width: 82
+                  height: 82
+                text: "#FF0000"
+  - type: block
+    id: file_dropdown
+    layer: 9200.0
+    opacity: 255
+    color: 0f0f0f
+    position:
+      x: 780
+      y: 68
+    size:
+      width: 210
+      height: 193
+    outline:
+      size: 1
+      color: 1c1c1c
+    unicode: 
+    children:
+      - type: grid_block
+        direction: column
+        gap: 0
+        element_h: 32
+        position:
+          x: 0
+          y: 1
+        children:
+          - { component: editor_dropdown_value, params: { id: "file_new", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "file_open", text_1: "", text_2: "", active: false, yoffset: 4, footer: true } }
+          - { component: editor_dropdown_value, params: { id: "file_save", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "file_save_as", text_1: "", text_2: "", active: false, footer: true } }
+          - { component: editor_dropdown_value, params: { id: "file_close_all", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "file_close", text_1: "", text_2: "", active: false } }
+  - type: block
+    id: edit_dropdown
+    layer: 9200.0
+    opacity: 255
+    color: 0f0f0f
+    position:
+      x: 825
+      y: 68
+    size:
+      width: 210
+      height: 193
+    outline:
+      size: 1
+      color: 1c1c1c
+    unicode: 
+    children:
+      - type: grid_block
+        direction: column
+        gap: 0
+        element_h: 32
+        position:
+          x: 0
+          y: 1
+        children:
+          - { component: editor_dropdown_value, params: { id: "edit_undo", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "edit_redo", text_1: "", text_2: "", active: false, footer: true } }
+          - { component: editor_dropdown_value, params: { id: "edit_cut", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "edit_copy", text_1: "", text_2: "", active: false, yoffset: 4 } }
+          - { component: editor_dropdown_value, params: { id: "edit_paste", text_1: "", text_2: "", active: false, footer: true } }
+          - { component: editor_dropdown_value, params: { id: "edit_preferences", text_1: "", text_2: "", active: false } }
+  - type: block
+    id: selection_dropdown
+    layer: 9200.0
+    opacity: 255
+    color: 0f0f0f
+    position:
+      x: 873
+      y: 68
+    size:
+      width: 210
+      height: 225
+    outline:
+      size: 1
+      color: 1c1c1c
+    unicode: 
+    children:
+      - type: grid_block
+        direction: column
+        gap: 0
+        element_h: 32
+        position:
+          x: 0
+          y: 1
+        children:
+          - { component: editor_dropdown_value, params: { id: "selection_all", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "selection_none", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "selection_reverse", text_1: "", text_2: "", active: false, footer: true } }
+          - { component: editor_dropdown_value, params: { id: "selection_hide", text_1: "", text_2: "", active: false, yoffset: 1 } }
+          - { component: editor_dropdown_value, params: { id: "selection_unhide", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "selection_block", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "selection_unblock", text_1: "", text_2: "", active: false } }
+  - type: block
+    id: layer_dropdown
+    layer: 9200.0
+    opacity: 255
+    color: 0f0f0f
+    position:
+      x: 960
+      y: 68
+    size:
+      width: 210
+      height: 193
+    outline:
+      size: 1
+      color: 1c1c1c
+    unicode: 
+    children:
+      - type: grid_block
+        direction: column
+        gap: 0
+        element_h: 32
+        position:
+          x: 0
+          y: 1
+        children:
+          - { component: editor_dropdown_value, params: { id: "layer_newblock", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "layer_newtext", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "layer_newitem", text_1: "", text_2: "", active: false, footer: true } }
+          - { component: editor_dropdown_value, params: { id: "layer_deletelayer", text_1: "", text_2: "", active: false, yoffset: 4 } }
+          - { component: editor_dropdown_value, params: { id: "layer_movedown", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "layer_moveup", text_1: "", text_2: "", active: false, yoffset: 4 } }
+  - type: block
+    id: window_dropdown
+    layer: 9200.0
+    opacity: 255
+    color: 0f0f0f
+    position:
+      x: 1018
+      y: 68
+    size:
+      width: 210
+      height: 96
+    outline:
+      size: 1
+      color: 1c1c1c
+    unicode: 
+    children:
+      - type: grid_block
+        direction: column
+        gap: 0
+        element_h: 32
+        position:
+          x: 0
+          y: 0
+        children:
+          - { component: editor_dropdown_value, params: { id: "window_hidetools", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "window_hidepages", text_1: "", text_2: "", active: false, yoffset: 4 } }
+          - { component: editor_dropdown_value, params: { id: "window_hidefooter", text_1: "", text_2: "", active: false } }
+  - type: block
+    id: cursor_page_dropdown
+    layer: 9200.0
+    opacity: 255
+    color: 0f0f0f
+    position:
+      x: 960
+      y: 500
+    size:
+      width: 210
+      height: 129
+    outline:
+      size: 1
+      color: 1c1c1c
+    unicode: 
+    children:
+      - type: grid_block
+        direction: column
+        gap: 0
+        element_h: 32
+        position:
+          x: 0
+          y: 1
+        children:
+          - { component: editor_dropdown_value, params: { id: "cursor_layer_newblock", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "cursor_layer_newtext", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "cursor_layer_newitem", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "cursor_layer_newimage", text_1: "", text_2: "", active: false, yoffset: 4 } }
+  - type: block
+    id: keyframe_dropdown
+    layer: 9300.0
+    opacity: 255
+    color: 0f0f0f
+    position:
+      x: 320
+      y: 800
+    size:
+      width: 210
+      height: 129
+    outline:
+      size: 1
+      color: 1c1c1c
+    unicode: 
+    children:
+      - type: grid_block
+        direction: column
+        gap: 0
+        element_h: 32
+        position:
+          x: 0
+          y: 1
+        children:
+          - { component: editor_dropdown_value, params: { id: "keyframe_edit_copy", text_1: "", text_2: "", active: false, yoffset: 4 } }
+          - { component: editor_dropdown_value, params: { id: "keyframe_edit_paste", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "keyframe_delete", text_1: "", text_2: "", active: false, footer: true } }
+          - { component: editor_dropdown_value, params: { id: "keyframe_properties", text_1: "", text_2: "", active: false, yoffset: 4 } }
+  - type: block
+    id: keyframe_timeline_dropdown
+    layer: 9300.0
+    opacity: 255
+    color: 0f0f0f
+    position:
+      x: 320
+      y: 800
+    size:
+      width: 210
+      height: 33
+    outline:
+      size: 1
+      color: 1c1c1c
+    unicode: 
+    children:
+      - type: grid_block
+        direction: column
+        gap: 0
+        element_h: 32
+        position:
+          x: 0
+          y: 1
+        children:
+          - { component: editor_dropdown_value, params: { id: "keyframe_timeline_paste", text_1: "", text_2: "", active: false } }
+  - type: block
+    id: cursor_layers_dropdown
+    layer: 9400.0
+    opacity: 255
+    color: 0f0f0f
+    position:
+      x: 960
+      y: 500
+    size:
+      width: 210
+      height: 353
+    outline:
+      size: 1
+      color: 1c1c1c
+    unicode: 
+    children:
+      - type: grid_block
+        direction: column
+        gap: 0
+        element_h: 32
+        position:
+          x: 0
+          y: 1
+        children:
+          - { component: editor_dropdown_value, params: { id: "layers_edit_cut", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "layers_edit_copy", text_1: "", text_2: "", active: false, yoffset: 4 } }
+          - { component: editor_dropdown_value, params: { id: "layers_edit_paste", text_1: "", text_2: "", active: false, footer: true } }
+          - { component: editor_dropdown_value, params: { id: "layers_cursor_layer_newblock", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "layers_cursor_layer_newtext", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "layers_cursor_layer_newitem", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "layers_cursor_layer_newimage", text_1: "", text_2: "", active: false, yoffset: 4, footer: true } }
+          - { component: editor_dropdown_value, params: { id: "layers_selection_hide", text_1: "", text_2: "", active: false, yoffset: 1 } }
+          - { component: editor_dropdown_value, params: { id: "layers_selection_unhide", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "layers_selection_block", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "layers_selection_unblock", text_1: "", text_2: "", active: false } }
+  - type: block
+    id: cursor_actions_edit_dropdown
+    layer: 9400.0
+    opacity: 255
+    color: 0f0f0f
+    position:
+      x: 960
+      y: 500
+    size:
+      width: 210
+      height: 97
+    outline:
+      size: 1
+      color: 1c1c1c
+    unicode: 
+    children:
+      - type: grid_block
+        direction: column
+        gap: 0
+        element_h: 32
+        position:
+          x: 0
+          y: 1
+        children:
+          - { component: editor_dropdown_value, params: { id: "actions_edit_cut", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "actions_edit_copy", text_1: "", text_2: "", active: false, yoffset: 4 } }
+          - { component: editor_dropdown_value, params: { id: "actions_edit_paste", text_1: "", text_2: "", active: false } }
+  - type: block
+    id: cursor_actions_dropdown
+    layer: 9400.0
+    opacity: 255
+    color: 0f0f0f
+    position:
+      x: 1655
+      y: 190
+    size:
+      width: 210
+      height: 289
+    outline:
+      size: 1
+      color: 1c1c1c
+    unicode: 
+    children:
+      - type: grid_block
+        direction: column
+        gap: 0
+        element_h: 32
+        position:
+          x: 0
+          y: 1
+        children:
+          - { component: editor_dropdown_value, params: { id: "actions_command", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "actions_console", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "actions_message", text_1: "", text_2: "", active: false, yoffset: 4 } }
+          - { component: editor_dropdown_value, params: { id: "actions_redirect", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "actions_teleport", text_1: "", text_2: "", active: false, yoffset: 4 } }
+          - { component: editor_dropdown_value, params: { id: "actions_sound", text_1: "", text_2: "", active: false, footer: true } }
+          - { component: editor_dropdown_value, params: { id: "actions_delay", text_1: "", text_2: "", active: false, yoffset: 4 } }
+          - { component: editor_dropdown_value, params: { id: "actions_close", text_1: "", text_2: "", active: false } }
+          - { component: editor_dropdown_value, params: { id: "actions_animation", text_1: "", text_2: "", active: false } }
+  - type: hitbox
+    layer: 9200.0
+    opacity: 0
+    color: ff0000
+    position:
+      x: 0
+      y: 10
+    size:
+      width: 500
+      height: 52-20
+    unicode: 
+    children:
+      - type: hitbox
+        id: navbar_logo
+        opacity: 0
+        position:
+          x: 12
+          y: 0
+        size:
+          width: 0
+          height: 0
+        align: left
+        unicode: 
+        children:
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 0
+              y: 23
+            size:
+              width: 64
+              height: 64
+            text: 
+      - type: hitbox
+        id: navbar_options
+        opacity: 0
+        position:
+          x: 1920/2-(500/2)+72
+          y: 0
+        size:
+          width: 0
+          height: 0
+        unicode: 
+        children:
+          - {component: editor_navbar_item, params: {id: "navbar_file", text_1: "", text_2: "", active: false, xoffset: 0, yoffset: 16, width: 29, left: -2}}
+          - {component: editor_navbar_item, params: {id: "navbar_edit", text_1: "", text_2: "", active: false, xoffset: 45, yoffset: 16, width: 32, left: 43}}
+          - {component: editor_navbar_item, params: {id: "navbar_selection", text_1: "", text_2: "", active: false, xoffset: 93, yoffset: 16, width: 71, left: 91}}
+          - {component: editor_navbar_item, params: {id: "navbar_layer", text_1: "", text_2: "", active: false, xoffset: 180, yoffset: 20, width: 42, left: 178}}
+          - {component: editor_navbar_item, params: {id: "navbar_window", text_1: "", text_2: "", active: false, xoffset: 237, yoffset: 16, width: 65, left: 236}}
+      - type: block
+        id: navbar_options
+        opacity: 0
+        position:
+          x: 12
+          y: 0
+        size:
+          width: 0
+          height: 0
+        unicode: 
+        children:
+          - type: text
+            id: editor_navbar_undo_text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 1722
+              y: 17
+            size:
+              width: 64
+              height: 64
+            text: 
+            children:
+              - type: hitbox
+                id: editor_navbar_undo
+                layer: 9205.0
+                opacity: 0
+                color: ff0000
+                position:
+                  x: -3
+                  y: -11
+                size:
+                  width: 23
+                  height: 23
+                unicode: 
+          - type: text
+            id: editor_navbar_redo_text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 1756
+              y: 17
+            size:
+              width: 64
+              height: 64
+            text: 
+            children:
+              - type: hitbox
+                id: editor_navbar_redo
+                layer: 9205.0
+                opacity: 0
+                color: ff0000
+                position:
+                  x: -3
+                  y: -11
+                size:
+                  width: 23
+                  height: 23
+                unicode: 
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 1792
+              y: 17
+            size:
+              width: 64
+              height: 64
+            text: 
+            children:
+              - type: hitbox
+                id: editor_navbar_home
+                layer: 9205.0
+                opacity: 0
+                color: ff0000
+                position:
+                  x: -3
+                  y: -11
+                size:
+                  width: 23
+                  height: 23
+                unicode: 
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 1824
+              y: 23
+            size:
+              width: 64
+              height: 64
+            text: 
+            children:
+              - type: hitbox
+                id: editor_navbar_export
+                layer: 9205.0
+                opacity: 0
+                color: ff0000
+                position:
+                  x: 0
+                  y: -20
+                size:
+                  width: 72
+                  height: 28
+                unicode: 
+  - type: rounded
+    id: right_sidebar
+    refreshopacity: true
+    layer: 9200.0
+    opacity: 255
+    color: 0f0f0f
+    position:
+      x: 1563
+      y: 72
+    size:
+      width: 335
+      height: 945
+    unicode: 
+    children:
+      - type: text
+        id: editor_properties_text
+        layer: 9201.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 39
+          y: 36
+        size:
+          width: 64
+          height: 64
+        text: 
+      - type: hitbox
+        id: properties_hitbox
+        layer: 9202.0
+        opacity: 0
+        color: ff0000
+        position:
+          x: 25
+          y: 24
+        size:
+          width: 100
+          height: 25
+        unicode: 
+      - type: text
+        layer: 9201.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 155
+          y: 36
+        size:
+          width: 64
+          height: 64
+        text: 
+      - type: hitbox
+        id: design_hitbox
+        layer: 9202.0
+        opacity: 0
+        color: ff0000
+        position:
+          x: 145
+          y: 24
+        size:
+          width: 70
+          height: 25
+        unicode: 
+      - type: text
+        layer: 9201.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 247
+          y: 36
+        size:
+          width: 64
+          height: 64
+        text: 
+      - type: hitbox
+        id: layers_hitbox
+        layer: 9202.0
+        opacity: 0
+        color: ff0000
+        position:
+          x: 235
+          y: 24
+        size:
+          width: 70
+          height: 25
+        unicode: 
+      - type: text
+        id: selected_underline
+        layer: 9201.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 240
+          y: 45
+        size:
+          width: 64
+          height: 64
+        text: 
+      - type: text
+        layer: 9201.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 56
+          y: 61
+        size:
+          width: 72
+          height: 64
+        text: 
+      - type: hitbox
+        id: properties
+        enabled: true
+        opacity: 0
+        position:
+          x: 0
+          y: 0
+        size:
+          width: 0
+          height: 0
+        children:
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 39
+              y: 294
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: grid_block
+            direction: column
+            gap: -45-11
+            position:
+              x: 127
+              y: 140-11
+            children:
+              - { component: editor_value, params: { id: "x", value: "---" } }
+              - { component: editor_value, params: { id: "y", value: "---" } }
+              - { component: editor_value, params: { id: "width", value: "---" } }
+              - { component: editor_value, params: { id: "height", value: "---" } }
+              - { component: editor_value, params: { id: "rotation", value: "---" } }
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 56
+              y: 322
+            size:
+              width: 72
+              height: 64
+            text: 
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 39
+              y: 474
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: grid_block
+            direction: column
+            gap: -45-11
+            position:
+              x: 127
+              y: 397-11
+            children:
+              - { component: editor_value, params: { id: "name", value: "---" } }
+              - { component: editor_value, params: { id: "layer", value: "---" } }
+              - { component: editor_value, params: { id: "id", value: "---" } }
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 56
+              y: 508
+            size:
+              width: 72
+              height: 64
+            text: 
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 39
+              y: 624
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: grid_block
+            direction: column
+            gap: -45-11
+            position:
+              x: 127
+              y: 583-11
+            children:
+              - { component: editor_value, params: { id: "visible", value: "---" } }
+              - { component: editor_value, params: { id: "locked", value: "---" } }
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 56
+              y: 508+148
+            size:
+              width: 72
+              height: 64
+            text: 
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 39
+              y: 624+114
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: grid_block
+            direction: column
+            gap: -45-11
+            position:
+              x: 127
+              y: 583-11+155
+            children:
+              - { component: editor_value, params: { id: "anchor", value: "---" } }
+      - type: hitbox
+        id: design
+        enabled: true
+        opacity: 0
+        position:
+          x: 0
+          y: 0
+        size:
+          width: 0
+          height: 0
+        children:
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 39
+              y: 222
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: grid_block
+            direction: column
+            gap: -45-11
+            position:
+              x: 127
+              y: 140-11
+            children:
+              - { component: editor_value, params: { id: "design_fill_color", value: "---" } }
+              - { component: editor_value, params: { id: "design_fill_style", value: "---" } }
+              - { component: editor_value, params: { id: "design_fill_opacity", value: "---" } }
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 56
+              y: 252
+            size:
+              width: 72
+              height: 64
+            text: 
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 39
+              y: 367
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: grid_block
+            direction: column
+            gap: -45-11
+            position:
+              x: 127
+              y: 327-11
+            children:
+              - { component: editor_value, params: { id: "design_border_radius", value: "---" } }
+              - { component: editor_value, params: { id: "design_border_color", value: "---" } }
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 56
+              y: 402
+            size:
+              width: 72
+              height: 64
+            text: 
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 39
+              y: 522
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: grid_block
+            direction: column
+            gap: -45-11
+            position:
+              x: 127
+              y: 482-11
+            children:
+              - { component: editor_value, params: { id: "design_hover_color", value: "---" } }
+              - { component: editor_value, params: { id: "design_hover_effect", value: "---" } }
+      - type: hitbox
+        id: text_settings
+        enabled: true
+        opacity: 0
+        position:
+          x: 0
+          y: 0
+        size:
+          width: 0
+          height: 0
+        children:
+          - type: text
+            id: text_align_1
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 56
+              y: 402+155
+            size:
+              width: 72
+              height: 64
+            text: 
+          - type: text
+            id: text_align_2
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 39
+              y: 522+121+38
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: grid_block
+            id: text_align_3
+            direction: column
+            gap: -45-11
+            position:
+              x: 127
+              y: 482-11+155
+            children:
+              - { component: editor_value, params: { id: "design_text_align", value: "---" } }
+              - { component: editor_value, params: { id: "design_text_wrapping", value: "---" } }
+      - type: hitbox
+        id: item_design
+        enabled: true
+        opacity: 0
+        position:
+          x: 0
+          y: 0
+        size:
+          width: 0
+          height: 0
+        children:
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 39
+              y: 222-42
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: grid_block
+            direction: column
+            gap: -45-11
+            position:
+              x: 127
+              y: 140-11
+            children:
+              - { component: editor_value, params: { id: "item_design_item", value: "---" } }
+              - { component: editor_value, params: { id: "item_design_glowing", value: "---" } }
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 56
+              y: 252-44
+            size:
+              width: 72
+              height: 64
+            text: 
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 39
+              y: 522-194-37
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: grid_block
+            direction: column
+            gap: -45-11-37
+            position:
+              x: 127
+              y: 482-11-194
+            children:
+              - { component: editor_value, params: { id: "item_design_hovereffect", value: "---" } }
+      - type: hitbox
+        id: layers
+        enabled: true
+        opacity: 0
+        position:
+          x: 0
+          y: 0
+        size:
+          width: 0
+          height: 0
+        children:
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 40
+              y: 101
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: text
+            id: scroll_top
+            refreshopacity: true
+            layer: 9207.0
+            opacity: 0
+            color: ffffff
+            align: left
+            position:
+              x: 68
+              y: 147
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: text
+            id: scroll_bottom
+            refreshopacity: true
+            layer: 9207.0
+            opacity: 0
+            color: ffffff
+            align: left
+            position:
+              x: 68
+              y: 898
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: grid_block
+            id: layers_list
+            direction: column
+            gap: -51
+            position:
+              x: 24
+              y: 130
+            children: []
+      - type: block
+        id: actions
+        enabled: true
+        opacity: 0
+        position:
+          x: 0
+          y: 0
+        size:
+          width: 0
+          height: 0
+        unicode: 
+        children:
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 39
+              y: 97
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: text
+            id: actions_scroll_top
+            refreshopacity: true
+            layer: 9207.0
+            opacity: 0
+            color: ffffff
+            align: left
+            position:
+              x: 68
+              y: 147
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: text
+            id: actions_scroll_bottom
+            refreshopacity: true
+            layer: 9207.0
+            opacity: 0
+            color: ffffff
+            align: left
+            position:
+              x: 68
+              y: 898
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: text
+            id: actions_new_button
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 239
+              y: 103
+            size:
+              width: 64
+              height: 64
+            text: 
+            children:
+              - type: hitbox
+                layer: 9202.0
+                id: actions_new_hitbox
+                enabled: true
+                opacity: 0
+                color: ff0000
+                position:
+                  x: 1
+                  y: -13
+                size:
+                  width: 58
+                  height: 21
+                unicode: 
+          - type: grid_block
+            id: actions_list
+            direction: column
+            gap: -51
+            position:
+              x: 24
+              y: 130
+            children: []
+      - type: block
+        id: keyframe_properties
+        layer: 9201.0
+        enabled: true
+        opacity: 0
+        position:
+          x: 0
+          y: 0
+        size:
+          width: 0
+          height: 0
+        unicode: 
+        children:
+          - type: text
+            id: keyframe_properties_type
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 39
+              y: 184
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: grid_block
+            direction: column
+            gap: -45-11
+            position:
+              x: 127
+              y: 140-11
+            children:
+              - { component: editor_value, params: { id: "keyframe_x", value: "---" } }
+              - { component: editor_value, params: { id: "keyframe_y", value: "---" } }
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 56
+              y: 246-32
+            size:
+              width: 72
+              height: 64
+            text: 
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 39
+              y: 331-32
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: grid_block
+            direction: column
+            gap: -45-11
+            position:
+              x: 127
+              y: 397-83-32
+            children:
+              - { component: editor_value, params: { id: "keyframe_interpolation", value: "---" } }
+      - type: block
+        id: keyframe_properties_rotation
+        layer: 9201.0
+        enabled: true
+        opacity: 0
+        position:
+          x: 0
+          y: 0
+        size:
+          width: 0
+          height: 0
+        unicode: 
+        children:
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 39
+              y: 184-42
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: grid_block
+            direction: column
+            gap: -45-11
+            position:
+              x: 127
+              y: 140-11
+            children:
+              - { component: editor_value, params: { id: "keyframe_rotation", value: "---" } }
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 56
+              y: 246-32-38
+            size:
+              width: 72
+              height: 64
+            text: 
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 39
+              y: 331-32-38
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: grid_block
+            direction: column
+            gap: -45-11
+            position:
+              x: 127
+              y: 397-83-32-38
+            children:
+              - { component: editor_value, params: { id: "keyframe_interpolation_rotation", value: "---" } }
+      - type: block
+        id: keyframe_properties_opacity
+        layer: 9201.0
+        enabled: true
+        opacity: 0
+        position:
+          x: 0
+          y: 0
+        size:
+          width: 0
+          height: 0
+        unicode: 
+        children:
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 39
+              y: 184-42+4
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: grid_block
+            direction: column
+            gap: -45-11
+            position:
+              x: 127
+              y: 140-11
+            children:
+              - { component: editor_value, params: { id: "keyframe_opacity", value: "---" } }
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 56
+              y: 246-32-38
+            size:
+              width: 72
+              height: 64
+            text: 
+          - type: text
+            layer: 9201.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 39
+              y: 331-32-38
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: grid_block
+            direction: column
+            gap: -45-11
+            position:
+              x: 127
+              y: 397-83-32-38
+            children:
+              - { component: editor_value, params: { id: "keyframe_interpolation_opacity", value: "---" } }
+  - type: rounded
+    id: left_sidebar
+    refreshopacity: true
+    layer: 9200.0
+    opacity: 255
+    color: 0f0f0f
+    position:
+      x: 22
+      y: 72
+    size:
+      width: 63
+      height: 945
+    unicode: 
+    children:
+      - type: grid_block
+        direction: column
+        gap: -151
+        position:
+          x: -58
+          y: 9
+        children:
+          - {component: editor_tool, params: {id: "tool_cursor", u1: "", u2: ""}}
+          - {component: editor_tool, params: {id: "tool_scale", u1: "", u2: ""}}
+          - {component: editor_tool, params: {id: "tool_align", u1: "", u2: ""}}
+          - {component: editor_tool, params: {id: "tool_colorchanger", u1: "", u2: ""}}
+          - {component: editor_tool, params: {id: "tool_color-picker", u1: "", u2: ""}}
+          - {component: editor_tool, params: {id: "tool_zoom", u1: "", u2: ""}}
+          - {component: editor_tool, params: {id: "tool_text", u1: "", u2: ""}}
+          - {component: editor_tool, params: {id: "tool_commands", u1: "", u2: ""}}
+          - {component: editor_tool, params: {id: "tool_animation", u1: "", u2: ""}}
+      - type: text
+        id: editor_color_1
+        layer: 9201.0
+        opacity: 255
+        color: 66b9ff
+        align: left
+        position:
+          x: 27
+          y: 921
+        size:
+          width: 64
+          height: 64
+        text: 
+      - type: text
+        id: editor_color_2
+        layer: 9201.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 6
+          y: 921
+        size:
+          width: 64
+          height: 64
+        text: 
+      - type: text
+        layer: 9202.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 37
+          y: 880
+        size:
+          width: 64
+          height: 64
+        text: 
+      - type: hitbox
+        id: editor_color_1_hitbox
+        layer: 9207.0
+        opacity: 0
+        color: 9e00ff
+        position:
+          x: 29
+          y: 899
+        size:
+          width: 28
+          height: 30
+        unicode: 
+      - type: hitbox
+        id: editor_color_2_hitbox
+        layer: 9207.0
+        opacity: 0
+        color: 00ff18
+        position:
+          x: 6
+          y: 899
+        size:
+          width: 23
+          height: 30
+        unicode: 
+      - type: block
+        id: editor_color_switch_hitbox
+        layer: 9207.0
+        opacity: 0
+        color: 9e00ff
+        position:
+          x: 30
+          y: 870
+        size:
+          width: 28
+          height: 20
+        unicode: 
+  - type: grid_block
+    id: active_pages
+    direction: row
+    gap: -30
+    position:
+      x: 111
+      y: 72
+    children: []
+  - type: block
+    id: footer
+    layer: 9200.0
+    opacity: 255
+    color: 0f0f0f
+    position:
+      x: -1920/2
+      y: 1080-38
+    size:
+      width: 1920*2
+      height: 300
+    outline:
+      size: 1
+      color: 141414
+    unicode: 
+    children:
+      - type: text
+        layer: 9201.0
+        opacity: 255
+        color: ffffff
+        align: left 
+        position:
+          x: 15+(1920/2)
+          y: 1062-1042
+        size:
+          width: 64
+          height: 64
+        text: 
+      - type: text
+        id: cursor_position
+        layer: 9201.0
+        opacity: 255
+        color: 969696
+        align: left
+        position:
+          x: 38+(1920/2)
+          y: 1056-1042
+        size:
+          width: 82
+          height: 82
+        text: 0, 0px
+      - type: text
+        id: page_info
+        layer: 9201.0
+        opacity: 255
+        color: 969696
+        align: right
+        position:
+          x: 1822+(1920/2)
+          y: 1056-1042
+        size:
+          width: 82
+          height: 82
+        text: 100%  |  0 layers, 0 groups
+  - type: block
+    id: preview_size
+    layer: 9190
+    opacity: 0
+    color: 0f0f0f
+    position:
+      x: 85.0+(1478/2)-(106/2)
+      y: 54.0+987-30-12
+    size:
+      width: 106
+      height: 30
+    aligned: left
+    unicode: 
+    children:
+      - type: text
+        id: preview_size_icon
+        refreshopacity: true
+        layer: 9201.0
+        opacity: 255
+        color: ffffff
+        align: right
+        position:
+          x: 42
+          y: 22
+        size:
+          width: 64
+          height: 64
+        text: 
+        children:
+          - type: text
+            id: page_info_text
+            layer: 9202.0
+            opacity: 255
+            color: 666666
+            align: center
+            position:
+              x: -23
+              y: -11
+            size:
+              width: 68
+              height: 68
+            text: 1920x1080
+  - type: block
+    id: preview_ui_addons
+    layer: 9198
+    opacity: 0
+    color: 0f0f0f
+    position:
+      x: 85.0+(1478/2)-(106/2)
+      y: 54.0+987-30-12
+    size:
+      width: 106
+      height: 30
+    unicode: 
+    children:
+      - type: text
+        refreshopacity: true
+        layer: 9199.0
+        opacity: 255
+        color: ffffff
+        align: right
+        position:
+          x: 450
+          y: -127
+        size:
+          width: 64
+          height: 64
+        text: 
+      - type: text
+        refreshopacity: true
+        layer: 9199.0
+        opacity: 255
+        color: ffffff
+        align: right
+        position:
+          x: 87
+          y: -128
+        size:
+          width: 79
+          height: 79
+        text: 
+  - type: text
+    id: addelements_info
+    refreshopacity: true
+    layer: 9100.0
+    opacity: 255
+    color: ffffff
+    position:
+      x: 824.0
+      y: 547.5
+    size:
+      width: 64
+      height: 64
+    text: 
+  - type: block
+    id: preview
+    layer: 0
+    opacity: 255
+    color: 080808
+    position:
+      x: 85.0
+      y: 54.0
+    size:
+      width: 1478
+      height: 987
+    unicode: 
+  - type: block_rounded
+    enabled: true
+    id: animation_timeline
+    refreshopacity: true
+    layer: 9210.0
+    opacity: 255
+    color: 0f0f0f
+    position:
+      x: 104
+      y: 731-7
+    size:
+      width: 1440
+      height: 286+7
+    rounding:
+      unicode: <#0f0f0f>
+    unicode: 
+    children:
+      - type: block_rounded
+        enabled: true
+        id: animation_box
+        refreshopacity: true
+        layer: 9212.0
+        opacity: 255
+        color: 141414
+        position:
+          x: 13
+          y: 13
+        size:
+          width: 184
+          height: 262+7
+        rounding:
+          unicode: <#141414>
+        unicode: 
+        children:
+          - type: text
+            layer: 9213.0
+            opacity: 255
+            color: 969696
+            align: left
+            position:
+              x: 12
+              y: 16
+            size:
+              width: 82
+              height: 82
+            text: <font:editor><#ffffff>0:00:00 <#969696><font:default>/<font:editor> 0
+          - { component: editor_animation_element, params: { name: "Block", row1: true, row1name: "Rotation", row2: true, row2name: "Position", row3: true, row3name: "Scale", row4: true, row4name: "Opacity", row5: false, row5name: "", row6: false, row6name: "" } }
+      - type: block
+        layer: 9214.0
+        opacity: 0
+        color: 202020
+        position:
+          x: 210
+          y: 47+9
+        size:
+          width: 1210
+          height: 1
+        unicode: 
+        children:
+          - type: hitbox
+            id: animation_slider_hitbox
+            layer: 9231.0
+            opacity: 0
+            color: ff0000
+            position:
+              x: -9
+              y: -20
+            size:
+              width: 1239
+              height: 20
+            unicode: 
+          - type: text
+            id: animation_accurate_slider_element
+            layer: 9230.0
+            opacity: 255
+            color: 969696
+            align: left
+            position:
+              x: -7-4
+              y: 205-9
+            size:
+              width: 64
+              height: 64
+            text: <#ffffff>
+            children:
+              - type: hitbox
+                id: animation_accurate_slider_hitbox
+                layer: 9231.0
+                opacity: 0
+                color: ff0000
+                position:
+                  x: 0
+                  y: -216
+                size:
+                  width: 16
+                  height: 20
+                unicode: 
+          - loop: 5
+            block:
+              type: block
+              layer: 9215.0
+              opacity: 255
+              color: ffffff
+              position:
+                x: -4+91+({counter}*244)
+                y: -63
+              size:
+                width: 64
+                height: 64
+              unicode: 
+          - loop: 21
+            block:
+              type: text
+              layer: 9214.0
+              opacity: 255
+              color: 969696
+              align: left
+              position:
+                x: -5+({counter}*60.7)
+                y: -63+36
+              size:
+                width: 72
+                height: 72
+              text: <#666666>{counter}
+  - { component: editor_info_popup, enabled: false }
+  - { component: editor_save_popup, enabled: true }
+  - { component: editor_preferences_popup, enabled: true }
+  - { component: editor_welcome_popup, enabled: true }
+  - { component: editor_manage_file_popup, title: "", enabled: true }

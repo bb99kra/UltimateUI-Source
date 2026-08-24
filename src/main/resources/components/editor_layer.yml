@@ -1,0 +1,317 @@
+params:
+  id: ""
+  slot: ""
+  name: "0"
+  dropdown: false
+  val: 0
+  children: false
+  under: false
+  open: true
+  parent: false
+  end: false
+  extralines: []
+  box1_icon: ""
+  box2_icon: ""
+  opacity_icon: ""
+blocks:
+  - type: hitbox
+    id: ${slot}_hitbox
+    layer: 9201.0
+    opacity: 5
+    color: ffffff
+    position:
+      x: 0
+      y: 0
+    size:
+      width: 0
+      height: 0
+    unicode: 
+    children:
+      - type: text
+        id: ${slot}_box1
+        layer: 9202.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 28
+          y: 32
+        size:
+          width: 64
+          height: 64
+        text: ${box1_icon}
+      - type: text
+        id: ${slot}_box2
+        layer: 9202.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 254
+          y: 32
+        size:
+          width: 64
+          height: 64
+        text: ${box2_icon}
+      - type: hitbox
+        id: ${id}_row
+        layer: 9206.0
+        opacity: 5
+        color: ffffff
+        position:
+          x: 0
+          y: 0
+        size:
+          width: 288
+          height: 39
+        unicode: 
+        children:
+          - type: text
+            id: ${slot}_opacity
+            layer: 9210.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 11
+              y: 18
+            size:
+              width: 64
+              height: 64
+            text: ${opacity_icon}
+          - type: hitbox
+            id: ${slot}_opacityhitbox
+            layer: 9210.0
+            opacity: 5
+            color: ff0000
+            align: left
+            position:
+              x: 7
+              y: 11
+            size:
+              width: 21
+              height: 15
+            unicode: 
+          - loop: "{extralines}"
+            block:
+              type: block
+              id: ${slot}_extraline_{counter}
+              layer: 9210.0
+              opacity: 255
+              color: 656565
+              align: left
+              position:
+                x: 38+(20*{counter})
+                y: 1
+              size:
+                width: 2
+                height: 39
+              unicode: 
+          - case: "{dropdown}"
+            true:
+              - case: "{parent}"
+                true:
+                  - loop: "{val}-1"
+                    block:
+                      type: block
+                      id: ${slot}_parentline_{counter}
+                      layer: 9210.0
+                      opacity: 255
+                      color: 656565
+                      align: left
+                      position:
+                        x: 38+(20*{val})-(20*({counter}+1))
+                        y: 1
+                      size:
+                        width: 2
+                        height: 39
+                      unicode: 
+                false:
+                  - case: "{end}"
+                    true:
+                      - type: block
+                        type: block
+                        id: ${slot}_parent_end_line
+                        layer: 9210.0
+                        opacity: 255
+                        color: 656565
+                        align: left
+                        position:
+                          x: 18+(20*{val})
+                          y: 1
+                        size:
+                          width: 2
+                          height: 19
+                        unicode: 
+              - case: "{open}"
+                true:
+                  - type: text
+                    id: ${slot}_dropdown_icon
+                    layer: 9210.0
+                    opacity: 255
+                    color: ffffff
+                    align: left
+                    position:
+                      x: 34+(20*{val})
+                      y: 16
+                    size:
+                      width: 64
+                      height: 64
+                    text: 
+                  - type: block
+                    id: ${slot}_open_tail_line
+                    layer: 9210.0
+                    opacity: 255
+                    color: 656565
+                    align: left
+                    position:
+                      x: 38+(20*{val})
+                      y: 26
+                    size:
+                      width: 2
+                      height: 14
+                    unicode: 
+                false:
+                  - type: text
+                    id: ${slot}_dropdown_icon
+                    layer: 9210.0
+                    opacity: 255
+                    color: ffffff
+                    align: left
+                    position:
+                      x: 34+(20*{val})
+                      y: 16
+                    size:
+                      width: 64
+                      height: 64
+                    text: 
+              - case: "{children}"
+                true:
+                  - type: block
+                    id: ${slot}_children_line
+                    layer: 9210.0
+                    opacity: 255
+                    color: 656565
+                    align: left
+                    position:
+                      x: 20+(20*{val})
+                      y: 18
+                    size:
+                      width: 10
+                      height: 2
+                    unicode: 
+              - type: hitbox
+                id: "${slot}_dropdownhitbox"
+                layer: 9210.0
+                opacity: 5
+                color: ff0000
+                align: left
+                position:
+                  x: 29+(20*{val})
+                  y: 11
+                size:
+                  width: 20
+                  height: 15
+                unicode: 
+              - type: text
+                id: ${slot}_name
+                layer: 9210.0
+                opacity: 255
+                color: 666666
+                align: left
+                position:
+                  x: 51+(20*{val})
+                  y: 15
+                size:
+                  width: 82
+                  height: 82
+                text: ${name}
+            false:
+              - case: "{parent}"
+                true:
+                  - loop: "{val}-1"
+                    block:
+                      type: block
+                      id: ${slot}_parentline_{counter}
+                      layer: 9210.0
+                      opacity: 255
+                      color: 656565
+                      align: left
+                      position:
+                        x: 38+(20*{val})-(20*({counter}+1))
+                        y: 1
+                      size:
+                        width: 2
+                        height: 39
+                      unicode: 
+              - case: "{children}"
+                false:
+                  - type: text
+                    id: ${slot}_name
+                    layer: 9210.0
+                    opacity: 255
+                    color: 666666
+                    align: left
+                    position:
+                      x: 51
+                      y: 15
+                    size:
+                      width: 82
+                      height: 82
+                    text: ${name}
+                true:
+                  - type: text
+                    id: ${slot}_name
+                    layer: 9210.0
+                    opacity: 255
+                    color: 666666
+                    align: left
+                    position:
+                      x: 51+(20*{val})
+                      y: 15
+                    size:
+                      width: 82
+                      height: 82
+                    text: ${name}
+                  - case: "{under}"
+                    true:
+                      - type: block
+                        id: ${slot}_under_line
+                        layer: 9210.0
+                        opacity: 255
+                        color: 656565
+                        align: left
+                        position:
+                          x: 38+(20*{val})
+                          y: 1
+                        size:
+                          width: 2
+                          height: 39
+                        unicode: 
+                    false:
+                      - type: block
+                        id: ${slot}_under_short_line
+                        layer: 9210.0
+                        opacity: 255
+                        color: 656565
+                        align: left
+                        position:
+                          x: 38+(20*{val})
+                          y: 1
+                        size:
+                          width: 2
+                          height: 20
+                        unicode: 
+                  - type: block
+                    id: ${slot}_under_horizontal_line
+                    layer: 9210.0
+                    opacity: 255
+                    color: 656565
+                    align: left
+                    position:
+                      x: 38+(20*{val})
+                      y: 20
+                    size:
+                      width: 10
+                      height: 2
+                    unicode: 

@@ -1,0 +1,51 @@
+params:
+  id: ""
+  text_1: "?"
+  text_2: "?"
+  active: false
+  yoffset: 0
+  xoffset: 0
+  width: 0
+  left: 0
+blocks:
+  - type: hitbox
+    id: ${id}
+    layer: 9207.0
+    opacity: 0
+    color: ff0000
+    position:
+      x: ${left}
+      y: 9
+    size:
+      width: ${width}
+      height: 20
+    unicode: 
+  - case: "{active}"
+    true:
+      - type: text
+        id: ${id}_text
+        layer: 9205.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: ${xoffset}
+          y: ${yoffset}
+        size:
+          width: 64
+          height: 64
+        text: ${text_2}
+    false:
+      - type: text
+        id: ${id}_text
+        layer: 9205.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: ${xoffset}
+          y: ${yoffset}
+        size:
+          width: 64
+          height: 64
+        text: ${text_1}

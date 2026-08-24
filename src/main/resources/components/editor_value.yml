@@ -1,0 +1,43 @@
+params:
+  id: ""
+  value: "0"
+blocks:
+  - type: block
+    id: "editor_val_${id}_hitbox"
+    layer: 9203.0
+    opacity: 0
+    color: ff0000
+    align: center
+    position:
+      x: 0
+      y: 0
+    size:
+      width: 184
+      height: 32
+    unicode: 
+  - type: text
+    layer: 9201.0
+    opacity: 255
+    color: ffffff
+    align: left
+    position:
+      x: 0
+      y: 23
+    size:
+      width: 64
+      height: 64
+    text: 
+    children:
+      - type: text
+        id: "editor_val_${id}"
+        layer: 9202.0
+        opacity: 255
+        color: 666666
+        align: left
+        position:
+          x: 9
+          y: -12
+        size:
+          width: 83
+          height: 83
+        text: "${value}"

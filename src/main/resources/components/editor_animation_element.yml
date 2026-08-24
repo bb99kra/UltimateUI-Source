@@ -1,0 +1,409 @@
+params:
+  name: "Unknown"
+  row1: false
+  row1name: "Unknown"
+  row2: false
+  row2name: "Unknown"
+  row3: false
+  row3name: "Unknown"
+  row4: false
+  row4name: "Unknown"
+  row5: false
+  row5name: "Unknown"
+  row6: false
+  row6name: "Unknown"
+blocks:
+  - type: rounded
+    id: animation_box_name
+    refreshopacity: true
+    layer: 9213.0
+    opacity: 255
+    color: 202020
+    position:
+      x: 7
+      y: 42
+    size:
+      width: 170
+      height: 27
+    unicode: ""
+    children:
+      - type: text
+        id: animation_element_name
+        layer: 9214.0
+        opacity: 255
+        color: 969696
+        align: left
+        position:
+          x: 8
+          y: 8
+        size:
+          width: 82
+          height: 82
+        text: "<#666666>{name}"
+        children:
+          - type: text
+            id: animation_hide_box
+            layer: 9214.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 140
+              y: 3
+            size:
+              width: 64
+              height: 64
+            text: ""
+            children:
+              - type: hitbox
+                enabled: true
+                id: animation_hide_box_hitbox
+                layer: 9215.0
+                opacity: 0
+                color: ff0000
+                position:
+                  x: -2
+                  y: -5
+                size:
+                  width: 16
+                  height: 16
+                unicode: ""
+      - case: "{row1}"
+        true:
+          - type: text
+            id: animation_row_label_rotation
+            layer: 9214.0
+            opacity: 255
+            color: 969696
+            align: left
+            position:
+              x: 16
+              y: 40
+            size:
+              width: 82
+              height: 82
+            text: "<#666666>${row1name}"
+            children:
+              - type: text
+                id: animation_plus_rotation
+                layer: 9214.0
+                opacity: 255
+                color: ffffff
+                align: left
+                position:
+                  x: 132
+                  y: 3
+                size:
+                  width: 64
+                  height: 64
+                text: ""
+                children:
+                  - type: hitbox
+                    enabled: true
+                    id: animation_plus_hitbox_rotation
+                    layer: 9215.0
+                    opacity: 0
+                    color: ff0000
+                    position:
+                      x: -2
+                      y: -5
+                    size:
+                      width: 16
+                      height: 16
+                    unicode: ""
+              - type: block
+                enabled: true
+                id: animation_box_rotation
+                refreshopacity: true
+                layer: 9212.0
+                opacity: 255
+                color: 141414
+                position:
+                  x: 163
+                  y: -9
+                size:
+                  width: 1239
+                  height: 28
+                unicode: ""
+      - case: "{row2}"
+        true:
+          - type: text
+            id: animation_row_label_position
+            layer: 9214.0
+            opacity: 255
+            color: 969696
+            align: left
+            position:
+              x: 16
+              y: 70
+            size:
+              width: 82
+              height: 82
+            text: "<#666666>${row2name}"
+            children:
+              - type: text
+                id: animation_plus_position
+                layer: 9214.0
+                opacity: 255
+                color: ffffff
+                align: left
+                position:
+                  x: 132
+                  y: 3
+                size:
+                  width: 64
+                  height: 64
+                text: ""
+                children:
+                  - type: hitbox
+                    enabled: true
+                    id: animation_plus_hitbox_position
+                    layer: 9215.0
+                    opacity: 0
+                    color: ff0000
+                    position:
+                      x: -2
+                      y: -5
+                    size:
+                      width: 16
+                      height: 16
+                    unicode: ""
+              - type: block
+                enabled: true
+                id: animation_box_position
+                refreshopacity: true
+                layer: 9212.0
+                opacity: 255
+                color: 141414
+                position:
+                  x: 163
+                  y: -9
+                size:
+                  width: 1239
+                  height: 28
+                unicode: ""
+      - case: "{row3}"
+        true:
+          - type: text
+            id: animation_row_label_scale
+            layer: 9214.0
+            opacity: 255
+            color: 969696
+            align: left
+            position:
+              x: 16
+              y: 100
+            size:
+              width: 82
+              height: 82
+            text: "<#666666>${row3name}"
+            children:
+              - type: text
+                id: animation_plus_scale
+                layer: 9214.0
+                opacity: 255
+                color: ffffff
+                align: left
+                position:
+                  x: 132
+                  y: 3
+                size:
+                  width: 64
+                  height: 64
+                text: ""
+                children:
+                  - type: hitbox
+                    enabled: true
+                    id: animation_plus_hitbox_scale
+                    layer: 9215.0
+                    opacity: 0
+                    color: ff0000
+                    position:
+                      x: -2
+                      y: -5
+                    size:
+                      width: 16
+                      height: 16
+                    unicode: ""
+              - type: block
+                enabled: true
+                id: animation_box_scale
+                refreshopacity: true
+                layer: 9212.0
+                opacity: 255
+                color: 141414
+                position:
+                  x: 163
+                  y: -9
+                size:
+                  width: 1239
+                  height: 28
+                unicode: ""
+      - case: "{row4}"
+        true:
+          - type: text
+            layer: 9214.0
+            opacity: 255
+            color: 969696
+            align: left
+            position:
+              x: 16
+              y: 130
+            size:
+              width: 82
+              height: 82
+            text: "<#666666>${row4name}"
+            children:
+              - type: text
+                id: animation_plus_row4
+                layer: 9214.0
+                opacity: 255
+                color: ffffff
+                align: left
+                position:
+                  x: 132
+                  y: 3
+                size:
+                  width: 64
+                  height: 64
+                text: ""
+                children:
+                  - type: hitbox
+                    enabled: true
+                    id: animation_plus_hitbox_row4
+                    layer: 9215.0
+                    opacity: 0
+                    color: ff0000
+                    position:
+                      x: -2
+                      y: -5
+                    size:
+                      width: 16
+                      height: 16
+                    unicode: ""
+              - type: block
+                enabled: true
+                id: animation_box_row4
+                refreshopacity: true
+                layer: 9212.0
+                opacity: 255
+                color: 141414
+                position:
+                  x: 163
+                  y: -9
+                size:
+                  width: 1239
+                  height: 28
+                unicode: ""
+      - case: "{row5}"
+        true:
+          - type: text
+            layer: 9214.0
+            opacity: 255
+            color: 969696
+            align: left
+            position:
+              x: 16
+              y: 160
+            size:
+              width: 82
+              height: 82
+            text: "<#666666>${row5name}"
+            children:
+              - type: text
+                id: animation_plus_row5
+                layer: 9214.0
+                opacity: 255
+                color: ffffff
+                align: left
+                position:
+                  x: 132
+                  y: 3
+                size:
+                  width: 64
+                  height: 64
+                text: ""
+                children:
+                  - type: hitbox
+                    enabled: true
+                    id: animation_plus_hitbox_row5
+                    layer: 9215.0
+                    opacity: 0
+                    color: ff0000
+                    position:
+                      x: -2
+                      y: -5
+                    size:
+                      width: 16
+                      height: 16
+                    unicode: ""
+              - type: block
+                enabled: true
+                id: animation_box_row5
+                refreshopacity: true
+                layer: 9212.0
+                opacity: 255
+                color: 141414
+                position:
+                  x: 163
+                  y: -9
+                size:
+                  width: 1239
+                  height: 28
+                unicode: ""
+      - case: "{row6}"
+        true:
+          - type: text
+            layer: 9214.0
+            opacity: 255
+            color: 969696
+            align: left
+            position:
+              x: 16
+              y: 190
+            size:
+              width: 82
+              height: 82
+            text: "<#666666>${row6name}"
+            children:
+              - type: text
+                id: animation_plus_row6
+                layer: 9214.0
+                opacity: 255
+                color: ffffff
+                align: left
+                position:
+                  x: 132
+                  y: 3
+                size:
+                  width: 64
+                  height: 64
+                text: ""
+                children:
+                  - type: hitbox
+                    enabled: true
+                    id: animation_plus_hitbox_row6
+                    layer: 9215.0
+                    opacity: 0
+                    color: ff0000
+                    position:
+                      x: -2
+                      y: -5
+                    size:
+                      width: 16
+                      height: 16
+                    unicode: ""
+              - type: block
+                enabled: true
+                id: animation_box_row6
+                refreshopacity: true
+                layer: 9212.0
+                opacity: 255
+                color: 141414
+                position:
+                  x: 163
+                  y: -9
+                size:
+                  width: 1239
+                  height: 28
+                unicode: ""

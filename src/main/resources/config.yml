@@ -1,0 +1,59 @@
+#  _   _ _ _   _                 _         _   _ ___
+# | | | | | |_(_)_ __ ___   __ _| |_ ___  | | | |_ _|
+# | | | | | __| | '_ ` _ \ / _` | __/ _ \ | | | || |
+# | |_| | | |_| | | | | | | (_| | ||  __/ | |_| || |
+# \____/|_|\__|_|_| |_| |_|\__,_|\__\___| \___/|___|
+#
+#
+# UltimateUI's main configuration file
+#
+# In this file, you will find the most important editor settings, the method for
+# serving the resource pack, and the licenses. Remember not to share it with anyone.
+#
+# If you need help with the plugin, take a look here:
+# https://xqedii.dev/docs/plugins/ultimate-ui
+license:
+  license-key: 'wuvGRbxpKlGS'
+editor:
+  placeholders:
+    text-refresh: 20
+  autosave:
+    enabled: true
+    interval-seconds: 600
+  history:
+    undo-limit: 50
+  sounds:
+    enabled: true
+    volume: 1.0
+  max-page-elements: 500
+  show-editor-files: false
+resource-pack:
+  apply-on-join: true
+  kick-on-decline: false
+  kick-on-fail: false
+  compress-images: true
+  remove-default-hotbar: false
+  hosting:
+    default-pack:
+      enabled: true
+    self-host:
+      enabled: false
+      server-ip: '127.0.0.1'
+      pack-port: 8123
+    external-host:
+      enabled: false
+      url: "link"
+    external-pack:
+      enabled: false
+    xqedii-setups:
+      # If this plugin is installed on one of my setups, you can enable this option and the
+      # plugin will take care of the entire synchronization of the 2 resource packs for you.
+      enabled: false
+  messages:
+    chat:
+      enabled: false
+    title:
+      enabled: true
+    sound:
+      enabled: true
+      volume: 1.0

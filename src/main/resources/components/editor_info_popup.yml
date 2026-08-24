@@ -1,0 +1,15 @@
+params:
+  info: 
+blocks:
+  - type: text
+    layer: 9202.0
+    opacity: 255
+    color: ffffff
+    align: left
+    position:
+      x: (1920/2)-118
+      y: 95
+    size:
+      width: 64
+      height: 64
+    text: ${info}

@@ -1,0 +1,128 @@
+params:
+  id: ""
+  active: false
+  pagename: "None"
+blocks:
+  - case: "{active}"
+    true:
+      - type: block_rounded
+        id: page_${id}_page_hitbox
+        layer: 9100.0
+        refreshopacity: true
+        opacity: 255
+        color: 141414
+        position:
+          x: 0
+          y: 0
+        size:
+          width: 195
+          height: 36
+        rounding:
+          unicode: 
+          bl:
+            x: 0
+            y: 1
+          br:
+            x: -1
+            y: 1
+        unicode: 
+        children:
+          - type: text
+            id: page_${id}_label
+            layer: 9101.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 12
+              y: 13
+            size:
+              width: 82
+              height: 82
+            text: ${pagename}
+          - type: text
+            id: page_${id}_close_icon
+            layer: 9101.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 171
+              y: 15
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: hitbox
+            id: page_${id}_close_hitbox
+            layer: 9105.0
+            opacity: 0
+            color: ff0000
+            position:
+              x: 169
+              y: 10
+            size:
+              width: 16
+              height: 16
+            unicode: 
+    false:
+      - type: block_rounded
+        id: page_${id}_page_hitbox
+        layer: 9100.0
+        refreshopacity: true
+        opacity: 255
+        color: 0f0f0f
+        position:
+          x: 0
+          y: 0
+        size:
+          width: 195
+          height: 36
+        rounding:
+          unicode: 
+          bl:
+            x: 0
+            y: 1
+          br:
+            x: 0
+            y: 1
+        unicode: 
+        children:
+          - type: text
+            id: page_${id}_label
+            layer: 9101.0
+            opacity: 255
+            color: 999999
+            align: left
+            position:
+              x: 12
+              y: 13
+            size:
+              width: 82
+              height: 82
+            text: ${pagename}
+          - type: text
+            id: page_${id}_close_icon
+            layer: 9101.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 171
+              y: 15
+            size:
+              width: 64
+              height: 64
+            text: 
+          - type: hitbox
+            id: page_${id}_close_hitbox
+            layer: 9105.0
+            opacity: 0
+            color: ff0000
+            position:
+              x: 169
+              y: 10
+            size:
+              width: 16
+              height: 16
+            unicode: 

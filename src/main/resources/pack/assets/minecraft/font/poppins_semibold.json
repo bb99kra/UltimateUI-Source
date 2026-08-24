@@ -1,0 +1,16 @@
+{
+    "_downloaded_from": "spilledspigot.com | user_id: 128 | username: LapHa | hash: eb88e288ab7ea351c84bcf27 | token: EB88E288",
+    "providers": [
+        {
+            "type": "ttf",
+            "file": "minecraft:poppins_semibold.ttf",
+            "shift": [
+                0,
+                0
+            ],
+            "size": 11,
+            "oversample": 20,
+            "skip": ""
+        }
+    ]
+}

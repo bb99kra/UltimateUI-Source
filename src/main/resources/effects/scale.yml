@@ -1,0 +1,12 @@
+id: scale
+name: Scale
+type: scale
+amount-percent: 5
+scale-x: 5%
+scale-y: 5%
+move-x: 0
+move-y: 0
+opacity-delta: 0
+rotation-deg: 0
+duration-ms: 250
+interpolation: ease-in-out

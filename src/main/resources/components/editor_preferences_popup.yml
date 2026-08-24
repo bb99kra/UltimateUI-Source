@@ -1,0 +1,434 @@
+blocks:
+  - type: block
+    refreshopacity: true
+    layer: 9605.0
+    opacity: 150
+    color: 000000
+    align: left
+    position:
+      x: -1920/2
+      y: -1080/2
+    size:
+      width: 1920*2
+      height: 1080*2
+    unicode: 
+  - type: block_rounded
+    id: popup_preferences_root
+    refreshopacity: true
+    layer: 9606.0
+    opacity: 255
+    color: 0f0f0f
+    position:
+      x: (1920/2)-(847/2)
+      y: (1080/2)-(442/2)-(105/2)
+    size:
+      width: 847
+      height: 473+105
+    rounding:
+      unicode: <#0f0f0f>
+    unicode: 
+    children:
+      - type: text
+        layer: 9607.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 27
+          y: 16+27
+        size:
+          width: 64
+          height: 64
+        text: <#ffffff>
+      - type: block
+        layer: 9608.0
+        opacity: 255
+        color: 292929
+        align: left
+        position:
+          x: 0
+          y: 74
+        size:
+          width: 847
+          height: 2
+        unicode: 
+      - type: text
+        layer: 9607.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 27
+          y: 16+105-9
+        size:
+          width: 64
+          height: 64
+        text: <#ffffff>
+        children:
+          - type: text
+            layer: 9607.0
+            opacity: 255
+            color: 999999
+            align: left
+            text-wrap: 500
+            position:
+              x: 192
+              y: 24
+            size:
+              width: 82
+              height: 82
+            text: Display where the player’s hotbar appears
+          - type: rounded
+            id: popup_preferences_hotbar_button
+            refreshopacity: true
+            layer: 9607.0
+            opacity: 255
+            color: 141414
+            position:
+              x: 470+88
+              y: -10
+            size:
+              width: 200
+              height: 50
+            unicode: 
+            children:
+              - type: hitbox
+                id: popup_preferences_hotbar_name
+                layer: 9609.0
+                opacity: 0
+                color: ff0000
+                align: left 
+                position:
+                  x: 0
+                  y: 0
+                size:
+                  width: 200
+                  height: 49
+                unicode: 
+              - type: text
+                id: popup_preferences_hotbar_value
+                layer: 9608.0
+                opacity: 255
+                color: 666666
+                align: center
+                text-wrap: 500
+                position:
+                  x: 58
+                  y: 20
+                size:
+                  width: 82
+                  height: 82
+                text: Disabled
+      - type: block
+        layer: 9608.0
+        opacity: 255
+        color: 292929
+        align: left
+        position:
+          x: 27
+          y: 186-9
+        size:
+          width: 847-2*27
+          height: 2
+        unicode: 
+      - type: text
+        layer: 9607.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 27
+          y: 16+105+105-9
+        size:
+          width: 64
+          height: 64
+        text: <#ffffff>
+        children:
+          - type: text
+            layer: 9607.0
+            opacity: 255
+            color: 999999
+            align: left
+            text-wrap: 500
+            position:
+              x: 192
+              y: 24
+            size:
+              width: 82
+              height: 82
+            text: Display where the player’s hand appears
+          - type: rounded
+            id: popup_preferences_hand_button
+            refreshopacity: true
+            layer: 9607.0
+            opacity: 255
+            color: 141414
+            position:
+              x: 470+88
+              y: -10
+            size:
+              width: 200
+              height: 50
+            unicode: 
+            children:
+              - type: hitbox
+                id: popup_preferences_hand_name
+                layer: 9609.0
+                opacity: 0
+                color: ff0000
+                align: left 
+                position:
+                  x: 0
+                  y: 0
+                size:
+                  width: 200
+                  height: 49
+                unicode: 
+              - type: text
+                id: popup_preferences_hand_value
+                layer: 9608.0
+                opacity: 255
+                color: 666666
+                align: center
+                text-wrap: 500
+                position:
+                  x: 58
+                  y: 20
+                size:
+                  width: 82
+                  height: 82
+                text: Disabled
+      - type: block
+        layer: 9608.0
+        opacity: 255
+        color: 292929
+        align: left
+        position:
+          x: 27
+          y: 186+105-9
+        size:
+          width: 847-2*27
+          height: 2
+        unicode: 
+      - type: text
+        layer: 9607.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 27
+          y: 16+3*105-9
+        size:
+          width: 64
+          height: 64
+        text: <#ffffff>
+        children:
+          - type: text
+            layer: 9607.0
+            opacity: 255
+            color: 999999
+            align: left
+            text-wrap: 500
+            position:
+              x: 192
+              y: 24
+            size:
+              width: 82
+              height: 82
+            text: Enable the optimized editor mode that improves FPS
+          - type: rounded
+            id: popup_preferences_optimized_button
+            refreshopacity: true
+            layer: 9607.0
+            opacity: 255
+            color: 141414
+            position:
+              x: 470+88
+              y: -10
+            size:
+              width: 200
+              height: 50
+            unicode: 
+            children:
+              - type: hitbox
+                id: popup_preferences_optimized_name
+                layer: 9609.0
+                opacity: 0
+                color: ff0000
+                align: left 
+                position:
+                  x: 0
+                  y: 0
+                size:
+                  width: 200
+                  height: 49
+                unicode: 
+              - type: text
+                id: popup_preferences_optimized_value
+                layer: 9608.0
+                opacity: 255
+                color: 666666
+                align: center
+                text-wrap: 500
+                position:
+                  x: 58
+                  y: 20
+                size:
+                  width: 82
+                  height: 82
+                text: Disabled
+      - type: block
+        layer: 9608.0
+        opacity: 255
+        color: 292929
+        align: left
+        position:
+          x: 27
+          y: 186+(105*2)-9
+        size:
+          width: 847-2*27
+          height: 2
+        unicode: 
+      - type: text
+        layer: 9607.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 27
+          y: 16+4*105-9
+        size:
+          width: 64
+          height: 64
+        text: <#ffffff>
+        children:
+          - type: text
+            layer: 9607.0
+            opacity: 255
+            color: 999999
+            align: left
+            text-wrap: 500
+            position:
+              x: 192
+              y: 24
+            size:
+              width: 82
+              height: 82
+            text: Toggle editor sounds on or off
+          - type: rounded
+            id: popup_preferences_sound_button
+            refreshopacity: true
+            layer: 9607.0
+            opacity: 255
+            color: 262626
+            position:
+              x: 470+88
+              y: -10
+            size:
+              width: 200
+              height: 50
+            unicode: 
+            children:
+              - type: hitbox
+                id: popup_preferences_sound_name
+                layer: 9609.0
+                opacity: 0
+                color: ff0000
+                align: left 
+                position:
+                  x: 0
+                  y: 0
+                size:
+                  width: 200
+                  height: 49
+                unicode: 
+              - type: text
+                id: popup_preferences_sound_value
+                layer: 9608.0
+                opacity: 255
+                color: 919191
+                align: center
+                text-wrap: 500
+                position:
+                  x: 58
+                  y: 20
+                size:
+                  width: 82
+                  height: 82
+                text: Enabled
+      - type: block
+        layer: 9608.0
+        opacity: 255
+        color: 292929
+        align: left
+        position:
+          x: 27
+          y: 186-9
+        size:
+          width: 847-2*27
+          height: 2
+        unicode: 
+      - type: block
+        layer: 9608.0
+        opacity: 255
+        color: 292929
+        align: left
+        position:
+          x: 0
+          y: 394-9+105
+        size:
+          width: 847
+          height: 2
+        unicode: 
+      - type: block
+        id: popup_preferences_cancel
+        layer: 9608.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 45
+          y: 395-9+105
+        size:
+          width: 64
+          height: 64
+        unicode: 
+      - type: hitbox
+        id: popup_preferences_cancel_hitbox
+        layer: 9608.0
+        opacity: 0
+        color: ff0000
+        align: left 
+        position:
+          x: 26
+          y: 409+105
+        size:
+          width: 103
+          height: 41
+        unicode: 
+      - type: block
+        id: popup_preferences_confirm
+        layer: 9608.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 708
+          y: 395-9+105
+        size:
+          width: 64
+          height: 64
+        unicode: 
+      - type: hitbox
+        id: popup_preferences_confirm_hitbox
+        layer: 9608.0
+        opacity: 0
+        color: ff0000
+        align: left
+        position:
+          x: 659
+          y: 409+105
+        size:
+          width: 163
+          height: 41
+        unicode: 

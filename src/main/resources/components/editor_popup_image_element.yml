@@ -1,0 +1,54 @@
+params:
+  image: "File name"
+  scale: "0, 0px"
+  bg: "141414"
+  hitbox_id: "popup_image_selector_entry_hitbox"
+blocks:
+  - type: rounded
+    layer: 9610
+    opacity: 255
+    color: ${bg}
+    size:
+      width: 380
+      height: 75
+    unicode: 
+    children:
+      - type: text
+        layer: 9611
+        opacity: 255
+        color: ffffff
+        align: left
+        text-wrap: 350
+        position:
+          x: 127
+          y: 19
+        size:
+          width: 98
+          height: 98
+        text: <font:poppins_semibold><#ffffff>${image}
+      - type: text
+        layer: 9611
+        opacity: 255
+        color: ffffff
+        align: left
+        text-wrap: 350
+        position:
+          x: 109
+          y: 50
+        size:
+          width: 82
+          height: 82
+        text: "<font:editor><#dedede>Scale: ${scale}"
+      - type: hitbox
+        id: ${hitbox_id}
+        layer: 9612
+        opacity: 0
+        color: ff0000
+        align: left
+        position:
+          x: 0
+          y: 0
+        size:
+          width: 380
+          height: 75
+        unicode: 

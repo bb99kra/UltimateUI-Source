@@ -1,0 +1,334 @@
+name: editor
+screen:
+  width: 1920
+  height: 1080
+  offsetX: 0
+  offsetY: 0
+  preview:
+    defaultZoom: 0.8
+  hitboxOffsetX: -2
+  hitboxOffsetY: -17
+  cursorSize: 10
+  cursorSpeed: 1.0
+  cursorUnicode: 
+  cursorLayer: 9700
+blocks:
+- type: block
+  id: background
+  layer: 0.0
+  opacity: 255
+  color: 080808
+  position:
+    x: -1920/2
+    y: -1080/2
+  size:
+    width: 1920*2
+    height: 1080*2
+  unicode: 
+- type: block
+  id: navbar
+  layer: 9200.0
+  opacity: 255
+  color: 0f0f0f
+  position:
+    x: -1920/2
+    y: 0
+  size:
+    width: 1920*2
+    height: 53
+  outline:
+    size: 1
+    color: 141414
+  unicode: 
+- type: block
+  layer: 9200.0
+  opacity: 0
+  color: ff0000
+  position:
+    x: 0
+    y: -30
+  size:
+    width: 500
+    height: 52-20
+  unicode: 
+  children:
+    - type: block
+      id: navbar_logo
+      opacity: 0
+      position:
+        x: 12
+        y: -2
+      size:
+        width: 0
+        height: 0
+      unicode: 
+      children:
+        - type: text
+          layer: 9201.0
+          opacity: 255
+          color: ffffff
+          align: left
+          position:
+            x: 0
+            y: 23
+          size:
+            width: 64
+            height: 64
+          text: 
+    - type: text
+      layer: 9201.0
+      opacity: 255
+      color: ffffff
+      align: left
+      position:
+        x: 1824
+        y: 21
+      size:
+        width: 64
+        height: 64
+      text: 
+      children:
+        - type: hitbox
+          id: editormenu_navbar_close
+          layer: 9205.0
+          opacity: 0
+          color: ff0000
+          position:
+            x: 0
+            y: -20
+          size:
+            width: 72
+            height: 28
+          unicode: 
+  editor_animation:
+    delay: 3
+    keyframes:
+      position:
+        '15':
+          y: 12
+          interpolation: smooth-out
+- type: grid_block
+  id: options
+  direction: row
+  gap: 40
+  position:
+    x: 380
+    y: 1100
+  children:
+    - type: block_rounded
+      id: edit_ui
+      layer: 9200.0
+      opacity: 255
+      color: 0f0f0f
+      position:
+        x: 0
+        y: 0
+      size:
+        width: 360
+        height: 700
+      rounding:
+        unicode: <#ffffff>
+      unicode: 
+      children:
+        - type: text
+          layer: 9201.0
+          opacity: 255
+          color: ffffff
+          align: left
+          position:
+            x: 124
+            y: 175
+          size:
+            width: 64
+            height: 64
+          text: 
+        - type: text
+          layer: 9201.0
+          opacity: 255
+          color: ffffff
+          align: left
+          position:
+            x: 81
+            y: 353
+          size:
+            width: 64
+            height: 64
+          text: 
+        - type: text
+          id: editor_menu_button_edit
+          layer: 9201.0
+          opacity: 255
+          color: ffffff
+          align: left
+          position:
+            x: 81
+            y: 650
+          size:
+            width: 64
+            height: 64
+          text: 
+        - type: block
+          id: editor_menu_button_edit_hitbox
+          layer: 9201.0
+          opacity: 0
+          color: ff0000
+          align: left
+          position:
+            x: 59
+            y: 594
+          size:
+            width: 243
+            height: 64
+          text: 
+      editor_animation:
+        delay: 3
+        keyframes:
+          position:
+            '15':
+              y: 223
+              interpolation: smooth-out
+    - type: block_rounded
+      id: create_ui
+      layer: 9200.0
+      opacity: 255
+      color: 0f0f0f
+      position:
+        x: 0
+        y: 0
+      size:
+        width: 360
+        height: 700
+      rounding:
+        unicode: <#ffffff>
+      unicode: 
+      children:
+        - type: text
+          layer: 9201.0
+          opacity: 255
+          color: ffffff
+          align: left
+          position:
+            x: 124
+            y: 167
+          size:
+            width: 64
+            height: 64
+          text: 
+        - type: text
+          layer: 9201.0
+          opacity: 255
+          color: ffffff
+          align: left
+          position:
+            x: 81
+            y: 350
+          size:
+            width: 64
+            height: 64
+          text: 
+        - type: text
+          id: editor_menu_button_create
+          layer: 9201.0
+          opacity: 255
+          color: ffffff
+          align: left
+          position:
+            x: 81
+            y: 650
+          size:
+            width: 64
+            height: 64
+          text: 
+        - type: block
+          id: editor_menu_button_create_hitbox
+          layer: 9201.0
+          opacity: 0
+          color: ff0000
+          align: left
+          position:
+            x: 59
+            y: 594
+          size:
+            width: 243
+            height: 64
+          text: 
+      editor_animation:
+        delay: 6
+        keyframes:
+          position:
+            '15':
+              y: 223
+              interpolation: smooth-out
+    - type: block_rounded
+      id: open_ui
+      layer: 9200.0
+      opacity: 255
+      color: 0f0f0f
+      position:
+        x: 0
+        y: 0
+      size:
+        width: 360
+        height: 700
+      rounding:
+        unicode: <#ffffff>
+      unicode: 
+      children:
+        - type: text
+          layer: 9201.0
+          opacity: 255
+          color: ffffff
+          align: left
+          position:
+            x: 134
+            y: 158
+          size:
+            width: 64
+            height: 64
+          text: 
+        - type: text
+          layer: 9201.0
+          opacity: 255
+          color: ffffff
+          align: left
+          position:
+            x: 81
+            y: 346
+          size:
+            width: 64
+            height: 64
+          text: 
+        - type: text
+          id: editor_menu_button_open
+          layer: 9201.0
+          opacity: 255
+          color: ffffff
+          align: left
+          position:
+            x: 81
+            y: 650
+          size:
+            width: 64
+            height: 64
+          text: 
+        - type: block
+          id: editor_menu_button_open_hitbox
+          layer: 9201.0
+          opacity: 0
+          color: ff0000
+          align: left
+          position:
+            x: 59
+            y: 594
+          size:
+            width: 243
+            height: 64
+          text: 
+      editor_animation:
+        delay: 9
+        keyframes:
+          position:
+            '15':
+              y: 223
+              interpolation: smooth-out
+- { component: editor_manage_file_popup, title: "" }

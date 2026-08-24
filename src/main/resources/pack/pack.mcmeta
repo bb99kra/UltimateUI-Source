@@ -1,0 +1,41 @@
+{
+  "pack": {
+    "description": "§6§lUltimate UI §7- §eResource Pack",
+    "pack_format": 55,
+    "supported_formats": [0, 9999]
+  },
+  "overlays": {
+    "entries": [
+      {
+        "formats": [80, 999],
+        "min_format": 80,
+        "max_format": 999,
+        "directory": "uui_26_1"
+      },
+      {
+        "formats": [56, 79],
+        "min_format": 56,
+        "max_format": 79,
+        "directory": "uui_1_21_x"
+      },
+      {
+        "formats": [55, 55],
+        "min_format": 55,
+        "max_format": 55,
+        "directory": "uui_1_21_5"
+      },
+      {
+        "formats": [42, 46],
+        "min_format": 42,
+        "max_format": 46,
+        "directory": "uui_1_21_4"
+      },
+      {
+        "formats": [32, 34],
+        "min_format": 32,
+        "max_format": 34,
+        "directory": "uui_1_21_1"
+      }
+    ]
+  }
+}

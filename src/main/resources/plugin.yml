@@ -1,0 +1,51 @@
+name: UltimateUI
+version: 1.2.1
+main: dev.xqedii.ultimateUI.UltimateUI
+api-version: '1.20'
+folia-supported: true
+authors: [ Xqedii ]
+softdepend:
+  - PlaceholderAPI
+  - ItemsAdder
+  - Oraxen
+  - Nexo
+  - CraftEngine
+  - Skript
+commands:
+  uui:
+    usage: /uui [open <name> [hud] [autoclose] [player]|create <name>|edit <name>|delete <name>|close [name]|menu|reload]
+    description: UltimateUI command
+    permission: ultimateui.command.use
+permissions:
+  ultimateui.admin:
+    description: Full access to all UltimateUI commands
+    default: op
+    children:
+      ultimateui.command.use: true
+      ultimateui.command.open: true
+      ultimateui.command.create: true
+      ultimateui.command.edit: true
+      ultimateui.command.delete: true
+      ultimateui.command.close: true
+      ultimateui.command.reload: true
+  ultimateui.command.use:
+    description: Access to base /uui command and help
+    default: true
+  ultimateui.command.open:
+    description: Open UIs with /uui open
+    default: op
+  ultimateui.command.create:
+    description: Create UIs with /uui create
+    default: op
+  ultimateui.command.edit:
+    description: Edit UIs with /uui edit
+    default: op
+  ultimateui.command.delete:
+    description: Delete UIs with /uui delete
+    default: op
+  ultimateui.command.close:
+    description: Close UIs with /uui close
+    default: op
+  ultimateui.command.reload:
+    description: Reload UltimateUI config with /uui reload
+    default: op

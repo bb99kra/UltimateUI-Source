@@ -1,0 +1,32 @@
+resource-pack:
+  messages:
+    chat:
+      loading: "<#dedb24>Resource pack is loading!"
+      success: "<#42f032>Resource pack loaded successfully!"
+      failed: "<#f04f32>Resource pack was not loaded correctly!"
+    title:
+      title: "<#dedb24><bold>Resource pack is loading!"
+      subtitle: "<#80fbc6>Your resource pack will be loaded soon..."
+    kick:
+      decline-message: "&cYou didn't accept the Texture Pack!"
+      fail-message: "&cResource Pack download Failed!"
+    prompt:
+      - ""
+      - "&6Please accept the &a&nResourcePack&6 to make the"
+      - "&6gameplay even better and more interesting!"
+      - ""
+      - "&aThanks to our Resource Pack, you will see many"
+      - "&anew features and amazing effects that you"
+      - "&awill not experience on other servers!"
+      - ""
+      - "&e|"
+      - "&e|"
+      - "&e|"
+      - "&e_____/         "
+      - "&e/                    "
+      - "&e|                     "
+      - "&e\\/                     "
+gui:
+  no-perm: "&cYou don't have permission {PERMISSION}"
+  cant-do-this: "&cYou can't do this!"
+  limit-reached: "&cReached page limit!"

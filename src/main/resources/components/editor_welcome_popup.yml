@@ -1,0 +1,156 @@
+blocks:
+  - type: block
+    id: popup_welcome_backdrop
+    refreshopacity: true
+    layer: 9605.0
+    opacity: 150
+    color: 000000
+    align: left
+    position:
+      x: -1920/2
+      y: -1080/2
+    size:
+      width: 1920*2
+      height: 1080*2
+    unicode: 
+  - type: block_rounded
+    id: popup_welcome_root
+    refreshopacity: true
+    layer: 9606.0
+    opacity: 255
+    color: 0f0f0f
+    position:
+      x: (1920/2)-(847/2)
+      y: (1080/2)-(442/2)-(105/2)
+    size:
+      width: 847
+      height: 473+105
+    rounding:
+      unicode: <#0f0f0f>
+    unicode: 
+    children:
+      - type: text
+        layer: 9607.0
+        opacity: 255
+        color: ffffff
+        align: center
+        position:
+          x: 360
+          y: 16+17
+        size:
+          width: 128
+          height: 128
+        text: <font:poppins_semibold><#ffffff>Hello %player%!
+      - type: text
+        layer: 9607.0
+        opacity: 255
+        color: ffffff
+        align: center
+        position:
+          x: 277
+          y: 361
+        size:
+          width: 64
+          height: 64
+        text: 
+        children:
+          - type: text
+            layer: 9607.0
+            opacity: 255
+            color: ffffff
+            align: center
+            position:
+              x: 245
+              y: 0
+            size:
+              width: 64
+              height: 64
+            text: 
+      - type: text
+        layer: 9607.0
+        opacity: 255
+        color: ffffff
+        align: center
+        position:
+          x: 277
+          y: 455
+        size:
+          width: 64
+          height: 64
+        text: 
+        children:
+          - type: text
+            layer: 9607.0
+            opacity: 255
+            color: ffffff
+            align: center
+            position:
+              x: 245
+              y: 0
+            size:
+              width: 64
+              height: 64
+            text: 
+      - type: block
+        layer: 9608.0
+        opacity: 255
+        color: 292929
+        align: left
+        position:
+          x: 0
+          y: 74
+        size:
+          width: 847
+          height: 2
+        unicode: 
+      - type: block
+        layer: 9608.0
+        opacity: 255
+        color: 292929
+        align: left
+        position:
+          x: 0
+          y: 394-9+105
+        size:
+          width: 847
+          height: 2
+        unicode: 
+      - type: hitbox
+        id: popup_welcome_link_hitbox
+        layer: 9660.0
+        opacity: 0
+        color: ff0000
+        align: left
+        position:
+          x: 273
+          y: 445
+        size:
+          width: 305
+          height: 18
+        unicode: 
+      - type: block
+        id: popup_welcome_confirm
+        layer: 9608.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 708-316
+          y: 395-9+105
+        size:
+          width: 64
+          height: 64
+        unicode: 
+      - type: hitbox
+        id: popup_welcome_confirm_hitbox
+        layer: 9608.0
+        opacity: 0
+        color: ff0000
+        align: left
+        position:
+          x: 659-316
+          y: 409+105
+        size:
+          width: 163
+          height: 41
+        unicode: 

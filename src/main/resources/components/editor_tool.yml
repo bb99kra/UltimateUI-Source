@@ -1,0 +1,45 @@
+params:
+  id: "tool_cursor"
+  u1: ""
+  u2: ""
+blocks:
+  - type: block
+    id: "${id}_hitbox"
+    layer: 9205.0
+    opacity: 100
+    color: 555555
+    align: left
+    position:
+      x: 0
+      y: -39
+    size:
+      width: 47
+      height: 47
+    unicode: 
+  - type: text
+    id: "${id}_bg"
+    layer: 9201.0
+    opacity: 255
+    color: ffffff
+    align: left
+    position:
+      x: 0
+      y: 0
+    size:
+      width: 64
+      height: 64
+    text: "${u1}"
+    children:
+      - type: text
+        id: "${id}_icon"
+        layer: 9201.0
+        opacity: 255
+        color: ffffff
+        align: center
+        position:
+          x: -66
+          y: 104
+        size:
+          width: 64
+          height: 64
+        text: "${u2}"

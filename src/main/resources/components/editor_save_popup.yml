@@ -1,0 +1,355 @@
+blocks:
+  - type: block
+    refreshopacity: true
+    layer: 9605.0
+    opacity: 150
+    color: 000000
+    align: left
+    position:
+      x: -1920/2
+      y: -1080/2
+    size:
+      width: 1920*2
+      height: 1080*2
+    unicode: 
+  - type: block_rounded
+    id: popup_save_root
+    refreshopacity: true
+    layer: 9606.0
+    opacity: 255
+    color: 0f0f0f
+    position:
+      x: (1920/2)-(847/2)
+      y: (1080/2)-(442/2)
+    size:
+      width: 847
+      height: 473
+    rounding:
+      unicode: <#0f0f0f>
+    unicode: 
+    children:
+      - type: text
+        layer: 9607.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 27
+          y: 16+27
+        size:
+          width: 64
+          height: 64
+        text: <#ffffff>
+      - type: block
+        layer: 9608.0
+        opacity: 255
+        color: 292929
+        align: left
+        position:
+          x: 0
+          y: 74
+        size:
+          width: 847
+          height: 2
+        unicode: 
+      - type: text
+        layer: 9607.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 27
+          y: 16+105-9
+        size:
+          width: 64
+          height: 64
+        text: <#ffffff>
+        children:
+          - type: text
+            layer: 9607.0
+            opacity: 255
+            color: ffffff
+            align: left
+            position:
+              x: 100
+              y: 2
+            size:
+              width: 64
+              height: 64
+            text: <#ffffff>
+          - type: text
+            layer: 9607.0
+            opacity: 255
+            color: 999999
+            align: left
+            text-wrap: 500
+            position:
+              x: 192
+              y: 24
+            size:
+              width: 82
+              height: 82
+            text: Enter the name under which you want to save your page
+          - type: rounded
+            id: popup_save_name
+            refreshopacity: true
+            layer: 9607.0
+            opacity: 255
+            color: 141414
+            position:
+              x: 470
+              y: -10
+            size:
+              width: 288
+              height: 49
+            unicode: 
+            children:
+              - type: hitbox
+                id: popup_save_textbox_name
+                layer: 9609.0
+                opacity: 0
+                color: ff0000
+                align: left 
+                position:
+                  x: 0
+                  y: 0
+                size:
+                  width: 288
+                  height: 49
+                unicode: 
+              - type: text
+                id: popup_save_name_value
+                layer: 9608.0
+                opacity: 255
+                color: 666666
+                align: left
+                text-wrap: 500
+                position:
+                  x: 192+15
+                  y: 20
+                size:
+                  width: 82
+                  height: 82
+                text: Example name
+      - type: block
+        layer: 9608.0
+        opacity: 255
+        color: 292929
+        align: left
+        position:
+          x: 27
+          y: 186-9
+        size:
+          width: 847-2*27
+          height: 2
+        unicode: 
+      - type: text
+        layer: 9607.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 27
+          y: 16+105+105-9
+        size:
+          width: 64
+          height: 64
+        text: <#ffffff>
+        children:
+          - type: text
+            layer: 9607.0
+            opacity: 255
+            color: 999999
+            align: left
+            text-wrap: 500
+            position:
+              x: 192
+              y: 24
+            size:
+              width: 82
+              height: 82
+            text: Enter a short description of your page
+          - type: rounded
+            id: popup_save_description
+            refreshopacity: true
+            layer: 9607.0
+            opacity: 255
+            color: 141414
+            position:
+              x: 470
+              y: -10
+            size:
+              width: 288
+              height: 49
+            unicode: 
+            children:
+              - type: hitbox
+                id: popup_save_textbox_desc
+                layer: 9609.0
+                opacity: 0
+                color: ff0000
+                align: left 
+                position:
+                  x: 0
+                  y: 0
+                size:
+                  width: 288
+                  height: 49
+                unicode: 
+              - type: text
+                id: popup_save_desc_value
+                layer: 9608.0
+                opacity: 255
+                color: 666666
+                align: left
+                text-wrap: 500
+                position:
+                  x: 192+15
+                  y: 20
+                size:
+                  width: 82
+                  height: 82
+                text: Example description
+      - type: block
+        layer: 9608.0
+        opacity: 255
+        color: 292929
+        align: left
+        position:
+          x: 27
+          y: 186+105-9
+        size:
+          width: 847-2*27
+          height: 2
+        unicode: 
+      - type: text
+        layer: 9607.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 27
+          y: 16+3*105-9
+        size:
+          width: 64
+          height: 64
+        text: <#ffffff>
+        children:
+          - type: text
+            layer: 9607.0
+            opacity: 255
+            color: 999999
+            align: left
+            text-wrap: 500
+            position:
+              x: 192
+              y: 24
+            size:
+              width: 82
+              height: 82
+            text: Enter the command that should open this UI
+          - type: rounded
+            id: popup_save_command
+            refreshopacity: true
+            layer: 9607.0
+            opacity: 255
+            color: 141414
+            position:
+              x: 470
+              y: -10
+            size:
+              width: 288
+              height: 49
+            unicode: 
+            children:
+              - type: hitbox
+                id: popup_save_textbox_command
+                layer: 9609.0
+                opacity: 0
+                color: ff0000
+                align: left 
+                position:
+                  x: 0
+                  y: 0
+                size:
+                  width: 288
+                  height: 49
+                unicode: 
+              - type: text
+                id: popup_save_command_value
+                layer: 9608.0
+                opacity: 255
+                color: 666666
+                align: left
+                text-wrap: 500
+                position:
+                  x: 192+15
+                  y: 20
+                size:
+                  width: 82
+                  height: 82
+                text: <font:default>/<font:editor>example
+      - type: block
+        layer: 9608.0
+        opacity: 255
+        color: 292929
+        align: left
+        position:
+          x: 0
+          y: 394-9
+        size:
+          width: 847
+          height: 2
+        unicode: 
+      - type: block
+        id: popup_save_cancel
+        layer: 9608.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 45
+          y: 395-9
+        size:
+          width: 64
+          height: 64
+        unicode: 
+      - type: hitbox
+        id: popup_save_cancel_hitbox
+        layer: 9608.0
+        opacity: 0
+        color: ff0000
+        align: left 
+        position:
+          x: 26
+          y: 409
+        size:
+          width: 103
+          height: 41
+        unicode: 
+      - type: block
+        id: popup_save_confirm
+        layer: 9608.0
+        opacity: 255
+        color: ffffff
+        align: left
+        position:
+          x: 708
+          y: 395-9
+        size:
+          width: 64
+          height: 64
+        unicode: 
+      - type: hitbox
+        id: popup_save_confirm_hitbox
+        layer: 9608.0
+        opacity: 0
+        color: ff0000
+        align: left
+        position:
+          x: 659
+          y: 409
+        size:
+          width: 163
+          height: 41
+        unicode: 

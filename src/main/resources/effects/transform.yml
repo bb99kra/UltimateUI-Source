@@ -1,0 +1,11 @@
+id: transform
+name: Transform
+type: transform
+move-x: 0
+move-y: -6
+scale-x: 8%
+scale-y: 8%
+opacity-delta: 0
+rotation-deg: 0
+duration-ms: 250
+interpolation: ease-in-out
