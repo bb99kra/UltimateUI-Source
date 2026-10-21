@@ -10,7 +10,7 @@ import dev.xqedii.ultimateUI.Xqedii_3ana5qf;
 import dev.xqedii.ultimateUI.Xqedii_3cny9rh;
 import dev.xqedii.ultimateUI.Xqedii_3gdqlgv;
 import dev.xqedii.ultimateUI.Xqedii_3uxgwyg;
-import dev.xqedii.ultimateUI.Xqedii_qm8v5oz;
+import dev.xqedii.ultimateUI.ColorPickerCoords;
 import dev.xqedii.ultimateUI.gui.model.HoverElement;
 import dev.xqedii.ultimateUI.service.camera.CameraService;
 import dev.xqedii.ultimateUI.service.gui.model.EditorPropertyField;
@@ -3361,7 +3361,7 @@ public abstract class EditorSidebarShellPart extends EditorPreviewSidebarPart {
             var4 = Xqedii_2ze73vg.Xqedii_2lfqnb3fhydq("C+852nfKg74J9IxxMl6Vi+EbG1EnpZVNBgPAGWI4a4FtcTSQ4F7jvA==");
          }
 
-         Xqedii_qm8v5oz var5 = this.Xqedii_l6v4fuu.Xqedii_g5n84hy(var4);
+         ColorPickerCoords var5 = this.Xqedii_l6v4fuu.Xqedii_g5n84hy(var4);
          var2.colorPickerHueAbsY = var5.hueAbsY();
          var2.colorPickerGradAbsX = var5.gradAbsX();
          var2.colorPickerGradAbsY = var5.gradAbsY();

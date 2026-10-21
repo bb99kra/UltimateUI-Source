@@ -36,7 +36,7 @@ public abstract class CommandArguments extends UiCommandRegistry {
          String var3 = this.firstNonBlank(var10001).trim().toLowerCase(Locale.ROOT);
          if (!var3.equals("editor")
             && !var3.equals("editor_menu")) {
-            Xqedii_g4i3bi9 var4 = this.parseOpenCommandOptions(var1, var2);
+            UiOpenOptions var4 = this.parseOpenCommandOptions(var1, var2);
             if (var4 == null) {
                return true;
             } else {
@@ -98,7 +98,7 @@ public abstract class CommandArguments extends UiCommandRegistry {
       }
    }
 
-   public Xqedii_g4i3bi9 parseOpenCommandOptions(CommandSender var1, String[] var2) {
+   public UiOpenOptions parseOpenCommandOptions(CommandSender var1, String[] var2) {
       if (var1 != null && var2 != null && var2.length >= 2) {
          int var3 = 0;
          int var4 = 0;
@@ -164,7 +164,7 @@ public abstract class CommandArguments extends UiCommandRegistry {
             );
             return null;
          } else {
-            return new Xqedii_g4i3bi9(var5, (var3 != 0), (var4 != 0));
+            return new UiOpenOptions(var5, (var3 != 0), (var4 != 0));
          }
       } else {
          return null;
@@ -173,17 +173,17 @@ public abstract class CommandArguments extends UiCommandRegistry {
 
    public boolean handleUuiShadersCommand(CommandSender var1, String[] var2) {
       {
-         return this.handleUuiPlayerToggleCommand(var1, var2, Xqedii_16ud823.SHADERS);
+         return this.handleUuiPlayerToggleCommand(var1, var2, ClientFeatureToggle.SHADERS);
       }
    }
 
    public boolean handleUuiCursorCommand(CommandSender var1, String[] var2) {
       {
-         return this.handleUuiPlayerToggleCommand(var1, var2, Xqedii_16ud823.CURSOR);
+         return this.handleUuiPlayerToggleCommand(var1, var2, ClientFeatureToggle.CURSOR);
       }
    }
 
-   public boolean handleUuiPlayerToggleCommand(CommandSender var1, String[] var2, Xqedii_16ud823 var3) {
+   public boolean handleUuiPlayerToggleCommand(CommandSender var1, String[] var2, ClientFeatureToggle var3) {
       if (!this.hasCommandPermission(var1, var3.permission, Xqedii_ipklhefu2b6a(var3.label))) {
          return true;
       } else if (this.Xqedii_2k1vujp != null && this.Xqedii_1fwpabk != null && this.Xqedii_1tuq2ol != null) {
@@ -265,14 +265,14 @@ public abstract class CommandArguments extends UiCommandRegistry {
                      );
                   }
 
-                  if (var3 == Xqedii_16ud823.CURSOR) {
+                  if (var3 == ClientFeatureToggle.CURSOR) {
                      this.Xqedii_2k1vujp.setPlayerInstantCursorOverride(var5, var7);
                   } else {
                      this.Xqedii_2k1vujp.setPlayerFixShadersOverride(var5, var7);
                   }
 
                   if (this.Xqedii_2k1vujp.hasOpenSession(var5) && this.isPlayerToggleEffective(var5, var3) != var9) {
-                     Xqedii_3ul4hqj.Xqedii_1o0kice(
+                     ChatColorUtil.Xqedii_1o0kice(
                         var1,
                         "The change applies the next time a UI is opened!"
                      );
@@ -293,9 +293,9 @@ public abstract class CommandArguments extends UiCommandRegistry {
       }
    }
 
-   public boolean isPlayerToggleEffective(Player var1, Xqedii_16ud823 var2) {
+   public boolean isPlayerToggleEffective(Player var1, ClientFeatureToggle var2) {
       {
-         return var2 == Xqedii_16ud823.CURSOR ? this.Xqedii_2k1vujp.isInstantCursorEffective(var1) : this.Xqedii_2k1vujp.isFixShadersEffective(var1);
+         return var2 == ClientFeatureToggle.CURSOR ? this.Xqedii_2k1vujp.isInstantCursorEffective(var1) : this.Xqedii_2k1vujp.isFixShadersEffective(var1);
       }
    }
 
@@ -318,12 +318,12 @@ public abstract class CommandArguments extends UiCommandRegistry {
       }
    }
 
-   public void sendPlayerToggleState(CommandSender var1, Player var2, boolean var3, Xqedii_16ud823 var4) {
+   public void sendPlayerToggleState(CommandSender var1, Player var2, boolean var3, ClientFeatureToggle var4) {
       {
-         Boolean var5 = var4 == Xqedii_16ud823.CURSOR
+         Boolean var5 = var4 == ClientFeatureToggle.CURSOR
             ? this.Xqedii_2k1vujp.resolvePlayerInstantCursorOverride(var2)
             : this.Xqedii_2k1vujp.resolvePlayerFixShadersOverride(var2);
-         boolean var6 = var4 == Xqedii_16ud823.CURSOR
+         boolean var6 = var4 == ClientFeatureToggle.CURSOR
             ? this.Xqedii_2k1vujp.isInstantCursorEnabledGlobally()
             : this.Xqedii_2k1vujp.isFixShadersEnabledGlobally();
          boolean var7 = var5 != null ? var5 : var6;
@@ -335,13 +335,13 @@ public abstract class CommandArguments extends UiCommandRegistry {
             var11 = Xqedii_25x2bu1bkixb3(var4.displayName);
             Object[] var10001 = new Object[1];
             var10001[0] = var8;
-            var11 = Xqedii_3ul4hqj.Xqedii_2d5sc5r(var11, var10001);
+            var11 = ChatColorUtil.Xqedii_2d5sc5r(var11, var10001);
          } else {
             var11 = Xqedii_3gsqs72mya3v3(var4.displayName);
             Object[] var15 = new Object[2];
             var15[0] = var2.getName();
             var15[1] = var8;
-            var11 = Xqedii_3ul4hqj.Xqedii_2d5sc5r(var11, var15);
+            var11 = ChatColorUtil.Xqedii_2d5sc5r(var11, var15);
          }
 
          String var9 = var11;
@@ -351,9 +351,9 @@ public abstract class CommandArguments extends UiCommandRegistry {
             var16[0] = var6
                ? "on"
                : "off";
-            var11 = Xqedii_3ul4hqj.Xqedii_2d5sc5r(var11, var16);
+            var11 = ChatColorUtil.Xqedii_2d5sc5r(var11, var16);
          } else {
-            var11 = Xqedii_3ul4hqj.Xqedii_2d5sc5r(
+            var11 = ChatColorUtil.Xqedii_2d5sc5r(
                var3
                   ? "Set for you only"
                   : "Set for this player only"
@@ -361,7 +361,7 @@ public abstract class CommandArguments extends UiCommandRegistry {
          }
 
          String var10 = var11;
-         Xqedii_3ul4hqj.Xqedii_2g7xq9b(var1, var7, var9, List.of(var10));
+         ChatColorUtil.Xqedii_2g7xq9b(var1, var7, var9, List.of(var10));
       }
    }
 
@@ -470,7 +470,7 @@ public abstract class CommandArguments extends UiCommandRegistry {
          var10001[13] = Xqedii_1df0pdx.deserialize(
             "<white>\u1d05\u1d0f\u1d04\u1d1c\u1d0d\u1d07\u0274\u1d1b\u1d00\u1d1b\u026a\u1d0f\u0274 \u1d00\u1d1b <yellow><hover:show_text:'<green>Click here to open!'><click:open_url:'https://docs.xqedii.dev/'>https://docs.xqedii.dev/</click></hover><reset>"
          );
-         Xqedii_3ul4hqj.send(var1, List.of(var10001));
+         ChatColorUtil.send(var1, List.of(var10001));
 
          try {
             var1.playSound(

@@ -905,7 +905,7 @@ public final class Xqedii_2b3rrt2 {
                   var10002[0] = var3;
                   var10002[1] = var2.Xqedii_2ei61uy();
                   var10002[2] = var2.getMessage();
-                  Xqedii_3ul4hqj.Xqedii_2dtmver(var9, var10001, var10002);
+                  ChatColorUtil.Xqedii_2dtmver(var9, var10001, var10002);
                }
             }
          }
@@ -922,7 +922,7 @@ public final class Xqedii_2b3rrt2 {
                String var7 = "...and {0} more, see the console!";
                Object[] var9 = new Object[1];
                var9[0] = var2.errors().size() - 12;
-               var3.add(Xqedii_3ul4hqj.Xqedii_l0arb10(var7, var9));
+               var3.add(ChatColorUtil.Xqedii_l0arb10(var7, var9));
                break;
             }
 
@@ -931,13 +931,13 @@ public final class Xqedii_2b3rrt2 {
             var10002[0] = var6.file();
             var10002[1] = var6.error().Xqedii_2ei61uy();
             var10002[2] = var6.error().getMessage();
-            var3.add(Xqedii_3ul4hqj.Xqedii_l0arb10(var10001, var10002));
+            var3.add(ChatColorUtil.Xqedii_l0arb10(var10001, var10002));
          }
 
          String var8 = "Your scripts have {0} errors!";
          Object[] var10 = new Object[1];
          var10[0] = var2.errors().size();
-         Xqedii_3ul4hqj.Xqedii_wmipi15(var1, Xqedii_3ul4hqj.Xqedii_l0arb10(var8, var10), var3);
+         ChatColorUtil.Xqedii_wmipi15(var1, ChatColorUtil.Xqedii_l0arb10(var8, var10), var3);
       }
    }
 

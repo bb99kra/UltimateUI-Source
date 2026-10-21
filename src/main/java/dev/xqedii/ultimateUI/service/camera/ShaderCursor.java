@@ -4,7 +4,7 @@ import dev.xqedii.ultimateUI.UltimateUI;
 import dev.xqedii.ultimateUI.Xqedii_2fwne6w;
 import dev.xqedii.ultimateUI.Xqedii_2hd31nw;
 import dev.xqedii.ultimateUI.Xqedii_38o2zes;
-import dev.xqedii.ultimateUI.Xqedii_6rbb9nu;
+import dev.xqedii.ultimateUI.ClockNetworkSnapshot;
 import dev.xqedii.ultimateUI.Xqedii_7q5l4nt;
 import dev.xqedii.ultimateUI.Xqedii_zg8ict9;
 import dev.xqedii.ultimateUI.service.hud.HudService;
@@ -408,7 +408,7 @@ public abstract class ShaderCursor extends CameraSoundMask {
 
                for (Entry var14 : (Iterable<Entry>) (var10.entrySet())) {
 
-                  var9.put((WorldClock)var14.getKey(), Xqedii_10yqyjp((Xqedii_6rbb9nu)var14.getValue(), var16));
+                  var9.put((WorldClock)var14.getKey(), Xqedii_10yqyjp((ClockNetworkSnapshot)var14.getValue(), var16));
                }
             } else {
                WorldClock var11 = Xqedii_1d6ww9x(var4);
@@ -431,7 +431,7 @@ public abstract class ShaderCursor extends CameraSoundMask {
       }
    }
 
-   public static ClockNetworkState Xqedii_10yqyjp(Xqedii_6rbb9nu var0, long var1) {
+   public static ClockNetworkState Xqedii_10yqyjp(ClockNetworkSnapshot var0, long var1) {
       if ((276720098 * 276720098 - 276720098 & 1) != 0) {
          throw new IllegalStateException();
       } else {
@@ -482,7 +482,7 @@ public abstract class ShaderCursor extends CameraSoundMask {
                for (Entry var6 : (Iterable<Entry>) (var3.entrySet())) {
 
                   if (var6.getKey() != null && var6.getValue() != null) {
-                     var4.put((WorldClock)var6.getKey(), new Xqedii_6rbb9nu((ClockNetworkState)var6.getValue(), var2.getWorldAge()));
+                     var4.put((WorldClock)var6.getKey(), new ClockNetworkSnapshot((ClockNetworkState)var6.getValue(), var2.getWorldAge()));
                   }
                }
             }

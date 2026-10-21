@@ -2,7 +2,7 @@ package dev.xqedii.ultimateUI.service.gui.editor;
 
 import dev.xqedii.ultimateUI.UltimateUI;
 import dev.xqedii.ultimateUI.Xqedii_10gtlsk;
-import dev.xqedii.ultimateUI.Xqedii_2r2mv4l;
+import dev.xqedii.ultimateUI.UiRefreshConfig;
 import dev.xqedii.ultimateUI.Xqedii_30g0ulj;
 import dev.xqedii.ultimateUI.Xqedii_38o2zes;
 import dev.xqedii.ultimateUI.Xqedii_3uxgwyg;
@@ -5822,9 +5822,9 @@ public abstract class EditorPagePreferencesPart extends EditorPopupPagePart {
 
                   EditorSession var67 = var19;
                   if (var67 != null) {
-                     Xqedii_2r2mv4l var68 = this.isInternalEditorPageName(var14)
-                        ? Xqedii_2r2mv4l.editor(this.isShadersEditorEnabled())
-                        : Xqedii_2r2mv4l.read(var13);
+                     UiRefreshConfig var68 = this.isInternalEditorPageName(var14)
+                        ? UiRefreshConfig.editor(this.isShadersEditorEnabled())
+                        : UiRefreshConfig.read(var13);
                      if (var67.hudTextOnlyMode && var68.enabled()) {
                         int var69 = this.hudService.isBossbarSession(var1)
                            ? Xqedii_30g0ulj.Xqedii_3bciqcb(this.hudService.bossbarUpdateTicks(var1), var68.updateTicks())
@@ -6158,9 +6158,9 @@ public abstract class EditorPagePreferencesPart extends EditorPopupPagePart {
                         var72 = Math.max(var49, var52);
                      }
 
-                     Xqedii_2r2mv4l var73 = !var3 && !this.isInternalEditorPageName(var14)
-                        ? Xqedii_2r2mv4l.read(var66)
-                        : Xqedii_2r2mv4l.editor(this.isShadersEditorEnabled());
+                     UiRefreshConfig var73 = !var3 && !this.isInternalEditorPageName(var14)
+                        ? UiRefreshConfig.read(var66)
+                        : UiRefreshConfig.editor(this.isShadersEditorEnabled());
                      int var57 = !var5
                            && var4
                            && !var7

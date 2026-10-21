@@ -8,7 +8,7 @@ public final class Xqedii_irwktj3 {
    public File Xqedii_3ukehvr;
    public String Xqedii_122m5nm;
    public boolean Xqedii_1kh6x7z;
-   public Xqedii_13x6286 Xqedii_2gkid3z;
+   public HudFollowMode Xqedii_2gkid3z;
    public int Xqedii_1svt1aq;
    public boolean Xqedii_1fdepr5;
    public boolean Xqedii_1xd0aa1;
@@ -27,5 +27,5 @@ public final class Xqedii_irwktj3 {
    public double Xqedii_1b6pbfy;
    public int Xqedii_m4m2ywj;
    public boolean Xqedii_2tf5gsk;
-   public volatile Xqedii_tmp4qaj Xqedii_2q8vz77;
+   public volatile ParsedGuiLayout Xqedii_2q8vz77;
 }

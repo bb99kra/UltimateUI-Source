@@ -44,7 +44,7 @@ public abstract class CommandFeedback extends UiImageLookup {
    public void sendUuiCommandError(CommandSender var1, String var2, Object... var3) {
       if (var1 != null) {
          String var4 = var2 == null ? "" : var2.trim();
-         Xqedii_3ul4hqj.Xqedii_2dtmver(
+         ChatColorUtil.Xqedii_2dtmver(
             var1,
             var4.isEmpty()
                ? "Something went wrong!"
@@ -56,7 +56,7 @@ public abstract class CommandFeedback extends UiImageLookup {
 
    public void sendUuiUsage(CommandSender var1, String var2, String var3) {
       {
-         Xqedii_3ul4hqj.Xqedii_2olsc6h(var1, var2, var3);
+         ChatColorUtil.Xqedii_2olsc6h(var1, var2, var3);
       }
    }
 

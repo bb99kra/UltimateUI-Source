@@ -4,7 +4,7 @@ import dev.xqedii.ultimateUI.service.gui.model.EditorSession;
 
 public final class Xqedii_25i7cuk {
 
-   public Xqedii_qm8v5oz Xqedii_g5n84hy(String var1) {
+   public ColorPickerCoords Xqedii_g5n84hy(String var1) {
       {
          String var2 = Xqedii_170zfgx.Xqedii_4ea1q5n(var1);
          if (var2.length() != 6) {
@@ -26,7 +26,7 @@ public final class Xqedii_25i7cuk {
          double var14 = Double.longBitsToDouble(4648937472376438784L)
             + (Double.longBitsToDouble(4607182418800017408L) - var8)
                * Double.longBitsToDouble(4643211215818981376L);
-         return new Xqedii_qm8v5oz(
+         return new ColorPickerCoords(
             var12 - Double.longBitsToDouble(-4600427019358961664L),
             var14 - Double.longBitsToDouble(4613937818241073152L),
             var10 - Double.longBitsToDouble(-4607182418800017408L)

@@ -338,11 +338,11 @@ public abstract class PluginBootstrap extends PluginState {
          String var10002 = "Enter a valid license in the {0} file";
          Object[] var10003 = new Object[1];
          var10003[0] = "config.yml";
-         Xqedii_3ul4hqj.Xqedii_wmipi15(
+         ChatColorUtil.Xqedii_wmipi15(
             var1,
             var10001,
             List.of(
-               Xqedii_3ul4hqj.Xqedii_l0arb10(var10002, var10003),
+               ChatColorUtil.Xqedii_l0arb10(var10002, var10003),
                "Need help? <hover:show_text:'<#ff7a7a>Click to open!'><click:open_url:'https://xqedii.dev/dc'><#ffb0b0>xqedii.dev/dc</click></hover>"
             )
          );

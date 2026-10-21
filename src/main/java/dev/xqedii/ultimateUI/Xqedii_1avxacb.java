@@ -13,7 +13,7 @@ public final class Xqedii_1avxacb {
    public final ScrollViewState Xqedii_2q32dop = new ScrollViewState();
    public final Map<String, double[]> Xqedii_h8t9zqa = new LinkedHashMap<>();
    public final Map<String, double[]> Xqedii_1c9ttj8 = new LinkedHashMap<>();
-   public final Map<String, Xqedii_1d1gx4g> Xqedii_h3mynbh = new ConcurrentHashMap<>();
+   public final Map<String, AnvilInputState> Xqedii_h3mynbh = new ConcurrentHashMap<>();
    public List<Map<String, Object>> Xqedii_17c3k63 = Collections.emptyList();
    public boolean Xqedii_r93bzs3;
 

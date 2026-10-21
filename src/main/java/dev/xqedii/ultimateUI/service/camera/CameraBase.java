@@ -3,7 +3,7 @@ package dev.xqedii.ultimateUI.service.camera;
 import dev.xqedii.ultimateUI.UltimateUI;
 import dev.xqedii.ultimateUI.Xqedii_16tq8zh;
 import dev.xqedii.ultimateUI.Xqedii_2hd31nw;
-import dev.xqedii.ultimateUI.Xqedii_6rbb9nu;
+import dev.xqedii.ultimateUI.ClockNetworkSnapshot;
 import dev.xqedii.ultimateUI.service.hud.HudService;
 import dev.xqedii.ultimateUI.service.npc.CursorNpcService;
 import dev.xqedii.ultimateui.libs.packetevents.packetevents.event.PacketListenerCommon;
@@ -97,7 +97,7 @@ public abstract class CameraBase {
    public final Map<UUID, Integer> Xqedii_3hs42n4 = new ConcurrentHashMap<>();
    public final Map<UUID, Integer> Xqedii_375khsg = new ConcurrentHashMap<>();
    public final Map<UUID, Runnable> Xqedii_34owqls = new HashMap<>();
-   public final Map<UUID, Map<WorldClock, Xqedii_6rbb9nu>> Xqedii_ly8judj = new ConcurrentHashMap<>();
+   public final Map<UUID, Map<WorldClock, ClockNetworkSnapshot>> Xqedii_ly8judj = new ConcurrentHashMap<>();
    public final Map<UUID, Boolean> Xqedii_3eelrw1 = new ConcurrentHashMap<>();
    public static final BlockData Xqedii_25bfamp;
    public static final BlockData Xqedii_b6eiiwd;

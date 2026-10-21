@@ -11,7 +11,7 @@ public final class Xqedii_3l1ke2c {
    public static final String[] Xqedii_1s4c06s;
    public static final String Xqedii_1piucqt = "+-*/%<>=!()[]{},.:?";
    public final String Xqedii_3exi2tx;
-   public final List<Xqedii_25ri1e7> Xqedii_34wrjqr = new ArrayList<>();
+   public final List<LexerToken> Xqedii_34wrjqr = new ArrayList<>();
    public final Deque<Integer> Xqedii_qge9b71 = new ArrayDeque<>();
    public int Xqedii_1khowns;
    public int Xqedii_2453gam = 1;
@@ -29,7 +29,7 @@ public final class Xqedii_3l1ke2c {
       this.Xqedii_qge9b71.push(0);
    }
 
-   public List<Xqedii_25ri1e7> Xqedii_1lbczed() {
+   public List<LexerToken> Xqedii_1lbczed() {
       {
          int var1 = 1;
 
@@ -80,8 +80,8 @@ public final class Xqedii_3l1ke2c {
                this.Xqedii_qge9b71.pop();
                this.Xqedii_34wrjqr
                   .add(
-                     new Xqedii_25ri1e7(
-                        Xqedii_1p9lu7f.DEDENT,
+                     new LexerToken(
+                        LexerTokenType.DEDENT,
                         "",
                         this.Xqedii_2453gam,
                         1
@@ -91,8 +91,8 @@ public final class Xqedii_3l1ke2c {
 
             this.Xqedii_34wrjqr
                .add(
-                  new Xqedii_25ri1e7(
-                     Xqedii_1p9lu7f.EOF,
+                  new LexerToken(
+                     LexerTokenType.EOF,
                      "",
                      this.Xqedii_2453gam,
                      1
@@ -134,8 +134,8 @@ public final class Xqedii_3l1ke2c {
                   this.Xqedii_qge9b71.push(var1);
                   this.Xqedii_34wrjqr
                      .add(
-                        new Xqedii_25ri1e7(
-                           Xqedii_1p9lu7f.INDENT,
+                        new LexerToken(
+                           LexerTokenType.INDENT,
                            "",
                            this.Xqedii_2453gam,
                            1
@@ -146,8 +146,8 @@ public final class Xqedii_3l1ke2c {
                      this.Xqedii_qge9b71.pop();
                      this.Xqedii_34wrjqr
                         .add(
-                           new Xqedii_25ri1e7(
-                              Xqedii_1p9lu7f.DEDENT,
+                           new LexerToken(
+                              LexerTokenType.DEDENT,
                               "",
                               this.Xqedii_2453gam,
                               1
@@ -185,12 +185,12 @@ public final class Xqedii_3l1ke2c {
    public void Xqedii_2m0u96g() {
       {
          if (!this.Xqedii_34wrjqr.isEmpty()) {
-            Xqedii_25ri1e7 var1 = this.Xqedii_34wrjqr.get(this.Xqedii_34wrjqr.size() - 1);
-            if (var1.type() != Xqedii_1p9lu7f.NEWLINE && var1.type() != Xqedii_1p9lu7f.INDENT && var1.type() != Xqedii_1p9lu7f.DEDENT) {
+            LexerToken var1 = this.Xqedii_34wrjqr.get(this.Xqedii_34wrjqr.size() - 1);
+            if (var1.type() != LexerTokenType.NEWLINE && var1.type() != LexerTokenType.INDENT && var1.type() != LexerTokenType.DEDENT) {
                this.Xqedii_34wrjqr
                   .add(
-                     new Xqedii_25ri1e7(
-                        Xqedii_1p9lu7f.NEWLINE,
+                     new LexerToken(
+                        LexerTokenType.NEWLINE,
                         "",
                         this.Xqedii_2453gam,
                         this.Xqedii_27fe156()
@@ -234,7 +234,7 @@ public final class Xqedii_3l1ke2c {
             this.Xqedii_1khowns = this.Xqedii_1khowns + 1;
             char var5 = var10000.charAt(var10001);
             if (var5 == var1) {
-               this.Xqedii_34wrjqr.add(new Xqedii_25ri1e7(Xqedii_1p9lu7f.STRING, var4.toString(), var2, var3));
+               this.Xqedii_34wrjqr.add(new LexerToken(LexerTokenType.STRING, var4.toString(), var2, var3));
                return;
             }
 
@@ -295,8 +295,8 @@ public final class Xqedii_3l1ke2c {
 
          this.Xqedii_34wrjqr
             .add(
-               new Xqedii_25ri1e7(
-                  Xqedii_1p9lu7f.NUMBER,
+               new LexerToken(
+                  LexerTokenType.NUMBER,
                   this.Xqedii_3exi2tx
                      .substring(var1, this.Xqedii_1khowns)
                      .replace(
@@ -325,7 +325,7 @@ public final class Xqedii_3l1ke2c {
             this.Xqedii_1khowns = this.Xqedii_1khowns + 1;
          }
 
-         this.Xqedii_34wrjqr.add(new Xqedii_25ri1e7(Xqedii_1p9lu7f.NAME, this.Xqedii_3exi2tx.substring(var1, this.Xqedii_1khowns), this.Xqedii_2453gam, var2));
+         this.Xqedii_34wrjqr.add(new LexerToken(LexerTokenType.NAME, this.Xqedii_3exi2tx.substring(var1, this.Xqedii_1khowns), this.Xqedii_2453gam, var2));
       }
    }
 
@@ -341,7 +341,7 @@ public final class Xqedii_3l1ke2c {
                String var7 = var4[var6];
                if (var7.equals(var3)) {
                   this.Xqedii_1khowns = this.Xqedii_1khowns + 2;
-                  this.Xqedii_34wrjqr.add(new Xqedii_25ri1e7(Xqedii_1p9lu7f.SYMBOL, var7, this.Xqedii_2453gam, var2));
+                  this.Xqedii_34wrjqr.add(new LexerToken(LexerTokenType.SYMBOL, var7, this.Xqedii_2453gam, var2));
                   return;
                }
             }
@@ -358,7 +358,7 @@ public final class Xqedii_3l1ke2c {
             }
 
             this.Xqedii_1khowns = this.Xqedii_1khowns + 1;
-            this.Xqedii_34wrjqr.add(new Xqedii_25ri1e7(Xqedii_1p9lu7f.SYMBOL, String.valueOf(var1), this.Xqedii_2453gam, var2));
+            this.Xqedii_34wrjqr.add(new LexerToken(LexerTokenType.SYMBOL, String.valueOf(var1), this.Xqedii_2453gam, var2));
          }
       }
    }

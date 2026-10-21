@@ -231,7 +231,7 @@ public abstract class WorldUiCommands extends CommandArguments {
                String var7 = "Reloaded {0} world UIs!";
                Object[] var8 = new Object[1];
                var8[0] = var6;
-               Xqedii_3ul4hqj.Xqedii_2pfjv2g(var1, var7, var8);
+               ChatColorUtil.Xqedii_2pfjv2g(var1, var7, var8);
                break;
             default:
                String var10002 = "Unknown option {0}! Use {1} to see all options.";
@@ -297,7 +297,7 @@ public abstract class WorldUiCommands extends CommandArguments {
          var10001[16] = Xqedii_1df0pdx.deserialize(
             "<white>\u1d05\u1d0f\u1d04\u1d1c\u1d0d\u1d07\u0274\u1d1b\u1d00\u1d1b\u026a\u1d0f\u0274 \u1d00\u1d1b <yellow><hover:show_text:'<green>Click here to open!'><click:open_url:'https://docs.xqedii.dev/'>https://docs.xqedii.dev/</click></hover><reset>"
          );
-         Xqedii_3ul4hqj.send(var1, List.of(var10001));
+         ChatColorUtil.send(var1, List.of(var10001));
       }
    }
 
@@ -308,19 +308,19 @@ public abstract class WorldUiCommands extends CommandArguments {
             String var10001 = "No UIs are placed in the world yet! Use {0} to place one.";
             Object[] var10002 = new Object[1];
             var10002[0] = "/uui world place [page]";
-            Xqedii_3ul4hqj.Xqedii_2dtmver(var1, var10001, var10002);
+            ChatColorUtil.Xqedii_2dtmver(var1, var10001, var10002);
          } else {
             ArrayList var3 = new ArrayList();
 
             for (WorldUiPart.WorldUiInfo var5 : (Iterable<WorldUiPart.WorldUiInfo>) (var2)) {
 
                String var6 = "static".equals(var5.mode())
-                  ? Xqedii_3ul4hqj.Xqedii_1u4gly2(var5.location())
+                  ? ChatColorUtil.Xqedii_1u4gly2(var5.location())
                   : "follows players";
                var3.add(
                   Xqedii_38nv8jyc47ufz(
-                     Xqedii_3ul4hqj.Xqedii_1u4gly2(var5.name()),
-                     Xqedii_3ul4hqj.Xqedii_1u4gly2(var5.page()),
+                     ChatColorUtil.Xqedii_1u4gly2(var5.name()),
+                     ChatColorUtil.Xqedii_1u4gly2(var5.page()),
                      var5.enabled()
                         ? "shown"
                         : "hidden",
@@ -331,13 +331,13 @@ public abstract class WorldUiCommands extends CommandArguments {
                               : "interactive shared"
                         )
                         : "display only",
-                     Xqedii_3ul4hqj.Xqedii_1u4gly2(var5.lookAt()),
+                     ChatColorUtil.Xqedii_1u4gly2(var5.lookAt()),
                      var6
                   )
                );
             }
 
-            Xqedii_3ul4hqj.Xqedii_3crurrx(var1, "World UIs", var3);
+            ChatColorUtil.Xqedii_3crurrx(var1, "World UIs", var3);
          }
       }
    }
@@ -403,16 +403,16 @@ public abstract class WorldUiCommands extends CommandArguments {
                String var11 = "Placed {0} in the world!";
                Object[] var16 = new Object[1];
                var16[0] = var6;
-               var11 = Xqedii_3ul4hqj.Xqedii_2d5sc5r(var11, var16);
+               var11 = ChatColorUtil.Xqedii_2d5sc5r(var11, var16);
                String var17 = "Saved as ID {0}";
                Object[] var10004 = new Object[1];
                var10004[0] = var8;
-               Xqedii_3ul4hqj.Xqedii_2g7xq9b(
+               ChatColorUtil.Xqedii_2g7xq9b(
                   var1,
                   (var9 != 0),
                   var11,
                   List.of(
-                     Xqedii_3ul4hqj.Xqedii_2d5sc5r(var17, var10004),
+                     ChatColorUtil.Xqedii_2d5sc5r(var17, var10004),
                      "Adjust it with <#d1ff96>/uui world help"
                   )
                );
@@ -443,7 +443,7 @@ public abstract class WorldUiCommands extends CommandArguments {
                String var10001 = "World UI {0} has been removed!";
                Object[] var10002 = new Object[1];
                var10002[0] = var3;
-               Xqedii_3ul4hqj.Xqedii_3458djb(var1, var10001, var10002);
+               ChatColorUtil.Xqedii_3458djb(var1, var10001, var10002);
             }
          }
       }
@@ -466,7 +466,7 @@ public abstract class WorldUiCommands extends CommandArguments {
                String var10001 = "World UI {0} has been moved in front of you!";
                Object[] var5 = new Object[1];
                var5[0] = var4;
-               Xqedii_3ul4hqj.Xqedii_2pfjv2g(var1, var10001, var5);
+               ChatColorUtil.Xqedii_2pfjv2g(var1, var10001, var5);
             }
          }
       } else {
@@ -524,7 +524,7 @@ public abstract class WorldUiCommands extends CommandArguments {
                      var10002[1] = Xqedii_101gcmngr2rmr(
                         Xqedii_v420beu(var12), Xqedii_v420beu(var8), Xqedii_v420beu(var10)
                      );
-                     Xqedii_3ul4hqj.Xqedii_2pfjv2g(var1, var10001, var10002);
+                     ChatColorUtil.Xqedii_2pfjv2g(var1, var10001, var10002);
                   }
                }
             }
@@ -566,17 +566,17 @@ public abstract class WorldUiCommands extends CommandArguments {
                      Object[] var10002 = new Object[2];
                      var10002[0] = var3;
                      var10002[1] = Xqedii_v420beu(var8);
-                     Xqedii_3ul4hqj.Xqedii_2pfjv2g(var1, var10001, var10002);
+                     ChatColorUtil.Xqedii_2pfjv2g(var1, var10001, var10002);
                   } else {
                      int var10 = 1;
                      String var11 = "World UI {0} now faces yaw {1}!";
                      Object[] var10003 = new Object[2];
                      var10003[0] = var3;
                      var10003[1] = Xqedii_v420beu(var8);
-                     Xqedii_3ul4hqj.Xqedii_2g7xq9b(
+                     ChatColorUtil.Xqedii_2g7xq9b(
                         var1,
                         (var10 != 0),
-                        Xqedii_3ul4hqj.Xqedii_2d5sc5r(var11, var10003),
+                        ChatColorUtil.Xqedii_2d5sc5r(var11, var10003),
                         List.of(
                            "Look-at is on, so it still turns to the player"
                         )
@@ -633,17 +633,17 @@ public abstract class WorldUiCommands extends CommandArguments {
                   String var7 = "World UI {0} now turns to face the player!";
                   Object[] var10 = new Object[1];
                   var10[0] = var3;
-                  Xqedii_3ul4hqj.Xqedii_2pfjv2g(var1, var7, var10);
+                  ChatColorUtil.Xqedii_2pfjv2g(var1, var7, var10);
                } else if (var5 == 1) {
                   String var8 = "World UI {0} now turns left and right to the player!";
                   Object[] var11 = new Object[1];
                   var11[0] = var3;
-                  Xqedii_3ul4hqj.Xqedii_2pfjv2g(var1, var8, var11);
+                  ChatColorUtil.Xqedii_2pfjv2g(var1, var8, var11);
                } else {
                   String var9 = "World UI {0} no longer turns to the player!";
                   Object[] var12 = new Object[1];
                   var12[0] = var3;
-                  Xqedii_3ul4hqj.Xqedii_3458djb(var1, var9, var12);
+                  ChatColorUtil.Xqedii_3458djb(var1, var9, var12);
                }
             }
          }
@@ -689,10 +689,10 @@ public abstract class WorldUiCommands extends CommandArguments {
                      String var10002 = "World UI {0} is now interactive!";
                      Object[] var10003 = new Object[1];
                      var10003[0] = var3;
-                     Xqedii_3ul4hqj.Xqedii_2g7xq9b(
+                     ChatColorUtil.Xqedii_2g7xq9b(
                         var1,
                         (var10001 != 0),
-                        Xqedii_3ul4hqj.Xqedii_2d5sc5r(var10002, var10003),
+                        ChatColorUtil.Xqedii_2d5sc5r(var10002, var10003),
                         List.of(
                            "Look at it and hit to click, use the hotbar wheel to scroll"
                         )
@@ -701,7 +701,7 @@ public abstract class WorldUiCommands extends CommandArguments {
                      String var6 = "World UI {0} is no longer interactive!";
                      Object[] var7 = new Object[1];
                      var7[0] = var3;
-                     Xqedii_3ul4hqj.Xqedii_3458djb(var1, var6, var7);
+                     ChatColorUtil.Xqedii_3458djb(var1, var6, var7);
                   }
                }
             }
@@ -748,10 +748,10 @@ public abstract class WorldUiCommands extends CommandArguments {
                      String var10002 = "World UI {0} is now per player!";
                      Object[] var10003 = new Object[1];
                      var10003[0] = var3;
-                     Xqedii_3ul4hqj.Xqedii_2g7xq9b(
+                     ChatColorUtil.Xqedii_2g7xq9b(
                         var1,
                         (var10001 != 0),
-                        Xqedii_3ul4hqj.Xqedii_2d5sc5r(var10002, var10003),
+                        ChatColorUtil.Xqedii_2d5sc5r(var10002, var10003),
                         List.of(
                            "Every player scrolls and types in their own copy"
                         )
@@ -761,10 +761,10 @@ public abstract class WorldUiCommands extends CommandArguments {
                      String var7 = "World UI {0} is now shared!";
                      Object[] var10 = new Object[1];
                      var10[0] = var3;
-                     Xqedii_3ul4hqj.Xqedii_2g7xq9b(
+                     ChatColorUtil.Xqedii_2g7xq9b(
                         var1,
                         (var6 != 0),
-                        Xqedii_3ul4hqj.Xqedii_2d5sc5r(var7, var10),
+                        ChatColorUtil.Xqedii_2d5sc5r(var7, var10),
                         List.of(
                            "Scrolling or typing in it changes it for everyone"
                         )
@@ -886,7 +886,7 @@ public abstract class WorldUiCommands extends CommandArguments {
                   Object[] var10002 = new Object[2];
                   var10002[0] = var3;
                   var10002[1] = Xqedii_v420beu(var4);
-                  Xqedii_3ul4hqj.Xqedii_2pfjv2g(var1, var10001, var10002);
+                  ChatColorUtil.Xqedii_2pfjv2g(var1, var10001, var10002);
                }
             }
          }
@@ -937,7 +937,7 @@ public abstract class WorldUiCommands extends CommandArguments {
                      : "World UI {0} now stands in one place!";
                   Object[] var10002 = new Object[1];
                   var10002[0] = var3;
-                  Xqedii_3ul4hqj.Xqedii_2pfjv2g(var1, var6, var10002);
+                  ChatColorUtil.Xqedii_2pfjv2g(var1, var6, var10002);
                }
             }
          }
@@ -972,12 +972,12 @@ public abstract class WorldUiCommands extends CommandArguments {
                      String var10001 = "World UI {0} is now shown!";
                      Object[] var10002 = new Object[1];
                      var10002[0] = var4;
-                     Xqedii_3ul4hqj.Xqedii_2pfjv2g(var1, var10001, var10002);
+                     ChatColorUtil.Xqedii_2pfjv2g(var1, var10001, var10002);
                   } else {
                      String var8 = "World UI {0} is now hidden!";
                      Object[] var9 = new Object[1];
                      var9[0] = var4;
-                     Xqedii_3ul4hqj.Xqedii_3458djb(var1, var8, var9);
+                     ChatColorUtil.Xqedii_3458djb(var1, var8, var9);
                   }
                }
             }

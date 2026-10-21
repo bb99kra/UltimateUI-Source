@@ -11,7 +11,7 @@ public final class Xqedii_2f78jo3 {
    public final Map<String, Xqedii_3j2w0l1> Xqedii_2f37hi3 = new LinkedHashMap<>();
    public final Map<Integer, Xqedii_2pbx7s8> Xqedii_at2aqft = new LinkedHashMap<>();
    public final Xqedii_1avxacb Xqedii_186erki;
-   public List<Xqedii_3f5tr86> Xqedii_2aq4qhk = Collections.emptyList();
+   public List<ElementBounds> Xqedii_2aq4qhk = Collections.emptyList();
    public float Xqedii_306vaa6;
    public String Xqedii_2xzilb5;
    public int Xqedii_3cc6ajn;

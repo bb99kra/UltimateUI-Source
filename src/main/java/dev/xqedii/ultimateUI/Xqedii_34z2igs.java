@@ -8,11 +8,11 @@ import net.kyori.adventure.bossbar.BossBar.Flag;
 import net.kyori.adventure.bossbar.BossBar.Overlay;
 import net.kyori.adventure.text.Component;
 
-public record Xqedii_34z2igs(UUID barId, Xqedii_fwiw7cd action, Component title, float health, Color color, Overlay overlay, EnumSet<Flag> flags) {
+public record Xqedii_34z2igs(UUID barId, BossbarAction action, Component title, float health, Color color, Overlay overlay, EnumSet<Flag> flags) {
 
    @Override
 
-   public Xqedii_fwiw7cd action() {
+   public BossbarAction action() {
       {
          return this.action;
       }

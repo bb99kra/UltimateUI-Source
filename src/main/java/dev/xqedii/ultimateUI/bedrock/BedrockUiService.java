@@ -4,7 +4,7 @@ import dev.xqedii.ultimateUI.UltimateUI;
 import dev.xqedii.ultimateUI.Xqedii_1cydrw2;
 import dev.xqedii.ultimateUI.Xqedii_1lbievo;
 import dev.xqedii.ultimateUI.Xqedii_1nc5hgr;
-import dev.xqedii.ultimateUI.Xqedii_1rr9pk9;
+import dev.xqedii.ultimateUI.BedrockPackExportResult;
 import dev.xqedii.ultimateUI.Xqedii_1tuv3qh;
 import dev.xqedii.ultimateUI.Xqedii_23ssj1h;
 import dev.xqedii.ultimateUI.Xqedii_2hdrgs5;
@@ -1563,7 +1563,7 @@ public final class BedrockUiService {
                   null
                );
             } else {
-               Xqedii_1rr9pk9 var3 = this.Xqedii_pl0jemr().Xqedii_29hipmc(var2, var1);
+               BedrockPackExportResult var3 = this.Xqedii_pl0jemr().Xqedii_29hipmc(var2, var1);
                LinkedHashMap var4 = new LinkedHashMap();
 
                for (Xqedii_2kb1ns6 var6 : (Iterable<Xqedii_2kb1ns6>) (var2)) {

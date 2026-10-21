@@ -20,7 +20,7 @@ public class Xqedii_16dvil3 extends PacketListenerAbstract {
       if (var1 != null && var1.getPacketType() == Client.INTERACT_ENTITY) {
          if (var1.getPlayer() instanceof Player var2) {
             WrapperPlayClientInteractEntity var5 = new WrapperPlayClientInteractEntity(var1);
-            Xqedii_u0dqcud var4 = (Xqedii_u0dqcud)this.Xqedii_1ac9x13.Xqedii_28h4g3k.get(var5.getEntityId());
+            WorldUiViewerEntity var4 = (WorldUiViewerEntity)this.Xqedii_1ac9x13.Xqedii_28h4g3k.get(var5.getEntityId());
             if (var4 != null && var4.viewerId().equals(var2.getUniqueId())) {
                var1.setCancelled(true);
                Xqedii_38o2zes.Xqedii_1avvt9e(WorldUiPart.Xqedii_lvvjxhd(this.Xqedii_1ac9x13), var2, () -> {

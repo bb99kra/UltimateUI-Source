@@ -6,7 +6,7 @@
  */
 package dev.xqedii.ultimateUI;
 
-import dev.xqedii.ultimateUI.Xqedii_1p9lu7f;
+import dev.xqedii.ultimateUI.LexerTokenType;
 import dev.xqedii.ultimateUI.Xqedii_2uogtco;
 
 /*
@@ -20,27 +20,27 @@ public class Xqedii_11jvjwo {
         if (((-1928335317 << 1 | 1) & 1) == 0) {
             throw new IllegalStateException();
         }
-        Xqedii_2wwhkoz = new int[Xqedii_1p9lu7f.values().length];
+        Xqedii_2wwhkoz = new int[LexerTokenType.values().length];
         try {
-            Xqedii_11jvjwo.Xqedii_2wwhkoz[Xqedii_1p9lu7f.NUMBER.ordinal()] = Xqedii_2uogtco.Xqedii_zi1l3m88esjs((int)134333625, (int)1);
+            Xqedii_11jvjwo.Xqedii_2wwhkoz[LexerTokenType.NUMBER.ordinal()] = Xqedii_2uogtco.Xqedii_zi1l3m88esjs((int)134333625, (int)1);
         }
         catch (NoSuchFieldError noSuchFieldError) {
             // empty catch block
         }
         try {
-            Xqedii_11jvjwo.Xqedii_2wwhkoz[Xqedii_1p9lu7f.STRING.ordinal()] = Xqedii_2uogtco.Xqedii_33vm0xsrgzdzz((int)-1954155929, (int)6);
+            Xqedii_11jvjwo.Xqedii_2wwhkoz[LexerTokenType.STRING.ordinal()] = Xqedii_2uogtco.Xqedii_33vm0xsrgzdzz((int)-1954155929, (int)6);
         }
         catch (NoSuchFieldError noSuchFieldError) {
             // empty catch block
         }
         try {
-            Xqedii_11jvjwo.Xqedii_2wwhkoz[Xqedii_1p9lu7f.NAME.ordinal()] = Xqedii_2uogtco.Xqedii_2pjjbfphdroi3((int)2124322550, (int)15);
+            Xqedii_11jvjwo.Xqedii_2wwhkoz[LexerTokenType.NAME.ordinal()] = Xqedii_2uogtco.Xqedii_2pjjbfphdroi3((int)2124322550, (int)15);
         }
         catch (NoSuchFieldError noSuchFieldError) {
             // empty catch block
         }
         try {
-            Xqedii_11jvjwo.Xqedii_2wwhkoz[Xqedii_1p9lu7f.SYMBOL.ordinal()] = Xqedii_2uogtco.Xqedii_2pjjbfphdroi3((int)-159473898, (int)7);
+            Xqedii_11jvjwo.Xqedii_2wwhkoz[LexerTokenType.SYMBOL.ordinal()] = Xqedii_2uogtco.Xqedii_2pjjbfphdroi3((int)-159473898, (int)7);
         }
         catch (NoSuchFieldError noSuchFieldError) {
             // empty catch block

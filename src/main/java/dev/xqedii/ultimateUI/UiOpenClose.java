@@ -55,7 +55,7 @@ public abstract class UiOpenClose extends CommandFeedback {
 
          switch (var5) {
             case 0:
-               Xqedii_3ul4hqj.Xqedii_3m0zjou(
+               ChatColorUtil.Xqedii_3m0zjou(
                   var1,
                   "Building the Bedrock pack..."
                );
@@ -64,14 +64,14 @@ public abstract class UiOpenClose extends CommandFeedback {
                      ArrayList var2x = new ArrayList();
 
                      for (String var4 : var1x.warnings()) {
-                        var2x.add(Xqedii_3ul4hqj.Xqedii_1u4gly2(var4));
+                        var2x.add(ChatColorUtil.Xqedii_1u4gly2(var4));
                      }
 
-                     String var5x = Xqedii_3ul4hqj.Xqedii_1u4gly2(Xqedii_3ul4hqj.Xqedii_2qnwa4c(var1x.message()));
+                     String var5x = ChatColorUtil.Xqedii_1u4gly2(ChatColorUtil.Xqedii_2qnwa4c(var1x.message()));
                      if (var1x.success()) {
-                        Xqedii_3ul4hqj.Xqedii_2g7xq9b(var1, true, var5x, var2x);
+                        ChatColorUtil.Xqedii_2g7xq9b(var1, true, var5x, var2x);
                      } else {
-                        Xqedii_3ul4hqj.Xqedii_wmipi15(var1, var5x, var2x);
+                        ChatColorUtil.Xqedii_wmipi15(var1, var5x, var2x);
                      }
                   }
                });
@@ -82,10 +82,10 @@ public abstract class UiOpenClose extends CommandFeedback {
 
                for (String var13 : (Iterable<String>) (var10)) {
 
-                  var11.add(Xqedii_3ul4hqj.Xqedii_2133eaa(Xqedii_3ul4hqj.Xqedii_1u4gly2(var13)));
+                  var11.add(ChatColorUtil.Xqedii_2133eaa(ChatColorUtil.Xqedii_1u4gly2(var13)));
                }
 
-               Xqedii_3ul4hqj.Xqedii_3crurrx(var1, Xqedii_1hoyqbtsoi0u(var10.size()), var11);
+               ChatColorUtil.Xqedii_3crurrx(var1, Xqedii_1hoyqbtsoi0u(var10.size()), var11);
                break;
             case 2:
                ArrayList var6 = new ArrayList();
@@ -94,32 +94,32 @@ public abstract class UiOpenClose extends CommandFeedback {
                   int var9 = var8.indexOf(": ");
                   var6.add(
                      var9 > 0
-                        ? Xqedii_3ul4hqj.Xqedii_1oxsv35(
+                        ? ChatColorUtil.Xqedii_1oxsv35(
                            var8.substring(0, var9).trim(),
-                           Xqedii_3ul4hqj.Xqedii_1u4gly2(var8.substring(var9 + 2).trim())
+                           ChatColorUtil.Xqedii_1u4gly2(var8.substring(var9 + 2).trim())
                         )
-                        : Xqedii_3ul4hqj.Xqedii_2133eaa(Xqedii_3ul4hqj.Xqedii_1u4gly2(var8))
+                        : ChatColorUtil.Xqedii_2133eaa(ChatColorUtil.Xqedii_1u4gly2(var8))
                   );
                }
 
-               Xqedii_3ul4hqj.Xqedii_3crurrx(var1, "Bedrock", var6);
+               ChatColorUtil.Xqedii_3crurrx(var1, "Bedrock", var6);
                break;
             default:
-               Xqedii_3ul4hqj.Xqedii_3crurrx(
+               ChatColorUtil.Xqedii_3crurrx(
                   var1,
                   "Bedrock",
                   List.of(
-                     Xqedii_3ul4hqj.Xqedii_15zzeiq(
+                     ChatColorUtil.Xqedii_15zzeiq(
                         "/uui bedrock",
                         "build",
                         "Builds the Bedrock resource pack"
                      ),
-                     Xqedii_3ul4hqj.Xqedii_15zzeiq(
+                     ChatColorUtil.Xqedii_15zzeiq(
                         "/uui bedrock",
                         "pages",
                         "Lists the pages available on Bedrock"
                      ),
-                     Xqedii_3ul4hqj.Xqedii_15zzeiq(
+                     ChatColorUtil.Xqedii_15zzeiq(
                         "/uui bedrock",
                         "status",
                         "Shows the state of Bedrock support"

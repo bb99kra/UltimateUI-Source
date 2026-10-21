@@ -109,7 +109,7 @@ public final class Xqedii_21nanys {
                            continue;
                         }
 
-                        if (Xqedii_2r2mv4l.read(var14).enabled()) {
+                        if (UiRefreshConfig.read(var14).enabled()) {
                            var1.add(var12);
                         }
                      }

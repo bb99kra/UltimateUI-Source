@@ -122,7 +122,7 @@ public abstract class LangMessages extends EditorAutosave {
          if (var2.contains("<")
             && var2.contains(">")) {
             try {
-               return Xqedii_1df0pdx.deserialize(Xqedii_3ul4hqj.Xqedii_2emodor(var2));
+               return Xqedii_1df0pdx.deserialize(ChatColorUtil.Xqedii_2emodor(var2));
             } catch (Throwable var4) {
             }
          }

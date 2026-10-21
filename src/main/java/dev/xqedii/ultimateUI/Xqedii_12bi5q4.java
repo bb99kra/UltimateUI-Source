@@ -32,14 +32,14 @@ public final class Xqedii_12bi5q4 {
       this.Xqedii_1p68vxq = var1;
    }
 
-   public File Xqedii_1kxrs0m(Xqedii_hme1l2t var1) {
+   public File Xqedii_1kxrs0m(CustomItemPlugin var1) {
       {
          File var2 = this.Xqedii_1p68vxq.getDataFolder().getParentFile();
          return var2 == null ? null : new File(var2, var1.Xqedii_lho1nuv());
       }
    }
 
-   public Xqedii_1pwigla Xqedii_278kok9(Xqedii_hme1l2t var1, File var2) throws IOException {
+   public Xqedii_1pwigla Xqedii_278kok9(CustomItemPlugin var1, File var2) throws IOException {
       {
          File var3 = this.Xqedii_1kxrs0m(var1);
          if (var3 != null && var3.isDirectory()) {
@@ -111,7 +111,7 @@ public final class Xqedii_12bi5q4 {
       }
    }
 
-   public void Xqedii_1oajq4y(Xqedii_hme1l2t var1, File var2, List<String> var3, String... var4) throws IOException {
+   public void Xqedii_1oajq4y(CustomItemPlugin var1, File var2, List<String> var3, String... var4) throws IOException {
       if (var2 != null && var2.isFile() && var4.length != 0) {
          String var5 = Files.readString(var2.toPath(), StandardCharsets.UTF_8);
          String var6 = var5.contains("\r\n")

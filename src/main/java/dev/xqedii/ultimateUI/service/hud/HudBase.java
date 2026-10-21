@@ -3,7 +3,7 @@ package dev.xqedii.ultimateUI.service.hud;
 import dev.xqedii.ultimateUI.UltimateUI;
 import dev.xqedii.ultimateUI.Xqedii_2t8d8j4;
 import dev.xqedii.ultimateUI.Xqedii_3ennv92;
-import dev.xqedii.ultimateUI.Xqedii_3esdued;
+import dev.xqedii.ultimateUI.PlayerElementId;
 import dev.xqedii.ultimateUI.service.bossbar.BossbarRenderService;
 import dev.xqedii.ultimateui.libs.packetevents.packetevents.event.PacketListenerCommon;
 import java.lang.reflect.Method;
@@ -113,7 +113,7 @@ public abstract class HudBase {
    public final AtomicInteger Xqedii_31fmop3 = new AtomicInteger(Xqedii_3ennv92.Xqedii_23eqbr36nssuk(-1791678544, 18));
    public final AtomicInteger Xqedii_2pqqofd = new AtomicInteger(Xqedii_3ennv92.Xqedii_23eqbr36nssuk(986383513, 21));
    public final Map<UUID, Map<String, Xqedii_2t8d8j4>> Xqedii_7rxyqib = new ConcurrentHashMap<>();
-   public final Map<UUID, Xqedii_3esdued> Xqedii_ffdt8d5 = new HashMap<>();
+   public final Map<UUID, PlayerElementId> Xqedii_ffdt8d5 = new HashMap<>();
    public final LinkedHashSet<UUID> Xqedii_2ruo9yk = new LinkedHashSet<>();
    public final Map<UUID, int[]> Xqedii_v8ssh03 = new ConcurrentHashMap<>();
    public final Map<UUID, Entity> Xqedii_3ediaz4 = new HashMap<>();

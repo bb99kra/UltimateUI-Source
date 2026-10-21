@@ -14,7 +14,7 @@ package dev.xqedii.ultimateUI.service.gui.editor.shell.managers;
 import dev.xqedii.ultimateUI.UltimateUI;
 import dev.xqedii.ultimateUI.Xqedii_1as73k7;
 import dev.xqedii.ultimateUI.Xqedii_3ucf4be;
-import dev.xqedii.ultimateUI.Xqedii_3ul4hqj;
+import dev.xqedii.ultimateUI.ChatColorUtil;
 import dev.xqedii.ultimateUI.Xqedii_3uxgwyg;
 import dev.xqedii.ultimateUI.service.camera.CameraService;
 import dev.xqedii.ultimateUI.service.gui.editor.GuiServiceEditorSidebarSupport;
@@ -1125,7 +1125,7 @@ extends GuiServiceEditorSidebarSupport {
         if (player == null) {
             return;
         }
-        Xqedii_3ul4hqj.Xqedii_uawesb0((CommandSender)player, Xqedii_1as73k7.Xqedii_3sg3wlcdsipy0("ZKjK1W8dx5I/PI0Oejcv8GTynmotiJ8aBaDBscw3SNNrfzInVvxUG6CtKeMt2VE1t+rzIAt8Vp/R82rZvjrj/1NT2iErg5i4cYC70ayvFllp1COXIfCFXcSaMcD3SJ9YjZnKU7CByivNRYIvVwnBdZe8Pjmx5d9ydz9NqQzzA8Bno4vRo6R2A+BkeAvyd9VBZEvhoGtzvCSHGdpYUQVQ23eGrCENHIYhToS9TPO/Zfd7min34zpt2Cn/aBdogddJuhVoc9KLKcjfcRzqoDVnQB99bI620Sg3V4DjrdKsSEmjbLJdl/+VQZIQF7PANodPX4oTZKfh/DzEUqf/TrddtGsh/DW34XOAL2kWjtbICQhqdjJw695FnaFH8RKkhI6Fa83rVWttupbc74hGPKj24BmtvFH4LPv7OPsMTY2TvYqQhkhl8VdWogu8NfRSw5qPu/EO1XckFgmrvULMt5ZhGTNaPWNVH8jvTb0QN/zd8DbTBvRZMI4j06P1saCXjh0icRxDMxyJFNIDaJ+k8QhE82FVGIDKsDYbmlYABwCQqATn1q7gweWcLobApDEvhJHfeP+mHk7EviMhnOf8fyRKTss3stjOXA=="));
+        ChatColorUtil.Xqedii_uawesb0((CommandSender)player, Xqedii_1as73k7.Xqedii_3sg3wlcdsipy0("ZKjK1W8dx5I/PI0Oejcv8GTynmotiJ8aBaDBscw3SNNrfzInVvxUG6CtKeMt2VE1t+rzIAt8Vp/R82rZvjrj/1NT2iErg5i4cYC70ayvFllp1COXIfCFXcSaMcD3SJ9YjZnKU7CByivNRYIvVwnBdZe8Pjmx5d9ydz9NqQzzA8Bno4vRo6R2A+BkeAvyd9VBZEvhoGtzvCSHGdpYUQVQ23eGrCENHIYhToS9TPO/Zfd7min34zpt2Cn/aBdogddJuhVoc9KLKcjfcRzqoDVnQB99bI620Sg3V4DjrdKsSEmjbLJdl/+VQZIQF7PANodPX4oTZKfh/DzEUqf/TrddtGsh/DW34XOAL2kWjtbICQhqdjJw695FnaFH8RKkhI6Fa83rVWttupbc74hGPKj24BmtvFH4LPv7OPsMTY2TvYqQhkhl8VdWogu8NfRSw5qPu/EO1XckFgmrvULMt5ZhGTNaPWNVH8jvTb0QN/zd8DbTBvRZMI4j06P1saCXjh0icRxDMxyJFNIDaJ+k8QhE82FVGIDKsDYbmlYABwCQqATn1q7gweWcLobApDEvhJHfeP+mHk7EviMhnOf8fyRKTss3stjOXA=="));
     }
 
     public void playWelcomePopupSound(Player player, EditorSession editorSession, String string) {
@@ -1173,7 +1173,7 @@ extends GuiServiceEditorSidebarSupport {
         if (this.shouldSuppressEditorPlayerMessage(player, string)) {
             return;
         }
-        Xqedii_3ul4hqj.send((CommandSender)player, component);
+        ChatColorUtil.send((CommandSender)player, component);
     }
 
     public void sendEditorPlayerMessage(Player player, String string) {
@@ -1186,42 +1186,42 @@ extends GuiServiceEditorSidebarSupport {
         if (this.shouldSuppressEditorPlayerMessage(player, string)) {
             return;
         }
-        Xqedii_3ul4hqj.send((CommandSender)player, (Component)LegacyComponentSerializer.legacySection().deserialize(Xqedii_3ul4hqj.Xqedii_2qnwa4c(string.trim())));
+        ChatColorUtil.send((CommandSender)player, (Component)LegacyComponentSerializer.legacySection().deserialize(ChatColorUtil.Xqedii_2qnwa4c(string.trim())));
     }
 
     public void sendEditorError(Player player, String string, Object ... objectArray) {
         if ((0xD51DE0A8 ^ 0xD51DE0A8) != 0) {
             throw new IllegalStateException();
         }
-        this.sendEditorPlayerMessage(player, Xqedii_3uxgwyg.Xqedii_2p0af0b.deserialize((String)Xqedii_3ul4hqj.Xqedii_1t2nnko(string, objectArray)));
+        this.sendEditorPlayerMessage(player, Xqedii_3uxgwyg.Xqedii_2p0af0b.deserialize((String)ChatColorUtil.Xqedii_1t2nnko(string, objectArray)));
     }
 
     public void sendEditorUsage(Player player, String string, String string2) {
         if ((1227117012 * 1227117012 - 1227117012 & 1) != 0) {
             throw new IllegalStateException();
         }
-        this.sendEditorPlayerMessage(player, Xqedii_3uxgwyg.Xqedii_2p0af0b.deserialize((String)Xqedii_3ul4hqj.Xqedii_1wtk0rm(string, string2)));
+        this.sendEditorPlayerMessage(player, Xqedii_3uxgwyg.Xqedii_2p0af0b.deserialize((String)ChatColorUtil.Xqedii_1wtk0rm(string, string2)));
     }
 
     public void sendEditorSuccess(Player player, String string, Object ... objectArray) {
         if ((0x5E3B58CC ^ 0x5E3B58CC) != 0) {
             throw new IllegalStateException();
         }
-        this.sendEditorPlayerMessage(player, Xqedii_3uxgwyg.Xqedii_2p0af0b.deserialize((String)Xqedii_3ul4hqj.Xqedii_33qmw8k(string, objectArray)));
+        this.sendEditorPlayerMessage(player, Xqedii_3uxgwyg.Xqedii_2p0af0b.deserialize((String)ChatColorUtil.Xqedii_33qmw8k(string, objectArray)));
     }
 
     public void sendEditorRemoved(Player player, String string, Object ... objectArray) {
         if (((-926902025 << 1 | 1) & 1) == 0) {
             throw new IllegalStateException();
         }
-        this.sendEditorPlayerMessage(player, Xqedii_3uxgwyg.Xqedii_2p0af0b.deserialize((String)Xqedii_3ul4hqj.Xqedii_9qy68nj(string, objectArray)));
+        this.sendEditorPlayerMessage(player, Xqedii_3uxgwyg.Xqedii_2p0af0b.deserialize((String)ChatColorUtil.Xqedii_9qy68nj(string, objectArray)));
     }
 
     public void sendEditorInfo(Player player, String string, Object ... objectArray) {
         if ((413213315 * (413213315 + 1) & 1) != 0) {
             throw new IllegalStateException();
         }
-        this.sendEditorPlayerMessage(player, Xqedii_3uxgwyg.Xqedii_2p0af0b.deserialize((String)Xqedii_3ul4hqj.Xqedii_2iiyx7k(string, objectArray)));
+        this.sendEditorPlayerMessage(player, Xqedii_3uxgwyg.Xqedii_2p0af0b.deserialize((String)ChatColorUtil.Xqedii_2iiyx7k(string, objectArray)));
     }
 
     public void sendEditorLimitReached(Player player, int n) {

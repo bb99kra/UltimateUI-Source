@@ -67,9 +67,9 @@ public abstract class PluginState extends JavaPlugin {
    public YamlConfiguration Xqedii_389zivo;
    public PlatformCompat.CancellableTask Xqedii_1fzr9sp;
    public boolean Xqedii_1lguiuv = false;
-   public Xqedii_2nwgjlb Xqedii_1zavo1k;
+   public LicenseRuntimeGuard Xqedii_1zavo1k;
    public boolean Xqedii_3g0zdbr = false;
-   public Xqedii_2b0ukbv Xqedii_1mi7xjn = Xqedii_2b0ukbv.ERROR;
+   public LicenseStatus Xqedii_1mi7xjn = LicenseStatus.ERROR;
    public final Xqedii_2t253qr Xqedii_1e7k2q0 = new Xqedii_2t253qr();
    public Map<String, UiImageAtlasService.GeneratedImage> Xqedii_11hx7yt = new HashMap<>();
    public String Xqedii_3b8f4mz = "";

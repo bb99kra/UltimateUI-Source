@@ -41,7 +41,7 @@ public final class Xqedii_2t253qr {
    public static final Pattern Xqedii_2jae8sc;
    public static final Set<String> Xqedii_pi7q4dz;
    public String Xqedii_1woh7lz;
-   public Xqedii_2ittm45 Xqedii_r5cqo88;
+   public AtlasGenerationResult Xqedii_r5cqo88;
 
    public String Xqedii_3rv9moh(List<File> var1) {
       {
@@ -70,9 +70,9 @@ public final class Xqedii_2t253qr {
       }
    }
 
-   public Xqedii_2ittm45 Xqedii_1hvwbjh(File var1, Logger var2) {
+   public AtlasGenerationResult Xqedii_1hvwbjh(File var1, Logger var2) {
       if (var1 == null) {
-         return new Xqedii_2ittm45(Collections.emptyMap(), 0);
+         return new AtlasGenerationResult(Collections.emptyMap(), 0);
       } else {
          File var3 = new File(
             new File(var1, "contents"),
@@ -189,8 +189,8 @@ public final class Xqedii_2t253qr {
 
                                     String var44 = new String(Character.toChars(var39));
                                     var26.append(var44);
-                                    var10.add(new Xqedii_9fm8ycl(var35, var39));
-                                    var28.add(new Xqedii_117zh3y(var20, var31, var32, var33, var34, var36));
+                                    var10.add(new FontGlyphCodepoint(var35, var39));
+                                    var28.add(new ImageCropTask(var20, var31, var32, var33, var34, var36));
                                  }
                               }
                            }
@@ -222,7 +222,7 @@ public final class Xqedii_2t253qr {
 
             this.Xqedii_1pslcum(var5, var10, var2);
             this.Xqedii_188508q(var12, var13, var2);
-            Xqedii_2ittm45 var42 = new Xqedii_2ittm45(Collections.unmodifiableMap(new LinkedHashMap<>(var9)), var15);
+            AtlasGenerationResult var42 = new AtlasGenerationResult(Collections.unmodifiableMap(new LinkedHashMap<>(var9)), var15);
             this.Xqedii_1woh7lz = var16 != 0 ? null : var8;
             this.Xqedii_r5cqo88 = var16 != 0 ? null : var42;
             return var42;
@@ -752,7 +752,7 @@ public final class Xqedii_2t253qr {
       }
    }
 
-   public int Xqedii_2zmj771(List<Xqedii_117zh3y> var1, Logger var2) {
+   public int Xqedii_2zmj771(List<ImageCropTask> var1, Logger var2) {
       if (var1 != null && !var1.isEmpty()) {
          AtomicInteger var3 = new AtomicInteger(0);
          var1.parallelStream().forEach(var3x -> {
@@ -840,14 +840,14 @@ public final class Xqedii_2t253qr {
       }
    }
 
-   public void Xqedii_1pslcum(File var1, List<Xqedii_9fm8ycl> var2, Logger var3) {
+   public void Xqedii_1pslcum(File var1, List<FontGlyphCodepoint> var2, Logger var3) {
       {
          StringBuilder var4 = new StringBuilder();
          var4.append("{\n");
          var4.append("  \"providers\": [\n");
          if (var2 != null) {
             for (int var5 = 0; var5 < var2.size(); var5++) {
-               Xqedii_9fm8ycl var6 = (Xqedii_9fm8ycl)var2.get(var5);
+               FontGlyphCodepoint var6 = (FontGlyphCodepoint)var2.get(var5);
                var4.append(
                      "    {\"type\": \"bitmap\", \"file\": \"minecraft:font/images/"
                   )

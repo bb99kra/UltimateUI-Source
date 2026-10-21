@@ -359,7 +359,7 @@ public final class Xqedii_38o2zes {
          var12.Xqedii_2hpi5bz(var11);
          return var12;
       } else {
-         return Xqedii_brkjme2.INSTANCE;
+         return NoOpTask.INSTANCE;
       }
    }
 
@@ -380,7 +380,7 @@ public final class Xqedii_38o2zes {
          Xqedii_2sj63w1(var0, var1, var11::Xqedii_h4h1qfo, var7);
          return var11;
       } else {
-         return Xqedii_brkjme2.INSTANCE;
+         return NoOpTask.INSTANCE;
       }
    }
 

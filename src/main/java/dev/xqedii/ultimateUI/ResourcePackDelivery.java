@@ -286,7 +286,7 @@ public abstract class ResourcePackDelivery extends LangMessages {
 
    public void rebuildUiImagesIntoResourcePack() {
       {
-         Xqedii_2ittm45 var1 = this.Xqedii_1e7k2q0.Xqedii_1hvwbjh(this.getDataFolder(), this.getLogger());
+         AtlasGenerationResult var1 = this.Xqedii_1e7k2q0.Xqedii_1hvwbjh(this.getDataFolder(), this.getLogger());
          if (var1 != null && var1.imagesByName() != null) {
             this.Xqedii_11hx7yt = new HashMap<>(var1.imagesByName());
          } else {
@@ -375,7 +375,7 @@ public abstract class ResourcePackDelivery extends LangMessages {
          )) {
          return null;
       } else {
-         Xqedii_hme1l2t var1 = Xqedii_hme1l2t.Xqedii_3mduzsu(
+         CustomItemPlugin var1 = CustomItemPlugin.Xqedii_3mduzsu(
             this.getConfig()
                .getString(
                   "resource-pack.hosting.external-pack.auto-deploy",

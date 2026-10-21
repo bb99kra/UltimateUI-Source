@@ -21,10 +21,10 @@ public final class Xqedii_11ahxwr implements Xqedii_1o1cvf4 {
    }
 
    @Override
-   public void Xqedii_3p9z9ee(Player var1, UUID var2, Xqedii_fwiw7cd var3, Component var4) {
+   public void Xqedii_3p9z9ee(Player var1, UUID var2, BossbarAction var3, Component var4) {
       {
          WrapperPlayServerBossBar var5 = new WrapperPlayServerBossBar(var2, this.Xqedii_x2agdnc(var3));
-         if (var3 != Xqedii_fwiw7cd.REMOVE) {
+         if (var3 != BossbarAction.REMOVE) {
             var5.setTitle((Component)(var4 == null ? Component.empty() : var4));
             var5.setHealth(Float.intBitsToFloat(0));
             var5.setColor(Color.YELLOW);
@@ -44,10 +44,10 @@ public final class Xqedii_11ahxwr implements Xqedii_1o1cvf4 {
    }
 
    @Override
-   public void Xqedii_s6fwnzl(Player var1, UUID var2, Xqedii_fwiw7cd var3, Xqedii_38cw7ku var4) {
+   public void Xqedii_s6fwnzl(Player var1, UUID var2, BossbarAction var3, Xqedii_38cw7ku var4) {
       {
          WrapperPlayServerBossBar var5 = new WrapperPlayServerBossBar(var2, this.Xqedii_x2agdnc(var3));
-         if (var3 != Xqedii_fwiw7cd.REMOVE && var4 != null) {
+         if (var3 != BossbarAction.REMOVE && var4 != null) {
             var5.setTitle((Component)(var4.title == null ? Component.empty() : var4.title));
             var5.setHealth(var4.Xqedii_lpfdzop);
             var5.setColor(var4.Xqedii_2gslzsd);
@@ -79,7 +79,7 @@ public final class Xqedii_11ahxwr implements Xqedii_1o1cvf4 {
       }
    }
 
-   public Action Xqedii_x2agdnc(Xqedii_fwiw7cd var1) {
+   public Action Xqedii_x2agdnc(BossbarAction var1) {
       {
          return switch (var1) {
             case ADD -> Action.ADD;

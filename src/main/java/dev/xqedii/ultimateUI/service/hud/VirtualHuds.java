@@ -4,7 +4,7 @@ import dev.xqedii.ultimateUI.UltimateUI;
 import dev.xqedii.ultimateUI.Xqedii_2bch2cw;
 import dev.xqedii.ultimateUI.Xqedii_2t8d8j4;
 import dev.xqedii.ultimateUI.Xqedii_38o2zes;
-import dev.xqedii.ultimateUI.Xqedii_3esdued;
+import dev.xqedii.ultimateUI.PlayerElementId;
 import dev.xqedii.ultimateui.libs.packetevents.packetevents.PacketEvents;
 import dev.xqedii.ultimateui.libs.packetevents.packetevents.protocol.entity.data.EntityData;
 import dev.xqedii.ultimateui.libs.packetevents.packetevents.protocol.entity.data.EntityDataTypes;
@@ -142,7 +142,7 @@ public abstract class VirtualHuds extends HudVectors {
       } else if (var1 == null) {
          return null;
       } else {
-         Xqedii_3esdued var2 = this.Xqedii_ffdt8d5.get(var1.getUniqueId());
+         PlayerElementId var2 = this.Xqedii_ffdt8d5.get(var1.getUniqueId());
          if (var2 == null) {
             return null;
          } else {
@@ -158,7 +158,7 @@ public abstract class VirtualHuds extends HudVectors {
       } else if (var1 == null) {
          return null;
       } else {
-         Xqedii_3esdued var2 = this.Xqedii_ffdt8d5.get(var1.getUniqueId());
+         PlayerElementId var2 = this.Xqedii_ffdt8d5.get(var1.getUniqueId());
          return var2 == null ? null : Bukkit.getPlayer(var2.playerId());
       }
    }
@@ -174,7 +174,7 @@ public abstract class VirtualHuds extends HudVectors {
                return new ConcurrentHashMap<>();
             }
          }).put(var2.Xqedii_26svack, var2);
-         this.Xqedii_ffdt8d5.put(var2.Xqedii_216y0r3.getUniqueId(), new Xqedii_3esdued(var1.getUniqueId(), var2.Xqedii_26svack));
+         this.Xqedii_ffdt8d5.put(var2.Xqedii_216y0r3.getUniqueId(), new PlayerElementId(var1.getUniqueId(), var2.Xqedii_26svack));
          var2.Xqedii_216y0r3
             .setMetadata(
                Xqedii_2bch2cw.Xqedii_sqklmrx8mjk8("EbzMfRQiWbnxZRWTtkeYIp9pHaCWkV7m0OHXQLl+r5sAh8MedZJIXJObwTOaus/ciM/EYMh6Tdo="),

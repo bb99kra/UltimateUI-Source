@@ -12,8 +12,8 @@ public final class CommunityUltimateUI extends UltimateUI {
       this.saveDefaultConfig();
       this.mergeConfigDefaults();
       this.migrateLegacyResourcePackUrl();
-      this.Xqedii_1zavo1k = new Xqedii_2nwgjlb(this);
-      this.Xqedii_1mi7xjn = Xqedii_2b0ukbv.VALID;
+      this.Xqedii_1zavo1k = new LicenseRuntimeGuard(this);
+      this.Xqedii_1mi7xjn = LicenseStatus.VALID;
       this.Xqedii_3g0zdbr = true;
 
       try {

@@ -1,25 +1,25 @@
 package dev.xqedii.ultimateUI.service.gui;
 
 import dev.xqedii.ultimateUI.UltimateUI;
-import dev.xqedii.ultimateUI.Xqedii_13x6286;
+import dev.xqedii.ultimateUI.HudFollowMode;
 import dev.xqedii.ultimateUI.Xqedii_1a2mt0h;
 import dev.xqedii.ultimateUI.Xqedii_1avxacb;
-import dev.xqedii.ultimateUI.Xqedii_1d1gx4g;
+import dev.xqedii.ultimateUI.AnvilInputState;
 import dev.xqedii.ultimateUI.Xqedii_2f78jo3;
 import dev.xqedii.ultimateUI.Xqedii_2pbx7s8;
 import dev.xqedii.ultimateUI.Xqedii_38o2zes;
 import dev.xqedii.ultimateUI.Xqedii_3bglnh9;
 import dev.xqedii.ultimateUI.Xqedii_3c3nhzv;
 import dev.xqedii.ultimateUI.Xqedii_3ep50li;
-import dev.xqedii.ultimateUI.Xqedii_3f5tr86;
+import dev.xqedii.ultimateUI.ElementBounds;
 import dev.xqedii.ultimateUI.Xqedii_3ihqgc8;
 import dev.xqedii.ultimateUI.Xqedii_3j2w0l1;
 import dev.xqedii.ultimateUI.Xqedii_3kjd61w;
 import dev.xqedii.ultimateUI.Xqedii_fg9gmp9;
 import dev.xqedii.ultimateUI.Xqedii_irwktj3;
 import dev.xqedii.ultimateUI.Xqedii_sq3891d;
-import dev.xqedii.ultimateUI.Xqedii_tmp4qaj;
-import dev.xqedii.ultimateUI.Xqedii_u0dqcud;
+import dev.xqedii.ultimateUI.ParsedGuiLayout;
+import dev.xqedii.ultimateUI.WorldUiViewerEntity;
 import dev.xqedii.ultimateUI.api.event.UltimateUIInputSubmitEvent;
 import dev.xqedii.ultimateUI.gui.parser.ScrollViewState;
 import dev.xqedii.ultimateUI.service.camera.CameraService;
@@ -124,7 +124,7 @@ public abstract class WorldUiPart extends ApiElements {
    public static final List<String> Xqedii_1p37d2s;
    public final Map<String, Xqedii_irwktj3> Xqedii_1yiv0kc = new ConcurrentHashMap<>();
    public final Map<String, Xqedii_1a2mt0h> Xqedii_35obddf = new ConcurrentHashMap<>();
-   public final Map<Integer, Xqedii_u0dqcud> Xqedii_28h4g3k = new ConcurrentHashMap<>();
+   public final Map<Integer, WorldUiViewerEntity> Xqedii_28h4g3k = new ConcurrentHashMap<>();
    public final Map<UUID, Long> Xqedii_18wixnx = new ConcurrentHashMap<>();
    public final Map<String, Map<String, String>> Xqedii_1exxxow = new ConcurrentHashMap<>();
    public final Map<UUID, Long> Xqedii_useqsj7 = new ConcurrentHashMap<>();
@@ -181,7 +181,7 @@ public abstract class WorldUiPart extends ApiElements {
       } else if (var1 != null) {
          for (Xqedii_irwktj3 var3 : this.Xqedii_1yiv0kc.values()) {
             if (var3.Xqedii_1kh6x7z
-               && var3.Xqedii_2gkid3z == Xqedii_13x6286.FOLLOW
+               && var3.Xqedii_2gkid3z == HudFollowMode.FOLLOW
                && this.Xqedii_iy1ykel(var3, var1)
                && !this.Xqedii_35obddf.containsKey(this.Xqedii_33ry265(var3.Xqedii_1kjhbri, var1.getUniqueId()))) {
                this.Xqedii_1lvabt1(var3, var1);
@@ -352,7 +352,7 @@ public abstract class WorldUiPart extends ApiElements {
          throw new IllegalStateException();
       } else {
          Xqedii_irwktj3 var2 = this.Xqedii_2mx2qgo(var1);
-         return ((var2 != null && var2.Xqedii_2gkid3z == Xqedii_13x6286.STATIC
+         return ((var2 != null && var2.Xqedii_2gkid3z == HudFollowMode.STATIC
             ? Xqedii_3ihqgc8.Xqedii_e85v2ofrfaac(2015589574, 24)
             : Xqedii_3ihqgc8.Xqedii_3uwg40ecgal2u(1032529960, 4)) != 0);
       }
@@ -971,7 +971,7 @@ public abstract class WorldUiPart extends ApiElements {
    public boolean Xqedii_7pfdz1p(Xqedii_irwktj3 var1) {
       if (((-222339985 << 1 | 1) & 1) == 0) {
          throw new IllegalStateException();
-      } else if (var1.Xqedii_2gkid3z == Xqedii_13x6286.STATIC) {
+      } else if (var1.Xqedii_2gkid3z == HudFollowMode.STATIC) {
          return this.Xqedii_40udfqo(var1);
       } else if (this.Xqedii_2enuzo1(var1) == null) {
          return (Xqedii_3ihqgc8.Xqedii_1y3ssml1szkmh(1586002024, 9) != 0);
@@ -1125,7 +1125,7 @@ public abstract class WorldUiPart extends ApiElements {
          for (Xqedii_1a2mt0h var3 : this.Xqedii_35obddf.values()) {
             if (var3.Xqedii_2u9ms1f.Xqedii_1kjhbri.equals(var1.Xqedii_1kjhbri)) {
                var3.Xqedii_2u9ms1f.Xqedii_2q8vz77 = null;
-               Xqedii_tmp4qaj var4 = this.Xqedii_2enuzo1(var3.Xqedii_2u9ms1f);
+               ParsedGuiLayout var4 = this.Xqedii_2enuzo1(var3.Xqedii_2u9ms1f);
                if (var4 != null) {
                   this.Xqedii_gtw7cir(var3);
                   var3.Xqedii_3uo0d9i = var4;
@@ -1228,7 +1228,7 @@ public abstract class WorldUiPart extends ApiElements {
          var10003[Xqedii_3ihqgc8.Xqedii_1yr2w71y595u6(398084204, 0)] = var2.getString(
             Xqedii_3ihqgc8.Xqedii_1uu5gx5gc3ttb("VlqqrTxAcGfEyjaf4Rf5bwjQ8h/3j04KIZfe+f9eowkKILP3")
          );
-         var3.Xqedii_2gkid3z = var10001.equalsIgnoreCase(this.firstNonBlank(var10003).trim()) ? Xqedii_13x6286.FOLLOW : Xqedii_13x6286.STATIC;
+         var3.Xqedii_2gkid3z = var10001.equalsIgnoreCase(this.firstNonBlank(var10003).trim()) ? HudFollowMode.FOLLOW : HudFollowMode.STATIC;
          var3.Xqedii_1svt1aq = parseWorldUiLookAt(
             var2.getString(Xqedii_3ihqgc8.Xqedii_1uu5gx5gc3ttb("xHASI2oVlqXUWoit5UOz7MYkvKHL/1V8AskOWW4m+1LuKDOcpHqtanLA"))
          );
@@ -1297,7 +1297,7 @@ public abstract class WorldUiPart extends ApiElements {
          var8[Xqedii_3ihqgc8.Xqedii_e85v2ofrfaac(2032366790, 8)] = var2.getString(
             Xqedii_3ihqgc8.Xqedii_1uu5gx5gc3ttb("rfBohz7G/uTUhvOEK8sPL4p9s7dnxjt2SZuWniWwk1kWaRtD9oaMEcYtA1m70c79")
          );
-         var8[Xqedii_3ihqgc8.Xqedii_3uwg40ecgal2u(-1032529961, 26)] = var3.Xqedii_2gkid3z == Xqedii_13x6286.FOLLOW
+         var8[Xqedii_3ihqgc8.Xqedii_3uwg40ecgal2u(-1032529961, 26)] = var3.Xqedii_2gkid3z == HudFollowMode.FOLLOW
             ? Xqedii_3ihqgc8.Xqedii_1uu5gx5gc3ttb("mo7uhzcypq4iFDDJOFeqxNyqLHCTRvkNZDKgqWhEvd7uJATWH6M=")
             : Xqedii_3ihqgc8.Xqedii_1uu5gx5gc3ttb("cilL8wizVUuiIg2BaWu9FDMgaEhb3W3cJBjCdc/DrRSSug==");
          String var4 = this.firstNonBlank(var8).trim();
@@ -1539,16 +1539,16 @@ public abstract class WorldUiPart extends ApiElements {
       if ((-243667725 * -243667725 - -243667725 & 1) != 0) {
          throw new IllegalStateException();
       } else {
-         Xqedii_tmp4qaj var4 = this.Xqedii_2enuzo1(var2);
+         ParsedGuiLayout var4 = this.Xqedii_2enuzo1(var2);
          return var4 == null ? null : new Xqedii_1a2mt0h(var1, var2, var3, var4);
       }
    }
 
-   public Xqedii_tmp4qaj Xqedii_2enuzo1(Xqedii_irwktj3 var1) {
+   public ParsedGuiLayout Xqedii_2enuzo1(Xqedii_irwktj3 var1) {
       if (((789982160 | 1) & 1) == 0) {
          throw new IllegalStateException();
       } else {
-         Xqedii_tmp4qaj var2 = var1.Xqedii_2q8vz77;
+         ParsedGuiLayout var2 = var1.Xqedii_2q8vz77;
          if (var2 != null) {
             return var2;
          } else {
@@ -1572,7 +1572,7 @@ public abstract class WorldUiPart extends ApiElements {
                   this.copyBlocks(var7.getList(Xqedii_3ihqgc8.Xqedii_1uu5gx5gc3ttb("eUgnA48QUEliZYPJ0rBVVnjRcNByj4NYvV3AnIMBGII/TripzWerew==")))
                );
                this.applyImageLayoutOffsetFormatToLoadedBlocks(var7, var9);
-               Xqedii_tmp4qaj var10 = new Xqedii_tmp4qaj(
+               ParsedGuiLayout var10 = new ParsedGuiLayout(
                   var9,
                   var8,
                   Math.max(
@@ -1609,7 +1609,7 @@ public abstract class WorldUiPart extends ApiElements {
       if ((-266010203 ^ -266010203) != 0) {
          throw new IllegalStateException();
       } else {
-         Xqedii_tmp4qaj var3 = var1.Xqedii_3uo0d9i;
+         ParsedGuiLayout var3 = var1.Xqedii_3uo0d9i;
          var2.Xqedii_2q32dop.clearMetrics();
          var2.Xqedii_2q32dop.clearFilterValues();
 
@@ -1617,7 +1617,7 @@ public abstract class WorldUiPart extends ApiElements {
             var2.Xqedii_2q32dop.putFilterValue((String)var5.getKey(), (String)var5.getValue());
          }
 
-         for (Xqedii_1d1gx4g var11 : var2.Xqedii_h3mynbh.values()) {
+         for (AnvilInputState var11 : var2.Xqedii_h3mynbh.values()) {
             var2.Xqedii_2q32dop.putFilterValue(var11.inputId(), var11.text());
             var2.Xqedii_2q32dop.putFilterValue(var11.variable(), var11.text());
          }
@@ -2081,7 +2081,7 @@ public abstract class WorldUiPart extends ApiElements {
       if (((-1082773658 | 1) & 1) == 0) {
          throw new IllegalStateException();
       } else {
-         Xqedii_tmp4qaj var5 = var1.Xqedii_3uo0d9i;
+         ParsedGuiLayout var5 = var1.Xqedii_3uo0d9i;
          Xqedii_1avxacb var6 = this.Xqedii_322y3to(var1, var3);
          if (!var6.Xqedii_r93bzs3) {
             this.Xqedii_jjzxp6j(var1, var6);
@@ -2162,7 +2162,7 @@ public abstract class WorldUiPart extends ApiElements {
                      var19++;
                      if (!var25) {
                         var16.add(
-                           new Xqedii_3f5tr86(
+                           new ElementBounds(
                               var24,
                               var26[Xqedii_3ihqgc8.Xqedii_e85v2ofrfaac(2032366790, 30)],
                               var26[Xqedii_3ihqgc8.Xqedii_e85v2ofrfaac(2032366806, 4)],
@@ -2265,7 +2265,7 @@ public abstract class WorldUiPart extends ApiElements {
                int var46 = this.hudService.spawnWorldInteraction(var2, var45, (float)var43.Xqedii_35crh3k, (float)var43.Xqedii_203jf14);
                if (var46 >= 0) {
                   var3.Xqedii_at2aqft.put(var46, var43);
-                  this.Xqedii_28h4g3k.put(var46, new Xqedii_u0dqcud(var1.Xqedii_m23ejo5, var2.getUniqueId(), var46));
+                  this.Xqedii_28h4g3k.put(var46, new WorldUiViewerEntity(var1.Xqedii_m23ejo5, var2.getUniqueId(), var46));
                }
             }
          }
@@ -2498,7 +2498,7 @@ public abstract class WorldUiPart extends ApiElements {
          int var21 = var4.opacity();
          EditorTimelineKeyframePart.HoverEffectRuntimeConfig var22 = var3.effect();
          if (var22 != null) {
-            Xqedii_tmp4qaj var23 = var1.Xqedii_3uo0d9i;
+            ParsedGuiLayout var23 = var1.Xqedii_3uo0d9i;
             double var11 = var1.Xqedii_2u9ms1f.Xqedii_2llkhpy / var23.pageWidth();
             float var13 = var1.Xqedii_2u9ms1f.Xqedii_1svt1aq != 0
                ? Float.intBitsToFloat(Xqedii_3ihqgc8.Xqedii_1yr2w71y595u6(1411195958, 31))
@@ -2572,7 +2572,7 @@ public abstract class WorldUiPart extends ApiElements {
          Location var3 = var1.Xqedii_2lkymh6;
          if (var3 != null && var3.getWorld() != null && var3.getWorld().equals(var2.getWorld())) {
             Xqedii_irwktj3 var4 = var1.Xqedii_2u9ms1f;
-            Xqedii_tmp4qaj var5 = var1.Xqedii_3uo0d9i;
+            ParsedGuiLayout var5 = var1.Xqedii_3uo0d9i;
             Location var6 = var2.getEyeLocation();
             double var7 = var4.Xqedii_2llkhpy / Double.longBitsToDouble(Xqedii_3ihqgc8.Xqedii_3u3apuri2wjbb(1882854153251846777L, 36));
             double var9 = var4.Xqedii_27dvef7 + var7;
@@ -2642,9 +2642,9 @@ public abstract class WorldUiPart extends ApiElements {
       if ((1067731638 * (1067731638 + 1) & 1) != 0) {
          throw new IllegalStateException();
       } else {
-         Xqedii_3f5tr86 var6 = null;
+         ElementBounds var6 = null;
 
-         for (Xqedii_3f5tr86 var8 : var1.Xqedii_2aq4qhk) {
+         for (ElementBounds var8 : var1.Xqedii_2aq4qhk) {
             if (var8.contains(var2, var4) && (var6 == null || var8.layer() > var6.layer() || var8.layer() == var6.layer() && var8.order() > var6.order())) {
                var6 = var8;
             }
@@ -2881,7 +2881,7 @@ public abstract class WorldUiPart extends ApiElements {
             if (!this.shouldSpawnOpacityVisual(var4, var11)) {
                return null;
             } else {
-               Xqedii_tmp4qaj var12 = var1.Xqedii_3uo0d9i;
+               ParsedGuiLayout var12 = var1.Xqedii_3uo0d9i;
                double var13 = this.readRuntimeNumericValue(
                   var2,
                   null,
@@ -3239,7 +3239,7 @@ public abstract class WorldUiPart extends ApiElements {
       } else {
          String var8 = this.resolveInputId(var4, var5);
          String var9 = this.resolveInputVariable(var4, var8);
-         Xqedii_1d1gx4g var10 = var3.Xqedii_h3mynbh.get(var5);
+         AnvilInputState var10 = var3.Xqedii_h3mynbh.get(var5);
          int var11 = var10 != null ? Xqedii_3ihqgc8.Xqedii_3uwg40ecgal2u(-1032529961, 8) : Xqedii_3ihqgc8.Xqedii_3uwg40ecgal2u(1032529960, 3);
          String var12 = var11 != 0 ? var10.text() : this.Xqedii_je53k53(var1, var2, var3, var4, var8, var9);
          if (var12.isEmpty() && var11 == 0) {
@@ -3485,7 +3485,7 @@ public abstract class WorldUiPart extends ApiElements {
       }
    }
 
-   public boolean Xqedii_3e40ptx(Xqedii_tmp4qaj var1, String var2) {
+   public boolean Xqedii_3e40ptx(ParsedGuiLayout var1, String var2) {
       if ((-712964523 * -712964523 + -712964523 & 1) != 0) {
          throw new IllegalStateException();
       } else {
@@ -3568,7 +3568,7 @@ public abstract class WorldUiPart extends ApiElements {
             List var21 = this.readActionBranch(var6, Xqedii_3ihqgc8.Xqedii_1uu5gx5gc3ttb("ONYXEdZ65GI/vYMSo5jRbxHAcHadqElWS4db/yscBy3ex7MY6XHd3xaX+aIpGQ=="));
             long var22 = this.Xqedii_37xasx8.incrementAndGet();
             this.Xqedii_useqsj7.put(var8, var22);
-            var5.Xqedii_h3mynbh.put(var4, new Xqedii_1d1gx4g(var11, var12, var16, var22));
+            var5.Xqedii_h3mynbh.put(var4, new AnvilInputState(var11, var12, var16, var22));
             this.Xqedii_oncxunw(var2, var3, var5, Xqedii_3ihqgc8.Xqedii_3uwg40ecgal2u(1032529960, 0));
             Runnable var24 = () -> {
                if ((1137307466 * 1137307466 - 1137307466 & 1) != 0) {
@@ -3611,7 +3611,7 @@ public abstract class WorldUiPart extends ApiElements {
                      Xqedii_1a2mt0h var10x = this.Xqedii_35obddf.get(var7);
                      Xqedii_1avxacb var11x = this.Xqedii_1l1cnj5(var10x, var8);
                      if (var11x != null) {
-                        var11x.Xqedii_h3mynbh.put(var4, new Xqedii_1d1gx4g(var11, var12, this.limitRuntimeInputText(var9x, var13), var22));
+                        var11x.Xqedii_h3mynbh.put(var4, new AnvilInputState(var11, var12, this.limitRuntimeInputText(var9x, var13), var22));
                         this.Xqedii_oncxunw(var10x, var10x.Xqedii_2zsng32.get(var8), var11x, Xqedii_3ihqgc8.Xqedii_1y3ssml1szkmh(2020105864, 25));
                      }
                   }
@@ -3702,7 +3702,7 @@ public abstract class WorldUiPart extends ApiElements {
          Xqedii_1a2mt0h var6 = this.Xqedii_35obddf.get(var1);
          Xqedii_1avxacb var7 = this.Xqedii_1l1cnj5(var6, var2);
          if (var7 != null) {
-            Xqedii_1d1gx4g var8 = var7.Xqedii_h3mynbh.get(var3);
+            AnvilInputState var8 = var7.Xqedii_h3mynbh.get(var3);
             if (var8 != null && var8.token() == var4) {
                var7.Xqedii_h3mynbh.remove(var3);
             }
@@ -3713,7 +3713,7 @@ public abstract class WorldUiPart extends ApiElements {
    }
 
    public void Xqedii_vxzcgon(
-      Xqedii_tmp4qaj var1,
+      ParsedGuiLayout var1,
       ConfigurationSection var2,
       String var3,
       double[] var4,
@@ -3764,7 +3764,7 @@ public abstract class WorldUiPart extends ApiElements {
       }
    }
 
-   public List<Map<String, Object>> Xqedii_iwuh552(Xqedii_tmp4qaj var1, String var2) {
+   public List<Map<String, Object>> Xqedii_iwuh552(ParsedGuiLayout var1, String var2) {
       if ((94496722 ^ 94496722) != 0) {
          throw new IllegalStateException();
       } else {
@@ -3798,7 +3798,7 @@ public abstract class WorldUiPart extends ApiElements {
             && Double.isFinite(var2.Xqedii_3e6rt9d)
             && Double.isFinite(var2.Xqedii_4y9g64q)
             && Double.isFinite(var2.Xqedii_qublebm)) {
-            Xqedii_tmp4qaj var5 = var1.Xqedii_3uo0d9i;
+            ParsedGuiLayout var5 = var1.Xqedii_3uo0d9i;
             double var6 = var1.Xqedii_2u9ms1f.Xqedii_2llkhpy / var5.pageWidth();
             double var8 = Math.max(
                Double.longBitsToDouble(Xqedii_3ihqgc8.Xqedii_3q99a8e1nv4ng(-6631010883953778886L, 43)), (var2.Xqedii_4y9g64q - var2.Xqedii_28fe0kz) * var6
@@ -3967,7 +3967,7 @@ public abstract class WorldUiPart extends ApiElements {
                   } else if (var1 != null && var1.getPacketType() == Client.INTERACT_ENTITY) {
                      if (var1.getPlayer() instanceof Player var2x) {
                         WrapperPlayClientInteractEntity var5 = new WrapperPlayClientInteractEntity(var1);
-                        Xqedii_u0dqcud var4 = WorldUiPart.this.Xqedii_28h4g3k.get(var5.getEntityId());
+                        WorldUiViewerEntity var4 = WorldUiPart.this.Xqedii_28h4g3k.get(var5.getEntityId());
                         if (var4 != null && var4.viewerId().equals(var2x.getUniqueId())) {
                            var1.setCancelled((Xqedii_sq3891d.Xqedii_2xte153zvmld7(695989739, 7) != 0));
                            Xqedii_38o2zes.Xqedii_1avvt9e(WorldUiPart.Xqedii_lvvjxhd(WorldUiPart.this), var2x, () -> {
@@ -4006,7 +4006,7 @@ public abstract class WorldUiPart extends ApiElements {
       }
    }
 
-   public void Xqedii_14dkzm2(Player var1, Xqedii_u0dqcud var2) {
+   public void Xqedii_14dkzm2(Player var1, WorldUiViewerEntity var2) {
       if (((1853568347 | 1) & 1) == 0) {
          throw new IllegalStateException();
       } else if (var1 != null && var1.isOnline()) {

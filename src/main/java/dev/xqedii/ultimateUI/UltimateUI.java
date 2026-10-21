@@ -76,9 +76,9 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
       {
          this.saveDefaultConfig();
          this.mergeConfigDefaults();
-         this.Xqedii_1zavo1k = new Xqedii_2nwgjlb(this);
+         this.Xqedii_1zavo1k = new LicenseRuntimeGuard(this);
          this.Xqedii_1mi7xjn = this.Xqedii_1zavo1k.Xqedii_3w0o3x5();
-         this.Xqedii_3g0zdbr = ((this.Xqedii_1mi7xjn == Xqedii_2b0ukbv.VALID
+         this.Xqedii_3g0zdbr = ((this.Xqedii_1mi7xjn == LicenseStatus.VALID
             ? 1
             : 0) != 0);
          if (this.Xqedii_3g0zdbr) {
@@ -104,7 +104,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
          this.activatePlugin();
       } else {
          String var1;
-         if (this.Xqedii_1mi7xjn == Xqedii_2b0ukbv.INVALID) {
+         if (this.Xqedii_1mi7xjn == LicenseStatus.INVALID) {
             var1 = "<#fb5454>Inactive (Invalid)";
          } else {
             var1 = "<#fb5454>Inactive (Connection Error)";
@@ -116,7 +116,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
             this.getCommand("uui").setTabCompleter(this);
          }
 
-         if (this.Xqedii_1mi7xjn != Xqedii_2b0ukbv.INVALID) {
+         if (this.Xqedii_1mi7xjn != LicenseStatus.INVALID) {
             this.scheduleStartupLicenseRetry(1);
          }
       }
@@ -133,8 +133,8 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
             this,
             () -> {
                if (this.Xqedii_2k1vujp == null && this.isEnabled()) {
-                  Xqedii_2b0ukbv var2 = this.Xqedii_1zavo1k.Xqedii_3w0o3x5();
-                  if (var2 == Xqedii_2b0ukbv.VALID && Xqedii_3omh7nb.Xqedii_2wauvzv().Xqedii_1u155gu()) {
+                  LicenseStatus var2 = this.Xqedii_1zavo1k.Xqedii_3w0o3x5();
+                  if (var2 == LicenseStatus.VALID && Xqedii_3omh7nb.Xqedii_2wauvzv().Xqedii_1u155gu()) {
                      Xqedii_38o2zes.Xqedii_34mipix(
                         this,
                         () -> {
@@ -149,7 +149,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
                            }
                         }
                      );
-                  } else if (var2 == Xqedii_2b0ukbv.INVALID) {
+                  } else if (var2 == LicenseStatus.INVALID) {
                      this.Xqedii_1mi7xjn = var2;
                      this.getLogger()
                         .warning(
@@ -325,7 +325,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
             String var10001 = "UltimateUI is not running yet, use {0} first!";
             Object[] var10002 = new Object[1];
             var10002[0] = "/uui reload";
-            Xqedii_3ul4hqj.Xqedii_2dtmver(var1, var10001, var10002);
+            ChatColorUtil.Xqedii_2dtmver(var1, var10001, var10002);
             return true;
          } else {
             int var5 = -1;
@@ -360,7 +360,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
    public boolean reloadConfigOnly(CommandSender var1) {
       if (!this.Xqedii_3jm11h0
          .compareAndSet(false, true)) {
-         Xqedii_3ul4hqj.Xqedii_2dtmver(
+         ChatColorUtil.Xqedii_2dtmver(
             var1,
             "The config is already reloading, please wait!"
          );
@@ -398,11 +398,11 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
                String var17 = "World UIs reloaded: {0}";
                Object[] var18 = new Object[1];
                var18[0] = var12;
-               var13.add(Xqedii_3ul4hqj.Xqedii_2d5sc5r(var17, var18));
-               Xqedii_3ul4hqj.Xqedii_2g7xq9b(
+               var13.add(ChatColorUtil.Xqedii_2d5sc5r(var17, var18));
+               ChatColorUtil.Xqedii_2g7xq9b(
                   var1,
                   true,
-                  Xqedii_3ul4hqj.Xqedii_2d5sc5r(
+                  ChatColorUtil.Xqedii_2d5sc5r(
                      "The configuration has been reloaded!"
                   ),
                   var13
@@ -413,7 +413,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
                String var10001 = "Reload failed: {0}";
                Object[] var10002 = new Object[1];
                var10002[0] = String.valueOf(var10.getMessage());
-               Xqedii_3ul4hqj.Xqedii_2dtmver(var1, var10001, var10002);
+               ChatColorUtil.Xqedii_2dtmver(var1, var10001, var10002);
                var8 = false;
             } finally {
                if (var8) {
@@ -433,13 +433,13 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
    public boolean reloadPackOnly(CommandSender var1) {
       if (!this.Xqedii_3jm11h0
          .compareAndSet(false, true)) {
-         Xqedii_3ul4hqj.Xqedii_2dtmver(
+         ChatColorUtil.Xqedii_2dtmver(
             var1,
             "The config is already reloading, please wait!"
          );
          return true;
       } else {
-         Xqedii_3ul4hqj.Xqedii_3m0zjou(
+         ChatColorUtil.Xqedii_3m0zjou(
             var1,
             "Rebuilding the resource pack..."
          );
@@ -479,7 +479,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
                                  String var10001 = "Resource pack generated with {0} images";
                                  Object[] var10002 = new Object[1];
                                  var10002[0] = var3;
-                                 var4.add(Xqedii_3ul4hqj.Xqedii_2d5sc5r(var10001, var10002));
+                                 var4.add(ChatColorUtil.Xqedii_2d5sc5r(var10001, var10002));
                                  this.finishExternalPackDeploy(var4, var2);
                                  String var5 = this.resolveResourcePackUrl();
                                  this.Xqedii_3b8f4mz = this.computeResourcePackDeliverySignature(var5);
@@ -487,11 +487,11 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
                                  var10001 = "Sent to {0} online players";
                                  var10002 = new Object[1];
                                  var10002[0] = Bukkit.getOnlinePlayers().size();
-                                 var4.add(Xqedii_3ul4hqj.Xqedii_2d5sc5r(var10001, var10002));
-                                 Xqedii_3ul4hqj.Xqedii_2g7xq9b(
+                                 var4.add(ChatColorUtil.Xqedii_2d5sc5r(var10001, var10002));
+                                 ChatColorUtil.Xqedii_2g7xq9b(
                                     var1,
                                     true,
-                                    Xqedii_3ul4hqj.Xqedii_2d5sc5r(
+                                    ChatColorUtil.Xqedii_2d5sc5r(
                                        "The resource pack has been updated!"
                                     ),
                                     var4
@@ -509,7 +509,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
                                  String var10001 = "Reload failed: {0}";
                                  Object[] var10002 = new Object[1];
                                  var10002[0] = String.valueOf(var11.getMessage());
-                                 Xqedii_3ul4hqj.Xqedii_2dtmver(var1, var10001, var10002);
+                                 ChatColorUtil.Xqedii_2dtmver(var1, var10001, var10002);
                               }
                            }
                         );
@@ -537,7 +537,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
          Xqedii_1zgvf22 var2 = this.loadScripts(null);
          this.refreshUiCommands();
          if (var2 == null) {
-            Xqedii_3ul4hqj.Xqedii_2dtmver(
+            ChatColorUtil.Xqedii_2dtmver(
                var1,
                "The scripts could not be loaded, see the console!"
             );
@@ -547,15 +547,15 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
             String var10001 = "Scripts compiled: {0}";
             Object[] var10002 = new Object[1];
             var10002[0] = var2.scripts();
-            var3.add(Xqedii_3ul4hqj.Xqedii_2d5sc5r(var10001, var10002));
+            var3.add(ChatColorUtil.Xqedii_2d5sc5r(var10001, var10002));
             var10001 = "Script events: {0}";
             var10002 = new Object[1];
             var10002[0] = var2.handlers();
-            var3.add(Xqedii_3ul4hqj.Xqedii_2d5sc5r(var10001, var10002));
-            Xqedii_3ul4hqj.Xqedii_2g7xq9b(
+            var3.add(ChatColorUtil.Xqedii_2d5sc5r(var10001, var10002));
+            ChatColorUtil.Xqedii_2g7xq9b(
                var1,
                var2.errors().isEmpty(),
-               Xqedii_3ul4hqj.Xqedii_2d5sc5r(
+               ChatColorUtil.Xqedii_2d5sc5r(
                   "The pages have been reloaded!"
                ),
                var3
@@ -569,13 +569,13 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
    public boolean reloadEverything(CommandSender var1) {
       if (!this.Xqedii_3jm11h0
          .compareAndSet(false, true)) {
-         Xqedii_3ul4hqj.Xqedii_2dtmver(
+         ChatColorUtil.Xqedii_2dtmver(
             var1,
             "The config is already reloading, please wait!"
          );
          return true;
       } else {
-         Xqedii_3ul4hqj.Xqedii_3m0zjou(
+         ChatColorUtil.Xqedii_3m0zjou(
             var1,
             "Reloading the configuration..."
          );
@@ -611,9 +611,9 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
                      label101: {
                         try {
                            var9 = true;
-                           Xqedii_2b0ukbv var2 = this.Xqedii_1zavo1k.Xqedii_3w0o3x5();
-                           if (var2 != Xqedii_2b0ukbv.VALID) {
-                              String var14 = var2 == Xqedii_2b0ukbv.INVALID
+                           LicenseStatus var2 = this.Xqedii_1zavo1k.Xqedii_3w0o3x5();
+                           if (var2 != LicenseStatus.VALID) {
+                              String var14 = var2 == LicenseStatus.INVALID
                                  ? "Incorrect License Key"
                                  : "Connection Error";
                               Xqedii_38o2zes.Xqedii_34mipix(
@@ -623,7 +623,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
                                        String var10001 = "License error: {0}";
                                        Object[] var10002 = new Object[1];
                                        var10002[0] = var14;
-                                       Xqedii_3ul4hqj.Xqedii_2dtmver(var1, var10001, var10002);
+                                       ChatColorUtil.Xqedii_2dtmver(var1, var10001, var10002);
                                     }
                                  }
                               );
@@ -634,7 +634,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
                            Xqedii_38o2zes.Xqedii_34mipix(this, () -> {
                               {
                                  if (this.Xqedii_2k1vujp == null) {
-                                    this.Xqedii_1mi7xjn = Xqedii_2b0ukbv.VALID;
+                                    this.Xqedii_1mi7xjn = LicenseStatus.VALID;
                                     this.Xqedii_3g0zdbr = true;
                                     if (this.Xqedii_2lp9ah4 != null) {
                                        this.Xqedii_2lp9ah4.disable();
@@ -672,7 +672,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
                                     String var10001 = "Resource pack generated with {0} images";
                                     Object[] var10002 = new Object[1];
                                     var10002[0] = var3xx;
-                                    var4x.add(Xqedii_3ul4hqj.Xqedii_2d5sc5r(var10001, var10002));
+                                    var4x.add(ChatColorUtil.Xqedii_2d5sc5r(var10001, var10002));
                                     this.finishExternalPackDeploy(var4x, var3x);
                                     String var5 = this.resolveResourcePackUrl();
                                     this.Xqedii_3b8f4mz = this.computeResourcePackDeliverySignature(var5);
@@ -684,7 +684,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
                                        var10001 = "World UIs reloaded: {0}";
                                        var10002 = new Object[1];
                                        var10002[0] = var6;
-                                       var4x.add(Xqedii_3ul4hqj.Xqedii_2d5sc5r(var10001, var10002));
+                                       var4x.add(ChatColorUtil.Xqedii_2d5sc5r(var10001, var10002));
                                     }
 
                                     Xqedii_1zgvf22 var7 = this.loadScripts(null);
@@ -692,18 +692,18 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
                                        var10001 = "Scripts compiled: {0}";
                                        var10002 = new Object[1];
                                        var10002[0] = var7.scripts();
-                                       var4x.add(Xqedii_3ul4hqj.Xqedii_2d5sc5r(var10001, var10002));
+                                       var4x.add(ChatColorUtil.Xqedii_2d5sc5r(var10001, var10002));
                                     }
 
                                     var4x.add(
-                                       Xqedii_3ul4hqj.Xqedii_2d5sc5r(
+                                       ChatColorUtil.Xqedii_2d5sc5r(
                                           "License is valid"
                                        )
                                     );
-                                    Xqedii_3ul4hqj.Xqedii_2g7xq9b(
+                                    ChatColorUtil.Xqedii_2g7xq9b(
                                        var1,
                                        true,
-                                       Xqedii_3ul4hqj.Xqedii_2d5sc5r(
+                                       ChatColorUtil.Xqedii_2d5sc5r(
                                           "The configuration has been reloaded!"
                                        ),
                                        var4x
@@ -724,7 +724,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
                                     String var10001 = "Reload failed: {0}";
                                     Object[] var10002 = new Object[1];
                                     var10002[0] = String.valueOf(var12.getMessage());
-                                    Xqedii_3ul4hqj.Xqedii_2dtmver(var1, var10001, var10002);
+                                    ChatColorUtil.Xqedii_2dtmver(var1, var10001, var10002);
                                  }
                               }
                            );
@@ -759,18 +759,18 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
             String var10001 = "Changed {0} because it conflicts with the UltimateUI pack";
             Object[] var10002 = new Object[1];
             var10002[0] = var5;
-            var1.add(Xqedii_3ul4hqj.Xqedii_39ytrlf(var10001, var10002));
+            var1.add(ChatColorUtil.Xqedii_39ytrlf(var10001, var10002));
          }
 
          String var9 = "Resource pack deployed to {0}";
          Object[] var11 = new Object[1];
          var11[0] = var3;
-         var1.add(Xqedii_3ul4hqj.Xqedii_2d5sc5r(var9, var11));
+         var1.add(ChatColorUtil.Xqedii_2d5sc5r(var9, var11));
          if (!this.getServer().getPluginManager().isPluginEnabled(var3)) {
             var9 = "{0} is not enabled, reload it yourself once it runs";
             var11 = new Object[1];
             var11[0] = var3;
-            var1.add(Xqedii_3ul4hqj.Xqedii_39ytrlf(var9, var11));
+            var1.add(ChatColorUtil.Xqedii_39ytrlf(var9, var11));
          } else {
             long var8 = 1L;
 
@@ -863,10 +863,10 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
                      ArrayList var2x = new ArrayList();
                      this.finishExternalPackDeploy(var2x, var7);
                      if (!var2x.isEmpty()) {
-                        Xqedii_3ul4hqj.Xqedii_2g7xq9b(
+                        ChatColorUtil.Xqedii_2g7xq9b(
                            this.getServer().getConsoleSender(),
                            true,
-                           Xqedii_3ul4hqj.Xqedii_2d5sc5r(
+                           ChatColorUtil.Xqedii_2d5sc5r(
                               "The rebuilt resource pack has been deployed!"
                            ),
                            var2x
@@ -901,7 +901,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
    public void registerSkriptIntegration() {
       if (Bukkit.getPluginManager().getPlugin("Skript") != null) {
          try {
-            Xqedii_1uy3j6u.Xqedii_2s3fucr(this);
+            UltimateUiSkriptBridge.Xqedii_2s3fucr(this);
          } catch (Throwable var2) {
             this.getLogger().warning(Xqedii_3tvu4ro8z2mdg(String.valueOf(var2)));
          }
@@ -1061,7 +1061,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
                String var3 = var1.getStatus().name();
                if ("ACCEPTED".equals(var3)) {
                   if (this.isResourcePackChatMessagesEnabled()) {
-                     Xqedii_3ul4hqj.send(
+                     ChatColorUtil.send(
                         var2,
                         this.getLangMessage(
                            "resource-pack.messages.chat.loading",
@@ -1105,7 +1105,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
                   }
 
                   if (this.isResourcePackChatMessagesEnabled()) {
-                     Xqedii_3ul4hqj.send(
+                     ChatColorUtil.send(
                         var2,
                         this.getLangMessage(
                            "resource-pack.messages.chat.success",
@@ -1143,7 +1143,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
                            if (var2.isOnline()) {
                               this.forceClearTitle(var2);
                               if (this.isResourcePackChatMessagesEnabled()) {
-                                 Xqedii_3ul4hqj.send(
+                                 ChatColorUtil.send(
                                     var2,
                                     this.getLangMessage(
                                        "resource-pack.messages.chat.failed",
@@ -1782,7 +1782,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
          if (!this.hasCommandPermissionSilent(
             var5, "ultimateui.command.use"
          )) {
-            Xqedii_3ul4hqj.send(
+            ChatColorUtil.send(
                var5,
                this.getLangMessage(
                   "gui.cant-do-this",
@@ -1874,7 +1874,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
                return true;
             }
 
-            Xqedii_g4i3bi9 var23 = this.parseOpenCommandOptions(var5, var4);
+            UiOpenOptions var23 = this.parseOpenCommandOptions(var5, var4);
             if (var23 == null) {
                return true;
             }
@@ -2113,7 +2113,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
             String var29 = "Cursor sensitivity set to {0}!";
             Object[] var36 = new Object[1];
             var36[0] = var21;
-            Xqedii_3ul4hqj.Xqedii_2pfjv2g(var5, var29, var36);
+            ChatColorUtil.Xqedii_2pfjv2g(var5, var29, var36);
          } else {
             if (var4[0]
                .equalsIgnoreCase("shaders")) {
@@ -2161,7 +2161,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
 
          return true;
       } else {
-         Xqedii_3ul4hqj.send(
+         ChatColorUtil.send(
             var5,
             this.getLangMessage(
                "gui.editor-not-on-bedrock",
@@ -2233,13 +2233,13 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
                var4[1]
             );
          } else {
-            Xqedii_16ud823 var13 = var4[0]
+            ClientFeatureToggle var13 = var4[0]
                   .equalsIgnoreCase("shaders")
-               ? Xqedii_16ud823.SHADERS
+               ? ClientFeatureToggle.SHADERS
                : (
                   var4[0]
                         .equalsIgnoreCase("cursor")
-                     ? Xqedii_16ud823.CURSOR
+                     ? ClientFeatureToggle.CURSOR
                      : null
                );
             if (var13 == null

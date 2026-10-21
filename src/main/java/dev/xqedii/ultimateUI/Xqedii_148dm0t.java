@@ -87,16 +87,16 @@ public final class Xqedii_148dm0t {
          PacketWrapper var4 = var1.getLastUsedWrapper();
          WrapperPlayServerBossBar var5 = new WrapperPlayServerBossBar(var1);
          var1.setLastUsedWrapper(var4);
-         Xqedii_fwiw7cd var6 = Xqedii_sewrhnb(var5.getAction());
+         BossbarAction var6 = Xqedii_sewrhnb(var5.getAction());
          if (var5.getUUID() != null && var6 != null) {
-            Component var7 = var6 != Xqedii_fwiw7cd.ADD && var6 != Xqedii_fwiw7cd.UPDATE_TITLE ? null : var5.getTitle();
-            float var8 = var6 != Xqedii_fwiw7cd.ADD && var6 != Xqedii_fwiw7cd.UPDATE_HEALTH
+            Component var7 = var6 != BossbarAction.ADD && var6 != BossbarAction.UPDATE_TITLE ? null : var5.getTitle();
+            float var8 = var6 != BossbarAction.ADD && var6 != BossbarAction.UPDATE_HEALTH
                ? Float.intBitsToFloat(0)
                : var5.getHealth();
-            int var9 = var6 != Xqedii_fwiw7cd.ADD && var6 != Xqedii_fwiw7cd.UPDATE_STYLE
+            int var9 = var6 != BossbarAction.ADD && var6 != BossbarAction.UPDATE_STYLE
                ? 0
                : 1;
-            int var10 = var6 != Xqedii_fwiw7cd.ADD && var6 != Xqedii_fwiw7cd.UPDATE_FLAGS
+            int var10 = var6 != BossbarAction.ADD && var6 != BossbarAction.UPDATE_FLAGS
                ? 0
                : 1;
             Xqedii_34z2igs var11 = new Xqedii_34z2igs(
@@ -122,7 +122,7 @@ public final class Xqedii_148dm0t {
                   ? 1
                   : 0;
                Xqedii_38cw7ku var8 = var5.Xqedii_2bjpkmq.get(var4);
-               if (var2.action() == Xqedii_fwiw7cd.REMOVE) {
+               if (var2.action() == BossbarAction.REMOVE) {
                   if (var8 == null) {
                      return false;
                   } else if (!var8.Xqedii_cav4kxy) {
@@ -138,7 +138,7 @@ public final class Xqedii_148dm0t {
                   }
                } else {
                   if (var8 == null) {
-                     if (var2.action() != Xqedii_fwiw7cd.ADD) {
+                     if (var2.action() != BossbarAction.ADD) {
                         return false;
                      }
 
@@ -212,7 +212,7 @@ public final class Xqedii_148dm0t {
 
          for (UUID var4 : var2.Xqedii_394arwg) {
             if (var2.Xqedii_2bjpkmq.remove(var4) != null) {
-               this.Xqedii_3mi6i2t.Xqedii_s6fwnzl(var1, var4, Xqedii_fwiw7cd.REMOVE, null);
+               this.Xqedii_3mi6i2t.Xqedii_s6fwnzl(var1, var4, BossbarAction.REMOVE, null);
             }
          }
 
@@ -231,7 +231,7 @@ public final class Xqedii_148dm0t {
             for (Entry var9 : (Iterable<Entry>) (var6)) {
 
                ((Xqedii_38cw7ku)var9.getValue()).Xqedii_cav4kxy = true;
-               this.Xqedii_3mi6i2t.Xqedii_s6fwnzl(var1, (UUID)var9.getKey(), Xqedii_fwiw7cd.ADD, (Xqedii_38cw7ku)var9.getValue());
+               this.Xqedii_3mi6i2t.Xqedii_s6fwnzl(var1, (UUID)var9.getKey(), BossbarAction.ADD, (Xqedii_38cw7ku)var9.getValue());
             }
          }
       }
@@ -292,17 +292,17 @@ public final class Xqedii_148dm0t {
 
    // $VF: Unable to simplify switch on enum
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-   public static Xqedii_fwiw7cd Xqedii_sewrhnb(Action var0) {
+   public static BossbarAction Xqedii_sewrhnb(Action var0) {
       if (var0 == null) {
          return null;
       } else {
          return switch (dev.xqedii.ultimateUI.Xqedii_1pfporw.Xqedii_1e66zqy[var0.ordinal()]) {
-            case 1 -> Xqedii_fwiw7cd.ADD;
-            case 2 -> Xqedii_fwiw7cd.REMOVE;
-            case 3 -> Xqedii_fwiw7cd.UPDATE_HEALTH;
-            case 4 -> Xqedii_fwiw7cd.UPDATE_TITLE;
-            case 5 -> Xqedii_fwiw7cd.UPDATE_STYLE;
-            case 6 -> Xqedii_fwiw7cd.UPDATE_FLAGS;
+            case 1 -> BossbarAction.ADD;
+            case 2 -> BossbarAction.REMOVE;
+            case 3 -> BossbarAction.UPDATE_HEALTH;
+            case 4 -> BossbarAction.UPDATE_TITLE;
+            case 5 -> BossbarAction.UPDATE_STYLE;
+            case 6 -> BossbarAction.UPDATE_FLAGS;
             default -> throw new MatchException(null, null);
          };
       }
@@ -384,7 +384,7 @@ public final class Xqedii_148dm0t {
             UUID var4 = var1.getUniqueId();
 
             for (int var5 = 0; var5 < var3.size(); var5++) {
-               this.Xqedii_3mi6i2t.Xqedii_3p9z9ee(var1, Xqedii_1fp5wzn(var4, var5), Xqedii_fwiw7cd.REMOVE, null);
+               this.Xqedii_3mi6i2t.Xqedii_3p9z9ee(var1, Xqedii_1fp5wzn(var4, var5), BossbarAction.REMOVE, null);
             }
          }
       }
@@ -412,15 +412,15 @@ public final class Xqedii_148dm0t {
                Component var9 = (Component)var2.get(var8);
                if (var8 < var7) {
                   if (!var9.equals(var6.get(var8))) {
-                     this.Xqedii_3mi6i2t.Xqedii_3p9z9ee(var1, Xqedii_1fp5wzn(var3, var8), Xqedii_fwiw7cd.UPDATE_TITLE, var9);
+                     this.Xqedii_3mi6i2t.Xqedii_3p9z9ee(var1, Xqedii_1fp5wzn(var3, var8), BossbarAction.UPDATE_TITLE, var9);
                   }
                } else {
-                  this.Xqedii_3mi6i2t.Xqedii_3p9z9ee(var1, Xqedii_1fp5wzn(var3, var8), Xqedii_fwiw7cd.ADD, var9);
+                  this.Xqedii_3mi6i2t.Xqedii_3p9z9ee(var1, Xqedii_1fp5wzn(var3, var8), BossbarAction.ADD, var9);
                }
             }
 
             for (int var12 = var2.size(); var12 < var7; var12++) {
-               this.Xqedii_3mi6i2t.Xqedii_3p9z9ee(var1, Xqedii_1fp5wzn(var3, var12), Xqedii_fwiw7cd.REMOVE, null);
+               this.Xqedii_3mi6i2t.Xqedii_3p9z9ee(var1, Xqedii_1fp5wzn(var3, var12), BossbarAction.REMOVE, null);
             }
 
             var4.Xqedii_px4voub = new ArrayList<>(var2);

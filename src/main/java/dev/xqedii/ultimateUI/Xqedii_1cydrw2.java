@@ -89,7 +89,7 @@ public final class Xqedii_1cydrw2 extends Xqedii_1ks3mne {
       }
    }
 
-   public Xqedii_1rr9pk9 Xqedii_29hipmc(List<Xqedii_2kb1ns6> var1, List<String> var2) throws IOException {
+   public BedrockPackExportResult Xqedii_29hipmc(List<Xqedii_2kb1ns6> var1, List<String> var2) throws IOException {
       {
          File var3 = new File(
             this.Xqedii_ef13m9a, "bedrock/pack"
@@ -182,7 +182,7 @@ public final class Xqedii_1cydrw2 extends Xqedii_1ks3mne {
          );
          this.Xqedii_1sv0x4x(var1);
          File var20 = this.Xqedii_1sujeju(var3);
-         return new Xqedii_1rr9pk9(
+         return new BedrockPackExportResult(
             var3,
             var20,
             var1.size(),

@@ -51,7 +51,7 @@ public abstract class Xqedii_piddhjw extends Xqedii_162huh6 {
             var6 ? var1.Xqedii_33bg1mh() : var1.Xqedii_s8xbs95(), true
          );
          var8.put(var10001, Xqedii_29ge1r6.Xqedii_2fhwu22(var10002));
-         Xqedii_314aen4 var9 = new Xqedii_314aen4(var1.Xqedii_2g46lck, var1.Xqedii_1m61jit, var1.Xqedii_12g62h3, var1.Xqedii_r5a1fhj);
+         GuiBoundingBox var9 = new GuiBoundingBox(var1.Xqedii_2g46lck, var1.Xqedii_1m61jit, var1.Xqedii_12g62h3, var1.Xqedii_r5a1fhj);
          List var10 = this.Xqedii_azbn0pf(var7, "", var9);
          ArrayList var11 = new ArrayList();
          if (var6) {
@@ -314,7 +314,7 @@ public abstract class Xqedii_piddhjw extends Xqedii_162huh6 {
       }
    }
 
-   public List<Object> Xqedii_azbn0pf(Xqedii_39t0x33 var1, String var2, Xqedii_314aen4 var3) throws IOException {
+   public List<Object> Xqedii_azbn0pf(Xqedii_39t0x33 var1, String var2, GuiBoundingBox var3) throws IOException {
       {
          ArrayList var4 = new ArrayList();
          int var5 = 1;
@@ -757,7 +757,7 @@ public abstract class Xqedii_piddhjw extends Xqedii_162huh6 {
       }
    }
 
-   public List<Object> Xqedii_1eq9emc(Xqedii_39t0x33 var1, Xqedii_v7p1hqx var2, Xqedii_314aen4 var3, int var4) throws IOException {
+   public List<Object> Xqedii_1eq9emc(Xqedii_39t0x33 var1, Xqedii_v7p1hqx var2, GuiBoundingBox var3, int var4) throws IOException {
       {
          Xqedii_2kb1ns6 var5 = var1.page();
          ArrayList var6 = new ArrayList();
@@ -837,7 +837,7 @@ public abstract class Xqedii_piddhjw extends Xqedii_162huh6 {
       }
    }
 
-   public List<Object> Xqedii_609wugh(Xqedii_39t0x33 var1, Xqedii_v7p1hqx var2, Xqedii_314aen4 var3, String var4, int var5) {
+   public List<Object> Xqedii_609wugh(Xqedii_39t0x33 var1, Xqedii_v7p1hqx var2, GuiBoundingBox var3, String var4, int var5) {
       {
          ArrayList var6 = new ArrayList();
          Map var7 = this.Xqedii_3jkhq3u(var1, var2, var3, var2.Xqedii_21n4stt, var2.Xqedii_1vycaiv, var5 + 1);
@@ -1011,7 +1011,7 @@ public abstract class Xqedii_piddhjw extends Xqedii_162huh6 {
       }
    }
 
-   public Map<String, Object> Xqedii_21bs51y(Xqedii_39t0x33 var1, Xqedii_v7p1hqx var2, Xqedii_314aen4 var3, int var4) throws IOException {
+   public Map<String, Object> Xqedii_21bs51y(Xqedii_39t0x33 var1, Xqedii_v7p1hqx var2, GuiBoundingBox var3, int var4) throws IOException {
       {
          Map var5 = Xqedii_29ge1r6.Xqedii_15tec8i();
          var5.put(
@@ -1082,7 +1082,7 @@ public abstract class Xqedii_piddhjw extends Xqedii_162huh6 {
       }
    }
 
-   public Map<String, Object> Xqedii_13roph7(Xqedii_39t0x33 var1, Xqedii_3duv2su var2, Xqedii_314aen4 var3, int var4) throws IOException {
+   public Map<String, Object> Xqedii_13roph7(Xqedii_39t0x33 var1, Xqedii_3duv2su var2, GuiBoundingBox var3, int var4) throws IOException {
       {
          Xqedii_2kb1ns6 var5 = var1.page();
          String var6 = Xqedii_3s6jh58cyhdj5(
@@ -1093,7 +1093,7 @@ public abstract class Xqedii_piddhjw extends Xqedii_162huh6 {
             Xqedii_296z12u(var2.Xqedii_2h2vht7),
             var1.namespace().size()
          );
-         Xqedii_314aen4 var7 = new Xqedii_314aen4(var2.Xqedii_366js72, var2.Xqedii_1zzzeuc, var2.Xqedii_2543rc0(), var2.Xqedii_2vric3z());
+         GuiBoundingBox var7 = new GuiBoundingBox(var2.Xqedii_366js72, var2.Xqedii_1zzzeuc, var2.Xqedii_2543rc0(), var2.Xqedii_2vric3z());
          Map var8 = Xqedii_29ge1r6.Xqedii_15tec8i();
          var8.put(
             "type",
@@ -1676,7 +1676,7 @@ public abstract class Xqedii_piddhjw extends Xqedii_162huh6 {
       }
    }
 
-   public Map<String, Object> Xqedii_3jkhq3u(Xqedii_39t0x33 var1, Xqedii_v7p1hqx var2, Xqedii_314aen4 var3, int var4, String var5, int var6) {
+   public Map<String, Object> Xqedii_3jkhq3u(Xqedii_39t0x33 var1, Xqedii_v7p1hqx var2, GuiBoundingBox var3, int var4, String var5, int var6) {
       {
          Map var7 = this.Xqedii_3oe2d98(
             var1,
@@ -1782,7 +1782,7 @@ public abstract class Xqedii_piddhjw extends Xqedii_162huh6 {
       }
    }
 
-   public void Xqedii_ibdapof(Map<String, Object> var1, Xqedii_314aen4 var2, double var3, double var5, double var7, double var9) {
+   public void Xqedii_ibdapof(Map<String, Object> var1, GuiBoundingBox var2, double var3, double var5, double var7, double var9) {
       {
          double var11 = Math.max(Double.longBitsToDouble(4607182418800017408L), var2.width());
          double var13 = Math.max(Double.longBitsToDouble(4607182418800017408L), var2.height());

@@ -4,7 +4,7 @@ import dev.xqedii.ultimateUI.UltimateUI;
 import dev.xqedii.ultimateUI.Xqedii_1ino5c0;
 import dev.xqedii.ultimateUI.Xqedii_1uzjgh7;
 import dev.xqedii.ultimateUI.Xqedii_38o2zes;
-import dev.xqedii.ultimateUI.Xqedii_3gpvmi2;
+import dev.xqedii.ultimateUI.NpcPluginType;
 import dev.xqedii.ultimateui.libs.packetevents.packetevents.PacketEvents;
 import dev.xqedii.ultimateui.libs.packetevents.packetevents.PacketEventsAPI;
 import dev.xqedii.ultimateui.libs.packetevents.packetevents.event.PacketListenerAbstract;
@@ -55,7 +55,7 @@ public class CursorNpcService {
    public final Set<UUID> Xqedii_3e2vkr1 = ConcurrentHashMap.newKeySet();
    public PacketListenerCommon Xqedii_2rymnfq;
    public volatile boolean Xqedii_17xnycq = (Xqedii_1ino5c0.Xqedii_2smplobxkxptv(-142414698, 7) != 0);
-   public volatile Xqedii_3gpvmi2 Xqedii_1cvkbow = Xqedii_3gpvmi2.NONE;
+   public volatile NpcPluginType Xqedii_1cvkbow = NpcPluginType.NONE;
    public volatile boolean Xqedii_3ho74ti;
    public volatile Object Xqedii_2r435rn;
    public volatile Object Xqedii_16ifz9w;
@@ -117,10 +117,10 @@ public class CursorNpcService {
       if ((-844141219 * -844141219 + -844141219 & 1) != 0) {
          throw new IllegalStateException();
       } else {
-         this.Xqedii_1cvkbow = Xqedii_3gpvmi2.NONE;
+         this.Xqedii_1cvkbow = NpcPluginType.NONE;
          Plugin var1 = Bukkit.getPluginManager().getPlugin(Xqedii_1ino5c0.Xqedii_2df1de1vt0vwb("DJusKY04Mf++gqAMZte6RBIEYKoN3tLQPEYYWJsw6SE32hmsdp9d8NQT+F4="));
          if (var1 != null && var1.isEnabled() && this.Xqedii_q1xajp8()) {
-            this.Xqedii_1cvkbow = Xqedii_3gpvmi2.CITIZENS;
+            this.Xqedii_1cvkbow = NpcPluginType.CITIZENS;
             this.Xqedii_fqsswts
                .getLogger()
                .info(
@@ -132,7 +132,7 @@ public class CursorNpcService {
             Plugin var2 = Bukkit.getPluginManager()
                .getPlugin(Xqedii_1ino5c0.Xqedii_2df1de1vt0vwb("zrEbxbVyrAkHTPrT/Q72dCFBA/sQVBLT4W6ITQCZAUJ/b4GqGltYbncVvHupdA=="));
             if (var2 != null && var2.isEnabled() && this.Xqedii_2idfv38()) {
-               this.Xqedii_1cvkbow = Xqedii_3gpvmi2.FANCYNPCS;
+               this.Xqedii_1cvkbow = NpcPluginType.FANCYNPCS;
                this.Xqedii_fqsswts
                   .getLogger()
                   .info(
@@ -269,7 +269,7 @@ public class CursorNpcService {
       if (((-1031359846 << 1 | 1) & 1) == 0) {
          throw new IllegalStateException();
       } else if (var1 != null && var1.isOnline() && var2 != null && var2.getWorld() != null) {
-         if (this.Xqedii_1cvkbow == Xqedii_3gpvmi2.NONE) {
+         if (this.Xqedii_1cvkbow == NpcPluginType.NONE) {
             if (!this.Xqedii_3ho74ti) {
                this.Xqedii_3ho74ti = (Xqedii_1ino5c0.Xqedii_2ajizx00etb0b(202933176, 28) != 0);
                this.Xqedii_fqsswts
@@ -384,7 +384,7 @@ public class CursorNpcService {
                      .getMethod(Xqedii_1ino5c0.Xqedii_2df1de1vt0vwb("zAaxAeKBs6XzqR/UVzeUq2cllSkejaSEzldS/OK60shg35+bpaXFwuPEaSVbWQ=="))
                      .invoke(var4) instanceof Entity var9) {
                      var1.hideEntity(this.Xqedii_fqsswts, var9);
-                     return new Xqedii_1uzjgh7(var9.getEntityId(), var2.clone(), Xqedii_3gpvmi2.CITIZENS, var4);
+                     return new Xqedii_1uzjgh7(var9.getEntityId(), var2.clone(), NpcPluginType.CITIZENS, var4);
                   } else {
                      this.Xqedii_3afwrnm(var4);
                      return null;
@@ -818,7 +818,7 @@ public class CursorNpcService {
                var10000.invoke(var12, var47);
                int var14 = (Integer)var11.getMethod(Xqedii_1ino5c0.Xqedii_2df1de1vt0vwb("a5jX7Wpd2aS2btAzpxUZwCpF41K4fkA5GWPk2rOImIBq9vJctFu7qnpdoZ9N9R0/QtQ="))
                   .invoke(var3);
-               return new Xqedii_1uzjgh7(var14, var2.clone(), Xqedii_3gpvmi2.FANCYNPCS, var3);
+               return new Xqedii_1uzjgh7(var14, var2.clone(), NpcPluginType.FANCYNPCS, var3);
             }
          } catch (Throwable var15) {
             this.Xqedii_fqsswts.getLogger().warning(Xqedii_dq1j6im1wy3j(var1.getName(), var15.getMessage()));

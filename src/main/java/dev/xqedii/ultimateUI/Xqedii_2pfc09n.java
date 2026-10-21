@@ -41,7 +41,7 @@ public final class Xqedii_2pfc09n extends Command implements PluginIdentifiableC
             return true;
          }
       } else {
-         Xqedii_3ul4hqj.Xqedii_2dtmver(
+         ChatColorUtil.Xqedii_2dtmver(
             var1,
             "This command is for players only!"
          );

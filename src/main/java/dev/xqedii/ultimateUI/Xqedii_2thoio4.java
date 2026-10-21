@@ -12,7 +12,7 @@ public final class Xqedii_2thoio4 {
    public static final List<String> Xqedii_4h0tx6n;
    public static final List<String> Xqedii_p2rt6hv;
    public static final List<String> Xqedii_2xrm6um;
-   public final List<Xqedii_25ri1e7> Xqedii_rty1vz4;
+   public final List<LexerToken> Xqedii_rty1vz4;
    public final Xqedii_1kffk3z Xqedii_d4hvym9;
    public final List<Xqedii_39jklon> Xqedii_1ukapu0;
    public List<Xqedii_3vsk7zm> Xqedii_1ws39dv;
@@ -20,7 +20,7 @@ public final class Xqedii_2thoio4 {
    public int Xqedii_38gkvzl;
    public int Xqedii_1okvqlt;
 
-   public Xqedii_2thoio4(List<Xqedii_25ri1e7> var1, Xqedii_1kffk3z var2, List<Xqedii_39jklon> var3) {
+   public Xqedii_2thoio4(List<LexerToken> var1, Xqedii_1kffk3z var2, List<Xqedii_39jklon> var3) {
       this.Xqedii_rty1vz4 = var1;
       this.Xqedii_d4hvym9 = var2;
       this.Xqedii_1ukapu0 = var3;
@@ -84,10 +84,10 @@ public final class Xqedii_2thoio4 {
       {
          this.Xqedii_1ws39dv = var1;
 
-         while (!this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.EOF)) {
-            if (this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.NEWLINE)) {
+         while (!this.Xqedii_2o6grdd().is(LexerTokenType.EOF)) {
+            if (this.Xqedii_2o6grdd().is(LexerTokenType.NEWLINE)) {
                this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
-            } else if (!this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.INDENT) && !this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.DEDENT)) {
+            } else if (!this.Xqedii_2o6grdd().is(LexerTokenType.INDENT) && !this.Xqedii_2o6grdd().is(LexerTokenType.DEDENT)) {
                int var2 = this.Xqedii_2d86asd;
 
                try {
@@ -124,7 +124,7 @@ public final class Xqedii_2thoio4 {
          while (var2) {
             int var3 = this.Xqedii_2d86asd;
 
-            while (this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.NEWLINE)) {
+            while (this.Xqedii_2o6grdd().is(LexerTokenType.NEWLINE)) {
                this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
             }
 
@@ -145,23 +145,23 @@ public final class Xqedii_2thoio4 {
          int var2 = 0;
 
          for (int var3 = var1; var3 < this.Xqedii_2d86asd && var3 < this.Xqedii_rty1vz4.size(); var3++) {
-            if (this.Xqedii_rty1vz4.get(var3).is(Xqedii_1p9lu7f.INDENT)) {
+            if (this.Xqedii_rty1vz4.get(var3).is(LexerTokenType.INDENT)) {
                var2++;
-            } else if (this.Xqedii_rty1vz4.get(var3).is(Xqedii_1p9lu7f.DEDENT)) {
+            } else if (this.Xqedii_rty1vz4.get(var3).is(LexerTokenType.DEDENT)) {
                var2--;
             }
          }
 
          if (this.Xqedii_2d86asd <= var1
             || var2 > 0
-            || !this.Xqedii_rty1vz4.get(this.Xqedii_2d86asd - 1).is(Xqedii_1p9lu7f.NEWLINE)
-            || this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.INDENT)) {
-            while (!this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.EOF)) {
-               Xqedii_25ri1e7 var4 = this.Xqedii_2o6grdd();
-               if (var4.is(Xqedii_1p9lu7f.INDENT)) {
+            || !this.Xqedii_rty1vz4.get(this.Xqedii_2d86asd - 1).is(LexerTokenType.NEWLINE)
+            || this.Xqedii_2o6grdd().is(LexerTokenType.INDENT)) {
+            while (!this.Xqedii_2o6grdd().is(LexerTokenType.EOF)) {
+               LexerToken var4 = this.Xqedii_2o6grdd();
+               if (var4.is(LexerTokenType.INDENT)) {
                   var2++;
                } else {
-                  if (var4.is(Xqedii_1p9lu7f.DEDENT)) {
+                  if (var4.is(LexerTokenType.DEDENT)) {
                      if (var2 <= 0) {
                         return;
                      }
@@ -174,9 +174,9 @@ public final class Xqedii_2thoio4 {
                      continue;
                   }
 
-                  if (var4.is(Xqedii_1p9lu7f.NEWLINE) && var2 <= 0) {
+                  if (var4.is(LexerTokenType.NEWLINE) && var2 <= 0) {
                      this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
-                     if (!this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.INDENT)) {
+                     if (!this.Xqedii_2o6grdd().is(LexerTokenType.INDENT)) {
                         return;
                      }
                      continue;
@@ -194,28 +194,28 @@ public final class Xqedii_2thoio4 {
          int var2 = 0;
 
          for (int var3 = var1; var3 < this.Xqedii_2d86asd && var3 < this.Xqedii_rty1vz4.size(); var3++) {
-            if (this.Xqedii_rty1vz4.get(var3).is(Xqedii_1p9lu7f.INDENT)) {
+            if (this.Xqedii_rty1vz4.get(var3).is(LexerTokenType.INDENT)) {
                var2++;
-            } else if (this.Xqedii_rty1vz4.get(var3).is(Xqedii_1p9lu7f.DEDENT)) {
+            } else if (this.Xqedii_rty1vz4.get(var3).is(LexerTokenType.DEDENT)) {
                var2--;
             }
          }
 
-         while (!this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.EOF)) {
-            Xqedii_25ri1e7 var4 = this.Xqedii_2o6grdd();
-            if (var4.is(Xqedii_1p9lu7f.INDENT)) {
+         while (!this.Xqedii_2o6grdd().is(LexerTokenType.EOF)) {
+            LexerToken var4 = this.Xqedii_2o6grdd();
+            if (var4.is(LexerTokenType.INDENT)) {
                var2++;
-            } else if (var4.is(Xqedii_1p9lu7f.DEDENT)) {
+            } else if (var4.is(LexerTokenType.DEDENT)) {
                if (--var2 <= 0) {
                   this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
-                  if (!this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.DEDENT)) {
+                  if (!this.Xqedii_2o6grdd().is(LexerTokenType.DEDENT)) {
                      return;
                   }
                   continue;
                }
-            } else if (var4.is(Xqedii_1p9lu7f.NEWLINE) && var2 <= 0) {
+            } else if (var4.is(LexerTokenType.NEWLINE) && var2 <= 0) {
                this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
-               if (!this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.INDENT)) {
+               if (!this.Xqedii_2o6grdd().is(LexerTokenType.INDENT)) {
                   return;
                }
                continue;
@@ -226,22 +226,22 @@ public final class Xqedii_2thoio4 {
       }
    }
 
-   public Xqedii_25ri1e7 Xqedii_2o6grdd() {
+   public LexerToken Xqedii_2o6grdd() {
       {
          return this.Xqedii_rty1vz4.get(Math.min(this.Xqedii_2d86asd, this.Xqedii_rty1vz4.size() - 1));
       }
    }
 
-   public Xqedii_25ri1e7 Xqedii_1ns9xu6(int var1) {
+   public LexerToken Xqedii_1ns9xu6(int var1) {
       {
          return this.Xqedii_rty1vz4.get(Math.min(this.Xqedii_2d86asd + var1, this.Xqedii_rty1vz4.size() - 1));
       }
    }
 
-   public Xqedii_25ri1e7 Xqedii_my78stx() {
+   public LexerToken Xqedii_my78stx() {
       {
-         Xqedii_25ri1e7 var1 = this.Xqedii_2o6grdd();
-         if (!var1.is(Xqedii_1p9lu7f.EOF)) {
+         LexerToken var1 = this.Xqedii_2o6grdd();
+         if (!var1.is(LexerTokenType.EOF)) {
             this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
          }
 
@@ -249,7 +249,7 @@ public final class Xqedii_2thoio4 {
       }
    }
 
-   public Xqedii_3vsk7zm Xqedii_3sn28jz(Xqedii_25ri1e7 var1, String var2) {
+   public Xqedii_3vsk7zm Xqedii_3sn28jz(LexerToken var1, String var2) {
       {
          return new Xqedii_3vsk7zm(var2, var1.line(), var1.column());
       }
@@ -299,8 +299,8 @@ public final class Xqedii_2thoio4 {
 
    public String Xqedii_34yikyz(String var1) {
       {
-         Xqedii_25ri1e7 var2 = this.Xqedii_2o6grdd();
-         if (!var2.is(Xqedii_1p9lu7f.NAME)) {
+         LexerToken var2 = this.Xqedii_2o6grdd();
+         if (!var2.is(LexerTokenType.NAME)) {
             throw this.Xqedii_3sn28jz(var2, Xqedii_11usblxca3255(var1, var2.describe()));
          } else {
             this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
@@ -311,8 +311,8 @@ public final class Xqedii_2thoio4 {
 
    public String Xqedii_swi2jwl(String var1) {
       {
-         Xqedii_25ri1e7 var2 = this.Xqedii_2o6grdd();
-         if (!var2.is(Xqedii_1p9lu7f.STRING)) {
+         LexerToken var2 = this.Xqedii_2o6grdd();
+         if (!var2.is(LexerTokenType.STRING)) {
             throw this.Xqedii_3sn28jz(var2, Xqedii_1taq5bcwpzh1z(var1, var2.describe()));
          } else {
             this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
@@ -323,25 +323,25 @@ public final class Xqedii_2thoio4 {
 
    public boolean Xqedii_32zt7zc() {
       {
-         return ((!this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.NEWLINE)
-               && !this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.EOF)
-               && !this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.DEDENT)
+         return ((!this.Xqedii_2o6grdd().is(LexerTokenType.NEWLINE)
+               && !this.Xqedii_2o6grdd().is(LexerTokenType.EOF)
+               && !this.Xqedii_2o6grdd().is(LexerTokenType.DEDENT)
             ? 0
             : 1) != 0);
       }
    }
 
    public void Xqedii_2n6e3pq() {
-      if (this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.NEWLINE)) {
+      if (this.Xqedii_2o6grdd().is(LexerTokenType.NEWLINE)) {
          this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
-      } else if (!this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.EOF) && !this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.DEDENT)) {
+      } else if (!this.Xqedii_2o6grdd().is(LexerTokenType.EOF) && !this.Xqedii_2o6grdd().is(LexerTokenType.DEDENT)) {
          throw this.Xqedii_3sn28jz(this.Xqedii_2o6grdd(), Xqedii_3be94jvrxos1a(this.Xqedii_2o6grdd().describe()));
       }
    }
 
    public void Xqedii_hw7pztw() {
       {
-         Xqedii_25ri1e7 var1 = this.Xqedii_2o6grdd();
+         LexerToken var1 = this.Xqedii_2o6grdd();
          String var2 = this.Xqedii_34yikyz(
                "on, every, command, function, var or page"
             )
@@ -450,7 +450,7 @@ public final class Xqedii_2thoio4 {
                   var12 = this.Xqedii_34yikyz(
                      "the command name"
                   );
-               } else if (this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.STRING)) {
+               } else if (this.Xqedii_2o6grdd().is(LexerTokenType.STRING)) {
                   var12 = this.Xqedii_swi2jwl(
                      "the command name"
                   );
@@ -519,7 +519,7 @@ public final class Xqedii_2thoio4 {
    }
 
    public double Xqedii_1qolmih(boolean var1) {
-      if (!this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.NAME)) {
+      if (!this.Xqedii_2o6grdd().is(LexerTokenType.NAME)) {
          if (var1) {
             return Double.longBitsToDouble(4607182418800017408L);
          } else {
@@ -632,7 +632,7 @@ public final class Xqedii_2thoio4 {
       }
    }
 
-   public void Xqedii_1bly2od(Xqedii_25ri1e7 var1) {
+   public void Xqedii_1bly2od(LexerToken var1) {
       {
          String var2 = this.Xqedii_34yikyz(
                "an event, like click or open"
@@ -815,7 +815,7 @@ public final class Xqedii_2thoio4 {
          }
 
          String var5 = null;
-         if (this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.STRING)) {
+         if (this.Xqedii_2o6grdd().is(LexerTokenType.STRING)) {
             var5 = this.Xqedii_swi2jwl("the element id");
          }
 
@@ -841,14 +841,14 @@ public final class Xqedii_2thoio4 {
             ":",
             "at the end of this line"
          );
-         if (!this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.NEWLINE)) {
+         if (!this.Xqedii_2o6grdd().is(LexerTokenType.NEWLINE)) {
             Xqedii_3nlck21 var5 = this.Xqedii_t3irkxz();
             Xqedii_3nlck21[] var10000 = new Xqedii_3nlck21[1];
             var10000[0] = var5;
             return var10000;
          } else {
             this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
-            if (!this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.INDENT)) {
+            if (!this.Xqedii_2o6grdd().is(LexerTokenType.INDENT)) {
                throw this.Xqedii_3sn28jz(
                   this.Xqedii_2o6grdd(),
                   "The lines inside this block must be indented (start them with spaces)"
@@ -857,14 +857,14 @@ public final class Xqedii_2thoio4 {
                this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
                ArrayList var1 = new ArrayList();
 
-               while (!this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.DEDENT) && !this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.EOF)) {
-                  if (this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.NEWLINE)) {
+               while (!this.Xqedii_2o6grdd().is(LexerTokenType.DEDENT) && !this.Xqedii_2o6grdd().is(LexerTokenType.EOF)) {
+                  if (this.Xqedii_2o6grdd().is(LexerTokenType.NEWLINE)) {
                      this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
                   } else {
                      int var2 = this.Xqedii_2d86asd;
 
                      try {
-                        if (this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.INDENT)) {
+                        if (this.Xqedii_2o6grdd().is(LexerTokenType.INDENT)) {
                            throw this.Xqedii_3sn28jz(
                               this.Xqedii_2o6grdd(),
                               "This line is indented more than the line above it"
@@ -883,7 +883,7 @@ public final class Xqedii_2thoio4 {
                   }
                }
 
-               if (this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.DEDENT)) {
+               if (this.Xqedii_2o6grdd().is(LexerTokenType.DEDENT)) {
                   this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
                }
 
@@ -914,7 +914,7 @@ public final class Xqedii_2thoio4 {
 
    public Xqedii_3nlck21 Xqedii_t3irkxz() {
       {
-         Xqedii_25ri1e7 var1 = this.Xqedii_2o6grdd();
+         LexerToken var1 = this.Xqedii_2o6grdd();
          int var2 = var1.line();
          if ((
                var1.isWord("else")
@@ -923,7 +923,7 @@ public final class Xqedii_2thoio4 {
             )
             && !Xqedii_2w4v4yr(this.Xqedii_1ns9xu6(1))) {
             throw this.Xqedii_3sn28jz(var1, Xqedii_1onahknpkpj9v(var1.text()));
-         } else if (var1.is(Xqedii_1p9lu7f.NAME)
+         } else if (var1.is(LexerTokenType.NAME)
             && Xqedii_200w0a7.contains(var1.text().toLowerCase(Locale.ROOT))
             && !Xqedii_2w4v4yr(this.Xqedii_1ns9xu6(1))) {
             this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
@@ -934,19 +934,19 @@ public final class Xqedii_2thoio4 {
       }
    }
 
-   public static boolean Xqedii_2w4v4yr(Xqedii_25ri1e7 var0) {
+   public static boolean Xqedii_2w4v4yr(LexerToken var0) {
       {
-         return ((!var0.is(Xqedii_1p9lu7f.SYMBOL)
+         return ((!var0.is(LexerTokenType.SYMBOL)
                || !Xqedii_3ct77sg.contains(var0.text()) && !var0.text().equals(".")
             ? 0
             : 1) != 0);
       }
    }
 
-   public Xqedii_3nlck21 Xqedii_118rlff(Xqedii_25ri1e7 var1, int var2) {
+   public Xqedii_3nlck21 Xqedii_118rlff(LexerToken var1, int var2) {
       {
          Xqedii_ev3jp8w var3 = this.Xqedii_3nv6toq();
-         if (this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.SYMBOL) && Xqedii_3ct77sg.contains(this.Xqedii_2o6grdd().text())) {
+         if (this.Xqedii_2o6grdd().is(LexerTokenType.SYMBOL) && Xqedii_3ct77sg.contains(this.Xqedii_2o6grdd().text())) {
             String var4 = this.Xqedii_my78stx().text();
             this.Xqedii_35kxtal(var3, var1);
             Xqedii_ev3jp8w var5 = this.Xqedii_3nv6toq();
@@ -981,7 +981,7 @@ public final class Xqedii_2thoio4 {
                default -> 0;
             };
             return new Xqedii_2v9d3jq(var3, var6, var5, var2);
-         } else if (var3 instanceof Xqedii_2ucjp8c && var1.is(Xqedii_1p9lu7f.NAME) && !this.Xqedii_32zt7zc()) {
+         } else if (var3 instanceof Xqedii_2ucjp8c && var1.is(LexerTokenType.NAME) && !this.Xqedii_32zt7zc()) {
             throw this.Xqedii_3sn28jz(var1, Xqedii_2br6gj5oh8vhc(var1.text(), Xqedii_180dthy(var1.text())));
          } else if (!(var3 instanceof Xqedii_3ox0q7t) && !(var3 instanceof Xqedii_3wobtjl)) {
             throw this.Xqedii_3sn28jz(
@@ -1049,7 +1049,7 @@ public final class Xqedii_2thoio4 {
       }
    }
 
-   public void Xqedii_35kxtal(Xqedii_ev3jp8w var1, Xqedii_25ri1e7 var2) {
+   public void Xqedii_35kxtal(Xqedii_ev3jp8w var1, LexerToken var2) {
       if (!var1.Xqedii_25ddebp()) {
          throw this.Xqedii_3sn28jz(
             var2,
@@ -1058,7 +1058,7 @@ public final class Xqedii_2thoio4 {
       }
    }
 
-   public Xqedii_3nlck21 Xqedii_33hc29h(String var1, Xqedii_25ri1e7 var2, int var3) {
+   public Xqedii_3nlck21 Xqedii_33hc29h(String var1, LexerToken var2, int var3) {
       {
          int var5 = -1;
          switch (var1.hashCode()) {
@@ -1413,8 +1413,8 @@ public final class Xqedii_2thoio4 {
                return this.Xqedii_3vze4js(var87, var3, var117);
             case 11:
                Xqedii_ev3jp8w var26 = this.Xqedii_3nv6toq();
-               Xqedii_25ri1e7 var44 = this.Xqedii_2o6grdd();
-               String var56 = var44.is(Xqedii_1p9lu7f.NAME)
+               LexerToken var44 = this.Xqedii_2o6grdd();
+               String var56 = var44.is(LexerTokenType.NAME)
                   ? var44.text().toLowerCase(Locale.ROOT)
                   : "";
                if (!Xqedii_4h0tx6n.contains(var56)) {
@@ -1774,9 +1774,9 @@ public final class Xqedii_2thoio4 {
          }
 
          if (this.Xqedii_g1933gx("with")) {
-            Xqedii_25ri1e7 var8 = this.Xqedii_2o6grdd();
+            LexerToken var8 = this.Xqedii_2o6grdd();
             var4 = this.Xqedii_3nv6toq();
-            if (var8.is(Xqedii_1p9lu7f.STRING) && var4 instanceof Xqedii_29jdaam && Xqedii_2awqdkk.Xqedii_1uh18ch(var8.text()) == null) {
+            if (var8.is(LexerTokenType.STRING) && var4 instanceof Xqedii_29jdaam && Xqedii_2awqdkk.Xqedii_1uh18ch(var8.text()) == null) {
                throw this.Xqedii_3sn28jz(var8, Xqedii_2awqdkk.Xqedii_pzxldhl(var8.text()));
             }
          }
@@ -1796,8 +1796,8 @@ public final class Xqedii_2thoio4 {
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    public Xqedii_3nlck21 Xqedii_2eglftz(int var1) {
       {
-         Xqedii_25ri1e7 var2 = this.Xqedii_2o6grdd();
-         if (!var2.is(Xqedii_1p9lu7f.NAME)) {
+         LexerToken var2 = this.Xqedii_2o6grdd();
+         if (!var2.is(LexerTokenType.NAME)) {
             throw this.Xqedii_3sn28jz(
                var2, Xqedii_149had7p0ynq4(String.join(", ", Xqedii_p2rt6hv))
             );
@@ -1813,8 +1813,8 @@ public final class Xqedii_2thoio4 {
                var3.add(this.Xqedii_3nv6toq());
 
                while (!this.Xqedii_32zt7zc()) {
-                  Xqedii_25ri1e7 var4 = this.Xqedii_2o6grdd();
-                  String var5 = var4.is(Xqedii_1p9lu7f.NAME)
+                  LexerToken var4 = this.Xqedii_2o6grdd();
+                  String var5 = var4.is(LexerTokenType.NAME)
                      ? var4.text().toLowerCase(Locale.ROOT)
                      : "";
                   if (!Xqedii_2xrm6um.contains(var5)) {
@@ -1939,7 +1939,7 @@ public final class Xqedii_2thoio4 {
          while (true) {
             int var5 = this.Xqedii_2d86asd;
 
-            while (this.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.NEWLINE)) {
+            while (this.Xqedii_2o6grdd().is(LexerTokenType.NEWLINE)) {
                this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
             }
 
@@ -2045,7 +2045,7 @@ public final class Xqedii_2thoio4 {
          Object var1 = this.Xqedii_g6hkqz0();
 
          while (true) {
-            Xqedii_25ri1e7 var2 = this.Xqedii_2o6grdd();
+            LexerToken var2 = this.Xqedii_2o6grdd();
             int var3;
             if (var2.isSymbol("==")) {
                var3 = 6;
@@ -2100,7 +2100,7 @@ public final class Xqedii_2thoio4 {
             this.Xqedii_3kqvbrx("+")
                || this.Xqedii_3kqvbrx("-")
          ) {
-            Xqedii_25ri1e7 var2 = this.Xqedii_my78stx();
+            LexerToken var2 = this.Xqedii_my78stx();
             int var3 = var2.text().equals("+")
                ? 1
                : 2;
@@ -2120,7 +2120,7 @@ public final class Xqedii_2thoio4 {
                || this.Xqedii_3kqvbrx("/")
                || this.Xqedii_3kqvbrx("%")
          ) {
-            Xqedii_25ri1e7 var2 = this.Xqedii_my78stx();
+            LexerToken var2 = this.Xqedii_my78stx();
             String var4 = var2.text();
             int var5 = -1;
             switch (var4.hashCode()) {
@@ -2171,7 +2171,7 @@ public final class Xqedii_2thoio4 {
                   return (Xqedii_ev3jp8w)var1;
                }
 
-               Xqedii_25ri1e7 var2 = this.Xqedii_my78stx();
+               LexerToken var2 = this.Xqedii_my78stx();
                Xqedii_ev3jp8w var3 = this.Xqedii_3nv6toq();
                this.Xqedii_3cuz73k(
                   "]",
@@ -2180,7 +2180,7 @@ public final class Xqedii_2thoio4 {
                var1 = new Xqedii_2p9runp((Xqedii_ev3jp8w)var1, var3, var2.line());
             }
 
-            Xqedii_25ri1e7 var4 = this.Xqedii_my78stx();
+            LexerToken var4 = this.Xqedii_my78stx();
             String var5 = this.Xqedii_34yikyz(
                "a property name after '.'"
             );
@@ -2223,7 +2223,7 @@ public final class Xqedii_2thoio4 {
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    public Xqedii_ev3jp8w Xqedii_2r3irt9() {
       {
-         Xqedii_25ri1e7 var1 = this.Xqedii_2o6grdd();
+         LexerToken var1 = this.Xqedii_2o6grdd();
          int var2 = var1.line();
          switch (dev.xqedii.ultimateUI.Xqedii_11jvjwo.Xqedii_2wwhkoz[var1.type().ordinal()]) {
             case 1:
@@ -2349,8 +2349,8 @@ public final class Xqedii_2thoio4 {
                   ArrayList var4 = new ArrayList();
                   if (!this.Xqedii_3kqvbrx("}")) {
                      while (!this.Xqedii_3kqvbrx("}")) {
-                        Xqedii_25ri1e7 var5 = this.Xqedii_my78stx();
-                        if (!var5.is(Xqedii_1p9lu7f.NAME) && !var5.is(Xqedii_1p9lu7f.STRING)) {
+                        LexerToken var5 = this.Xqedii_my78stx();
+                        if (!var5.is(LexerTokenType.NAME) && !var5.is(LexerTokenType.STRING)) {
                            throw this.Xqedii_3sn28jz(
                               var5,
                               "Expected a key name in { key: value }"
@@ -2392,7 +2392,7 @@ public final class Xqedii_2thoio4 {
       }
    }
 
-   public Xqedii_ev3jp8w Xqedii_2pyrjto(Xqedii_25ri1e7 var1) {
+   public Xqedii_ev3jp8w Xqedii_2pyrjto(LexerToken var1) {
       {
          String var2 = var1.text();
          if (var2.indexOf(123) < 0) {
@@ -2451,14 +2451,14 @@ public final class Xqedii_2thoio4 {
       }
    }
 
-   public Xqedii_ev3jp8w Xqedii_v4mtmbd(String var1, Xqedii_25ri1e7 var2) {
+   public Xqedii_ev3jp8w Xqedii_v4mtmbd(String var1, LexerToken var2) {
       if (var1.isBlank()) {
          throw this.Xqedii_3sn28jz(
             var2,
             "Empty { } in text. Put a value inside, like {player.name}"
          );
       } else {
-         List<Xqedii_25ri1e7> var3;
+         List<LexerToken> var3;
          try {
             var3 = new Xqedii_3l1ke2c(var1).Xqedii_1lbczed();
          } catch (Xqedii_3vsk7zm var7) {
@@ -2467,18 +2467,18 @@ public final class Xqedii_2thoio4 {
 
          ArrayList var4 = new ArrayList(var3.size());
 
-         for (Xqedii_25ri1e7 var6 : var3) {
-            var4.add(new Xqedii_25ri1e7(var6.type(), var6.text(), var2.line(), var2.column() + var6.column()));
+         for (LexerToken var6 : var3) {
+            var4.add(new LexerToken(var6.type(), var6.text(), var2.line(), var2.column() + var6.column()));
          }
 
          Xqedii_2thoio4 var8 = new Xqedii_2thoio4(var4, this.Xqedii_d4hvym9, this.Xqedii_1ukapu0);
          Xqedii_ev3jp8w var9 = var8.Xqedii_3nv6toq();
 
-         while (var8.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.NEWLINE) || var8.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.DEDENT)) {
+         while (var8.Xqedii_2o6grdd().is(LexerTokenType.NEWLINE) || var8.Xqedii_2o6grdd().is(LexerTokenType.DEDENT)) {
             var8.Xqedii_2d86asd = var8.Xqedii_2d86asd + 1;
          }
 
-         if (!var8.Xqedii_2o6grdd().is(Xqedii_1p9lu7f.EOF)) {
+         if (!var8.Xqedii_2o6grdd().is(LexerTokenType.EOF)) {
             throw this.Xqedii_3sn28jz(var2, Xqedii_2bw4z6qvz0csc(var8.Xqedii_2o6grdd().describe()));
          } else {
             return var9;

@@ -7,7 +7,7 @@ import dev.xqedii.ultimateUI.Xqedii_14y6uzm;
 import dev.xqedii.ultimateUI.Xqedii_2lun6e9;
 import dev.xqedii.ultimateUI.Xqedii_2t253qr;
 import dev.xqedii.ultimateUI.Xqedii_38o2zes;
-import dev.xqedii.ultimateUI.Xqedii_3ul4hqj;
+import dev.xqedii.ultimateUI.ChatColorUtil;
 import dev.xqedii.ultimateUI.Xqedii_3uxgwyg;
 import dev.xqedii.ultimateUI.Xqedii_kqmefnf;
 import dev.xqedii.ultimateUI.Xqedii_l2une6g;
@@ -6673,7 +6673,7 @@ public abstract class EditorImageDragPart extends EditorOverlayPreviewPart {
          Object[] var10001 = new Object[Xqedii_p92kfr8.Xqedii_15ae4j3j41jaq(1501946593, 2)];
          var10001[Xqedii_p92kfr8.Xqedii_15ae4j3j41jaq(1501946585, 2)] = var3;
          var10001[Xqedii_p92kfr8.Xqedii_lmv0hkpfqrnh(-320709624, 1)] = var4;
-         return Xqedii_3ul4hqj.Xqedii_1t2nnko(var10000, var10001);
+         return ChatColorUtil.Xqedii_1t2nnko(var10000, var10001);
       }
    }
 
@@ -6688,7 +6688,7 @@ public abstract class EditorImageDragPart extends EditorOverlayPreviewPart {
             return (Xqedii_p92kfr8.Xqedii_lmv0hkpfqrnh(1266769308, 14) != 0);
          } else {
             String var4 = this.buildEditorPageLockedMessage(var2, var3);
-            Xqedii_3ul4hqj.send(var1, Xqedii_3uxgwyg.Xqedii_2p0af0b.deserialize(var4));
+            ChatColorUtil.send(var1, Xqedii_3uxgwyg.Xqedii_2p0af0b.deserialize(var4));
             return (Xqedii_p92kfr8.Xqedii_15ae4j3j41jaq(768972894, 22) != 0);
          }
       }
