@@ -14,7 +14,6 @@ import dev.xqedii.ultimateUI.api.event.UltimateUIBlockClickEvent;
  * Exception performing whole class analysis ignored.
  */
 public class Xqedii_18eapie {
-    public static final String Xqedii_32215a28a6wv8 = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
     public static final /* synthetic */ int[] Xqedii_1xl6h0t;
     private static transient /* synthetic */ String MeZYRDythi = "00000000000000000000000000000000000000000000";
 

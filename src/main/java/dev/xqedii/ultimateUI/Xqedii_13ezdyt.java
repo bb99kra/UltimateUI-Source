@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class Xqedii_13ezdyt extends Xqedii_3nlck21 {
-   public static final String Xqedii_1fp908aaizdwi = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public final boolean Xqedii_5ak6wpd;
    public final Xqedii_ev3jp8w Xqedii_2qxtnhn;
    public final Xqedii_ev3jp8w Xqedii_2xcaz6m;
@@ -18,9 +17,7 @@ public final class Xqedii_13ezdyt extends Xqedii_3nlck21 {
 
    @Override
    public void Xqedii_3egc8pa(Xqedii_y5pr2ec var1) {
-      if (((-480097457 << 1 | 1) & 1) == 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          Object var2 = this.Xqedii_2qxtnhn.Xqedii_28g36j3(var1);
          Object var3 = this.Xqedii_2xcaz6m.Xqedii_28g36j3(var1);
          if (!(var3 instanceof List var4)) {
@@ -31,7 +28,7 @@ public final class Xqedii_13ezdyt extends Xqedii_3nlck21 {
             } else {
                Object var7 = this.Xqedii_5ak6wpd
                   ? Xqedii_z4wg071.Xqedii_hbc7zbp(
-                     var3 == null ? Double.longBitsToDouble(Xqedii_2joeizo.Xqedii_2ifi0rwhh0z6d(4648897906688229665L, 40)) : var3, var2, this.Xqedii_2lldvpl
+                     var3 == null ? Double.longBitsToDouble(0L) : var3, var2, this.Xqedii_2lldvpl
                   )
                   : Xqedii_z4wg071.Xqedii_3c9epia(var3, this.Xqedii_2lldvpl) - Xqedii_z4wg071.Xqedii_3c9epia(var2, this.Xqedii_2lldvpl);
                this.Xqedii_2xcaz6m.Xqedii_2uxio2i(var1, var7);
@@ -41,7 +38,7 @@ public final class Xqedii_13ezdyt extends Xqedii_3nlck21 {
             if (this.Xqedii_5ak6wpd) {
                var4.add(var2);
             } else {
-               for (int var6 = Xqedii_2joeizo.Xqedii_2d99ccoblqj4w(630159787, 1); var6 < var5.size(); var6++) {
+               for (int var6 = 0; var6 < var5.size(); var6++) {
                   if (Xqedii_z4wg071.Xqedii_zxgkysn(var5.get(var6), var2)) {
                      var5.remove(var6);
                      break;

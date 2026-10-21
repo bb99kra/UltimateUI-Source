@@ -4,7 +4,6 @@ import java.util.Collections;
 import java.util.Map;
 
 public final class Xqedii_h8ljzyd {
-   public static final String Xqedii_ol33059a9lqx = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public final Object Xqedii_mmdh1eb;
    public final Map<String, Object> Xqedii_3kybzn8;
 

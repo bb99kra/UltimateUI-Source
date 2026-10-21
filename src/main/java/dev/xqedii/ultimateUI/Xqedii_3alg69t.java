@@ -14,7 +14,6 @@ import org.bukkit.event.inventory.PrepareAnvilEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 public final class Xqedii_3alg69t implements Listener {
-   public static final String Xqedii_357waopynn87h = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public final AnvilInputService Xqedii_597hfl7;
 
    public Xqedii_3alg69t(AnvilInputService var1) {
@@ -25,9 +24,7 @@ public final class Xqedii_3alg69t implements Listener {
       priority = EventPriority.MONITOR
    )
    public void onPrepareAnvil(PrepareAnvilEvent var1) {
-      if ((2121796230 ^ 2121796230) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          for (HumanEntity var3 : var1.getViewers()) {
             if (var3 instanceof Player var4 && this.Xqedii_597hfl7.isActive(var4)) {
                try {
@@ -43,10 +40,8 @@ public final class Xqedii_3alg69t implements Listener {
       priority = EventPriority.LOWEST
    )
    public void onClick(InventoryClickEvent var1) {
-      if ((-778543634 ^ -778543634) != 0) {
-         throw new IllegalStateException();
-      } else if (var1.getWhoClicked() instanceof Player var2 && this.Xqedii_597hfl7.isActive(var2)) {
-         var1.setCancelled((Xqedii_65g97z6.Xqedii_h304p3ta23bc(103499474, 14) != 0));
+      if (var1.getWhoClicked() instanceof Player var2 && this.Xqedii_597hfl7.isActive(var2)) {
+         var1.setCancelled(true);
 
          try {
             this.Xqedii_597hfl7.Xqedii_3ajrsnu(var2);
@@ -59,10 +54,8 @@ public final class Xqedii_3alg69t implements Listener {
       priority = EventPriority.LOWEST
    )
    public void onDrag(InventoryDragEvent var1) {
-      if ((-1369413046 * -1369413046 - -1369413046 & 1) != 0) {
-         throw new IllegalStateException();
-      } else if (var1.getWhoClicked() instanceof Player var2 && this.Xqedii_597hfl7.isActive(var2)) {
-         var1.setCancelled((Xqedii_65g97z6.Xqedii_1kifojtg0sfu9(-687945802, 25) != 0));
+      if (var1.getWhoClicked() instanceof Player var2 && this.Xqedii_597hfl7.isActive(var2)) {
+         var1.setCancelled(true);
 
          try {
             this.Xqedii_597hfl7.Xqedii_3ajrsnu(var2);
@@ -75,9 +68,7 @@ public final class Xqedii_3alg69t implements Listener {
       priority = EventPriority.MONITOR
    )
    public void onClose(InventoryCloseEvent var1) {
-      if ((1974251548 * (1974251548 + 1) & 1) != 0) {
-         throw new IllegalStateException();
-      } else if (var1.getPlayer() instanceof Player var2 && this.Xqedii_597hfl7.isActive(var2)) {
+      if (var1.getPlayer() instanceof Player var2 && this.Xqedii_597hfl7.isActive(var2)) {
          try {
             this.Xqedii_597hfl7.Xqedii_1uiqlej(var2, Xqedii_3prcdf5(var1));
          } catch (Throwable var4) {
@@ -86,9 +77,7 @@ public final class Xqedii_3alg69t implements Listener {
    }
 
    public static InputCloseReason Xqedii_3prcdf5(InventoryCloseEvent var0) {
-      if ((-22954776 * -22954776 + -22954776 & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          try {
             Object r = var0.getClass().getMethod("getReason").invoke(var0);
             return r != null && "DISCONNECT".equals(r.toString()) ? InputCloseReason.DISCONNECT : InputCloseReason.ESCAPE;
@@ -102,9 +91,7 @@ public final class Xqedii_3alg69t implements Listener {
       priority = EventPriority.MONITOR
    )
    public void onQuit(PlayerQuitEvent var1) {
-      if (((-1503080446 << 1 | 1) & 1) == 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          try {
             this.Xqedii_597hfl7.Xqedii_3ss3yna(var1.getPlayer());
          } catch (Throwable var3) {

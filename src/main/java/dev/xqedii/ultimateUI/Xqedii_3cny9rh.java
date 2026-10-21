@@ -5,12 +5,9 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 
 public final class Xqedii_3cny9rh {
-   public static final String Xqedii_25sym0a94xicz = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
 
    public static void Xqedii_1tc6luf(HudService var0, Player var1, String var2) {
-      if (((-946351060 << 1 | 1) & 1) == 0) {
-         throw new IllegalStateException();
-      } else if (var0 != null && var1 != null && var2 != null && !var2.isBlank()) {
+      if (var0 != null && var1 != null && var2 != null && !var2.isBlank()) {
          Entity var3 = var0.getHud(var1, var2);
          if (var3 != null) {
             var0.setHudNoTransition(var3);
@@ -19,9 +16,7 @@ public final class Xqedii_3cny9rh {
    }
 
    public static void Xqedii_21i7jf4(HudService var0, Player var1, String var2, int var3, int var4) {
-      if ((860194429 ^ 860194429) != 0) {
-         throw new IllegalStateException();
-      } else if (var0 != null && var1 != null && var2 != null && !var2.isBlank()) {
+      if (var0 != null && var1 != null && var2 != null && !var2.isBlank()) {
          Entity var5 = var0.getHud(var1, var2);
          if (var5 != null) {
             var0.setHudTransitionTicks(var5, var3, var4);
@@ -30,9 +25,7 @@ public final class Xqedii_3cny9rh {
    }
 
    public static void Xqedii_2bwaggn(HudService var0, Player var1, String var2, int var3) {
-      if (((-1500157148 << 1 | 1) & 1) == 0) {
-         throw new IllegalStateException();
-      } else if (var0 != null && var1 != null && var2 != null && !var2.isBlank()) {
+      if (var0 != null && var1 != null && var2 != null && !var2.isBlank()) {
          Entity var4 = var0.getHud(var1, var2);
          if (var4 != null) {
             var0.setOpacity(var4, var3);

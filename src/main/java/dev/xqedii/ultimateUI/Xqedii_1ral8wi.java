@@ -1,7 +1,6 @@
 package dev.xqedii.ultimateUI;
 
 public final class Xqedii_1ral8wi extends Xqedii_3nlck21 {
-   public static final String Xqedii_225ufcg74pee5 = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public final String Xqedii_ummnths;
    public final Xqedii_ev3jp8w Xqedii_ztajunw;
 
@@ -13,9 +12,7 @@ public final class Xqedii_1ral8wi extends Xqedii_3nlck21 {
 
    @Override
    public void Xqedii_3egc8pa(Xqedii_y5pr2ec var1) {
-      if ((1919765977 * 1919765977 + 1919765977 & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          var1.Xqedii_3a9kp91.Xqedii_107f1nz.put(this.Xqedii_ummnths, this.Xqedii_ztajunw == null ? null : this.Xqedii_ztajunw.Xqedii_28g36j3(var1));
       }
    }

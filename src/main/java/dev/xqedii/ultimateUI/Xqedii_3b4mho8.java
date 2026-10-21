@@ -14,7 +14,6 @@ import dev.xqedii.ultimateUI.service.gui.model.EditorPropertyField;
  * Exception performing whole class analysis ignored.
  */
 public class Xqedii_3b4mho8 {
-    public static final String Xqedii_2s5cjpe28wb96 = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
     public static final /* synthetic */ int[] Xqedii_10tk43h;
     private static transient /* synthetic */ String yBUvGghOnP = "00000000000000000000000000000000000000000000";
 

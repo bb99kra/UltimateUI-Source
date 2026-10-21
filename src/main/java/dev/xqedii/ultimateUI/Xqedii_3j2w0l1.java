@@ -4,7 +4,6 @@ import dev.xqedii.ultimateUI.service.hud.WorldDisplays;
 import org.bukkit.configuration.ConfigurationSection;
 
 public final class Xqedii_3j2w0l1 {
-   public static final String Xqedii_29qlx491y9cuc = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public final int Xqedii_2b6hmqn;
    public String Xqedii_3u5s934;
    public ConfigurationSection Xqedii_2nf1zu3;

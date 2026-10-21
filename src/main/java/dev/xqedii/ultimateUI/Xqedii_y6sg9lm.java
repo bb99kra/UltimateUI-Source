@@ -9,33 +9,28 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 
 public final class Xqedii_y6sg9lm extends Effect {
-   public static final String Xqedii_1nhfxovdxoohq = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public Expression<String> Xqedii_nhpf0d9;
    public Expression<String> Xqedii_18ilr9l;
    public Expression<Player> Xqedii_2b97xc6;
    public int Xqedii_3vshgam;
 
    public boolean init(Expression<?>[] var1, int var2, Kleenean var3, ParseResult var4) {
-      if (((2142785670 << 1 | 1) & 1) == 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          this.Xqedii_3vshgam = var2;
-         this.Xqedii_nhpf0d9 = (Expression) var1[Xqedii_d5uyudy.Xqedii_3lelij3rkidft(153629352, 22)];
+         this.Xqedii_nhpf0d9 = (Expression) var1[0];
          if (var2 == 0) {
-            this.Xqedii_18ilr9l = (Expression) var1[Xqedii_d5uyudy.Xqedii_2t6ti0iivyll8(279653971, 10)];
-            this.Xqedii_2b97xc6 = (Expression) var1[Xqedii_d5uyudy.Xqedii_2w7w17ka6plxh(-155335694, 4)];
+            this.Xqedii_18ilr9l = (Expression) var1[1];
+            this.Xqedii_2b97xc6 = (Expression) var1[2];
          } else {
-            this.Xqedii_2b97xc6 = (Expression) var1[Xqedii_d5uyudy.Xqedii_37kqfv36nxax1(-938895415, 22)];
+            this.Xqedii_2b97xc6 = (Expression) var1[1];
          }
 
-         return (Xqedii_d5uyudy.Xqedii_3lelij3rkidft(153625256, 12) != 0);
+         return true;
       }
    }
 
    public void execute(Event var1) {
-      if (((-684990361 | 1) & 1) == 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          UltimateUIAPI var2 = Xqedii_1uy3j6u.api();
          String var3 = this.Xqedii_nhpf0d9 == null ? null : (String)this.Xqedii_nhpf0d9.getSingle(var1);
          if (var2 != null && var3 != null && !var3.isBlank() && this.Xqedii_2b97xc6 != null) {
@@ -43,7 +38,7 @@ public final class Xqedii_y6sg9lm extends Effect {
             Player[] var5 = (Player[])this.Xqedii_2b97xc6.getArray(var1);
             int var6 = var5.length;
 
-            for (int var7 = Xqedii_d5uyudy.Xqedii_3lelij3rkidft(153629352, 21); var7 < var6; var7++) {
+            for (int var7 = 0; var7 < var6; var7++) {
                Player var8 = var5[var7];
                if (var8 != null && var8.isOnline()) {
                   switch (this.Xqedii_3vshgam) {
@@ -61,12 +56,10 @@ public final class Xqedii_y6sg9lm extends Effect {
    }
 
    public String toString(Event var1, boolean var2) {
-      if ((1853456792 ^ 1853456792) != 0) {
-         throw new IllegalStateException();
-      } else {
-         return this.Xqedii_3vshgam == Xqedii_d5uyudy.Xqedii_3lelij3rkidft(153631400, 10)
-            ? Xqedii_d5uyudy.Xqedii_vhgr3mv04ay6("JsDMieq5TJnNizfzAOADb+BOQDkkaKvSwTQv7mj1C3mx6jAR/+K82ttQaSKLkkIf0qf82nuXf3lg2v93Ukce9VmkPwI=")
-            : Xqedii_d5uyudy.Xqedii_vhgr3mv04ay6("gcizBW2EXwJMTpLT8lgvsW8rZVwB8LT/nLhDdqV2TJu/qKp5tmncGt4c2z00lrBEuDc/M0zEsRixXVX1wlgFMgSFEGHbRA==");
+      {
+         return this.Xqedii_3vshgam == 2
+            ? "ultimateui press key"
+            : "ultimateui run action";
       }
    }
 }

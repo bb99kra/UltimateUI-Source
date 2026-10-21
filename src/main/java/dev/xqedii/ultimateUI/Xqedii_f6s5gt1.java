@@ -41,7 +41,6 @@ import org.bukkit.plugin.Plugin;
  */
 public class Xqedii_f6s5gt1
 extends PacketListenerAbstract {
-    public static final String Xqedii_3cic0w92dsav8 = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
     public final /* synthetic */ PluginBootstrap Xqedii_zgojfjd;
     public final /* synthetic */ PluginBootstrap Xqedii_3hnjzsj;
     private static transient /* synthetic */ String MFrlqmVDRd = "00000000000000000000000000000000000000000000";

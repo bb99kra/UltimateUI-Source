@@ -9,7 +9,6 @@ import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
 public final class Xqedii_1avxacb {
-   public static final String Xqedii_2wgcuc3c9csae = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public final UUID Xqedii_zayz2bu;
    public final ScrollViewState Xqedii_2q32dop = new ScrollViewState();
    public final Map<String, double[]> Xqedii_h8t9zqa = new LinkedHashMap<>();
@@ -23,13 +22,11 @@ public final class Xqedii_1avxacb {
    }
 
    public void Xqedii_2qgqzmn() {
-      if (((1851043380 | 1) & 1) == 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          this.Xqedii_h8t9zqa.clear();
          this.Xqedii_1c9ttj8.clear();
          this.Xqedii_17c3k63 = Collections.emptyList();
-         this.Xqedii_r93bzs3 = (Xqedii_12s2vnd.Xqedii_kfptsxlgb199(926152523, 10) != 0);
+         this.Xqedii_r93bzs3 = false;
       }
    }
 }

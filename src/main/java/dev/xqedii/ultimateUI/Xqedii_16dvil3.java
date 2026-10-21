@@ -9,7 +9,6 @@ import dev.xqedii.ultimateui.libs.packetevents.packetevents.wrapper.play.client.
 import org.bukkit.entity.Player;
 
 public class Xqedii_16dvil3 extends PacketListenerAbstract {
-   public static final String Xqedii_20y8jqdv5pcff = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public final WorldUiPart Xqedii_1ac9x13;
 
    public Xqedii_16dvil3(WorldUiPart var1, PacketListenerPriority var2) {
@@ -18,18 +17,14 @@ public class Xqedii_16dvil3 extends PacketListenerAbstract {
    }
 
    public void onPacketReceive(PacketReceiveEvent var1) {
-      if ((-1530439834 * -1530439834 - -1530439834 & 1) != 0) {
-         throw new IllegalStateException();
-      } else if (var1 != null && var1.getPacketType() == Client.INTERACT_ENTITY) {
+      if (var1 != null && var1.getPacketType() == Client.INTERACT_ENTITY) {
          if (var1.getPlayer() instanceof Player var2) {
             WrapperPlayClientInteractEntity var5 = new WrapperPlayClientInteractEntity(var1);
             Xqedii_u0dqcud var4 = (Xqedii_u0dqcud)this.Xqedii_1ac9x13.Xqedii_28h4g3k.get(var5.getEntityId());
             if (var4 != null && var4.viewerId().equals(var2.getUniqueId())) {
-               var1.setCancelled(Xqedii_sq3891d.Xqedii_2xte153zvmld7(695989739, 7) != 0);
+               var1.setCancelled(true);
                Xqedii_38o2zes.Xqedii_1avvt9e(WorldUiPart.Xqedii_lvvjxhd(this.Xqedii_1ac9x13), var2, () -> {
-                  if ((-1695340855 ^ -1695340855) != 0) {
-                     throw new IllegalStateException();
-                  } else {
+                  {
                      this.Xqedii_1ac9x13.Xqedii_14dkzm2(var2, var4);
                   }
                });

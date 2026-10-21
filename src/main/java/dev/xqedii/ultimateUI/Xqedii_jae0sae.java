@@ -14,7 +14,6 @@ import org.bukkit.entity.TextDisplay;
  * Exception performing whole class analysis ignored.
  */
 public class Xqedii_jae0sae {
-    public static final String Xqedii_y92adurhio82 = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
     public static final /* synthetic */ int[] Xqedii_3am8z4q;
     private static transient /* synthetic */ String TeenipgEEy = "00000000000000000000000000000000000000000000";
 

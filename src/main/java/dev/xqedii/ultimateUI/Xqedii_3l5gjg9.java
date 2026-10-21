@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class Xqedii_3l5gjg9 extends Xqedii_ev3jp8w {
-   public static final String Xqedii_3v2dx253ffs56 = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public static final int Xqedii_mhe2c1u = 1;
    public static final int Xqedii_3amwr65 = 2;
    public static final int Xqedii_28fttdb = 3;
@@ -34,9 +33,7 @@ public final class Xqedii_3l5gjg9 extends Xqedii_ev3jp8w {
 
    @Override
    public Object Xqedii_28g36j3(Xqedii_y5pr2ec var1) {
-      if ((1355792196 * 1355792196 + 1355792196 & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          Object var2 = this.Xqedii_2le8rep.Xqedii_28g36j3(var1);
          Object var3 = this.Xqedii_81aubg7.Xqedii_28g36j3(var1);
          return Xqedii_1tkor05(this.Xqedii_31c5fot, var2, var3, this.Xqedii_3dzdvck);
@@ -44,9 +41,7 @@ public final class Xqedii_3l5gjg9 extends Xqedii_ev3jp8w {
    }
 
    public static Object Xqedii_1tkor05(int var0, Object var1, Object var2, int var3) {
-      if ((-1647662024 * -1647662024 - -1647662024 & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          switch (var0) {
             case 1:
                return Xqedii_z4wg071.Xqedii_hbc7zbp(var1, var2, var3);
@@ -54,9 +49,7 @@ public final class Xqedii_3l5gjg9 extends Xqedii_ev3jp8w {
                if (var1 instanceof List var10) {
                   ArrayList var5 = new ArrayList(var10);
                   var5.removeIf(var1x -> {
-                     if ((714129057 * 714129057 + 714129057 & 1) != 0) {
-                        throw new IllegalStateException();
-                     } else {
+                     {
                         return Xqedii_z4wg071.Xqedii_zxgkysn(var1x, var2);
                      }
                   });
@@ -66,17 +59,15 @@ public final class Xqedii_3l5gjg9 extends Xqedii_ev3jp8w {
                return Xqedii_z4wg071.Xqedii_3c9epia(var1, var3) - Xqedii_z4wg071.Xqedii_3c9epia(var2, var3);
             case 3:
                if (var1 instanceof String var9) {
-                  return var9.repeat(Math.max(Xqedii_21pvy4e.Xqedii_1m2ie2mgc531z(-963794408, 17), Xqedii_z4wg071.Xqedii_1x518al(var2, var3)));
+                  return var9.repeat(Math.max(0, Xqedii_z4wg071.Xqedii_1x518al(var2, var3)));
                }
 
                return Xqedii_z4wg071.Xqedii_3c9epia(var1, var3) * Xqedii_z4wg071.Xqedii_3c9epia(var2, var3);
             case 4:
                double var8 = Xqedii_z4wg071.Xqedii_3c9epia(var2, var3);
-               if (var8 == Double.longBitsToDouble(Xqedii_21pvy4e.Xqedii_3gq8vg4pglg6j(5475918925825271610L, 23))) {
+               if (var8 == Double.longBitsToDouble(0L)) {
                   throw new Xqedii_3vsk7zm(
-                     Xqedii_21pvy4e.Xqedii_9emh7rlcgmak(
-                        "PH1uaNBXSJvxwrdHiO9/Up4oSKUV90C5hjKKN9HOtXzmYJGSHUEgdTydYU+murDpvq/kLY8bT2Bmkkn7v+33d7OFjUj4v0u0QBC8Tw=="
-                     ),
+                     "You can't divide by zero",
                      var3
                   );
                }
@@ -84,56 +75,54 @@ public final class Xqedii_3l5gjg9 extends Xqedii_ev3jp8w {
                return Xqedii_z4wg071.Xqedii_3c9epia(var1, var3) / var8;
             case 5:
                double var4 = Xqedii_z4wg071.Xqedii_3c9epia(var2, var3);
-               if (var4 == Double.longBitsToDouble(Xqedii_21pvy4e.Xqedii_3gq8vg4pglg6j(-1728514824254947381L, 44))) {
+               if (var4 == Double.longBitsToDouble(0L)) {
                   throw new Xqedii_3vsk7zm(
-                     Xqedii_21pvy4e.Xqedii_9emh7rlcgmak(
-                        "PH1uaNBXSJvxwrdHiO9/Up4oSKUV90C5hjKKN9HOtXzmYJGSHUEgdTydYU+murDpvq/kLY8bT2Bmkkn7v+33d7OFjUj4v0u0QBC8Tw=="
-                     ),
+                     "You can't divide by zero",
                      var3
                   );
                }
 
                double var6 = Xqedii_z4wg071.Xqedii_3c9epia(var1, var3) % var4;
-               return var6 < Double.longBitsToDouble(Xqedii_21pvy4e.Xqedii_3gq8vg4pglg6j(-7494906222059008396L, 24)) ? var6 + Math.abs(var4) : var6;
+               return var6 < Double.longBitsToDouble(0L) ? var6 + Math.abs(var4) : var6;
             case 6:
                return Xqedii_z4wg071.Xqedii_zxgkysn(var1, var2);
             case 7:
                return Boolean.valueOf(
                   ((!Xqedii_z4wg071.Xqedii_zxgkysn(var1, var2)
-                     ? Xqedii_21pvy4e.Xqedii_2a9zs4eaj7mhr(762437959, 21)
-                     : Xqedii_21pvy4e.Xqedii_2bfvhy2yj102j(1632861502, 9)) != 0)
+                     ? 1
+                     : 0) != 0)
                );
             case 8:
                return Boolean.valueOf(
                   ((Xqedii_z4wg071.Xqedii_eqxwxh9(var1, var2, var3) < 0
-                     ? Xqedii_21pvy4e.Xqedii_2bfvhy2yj102j(-1632861503, 13)
-                     : Xqedii_21pvy4e.Xqedii_2dpwzxxlxkdll(2006095535, 30)) != 0)
+                     ? 1
+                     : 0) != 0)
                );
             case 9:
                return Boolean.valueOf(
                   ((Xqedii_z4wg071.Xqedii_eqxwxh9(var1, var2, var3) > 0
-                     ? Xqedii_21pvy4e.Xqedii_2dpwzxxlxkdll(-229452298, 3)
-                     : Xqedii_21pvy4e.Xqedii_2bfvhy2yj102j(1632861502, 30)) != 0)
+                     ? 1
+                     : 0) != 0)
                );
             case 10:
                return Boolean.valueOf(
                   ((Xqedii_z4wg071.Xqedii_eqxwxh9(var1, var2, var3) <= 0
-                     ? Xqedii_21pvy4e.Xqedii_1m2ie2mgc531z(-963663336, 17)
-                     : Xqedii_21pvy4e.Xqedii_2a9zs4eaj7mhr(1926569492, 17)) != 0)
+                     ? 1
+                     : 0) != 0)
                );
             case 11:
                return Boolean.valueOf(
                   ((Xqedii_z4wg071.Xqedii_eqxwxh9(var1, var2, var3) >= 0
-                     ? Xqedii_21pvy4e.Xqedii_2dpwzxxlxkdll(2109510837, 25)
-                     : Xqedii_21pvy4e.Xqedii_1m2ie2mgc531z(-963794408, 26)) != 0)
+                     ? 1
+                     : 0) != 0)
                );
             case 12:
                return Xqedii_z4wg071.Xqedii_2lutf1l(var1, var2);
             case 13:
                return Boolean.valueOf(
                   ((!Xqedii_z4wg071.Xqedii_2lutf1l(var1, var2)
-                     ? Xqedii_21pvy4e.Xqedii_1m2ie2mgc531z(-997348840, 25)
-                     : Xqedii_21pvy4e.Xqedii_2bfvhy2yj102j(1632861502, 31)) != 0)
+                     ? 1
+                     : 0) != 0)
                );
             case 14:
                return Xqedii_z4wg071.Xqedii_1lmv6tt(var1, var2);
@@ -142,12 +131,12 @@ public final class Xqedii_3l5gjg9 extends Xqedii_ev3jp8w {
             case 16:
                return Boolean.valueOf(
                   ((!Xqedii_z4wg071.Xqedii_1lmv6tt(var2, var1)
-                     ? Xqedii_21pvy4e.Xqedii_2bfvhy2yj102j(-1632861503, 7)
-                     : Xqedii_21pvy4e.Xqedii_2a9zs4eaj7mhr(1194152417, 13)) != 0)
+                     ? 1
+                     : 0) != 0)
                );
             default:
                throw new Xqedii_3vsk7zm(
-                  Xqedii_21pvy4e.Xqedii_9emh7rlcgmak("RkaF8E0ooB+WPnb6sPUUQ3ZJRvdIYpxE7uEiJQM63oszADnohPogsrb8K1XoIjwV/QndlWJxiKRrIC3w"), var3
+                  "Unknown operator", var3
                );
          }
       }

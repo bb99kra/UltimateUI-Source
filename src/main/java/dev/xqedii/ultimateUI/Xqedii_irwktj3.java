@@ -4,7 +4,6 @@ import java.io.File;
 import org.bukkit.Location;
 
 public final class Xqedii_irwktj3 {
-   public static final String Xqedii_1vse7nsoloco3 = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public String Xqedii_1kjhbri;
    public File Xqedii_3ukehvr;
    public String Xqedii_122m5nm;

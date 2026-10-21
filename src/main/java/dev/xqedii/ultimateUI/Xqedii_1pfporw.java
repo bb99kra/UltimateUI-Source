@@ -14,7 +14,6 @@ import dev.xqedii.ultimateui.libs.packetevents.packetevents.wrapper.play.server.
  * Exception performing whole class analysis ignored.
  */
 public class Xqedii_1pfporw {
-    public static final String Xqedii_3tq215up37h7x = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
     public static final /* synthetic */ int[] Xqedii_1e66zqy;
     private static transient /* synthetic */ String uZPiInSEoJ = "00000000000000000000000000000000000000000000";
 

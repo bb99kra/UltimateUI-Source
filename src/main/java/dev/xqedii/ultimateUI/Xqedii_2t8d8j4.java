@@ -7,7 +7,6 @@ import org.bukkit.util.Vector;
 import org.joml.Quaternionf;
 
 public final class Xqedii_2t8d8j4 {
-   public static final String Xqedii_3p4w1eqkgp2ib = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public final int Xqedii_1qxgv1w;
    public final UUID Xqedii_2pz488q;
    public final Entity Xqedii_216y0r3;
@@ -25,10 +24,10 @@ public final class Xqedii_2t8d8j4 {
    public int Xqedii_1aoqfs7;
    public int Xqedii_1d8vptj;
    public int Xqedii_g4y6hze;
-   public int Xqedii_k1vor1v = Xqedii_1cixo8c.Xqedii_2ek310jd134jg(-1080719649, 25);
+   public int Xqedii_k1vor1v = -2147483648;
    public boolean Xqedii_bl9xu45;
-   public int Xqedii_x7si9k7 = Xqedii_1cixo8c.Xqedii_37idzi0zs3n92(150300678, 30);
-   public int Xqedii_z1s1km7 = Xqedii_1cixo8c.Xqedii_2ek310jd134jg(-1098545441, 21);
+   public int Xqedii_x7si9k7 = -2147483648;
+   public int Xqedii_z1s1km7 = -2147483648;
    public String Xqedii_1tg0aim;
    public String Xqedii_2upyzdn;
    public volatile boolean Xqedii_1co5qbi;

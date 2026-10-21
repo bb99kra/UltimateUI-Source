@@ -15,7 +15,6 @@ import org.bukkit.event.Listener;
  */
 public class Xqedii_3mrezo4
 implements Listener {
-    public static final String Xqedii_15qs0w3oxcjej = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
     private static transient /* synthetic */ String iAKHayrSOk = "00000000000000000000000000000000000000000000";
 
     public Xqedii_3mrezo4(UltimateUI ultimateUI) {

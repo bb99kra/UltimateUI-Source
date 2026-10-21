@@ -27,7 +27,6 @@ import org.bukkit.entity.Player;
  */
 public class Xqedii_323s7gi
 extends PacketListenerAbstract {
-    public static final String Xqedii_11b655w1x0sup = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
     public final /* synthetic */ CameraSoundMask Xqedii_2dsptlo;
     private static transient /* synthetic */ String nyjSbtQsuE = "00000000000000000000000000000000000000000000";
 

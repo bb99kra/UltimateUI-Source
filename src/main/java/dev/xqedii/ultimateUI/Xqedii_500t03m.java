@@ -13,13 +13,10 @@ import java.util.Map;
 import java.util.Set;
 
 public final class Xqedii_500t03m {
-   public static final String Xqedii_e56hho9lxpa4 = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public static final int Xqedii_25ndeq5 = 48;
 
    public static Set<String> Xqedii_l2kdved(List<BossbarHudSnapshot> var0, List<Xqedii_1il8kkh> var1, Map<Integer, double[]> var2, List<BossbarEntityRect> var3) {
-      if ((552435704 * 552435704 + 552435704 & 1) != 0) {
-         throw new IllegalStateException();
-      } else if (var0 != null && !var0.isEmpty()) {
+      if (var0 != null && !var0.isEmpty()) {
          int var4 = var0.size();
          double[][] var5 = new double[var4][];
          if (var1 != null) {
@@ -28,24 +25,24 @@ public final class Xqedii_500t03m {
                   double[] var8 = var5[var7.Xqedii_1177et8];
                   if (var8 == null) {
                      int var10001 = var7.Xqedii_1177et8;
-                     double[] var10002 = new double[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(474095600, 12)];
-                     var10002[Xqedii_2t9igks.Xqedii_332oacil0nf1n(1180278341, 0)] = var7.Xqedii_edx81yn;
-                     var10002[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(-1673371664, 31)] = var7.Xqedii_2wzxbdl;
-                     var10002[Xqedii_2t9igks.Xqedii_332oacil0nf1n(-1180278374, 5)] = var7.Xqedii_25pg3mz;
-                     var10002[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(2084724720, 29)] = var7.Xqedii_yoez7kl;
+                     double[] var10002 = new double[4];
+                     var10002[0] = var7.Xqedii_edx81yn;
+                     var10002[1] = var7.Xqedii_2wzxbdl;
+                     var10002[2] = var7.Xqedii_25pg3mz;
+                     var10002[3] = var7.Xqedii_yoez7kl;
                      var5[var10001] = var10002;
                   } else {
-                     var8[Xqedii_2t9igks.Xqedii_332oacil0nf1n(1180278341, 3)] = Math.min(
-                        var8[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(-1127629043, 13)], var7.Xqedii_edx81yn
+                     var8[0] = Math.min(
+                        var8[0], var7.Xqedii_edx81yn
                      );
-                     var8[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(474111968, 4)] = Math.min(
-                        var8[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(1004648345, 26)], var7.Xqedii_2wzxbdl
+                     var8[1] = Math.min(
+                        var8[1], var7.Xqedii_2wzxbdl
                      );
-                     var8[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(460952574, 6)] = Math.max(
-                        var8[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(474111968, 3)], var7.Xqedii_25pg3mz
+                     var8[2] = Math.max(
+                        var8[2], var7.Xqedii_25pg3mz
                      );
-                     var8[Xqedii_2t9igks.Xqedii_332oacil0nf1n(-1146723910, 24)] = Math.max(
-                        var8[Xqedii_2t9igks.Xqedii_332oacil0nf1n(-1717149254, 28)], var7.Xqedii_yoez7kl
+                     var8[3] = Math.max(
+                        var8[3], var7.Xqedii_yoez7kl
                      );
                   }
                }
@@ -58,14 +55,14 @@ public final class Xqedii_500t03m {
             var14.addAll(var3);
          }
 
-         for (int var15 = Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(474111984, 14); var15 < var4; var15++) {
+         for (int var15 = 0; var15 < var4; var15++) {
             BossbarHudSnapshot var9 = (BossbarHudSnapshot)var0.get(var15);
             double[] var10 = var2 == null ? null : (double[])var2.get(var15);
             int var11 = var2 != null && var2.containsKey(var15)
-               ? Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(474107888, 12)
-               : Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(-469178848, 29);
+               ? 1
+               : 0;
             if (var9.entityOnly || var11 != 0) {
-               var13[var15] = (Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(-2096094312, 23) != 0);
+               var13[var15] = true;
                double[] var12 = var5[var15] != null ? var5[var15] : var10;
                if (var12 != null) {
                   var14.add(Xqedii_3av9z0j(var12, var9.layer));
@@ -79,24 +76,24 @@ public final class Xqedii_500t03m {
             while (!var14.isEmpty()) {
                BossbarEntityRect var16 = (BossbarEntityRect)var14.poll();
 
-               for (int var18 = Xqedii_2t9igks.Xqedii_2mgngna4gh25c(-607347728, 9); var18 < var4; var18++) {
+               for (int var18 = 0; var18 < var4; var18++) {
                   double[] var20 = var5[var18];
                   if (!var13[var18] && var20 != null) {
                      BossbarHudSnapshot var21 = (BossbarHudSnapshot)var0.get(var18);
                      if (!(var21.layer > var16.layer)
                         && var16.Xqedii_2m8wxtt(
-                           var20[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(275907699, 20)],
-                           var20[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(205676528, 28)],
-                           var20[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(-1214693407, 10)],
-                           var20[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(-563802234, 12)]
+                           var20[0],
+                           var20[1],
+                           var20[2],
+                           var20[3]
                         )) {
-                        var13[var18] = (Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(339894256, 27) != 0);
+                        var13[var18] = true;
                         var14.add(
                            new BossbarEntityRect(
-                              var20[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(474111984, 27)],
-                              var20[Xqedii_2t9igks.Xqedii_332oacil0nf1n(-1180278342, 2)],
-                              var20[Xqedii_2t9igks.Xqedii_332oacil0nf1n(-106536518, 30)],
-                              var20[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(474111216, 8)],
+                              var20[0],
+                              var20[1],
+                              var20[2],
+                              var20[3],
                               var21.layer
                            )
                         );
@@ -107,7 +104,7 @@ public final class Xqedii_500t03m {
 
             HashSet var17 = new HashSet();
 
-            for (int var19 = Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(474111984, 17); var19 < var4; var19++) {
+            for (int var19 = 0; var19 < var4; var19++) {
                if (var13[var19]) {
                   var17.add(((BossbarHudSnapshot)var0.get(var19)).id);
                }
@@ -123,13 +120,11 @@ public final class Xqedii_500t03m {
    public static Xqedii_2rmjlt7 Xqedii_2jtypg6(
       List<BossbarHudSnapshot> var0, List<Xqedii_1il8kkh> var1, Map<Integer, double[]> var2, List<BossbarEntityRect> var3, Set<String> var4
    ) {
-      if ((1923946775 ^ 1923946775) != 0) {
-         throw new IllegalStateException();
-      } else if (var0 != null && !var0.isEmpty() && var1 != null && var4 != null && !var4.isEmpty()) {
+      if (var0 != null && !var0.isEmpty() && var1 != null && var4 != null && !var4.isEmpty()) {
          int var5 = var0.size();
          HashSet var6 = new HashSet();
 
-         for (int var7 = Xqedii_2t9igks.Xqedii_2mgngna4gh25c(-254030693, 1); var7 < var5; var7++) {
+         for (int var7 = 0; var7 < var5; var7++) {
             BossbarHudSnapshot var8 = (BossbarHudSnapshot)var0.get(var7);
             if (var4.contains(var8.id) && !var8.entityOnly && (var2 == null || !var2.containsKey(var7))) {
                var6.add(var7);
@@ -160,39 +155,39 @@ public final class Xqedii_500t03m {
                      double[] var11 = var20[var10.Xqedii_1177et8];
                      if (var11 == null) {
                         int var10001 = var10.Xqedii_1177et8;
-                        double[] var10002 = new double[Xqedii_2t9igks.Xqedii_332oacil0nf1n(-1180282438, 12)];
-                        var10002[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(482614401, 10)] = var10.Xqedii_edx81yn;
-                        var10002[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(482613377, 10)] = var10.Xqedii_2wzxbdl;
-                        var10002[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(273810547, 20)] = var10.Xqedii_25pg3mz;
-                        var10002[Xqedii_2t9igks.Xqedii_332oacil0nf1n(-1176084038, 21)] = var10.Xqedii_yoez7kl;
+                        double[] var10002 = new double[4];
+                        var10002[0] = var10.Xqedii_edx81yn;
+                        var10002[1] = var10.Xqedii_2wzxbdl;
+                        var10002[2] = var10.Xqedii_25pg3mz;
+                        var10002[3] = var10.Xqedii_yoez7kl;
                         var20[var10001] = var10002;
                      } else {
-                        var11[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(1875078962, 27)] = Math.min(
-                           var11[Xqedii_2t9igks.Xqedii_332oacil0nf1n(1180278341, 27)], var10.Xqedii_edx81yn
+                        var11[0] = Math.min(
+                           var11[0], var10.Xqedii_edx81yn
                         );
-                        var11[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(-1016122761, 3)] = Math.min(
-                           var11[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(230476255, 5)], var10.Xqedii_2wzxbdl
+                        var11[1] = Math.min(
+                           var11[1], var10.Xqedii_2wzxbdl
                         );
-                        var11[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(298598728, 6)] = Math.max(
-                           var11[Xqedii_2t9igks.Xqedii_332oacil0nf1n(-1180409414, 17)], var10.Xqedii_25pg3mz
+                        var11[2] = Math.max(
+                           var11[2], var10.Xqedii_25pg3mz
                         );
-                        var11[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(1843810552, 8)] = Math.max(
-                           var11[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(474111600, 7)], var10.Xqedii_yoez7kl
+                        var11[3] = Math.max(
+                           var11[3], var10.Xqedii_yoez7kl
                         );
                      }
                   }
                }
 
-               for (int var21 = Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(474111984, 1); var21 < var5; var21++) {
+               for (int var21 = 0; var21 < var5; var21++) {
                   if (!var6.contains(var21) && var4.contains(((BossbarHudSnapshot)var0.get(var21)).id)) {
                      double[] var23 = var20[var21];
                      if (var23 != null) {
                         var18.add(
                            new BossbarEntityRect(
-                              var23[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(474111984, 19)],
-                              var23[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(1644458768, 28)],
-                              var23[Xqedii_2t9igks.Xqedii_332oacil0nf1n(-1180276294, 11)],
-                              var23[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(-607346192, 9)],
+                              var23[0],
+                              var23[1],
+                              var23[2],
+                              var23[3],
                               ((BossbarHudSnapshot)var0.get(var21)).layer
                            )
                         );
@@ -256,18 +251,16 @@ public final class Xqedii_500t03m {
    }
 
    public static List<Xqedii_1il8kkh> Xqedii_13u07rr(List<Xqedii_1il8kkh> var0, BossbarHudSnapshot var1, List<BossbarEntityRect> var2) {
-      if (((2124711716 << 1 | 1) & 1) == 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          ArrayList var3 = new ArrayList();
 
          for (Xqedii_1il8kkh var5 : var0) {
             ArrayList var6 = new ArrayList();
-            int[] var10001 = new int[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(474111920, 4)];
-            var10001[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(474111984, 24)] = var5.Xqedii_1t89g9g;
-            var10001[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(474111856, 7)] = var5.Xqedii_qw73drj;
-            var10001[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(-434068472, 13)] = var5.Xqedii_1t89g9g + var5.Xqedii_3kc0ndq;
-            var10001[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(472014832, 21)] = var5.Xqedii_qw73drj + var5.Xqedii_19an9ij;
+            int[] var10001 = new int[4];
+            var10001[0] = var5.Xqedii_1t89g9g;
+            var10001[1] = var5.Xqedii_qw73drj;
+            var10001[2] = var5.Xqedii_1t89g9g + var5.Xqedii_3kc0ndq;
+            var10001[3] = var5.Xqedii_qw73drj + var5.Xqedii_19an9ij;
             var6.add(var10001);
 
             for (BossbarEntityRect var8 : var2) {
@@ -280,7 +273,7 @@ public final class Xqedii_500t03m {
                   }
 
                   var6 = var9;
-                  if (var9.size() > Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(-938357683, 30)) {
+                  if (var9.size() > 48) {
                      return null;
                   }
                }
@@ -288,16 +281,16 @@ public final class Xqedii_500t03m {
 
             for (int[] var13 : (Iterable<int[]>) (var6)) {
 
-               int var14 = var13[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(921905148, 7)] - var13[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(1865576387, 11)];
-               int var15 = var13[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(-2079791584, 29)] - var13[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(-1127620851, 13)];
+               int var14 = var13[2] - var13[0];
+               int var15 = var13[3] - var13[1];
                if (var14 > 0 && var15 > 0) {
                   var3.add(
                      Xqedii_1il8kkh.Xqedii_1jrrn9i(
                         var5.Xqedii_1177et8,
                         var5.Xqedii_25muecf,
                         var5.Xqedii_f5uv5g9,
-                        var13[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(654063347, 23)],
-                        var13[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(-1214694431, 10)],
+                        var13[0],
+                        var13[1],
                         var14,
                         var15,
                         var5.Xqedii_m3xyrif,
@@ -314,53 +307,51 @@ public final class Xqedii_500t03m {
    }
 
    public static void Xqedii_1afw8s1(int[] var0, BossbarEntityRect var1, List<int[]> var2) {
-      if ((-198274647 * -198274647 - -198274647 & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          int var3 = (int)Math.floor(var1.left);
          int var4 = (int)Math.floor(var1.top);
          int var5 = (int)Math.ceil(var1.right);
          int var6 = (int)Math.ceil(var1.bottom);
-         if (var5 > var0[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(149299428, 5)]
-            && var3 < var0[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(86001457, 24)]
-            && var6 > var0[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(274859123, 20)]
-            && var4 < var0[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(499277808, 23)]) {
-            if (var4 > var0[Xqedii_2t9igks.Xqedii_332oacil0nf1n(-1180278342, 9)]) {
-               int[] var10001 = new int[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(474636272, 17)];
-               var10001[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(474111984, 20)] = var0[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(-1127629043, 13)];
-               var10001[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(411114692, 26)] = var0[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(1099436492, 22)];
-               var10001[Xqedii_2t9igks.Xqedii_332oacil0nf1n(-1179754054, 19)] = var0[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(-868136943, 14)];
-               var10001[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(474046448, 16)] = var4;
+         if (var5 > var0[0]
+            && var3 < var0[2]
+            && var6 > var0[1]
+            && var4 < var0[3]) {
+            if (var4 > var0[1]) {
+               int[] var10001 = new int[4];
+               var10001[0] = var0[0];
+               var10001[1] = var0[1];
+               var10001[2] = var0[2];
+               var10001[3] = var4;
                var2.add(var10001);
             }
 
-            if (var6 < var0[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(270768258, 31)]) {
-               int[] var9 = new int[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(469917680, 20)];
-               var9[Xqedii_2t9igks.Xqedii_332oacil0nf1n(1180278341, 30)] = var0[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(478223556, 26)];
-               var9[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(482500592, 23)] = var6;
-               var9[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(-1723866697, 18)] = var0[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(-906031684, 21)];
-               var9[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(545523942, 21)] = var0[Xqedii_2t9igks.Xqedii_332oacil0nf1n(-1180278278, 5)];
+            if (var6 < var0[3]) {
+               int[] var9 = new int[4];
+               var9[0] = var0[0];
+               var9[1] = var6;
+               var9[2] = var0[2];
+               var9[3] = var0[3];
                var2.add(var9);
             }
 
-            int var7 = Math.max(var0[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(102778673, 24)], var4);
-            int var8 = Math.min(var0[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(474046448, 16)], var6);
+            int var7 = Math.max(var0[1], var4);
+            int var8 = Math.min(var0[3], var6);
             if (var8 > var7) {
-               if (var3 > var0[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(1692370654, 20)]) {
-                  int[] var10 = new int[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(1843810808, 8)];
-                  var10[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(-2128821220, 2)] = var0[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(1930457604, 12)];
-                  var10[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(-434060280, 13)] = var7;
-                  var10[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(474109936, 10)] = var3;
-                  var10[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(499277808, 23)] = var8;
+               if (var3 > var0[0]) {
+                  int[] var10 = new int[4];
+                  var10[0] = var0[0];
+                  var10[1] = var7;
+                  var10[2] = var3;
+                  var10[3] = var8;
                   var2.add(var10);
                }
 
-               if (var5 < var0[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(-906031684, 21)]) {
-                  int[] var11 = new int[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(-254030685, 1)];
-                  var11[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(474111984, 7)] = var5;
-                  var11[Xqedii_2t9igks.Xqedii_3r3xl5ag0bu26(474111988, 2)] = var7;
-                  var11[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(-31753837, 30)] = var0[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(-1736273885, 15)];
-                  var11[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(-1214692383, 10)] = var8;
+               if (var5 < var0[2]) {
+                  int[] var11 = new int[4];
+                  var11[0] = var5;
+                  var11[1] = var7;
+                  var11[2] = var0[2];
+                  var11[3] = var8;
                   var2.add(var11);
                }
             }
@@ -371,17 +362,15 @@ public final class Xqedii_500t03m {
    }
 
    public static BossbarEntityRect Xqedii_3av9z0j(double[] var0, double var1) {
-      if ((401392863 * 401392863 - 401392863 & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          double var3 = Math.hypot(
-            var0[Xqedii_2t9igks.Xqedii_332oacil0nf1n(-1182375494, 21)] - var0[Xqedii_2t9igks.Xqedii_332oacil0nf1n(1180278341, 20)],
-            var0[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(276896964, 26)] - var0[Xqedii_2t9igks.Xqedii_2mgngna4gh25c(230476255, 5)]
+            var0[2] - var0[0],
+            var0[3] - var0[1]
          );
-         double var5 = (var0[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(-469178848, 29)] + var0[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(37324841, 3)])
-            / Double.longBitsToDouble(Xqedii_2t9igks.Xqedii_3qgvigubcm609(-5368494067468456850L, 55));
-         double var7 = (var0[Xqedii_2t9igks.Xqedii_42bvtdpmt4vp(1644970126, 17)] + var0[Xqedii_2t9igks.Xqedii_332oacil0nf1n(-1314496070, 26)])
-            / Double.longBitsToDouble(Xqedii_2t9igks.Xqedii_2alv4la87qsfe(-4702451484808749832L, 21));
+         double var5 = (var0[0] + var0[2])
+            / Double.longBitsToDouble(4611686018427387904L);
+         double var7 = (var0[1] + var0[3])
+            / Double.longBitsToDouble(4611686018427387904L);
          return new BossbarEntityRect(var5 - var3, var7 - var3, var5 + var3, var7 + var3, var1);
       }
    }

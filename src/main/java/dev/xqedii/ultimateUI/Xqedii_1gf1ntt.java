@@ -4,7 +4,6 @@ import java.util.List;
 import net.kyori.adventure.text.Component;
 
 public final class Xqedii_1gf1ntt {
-   public static final String Xqedii_187rh53rplqfi = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
 
    public final long signature;
    public final long structure;

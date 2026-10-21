@@ -6,7 +6,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.bukkit.Location;
 
 public final class Xqedii_1uzjgh7 {
-   public static final String Xqedii_2k2p5sbfciu3h = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public final int Xqedii_23stnyr;
    public final Location Xqedii_3gmr9uu;
    public final Xqedii_3gpvmi2 Xqedii_3ctqsuy;

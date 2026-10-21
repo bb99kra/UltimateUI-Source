@@ -3,7 +3,6 @@ package dev.xqedii.ultimateUI;
 import dev.xqedii.ultimateUI.service.bossbar.BossbarAssets;
 
 public final class Xqedii_2q1o8r1 {
-   public static final String Xqedii_2e86ehaa2uw74 = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public int Xqedii_2zyef1q;
    public int Xqedii_xeufmmf;
    public boolean Xqedii_27itpdq;

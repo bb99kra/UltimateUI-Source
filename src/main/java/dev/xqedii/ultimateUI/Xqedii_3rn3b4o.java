@@ -13,7 +13,6 @@ import java.util.UUID;
 import org.bukkit.entity.Player;
 
 public class Xqedii_3rn3b4o extends PacketListenerAbstract {
-   public static final String Xqedii_1vx6iq9ossdl3 = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public final HudPassengerGuard Xqedii_2fgadxf;
 
    public Xqedii_3rn3b4o(HudPassengerGuard var1, PacketListenerPriority var2) {
@@ -22,9 +21,7 @@ public class Xqedii_3rn3b4o extends PacketListenerAbstract {
    }
 
    public void onPacketSend(PacketSendEvent var1) {
-      if ((-422927959 * -422927959 + -422927959 & 1) != 0) {
-         throw new IllegalStateException();
-      } else if (var1 != null && var1.getPacketType() == Server.SET_PASSENGERS) {
+      if (var1 != null && var1.getPacketType() == Server.SET_PASSENGERS) {
          if (var1.getPlayer() instanceof Player var3) {
             WrapperPlayServerSetPassengers var4 = new WrapperPlayServerSetPassengers(var1);
             if (var4.getEntityId() == var3.getEntityId()) {
@@ -44,7 +41,7 @@ public class Xqedii_3rn3b4o extends PacketListenerAbstract {
                   int[] var10 = var14;
                   int var11 = var14.length;
 
-                  for (int var12 = Xqedii_185rqr9.Xqedii_2uvy449v2v79f(812875105, 30); var12 < var11; var12++) {
+                  for (int var12 = 0; var12 < var11; var12++) {
                      int var13 = var10[var12];
                      if (!var7.contains(var13)) {
                         var15.add(var13);
@@ -57,7 +54,7 @@ public class Xqedii_3rn3b4o extends PacketListenerAbstract {
                   LinkedHashSet var16 = new LinkedHashSet(var15);
                   var16.addAll(var7);
                   var4.setPassengers(HudPackets.Xqedii_14vespo(var16));
-                  var1.markForReEncode(Xqedii_185rqr9.Xqedii_30y0laybleuix(-1960778970, 8) != 0);
+                  var1.markForReEncode(true);
                }
             }
          }

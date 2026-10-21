@@ -1,7 +1,6 @@
 package dev.xqedii.ultimateUI;
 
 public final class Xqedii_1il8kkh {
-   public static final String Xqedii_2aq7qcq5nwu76 = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public static final int Xqedii_20i1b6f = 0;
    public static final int Xqedii_1giam0t = 1;
    public static final int Xqedii_24dwty5 = 2;
@@ -64,9 +63,9 @@ public final class Xqedii_1il8kkh {
       this.Xqedii_2sb63xq = var10;
       this.Xqedii_18nmhy9 = var11;
       this.Xqedii_2d9hu5h = var12;
-      this.Xqedii_1y7ol1r = var13 & Xqedii_1ctakye.Xqedii_3gb7e1zdiypu4(-681188918, 30);
+      this.Xqedii_1y7ol1r = var13 & 3;
       this.Xqedii_2lfkh7a = var14;
-      this.Xqedii_2lfvdxd = (Xqedii_1ctakye.Xqedii_3gb7e1zdiypu4(-1466294731, 30) != 0);
+      this.Xqedii_2lfvdxd = false;
       this.Xqedii_1ruao0x = var15;
       this.Xqedii_1f9t2xs = var16;
       this.Xqedii_22jt9mc = Xqedii_30g0ulj.Xqedii_28kokdu(var17);
@@ -78,20 +77,16 @@ public final class Xqedii_1il8kkh {
    }
 
    public static Xqedii_1il8kkh Xqedii_y3daijy(int var0, double var1, int var3, int var4, int var5, int var6, int var7, int var8, int var9) {
-      if ((-192220529 * -192220529 - -192220529 & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
-         return Xqedii_1jrrn9i(var0, var1, Xqedii_1ctakye.Xqedii_3gb7e1zdiypu4(-1466294731, 17), var3, var4, var5, var6, var7, var8, var9);
+      {
+         return Xqedii_1jrrn9i(var0, var1, 0, var3, var4, var5, var6, var7, var8, var9);
       }
    }
 
    public static Xqedii_1il8kkh Xqedii_1jrrn9i(int var0, double var1, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10) {
-      if ((-2120683505 ^ -2120683505) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          int var11 = Xqedii_30g0ulj.Xqedii_1kni5fu(var8);
          return new Xqedii_1il8kkh(
-            Xqedii_1ctakye.Xqedii_2pw42rfis4z0v(-465717804, 17),
+            0,
             var1,
             var3,
             var4,
@@ -100,12 +95,12 @@ public final class Xqedii_1il8kkh {
             var7,
             var8,
             var9,
-            Xqedii_1ctakye.Xqedii_3gb7e1zdiypu4(-1466179123, 17) + var11,
+            262144 + var11,
             Xqedii_30g0ulj.Xqedii_urxo6vz(var10),
-            Xqedii_1ctakye.Xqedii_28551wuytj37w(193759844, 9),
-            Xqedii_1ctakye.Xqedii_28551wuytj37w(193759844, 18),
-            (Xqedii_1ctakye.Xqedii_28551wuytj37w(193759844, 22) != 0),
-            Xqedii_1ctakye.Xqedii_x3rbnsvjgjts(-606157191, 25),
+            0,
+            0,
+            false,
+            2,
             var10,
             var0,
             var4,
@@ -119,12 +114,10 @@ public final class Xqedii_1il8kkh {
    public static Xqedii_1il8kkh Xqedii_3o2rcrl(
       int var0, double var1, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12
    ) {
-      if ((593105069 * 593105069 - 593105069 & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          int var13 = Xqedii_30g0ulj.Xqedii_1kni5fu(var8);
          return new Xqedii_1il8kkh(
-            Xqedii_1ctakye.Xqedii_28551wuytj37w(193759972, 6),
+            2,
             var1,
             var3,
             var4,
@@ -133,12 +126,12 @@ public final class Xqedii_1il8kkh {
             var7,
             var8,
             var9,
-            Xqedii_1ctakye.Xqedii_2pw42rfis4z0v(-565978275, 13) + var13,
+            294912 + var13,
             Xqedii_30g0ulj.Xqedii_urxo6vz(var12),
             var10,
             var11,
-            (Xqedii_1ctakye.Xqedii_28551wuytj37w(193759844, 17) != 0),
-            Xqedii_1ctakye.Xqedii_28551wuytj37w(193776228, 13),
+            false,
+            2,
             var12,
             var0,
             var4,
@@ -152,9 +145,7 @@ public final class Xqedii_1il8kkh {
    public static Xqedii_1il8kkh Xqedii_184ufbm(
       int var0, double var1, int var3, int var4, int var5, int var6, int var7, int var8, int var9, String var10, int var11, int var12
    ) {
-      if ((1888610343 ^ 1888610343) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          return Xqedii_2669ep6(var0, var1, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var4, var5, var4 + var6, var5 + var7);
       }
    }
@@ -177,24 +168,22 @@ public final class Xqedii_1il8kkh {
       double var17,
       double var19
    ) {
-      if ((65256507 * 65256507 + 65256507 & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          return new Xqedii_1il8kkh(
-            Xqedii_1ctakye.Xqedii_x3rbnsvjgjts(-557418023, 1),
+            1,
             var1,
             var3,
             var4,
             var5,
             var6,
             var7,
-            Xqedii_1ctakye.Xqedii_3gb7e1zdiypu4(1218059786, 5),
+            16777215,
             var8,
             var9,
             var10,
-            Xqedii_1ctakye.Xqedii_28551wuytj37w(193759844, 30),
-            Xqedii_1ctakye.Xqedii_x3rbnsvjgjts(-1636436047, 15),
-            (Xqedii_1ctakye.Xqedii_x3rbnsvjgjts(-1091161138, 28) != 0),
+            0,
+            0,
+            false,
             var11,
             var12,
             var0,
@@ -225,26 +214,24 @@ public final class Xqedii_1il8kkh {
       double var18,
       double var20
    ) {
-      if ((-725954686 * -725954686 - -725954686 & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
-         int var22 = var4 == Xqedii_1ctakye.Xqedii_x3rbnsvjgjts(1738407404, 13)
-            ? Xqedii_1ctakye.Xqedii_3gb7e1zdiypu4(1533403594, 26)
-            : Xqedii_1ctakye.Xqedii_2pw42rfis4z0v(-575756511, 28);
+      {
+         int var22 = var4 == 4
+            ? 4
+            : 3;
          return new Xqedii_1il8kkh(
             var22,
             var1,
             var3,
             var5,
             var6,
-            Xqedii_1ctakye.Xqedii_2pw42rfis4z0v(-2018067812, 22),
-            Xqedii_1ctakye.Xqedii_2pw42rfis4z0v(-723239499, 9),
+            0,
+            0,
             var7,
             var8,
             var9,
             var10,
-            Xqedii_1ctakye.Xqedii_2pw42rfis4z0v(-1244339139, 1),
-            Xqedii_1ctakye.Xqedii_2pw42rfis4z0v(957312373, 15),
+            0,
+            0,
             var11,
             var12,
             var13,
@@ -258,34 +245,28 @@ public final class Xqedii_1il8kkh {
    }
 
    public boolean Xqedii_22d03wg() {
-      if ((900648026 ^ 900648026) != 0) {
-         throw new IllegalStateException();
-      } else {
-         return ((this.Xqedii_2d73yig != Xqedii_1ctakye.Xqedii_3gb7e1zdiypu4(1466298826, 11)
-               && this.Xqedii_2d73yig != Xqedii_1ctakye.Xqedii_3gb7e1zdiypu4(1533403594, 26)
-            ? Xqedii_1ctakye.Xqedii_28551wuytj37w(193759844, 22)
-            : Xqedii_1ctakye.Xqedii_x3rbnsvjgjts(1738382828, 13)) != 0);
+      {
+         return ((this.Xqedii_2d73yig != 3
+               && this.Xqedii_2d73yig != 4
+            ? 0
+            : 1) != 0);
       }
    }
 
    public boolean Xqedii_1v237vj(Xqedii_1il8kkh var1) {
-      if (((1858212708 << 1 | 1) & 1) == 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          return ((var1 != null
-               && this.Xqedii_edx81yn < var1.Xqedii_25pg3mz - Double.longBitsToDouble(Xqedii_1ctakye.Xqedii_3rda2hfl0l96v(7422694739469499229L, 17))
-               && var1.Xqedii_edx81yn < this.Xqedii_25pg3mz - Double.longBitsToDouble(Xqedii_1ctakye.Xqedii_1m3ymu5pbxwc4(-4454142510147916729L, 1))
-               && this.Xqedii_2wzxbdl < var1.Xqedii_yoez7kl - Double.longBitsToDouble(Xqedii_1ctakye.Xqedii_3pdd3vd4zozeg(-1452538163138621321L, 42))
-               && var1.Xqedii_2wzxbdl < this.Xqedii_yoez7kl - Double.longBitsToDouble(Xqedii_1ctakye.Xqedii_3pdd3vd4zozeg(-1452534866751024905L, 18))
-            ? Xqedii_1ctakye.Xqedii_3gb7e1zdiypu4(1466294730, 0)
-            : Xqedii_1ctakye.Xqedii_28551wuytj37w(193759844, 18)) != 0);
+               && this.Xqedii_edx81yn < var1.Xqedii_25pg3mz - Double.longBitsToDouble(4602678819172646912L)
+               && var1.Xqedii_edx81yn < this.Xqedii_25pg3mz - Double.longBitsToDouble(4602678819172646912L)
+               && this.Xqedii_2wzxbdl < var1.Xqedii_yoez7kl - Double.longBitsToDouble(4602678819172646912L)
+               && var1.Xqedii_2wzxbdl < this.Xqedii_yoez7kl - Double.longBitsToDouble(4602678819172646912L)
+            ? 1
+            : 0) != 0);
       }
    }
 
    public int Xqedii_19hg2b0() {
-      if ((-139616823 ^ -139616823) != 0) {
-         throw new IllegalStateException();
-      } else if (this.Xqedii_22d03wg()) {
+      if (this.Xqedii_22d03wg()) {
          return Xqedii_30g0ulj.Xqedii_2jcnpyt(this.Xqedii_1t89g9g, this.Xqedii_qw73drj);
       } else {
          int var1 = Xqedii_30g0ulj.Xqedii_c3p3jo9(Xqedii_30g0ulj.Xqedii_clildms(this.Xqedii_2sb63xq));
@@ -296,30 +277,26 @@ public final class Xqedii_1il8kkh {
    }
 
    public int Xqedii_30989lo() {
-      if ((-1731936444 ^ -1731936444) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          int var1 = this.Xqedii_2llkml4();
          if (this.Xqedii_22d03wg()) {
-            return var1 & Xqedii_1ctakye.Xqedii_x3rbnsvjgjts(1022291811, 16);
-         } else if (this.Xqedii_2d73yig == Xqedii_1ctakye.Xqedii_3gb7e1zdiypu4(1466294730, 25)) {
-            return var1 >> Xqedii_1ctakye.Xqedii_3gb7e1zdiypu4(1462362570, 18) & Xqedii_1ctakye.Xqedii_3gb7e1zdiypu4(1466425802, 16);
+            return var1 & 3;
+         } else if (this.Xqedii_2d73yig == 1) {
+            return var1 >> 20 & 3;
          } else {
-            for (int var2 = Xqedii_1ctakye.Xqedii_3gb7e1zdiypu4(-1466294731, 23); var2 < Xqedii_1ctakye.Xqedii_28551wuytj37w(193759868, 3); var2++) {
+            for (int var2 = 0; var2 < 3; var2++) {
                if (Xqedii_30g0ulj.Xqedii_urxo6vz(var2).equals(this.Xqedii_2d9hu5h)) {
                   return var2;
                }
             }
 
-            return Xqedii_1ctakye.Xqedii_2pw42rfis4z0v(-1035326693, 25);
+            return -1;
          }
       }
    }
 
    public int Xqedii_2llkml4() {
-      if ((-760194977 * -760194977 + -760194977 & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          int var1 = Xqedii_30g0ulj.Xqedii_clildms(this.Xqedii_2sb63xq);
          if (this.Xqedii_22d03wg()) {
             return Xqedii_30g0ulj.Xqedii_2zxf2k5(this.Xqedii_m3xyrif, var1, this.Xqedii_22jt9mc);

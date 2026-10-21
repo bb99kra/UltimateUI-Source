@@ -6,7 +6,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.bukkit.Location;
 
 public final class Xqedii_1a2mt0h {
-   public static final String Xqedii_2chgz3so6als9 = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public final String Xqedii_m23ejo5;
    public final Xqedii_irwktj3 Xqedii_2u9ms1f;
    public final UUID Xqedii_hrnh6v6;
@@ -14,7 +13,7 @@ public final class Xqedii_1a2mt0h {
    public final Xqedii_1avxacb Xqedii_342ikl0 = new Xqedii_1avxacb(null);
    public volatile Xqedii_tmp4qaj Xqedii_3uo0d9i;
    public volatile Location Xqedii_2lkymh6;
-   public volatile boolean Xqedii_3nvqfsp = (Xqedii_1vijyc2.Xqedii_21pxt1ipkg1y4(-969404546, 9) != 0);
+   public volatile boolean Xqedii_3nvqfsp = true;
    public long Xqedii_2vod7ky;
 
    public Xqedii_1a2mt0h(String var1, Xqedii_irwktj3 var2, UUID var3, Xqedii_tmp4qaj var4) {

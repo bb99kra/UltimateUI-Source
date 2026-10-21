@@ -13,7 +13,6 @@ import dev.xqedii.ultimateUI.Xqedii_2uogtco;
  * Exception performing whole class analysis ignored.
  */
 public class Xqedii_11jvjwo {
-    public static final String Xqedii_24hlw5k58vu0l = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
     public static final /* synthetic */ int[] Xqedii_2wwhkoz;
     private static transient /* synthetic */ String WDyhPmYnhI = "00000000000000000000000000000000000000000000";
 

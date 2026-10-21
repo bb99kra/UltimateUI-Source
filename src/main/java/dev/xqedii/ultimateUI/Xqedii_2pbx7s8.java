@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Map;
 
 public final class Xqedii_2pbx7s8 {
-   public static final String Xqedii_yhm3tz27tdlr = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public final double Xqedii_m7gc5a1;
    public final double Xqedii_1il6ylu;
    public final double Xqedii_lxape50;

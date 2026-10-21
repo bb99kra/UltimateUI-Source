@@ -7,7 +7,6 @@ import java.util.Map;
 import java.util.UUID;
 
 public final class Xqedii_2f78jo3 {
-   public static final String Xqedii_1fi3rlf6jdtdw = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public final UUID Xqedii_rjd91hv;
    public final Map<String, Xqedii_3j2w0l1> Xqedii_2f37hi3 = new LinkedHashMap<>();
    public final Map<Integer, Xqedii_2pbx7s8> Xqedii_at2aqft = new LinkedHashMap<>();

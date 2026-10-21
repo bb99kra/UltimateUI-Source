@@ -3,7 +3,6 @@ package dev.xqedii.ultimateUI;
 import java.util.ArrayList;
 
 public final class Xqedii_2m7nhbf extends Xqedii_ev3jp8w {
-   public static final String Xqedii_yj3kgytifnhe = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public final Xqedii_ev3jp8w[] Xqedii_w7rakxn;
 
    public Xqedii_2m7nhbf(Xqedii_ev3jp8w[] var1, int var2) {
@@ -13,14 +12,12 @@ public final class Xqedii_2m7nhbf extends Xqedii_ev3jp8w {
 
    @Override
    public Object Xqedii_28g36j3(Xqedii_y5pr2ec var1) {
-      if (((-325885586 << 1 | 1) & 1) == 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          ArrayList var2 = new ArrayList(this.Xqedii_w7rakxn.length);
          Xqedii_ev3jp8w[] var3 = this.Xqedii_w7rakxn;
          int var4 = var3.length;
 
-         for (int var5 = Xqedii_2i9gjgu.Xqedii_r62apor7xfmk(-1312759543, 14); var5 < var4; var5++) {
+         for (int var5 = 0; var5 < var4; var5++) {
             Xqedii_ev3jp8w var6 = var3[var5];
             var2.add(var6.Xqedii_28g36j3(var1));
          }

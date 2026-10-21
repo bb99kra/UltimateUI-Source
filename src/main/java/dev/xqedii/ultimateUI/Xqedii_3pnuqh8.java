@@ -14,7 +14,6 @@ import dev.xqedii.ultimateUI.service.gui.model.EditorSavePopupField;
  * Exception performing whole class analysis ignored.
  */
 public class Xqedii_3pnuqh8 {
-    public static final String Xqedii_2zge317swkyjn = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
     public static final /* synthetic */ int[] Xqedii_3epmsu8;
     private static transient /* synthetic */ String CfRksWDQwk = "00000000000000000000000000000000000000000000";
 

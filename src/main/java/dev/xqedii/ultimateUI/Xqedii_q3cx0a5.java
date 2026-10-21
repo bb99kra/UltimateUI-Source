@@ -14,28 +14,23 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 public record Xqedii_q3cx0a5(File source, boolean zip) {
-   public static final String Xqedii_vyswfy9wxeuq = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
 
    public String signature() {
-      if (((773831606 | 1) & 1) == 0) {
-         throw new IllegalStateException();
-      } else if (this.zip) {
+      if (this.zip) {
          return Xqedii_toi3u78s0ui9(this.source.getAbsolutePath(), this.source.lastModified(), this.source.length());
       } else {
-         long var1 = Xqedii_382spr8.Xqedii_37cfzjwvzpuk0(507586204702062480L, 1);
+         long var1 = 17L;
 
          try (Stream<Path> var3 = Files.walk(this.source.toPath())) {
             for (Path var5 : var3.filter(var0 -> {
-               if ((-316050843 * -316050843 - -316050843 & 1) != 0) {
-                  throw new IllegalStateException();
-               } else {
+               {
                   return Files.isRegularFile(var0);
                }
             }).sorted().toList()) {
                File var6 = var5.toFile();
-               var1 = Xqedii_382spr8.Xqedii_2e6i0b5lc5mpr(-8329199311767524813L, 23) * var1 + var5.toString().hashCode();
-               var1 = Xqedii_382spr8.Xqedii_37cfzjwvzpuk0(507586204701841330L, 13) * var1 + Long.hashCode(var6.lastModified());
-               var1 = Xqedii_382spr8.Xqedii_2e6i0b5lc5mpr(-3588908253066908504L, 17) * var1 + Long.hashCode(var6.length());
+               var1 = 31L * var1 + var5.toString().hashCode();
+               var1 = 31L * var1 + Long.hashCode(var6.lastModified());
+               var1 = 31L * var1 + Long.hashCode(var6.length());
             }
          } catch (IOException var9) {
             var1 = System.currentTimeMillis();
@@ -46,9 +41,7 @@ public record Xqedii_q3cx0a5(File source, boolean zip) {
    }
 
    public Map<String, byte[]> read() throws IOException {
-      if (((-1208701621 << 1 | 1) & 1) == 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          LinkedHashMap var1 = new LinkedHashMap();
          if (this.zip) {
             try (ZipFile var14 = new ZipFile(this.source)) {
@@ -70,9 +63,7 @@ public record Xqedii_q3cx0a5(File source, boolean zip) {
 
             try (Stream<Path> var3 = Files.walk(var2)) {
                for (Path var5 : var3.filter(var0 -> {
-                  if ((-1210630126 * (-1210630126 + 1) & 1) != 0) {
-                     throw new IllegalStateException();
-                  } else {
+                  {
                      return Files.isRegularFile(var0);
                   }
                }).toList()) {
@@ -88,9 +79,7 @@ public record Xqedii_q3cx0a5(File source, boolean zip) {
    @Override
 
    public boolean zip() {
-      if (((706473545 | 1) & 1) == 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          return this.zip;
       }
    }

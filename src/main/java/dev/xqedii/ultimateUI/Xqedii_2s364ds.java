@@ -1,7 +1,6 @@
 package dev.xqedii.ultimateUI;
 
 public final class Xqedii_2s364ds extends Xqedii_ev3jp8w {
-   public static final String Xqedii_20idprro4cy8j = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public final String Xqedii_7d9u7zd;
    public final Xqedii_ev3jp8w Xqedii_1txxbrb;
 
@@ -13,9 +12,7 @@ public final class Xqedii_2s364ds extends Xqedii_ev3jp8w {
 
    @Override
    public Object Xqedii_28g36j3(Xqedii_y5pr2ec var1) {
-      if ((-1472429577 * (-1472429577 + 1) & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          Object var2 = this.Xqedii_1txxbrb.Xqedii_28g36j3(var1);
          return !(var2 instanceof String) && !(var2 instanceof Xqedii_11itj63)
             ? Xqedii_2d07ocz.get(var1, var2, this.Xqedii_7d9u7zd, this.Xqedii_3dzdvck)
@@ -25,18 +22,14 @@ public final class Xqedii_2s364ds extends Xqedii_ev3jp8w {
 
    @Override
    public boolean Xqedii_25ddebp() {
-      if (((79022536 | 1) & 1) == 0) {
-         throw new IllegalStateException();
-      } else {
-         return (Xqedii_2gjgld8.Xqedii_1237nmai0s7pt(-924472319, 28) != 0);
+      {
+         return true;
       }
    }
 
    @Override
    public void Xqedii_2uxio2i(Xqedii_y5pr2ec var1, Object var2) {
-      if (((1274710974 | 1) & 1) == 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          Object var3 = this.Xqedii_1txxbrb.Xqedii_28g36j3(var1);
          if (!(var3 instanceof String) && !(var3 instanceof Xqedii_11itj63)) {
             Xqedii_2d07ocz.Xqedii_2a9tfw6(var1, var3, this.Xqedii_7d9u7zd, var2, this.Xqedii_3dzdvck);

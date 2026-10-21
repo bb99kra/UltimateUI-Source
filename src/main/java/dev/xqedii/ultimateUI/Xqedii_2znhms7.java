@@ -3,7 +3,6 @@ package dev.xqedii.ultimateUI;
 import dev.xqedii.ultimateUI.gui.parser.ScrollViewState;
 
 public final class Xqedii_2znhms7 {
-   public static final String Xqedii_3cjbyz2u0hxci = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public double Xqedii_3hshg7e;
    public double Xqedii_3o2vu3n;
    public double Xqedii_431s80n;

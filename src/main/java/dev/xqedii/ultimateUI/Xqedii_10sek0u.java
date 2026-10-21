@@ -21,7 +21,6 @@ import dev.xqedii.ultimateui.libs.packetevents.packetevents.protocol.packettype.
  */
 public class Xqedii_10sek0u
 extends PacketListenerAbstract {
-    public static final String Xqedii_1pmswl3acerpz = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
     public final /* synthetic */ Xqedii_148dm0t Xqedii_300c5ku;
     private static transient /* synthetic */ String vsaCZmiFwr = "00000000000000000000000000000000000000000000";
 

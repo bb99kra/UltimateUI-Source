@@ -14,7 +14,6 @@ import dev.xqedii.ultimateUI.bedrock.BedrockUiService;
  * Exception performing whole class analysis ignored.
  */
 public class Xqedii_os41zqy {
-    public static final String Xqedii_2h9dxx2apacgf = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
     public static final /* synthetic */ int[] Xqedii_359kwn6;
     private static transient /* synthetic */ String fznzpTdkRA = "00000000000000000000000000000000000000000000";
 

@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Set;
 
 public final class Xqedii_2rmjlt7 {
-   public static final String Xqedii_lzzck05majbv = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public final Set<String> Xqedii_pc93lpb;
    public final List<Xqedii_1il8kkh> Xqedii_tkv4etv;
 

@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Map;
 
 public final class Xqedii_2p9runp extends Xqedii_ev3jp8w {
-   public static final String Xqedii_2tta3m1wwzy3k = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public final Xqedii_ev3jp8w Xqedii_3pyh46j;
    public final Xqedii_ev3jp8w Xqedii_qct7qsp;
 
@@ -16,9 +15,7 @@ public final class Xqedii_2p9runp extends Xqedii_ev3jp8w {
 
    @Override
    public Object Xqedii_28g36j3(Xqedii_y5pr2ec var1) {
-      if ((-532497371 ^ -532497371) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          Object var2 = this.Xqedii_3pyh46j.Xqedii_28g36j3(var1);
          Object var3 = this.Xqedii_qct7qsp.Xqedii_28g36j3(var1);
          if (var2 instanceof List var6) {
@@ -34,9 +31,7 @@ public final class Xqedii_2p9runp extends Xqedii_ev3jp8w {
    }
 
    public int Xqedii_2fum03z(int var1, Object var2) {
-      if ((1064675492 * (1064675492 + 1) & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          int var3 = Xqedii_z4wg071.Xqedii_1x518al(var2, this.Xqedii_3dzdvck);
          return var3 < 0 ? var1 + var3 : var3;
       }
@@ -44,18 +39,14 @@ public final class Xqedii_2p9runp extends Xqedii_ev3jp8w {
 
    @Override
    public boolean Xqedii_25ddebp() {
-      if ((-1245722304 * (-1245722304 + 1) & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
-         return (Xqedii_3n9nzjt.Xqedii_1u82u26xzslk8(-707801004, 17) != 0);
+      {
+         return true;
       }
    }
 
    @Override
    public void Xqedii_2uxio2i(Xqedii_y5pr2ec var1, Object var2) {
-      if ((97908199 * (97908199 + 1) & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          Object var3 = this.Xqedii_3pyh46j.Xqedii_28g36j3(var1);
          Object var4 = this.Xqedii_qct7qsp.Xqedii_28g36j3(var1);
          if (!(var3 instanceof List var5)) {
@@ -79,9 +70,7 @@ public final class Xqedii_2p9runp extends Xqedii_ev3jp8w {
 
    @Override
    public void Xqedii_2dz6h65(Xqedii_y5pr2ec var1) {
-      if ((17061616 ^ 17061616) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          Object var2 = this.Xqedii_3pyh46j.Xqedii_28g36j3(var1);
          Object var3 = this.Xqedii_qct7qsp.Xqedii_28g36j3(var1);
          if (var2 instanceof List var6) {

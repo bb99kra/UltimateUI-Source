@@ -14,7 +14,6 @@ import java.util.Iterator;
  */
 public class Xqedii_3kvzn1j
 implements Iterator<Object> {
-    public static final String Xqedii_25oxxq6krescv = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
     public double Xqedii_1kfgyla;
     public final /* synthetic */ double Xqedii_nnzqsu5;
     public final /* synthetic */ double Xqedii_hk98en6;

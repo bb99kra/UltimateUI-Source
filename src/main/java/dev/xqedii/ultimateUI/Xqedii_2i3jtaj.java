@@ -27,7 +27,6 @@ import org.bukkit.entity.Player;
  */
 public class Xqedii_2i3jtaj
 extends PacketListenerAbstract {
-    public static final String Xqedii_1h6jasgbir7up = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
     private static transient /* synthetic */ String TsfJihyOCf = "00000000000000000000000000000000000000000000";
 
     public Xqedii_2i3jtaj(PluginBootstrap pluginBootstrap, PacketListenerPriority packetListenerPriority) {

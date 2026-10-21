@@ -9,7 +9,6 @@ import java.util.UUID;
 import net.kyori.adventure.text.Component;
 
 public final class Xqedii_109qg45 {
-   public static final String Xqedii_1lxz98yunmyrd = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public final Map<UUID, Xqedii_38cw7ku> Xqedii_2bjpkmq = new LinkedHashMap<>();
    public final Set<UUID> Xqedii_394arwg = new LinkedHashSet<>();
    public boolean Xqedii_hc9001e;

@@ -11,7 +11,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public final class Xqedii_1yqm9k3 {
-   public static final String Xqedii_2v3frex5ll1y8 = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public final Xqedii_2b3rrt2 Xqedii_2fi2lg1;
    public final Xqedii_1kffk3z Xqedii_2q97y6i;
    public final Player Xqedii_1v4ue4a;
@@ -34,28 +33,22 @@ public final class Xqedii_1yqm9k3 {
    }
 
    public Player Xqedii_25ge4f1(int var1) {
-      if ((566736983 * 566736983 + 566736983 & 1) != 0) {
-         throw new IllegalStateException();
-      } else if (this.Xqedii_1v4ue4a != null && this.Xqedii_1v4ue4a.isOnline()) {
+      if (this.Xqedii_1v4ue4a != null && this.Xqedii_1v4ue4a.isOnline()) {
          return this.Xqedii_1v4ue4a;
       } else {
          throw new Xqedii_3vsk7zm(
-            Xqedii_knqxbmv.Xqedii_7v0p63le84h8(
-               "foIYwWN8tzICry4lOdctLQ4mcWMapux4r6JC9PkrKWH1T2c44lSPblUH7BX3py9sydYl/xIeNFXWysBAdyWj+3s0VNLbf4PfiwlQgv41Kd+80iGz3d4GsxUxUv/EhZ/hHKKuRRG7fPFaV/nj6UV1NpFuiZ3U/XVVW11PnrKyK4RFpdziSJ3/bVT4Yis1cwgw/uuQkGUSo490lnEl/lrY7zQ6DjnOT0/d8kDCIbjIsSJCShcEZXdd3y9yU7ghUg2FQzG9FhfLL4rRe2MzYrPJaeOcSyI="
-            ),
+            "There is no player here (use this inside an event of a player, or a command run by a player)",
             var1
          );
       }
    }
 
    public void Xqedii_x5301uw(UiElementWrite var1) {
-      if ((-1323245341 ^ -1323245341) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          if (!this.Xqedii_3rytfhb.isEmpty()) {
-            UiElementWrite var2 = this.Xqedii_3rytfhb.get(this.Xqedii_3rytfhb.size() - Xqedii_knqxbmv.Xqedii_uw7c9j0tr8bh(1710930696, 4));
+            UiElementWrite var2 = this.Xqedii_3rytfhb.get(this.Xqedii_3rytfhb.size() - 1);
             if (var2.elementId().equals(var1.elementId()) && var2.property().equals(var1.property())) {
-               this.Xqedii_3rytfhb.set(this.Xqedii_3rytfhb.size() - Xqedii_knqxbmv.Xqedii_323c4ujoxn11t(1778721944, 19), var1);
+               this.Xqedii_3rytfhb.set(this.Xqedii_3rytfhb.size() - 1, var1);
                return;
             }
          }
@@ -65,21 +58,15 @@ public final class Xqedii_1yqm9k3 {
    }
 
    public void Xqedii_2504ge3(UiElementCreate var1) {
-      if ((1799683484 * (1799683484 + 1) & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          this.Xqedii_2jsr2jw.add(var1);
       }
    }
 
    public void Xqedii_o19wdzr(String var1) {
-      if ((-1735801706 * (-1735801706 + 1) & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          this.Xqedii_2jsr2jw.removeIf(var1x -> {
-            if ((119538080 * 119538080 - 119538080 & 1) != 0) {
-               throw new IllegalStateException();
-            } else {
+            {
                return var1x.elementId().equals(var1);
             }
          });
@@ -88,9 +75,7 @@ public final class Xqedii_1yqm9k3 {
    }
 
    public void Xqedii_3u9m9cl() {
-      if ((1634517732 * 1634517732 - 1634517732 & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          if (!this.Xqedii_i9uy1th.isEmpty() || !this.Xqedii_2jsr2jw.isEmpty()) {
             ArrayList var1 = new ArrayList<>(this.Xqedii_i9uy1th);
             ArrayList var2 = new ArrayList<>(this.Xqedii_2jsr2jw);
@@ -112,15 +97,13 @@ public final class Xqedii_1yqm9k3 {
    }
 
    public String Xqedii_1r9cm9n() {
-      if (((-695567461 << 1 | 1) & 1) == 0) {
-         throw new IllegalStateException();
-      } else if (this.Xqedii_34yybpr != null && !this.Xqedii_34yybpr.Xqedii_3rt5h0f.isEmpty()) {
+      if (this.Xqedii_34yybpr != null && !this.Xqedii_34yybpr.Xqedii_3rt5h0f.isEmpty()) {
          return this.Xqedii_34yybpr.Xqedii_3rt5h0f;
       } else if (this.Xqedii_1v4ue4a != null && UltimateUIAPI.isAvailable()) {
          String var1 = UltimateUIAPI.get().getOpenGuiName(this.Xqedii_1v4ue4a);
-         return var1 == null ? Xqedii_knqxbmv.Xqedii_7v0p63le84h8("rTbiuLJTaDd/dzDBom1MmPgwTKgYhzJChHR5xw==") : var1;
+         return var1 == null ? "" : var1;
       } else {
-         return Xqedii_knqxbmv.Xqedii_7v0p63le84h8("rTbiuLJTaDd/dzDBom1MmPgwTKgYhzJChHR5xw==");
+         return "";
       }
    }
 }

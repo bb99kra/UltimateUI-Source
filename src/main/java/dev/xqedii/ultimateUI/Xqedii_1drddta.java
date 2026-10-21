@@ -1,7 +1,6 @@
 package dev.xqedii.ultimateUI;
 
 public final class Xqedii_1drddta extends Xqedii_3nlck21 {
-   public static final String Xqedii_23zirlmlcvmrc = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public static final int Xqedii_3aqux6b = 1;
    public static final int Xqedii_jzipmcq = 2;
    public static final int Xqedii_1zodb39 = 3;
@@ -16,9 +15,7 @@ public final class Xqedii_1drddta extends Xqedii_3nlck21 {
 
    @Override
    public void Xqedii_3egc8pa(Xqedii_y5pr2ec var1) {
-      if (((2055293488 << 1 | 1) & 1) == 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          switch (this.Xqedii_cyq1yw4) {
             case 1:
                var1.Xqedii_uj5flsr(this.Xqedii_2lldvpl);

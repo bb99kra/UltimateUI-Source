@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Map;
 
 public final class Xqedii_1kffk3z {
-   public static final String Xqedii_2nc6k33cmgnil = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public final String Xqedii_1gnbwtp;
    public String Xqedii_lp3i5aj;
    public final Map<String, Object> Xqedii_3i3ujw9 = new HashMap<>();

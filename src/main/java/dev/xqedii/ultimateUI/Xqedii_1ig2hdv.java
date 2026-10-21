@@ -15,8 +15,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 public final class Xqedii_1ig2hdv {
-   public static final String Xqedii_es28c4zq0p9b = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
-   public static final String Xqedii_koct9dw = Xqedii_5rk5h3b.Xqedii_1hbjoi2t94f06("0IRLn903U1+T8xNKUPdbdr+ra+Bqi7zHYcKrYxNqqEIB/o+SYEcUbX7lZYi7kQ==");
+   public static final String Xqedii_koct9dw = "uui/empty";
    public static final int Xqedii_1oqccw2 = 0;
    public static final int Xqedii_1bkr2bl = 2;
    public static final int Xqedii_3l7ran4 = 7000;
@@ -34,57 +33,49 @@ public final class Xqedii_1ig2hdv {
    public static Method Xqedii_2cs39d2;
 
    public static synchronized void Xqedii_oin15qb() {
-      if ((-375629247 ^ -375629247) != 0) {
-         throw new IllegalStateException();
-      } else if (!Xqedii_2j50ap1) {
-         Xqedii_2j50ap1 = (Xqedii_5rk5h3b.Xqedii_17j0cui6dhu5e(-435116849, 14) != 0);
+      if (!Xqedii_2j50ap1) {
+         Xqedii_2j50ap1 = true;
 
          try {
             Class var0 = Class.forName(
-               Xqedii_5rk5h3b.Xqedii_1hbjoi2t94f06(
-                  "h7t2M7zEvJOdQLxpkFjr+oXrzrBpj7xJnDD7E/TRxF4Yw51tTW+ytryRwK8YsrMewFmB+CkElDkwwW0TWy76DaCK4mo72d60ijtex4iyo4ktL7/jljel+aT0wPph08w8"
-               )
+               "org.bukkit.inventory.InventoryView"
             );
-            String var10001 = Xqedii_5rk5h3b.Xqedii_1hbjoi2t94f06("9zx4UkhDAWfCo0vtAd5RoKpX7Kzk7l1VZCizdfYXA4KpYfo+P7gHV5LX");
-            Class[] var10002 = new Class[Xqedii_5rk5h3b.Xqedii_276k358rx0c1h(-1224478059, 7)];
-            var10002[Xqedii_5rk5h3b.Xqedii_17j0cui6dhu5e(-435100465, 15)] = int.class;
-            var10002[Xqedii_5rk5h3b.Xqedii_17j0cui6dhu5e(-418323249, 24)] = ItemStack.class;
+            String var10001 = "setItem";
+            Class[] var10002 = new Class[2];
+            var10002[0] = int.class;
+            var10002[1] = ItemStack.class;
             Xqedii_2r08ihn = var0.getMethod(var10001, var10002);
-            Xqedii_bpnqp6l = var0.getMethod(Xqedii_5rk5h3b.Xqedii_1hbjoi2t94f06("/q1AyLtW76jQa2sexkmEG7hYvSLqCsNR1CNNmkIc1GU1M/jn1nTjvYir"));
+            Xqedii_bpnqp6l = var0.getMethod("getType");
          } catch (Throwable var15) {
          }
 
          try {
             Class var17 = Class.forName(
-               Xqedii_5rk5h3b.Xqedii_1hbjoi2t94f06(
-                  "QOCB8T/lyRkX+RTAfqXMZbzQj86Ii2CSCtK2XcUHeF0BYy4DrjOrkSqJPKY8iaT8mBLZ2uOy0a4BAej4RhyImQ5a6akBEf7UQeLn/Ro6Oqp4EgGlF8s="
-               )
+               "org.bukkit.inventory.MenuType"
             );
-            Xqedii_15jxoj8 = var17.getField(Xqedii_5rk5h3b.Xqedii_1hbjoi2t94f06("mIvS/kqF44mGB/uJ5w90T6HA+K5VzvKB1JF8QsSAEJ9oY2ibOkE=")).get(null);
-            Class[] var10000 = new Class[Xqedii_5rk5h3b.Xqedii_276k358rx0c1h(-1226801582, 4)];
-            var10000[Xqedii_5rk5h3b.Xqedii_1w1rncrndsf09(-1309976344, 11)] = Class.forName(
-               Xqedii_5rk5h3b.Xqedii_1hbjoi2t94f06(
-                  "jZ8s4OSBR/ONx9hnjhEw3w0GGk9MSd5O7+4HIldWDBP85JCPqJWcuKMf4xllZlNK9ZrmpCBoyy1I7Uc35Lts9bJh5HylX6zBm8L8HlzuiwM9C4AqXTaUDrI1z7gwcvHHAS0="
-               )
+            Xqedii_15jxoj8 = var17.getField("ANVIL").get(null);
+            Class[] var10000 = new Class[2];
+            var10000[0] = Class.forName(
+               "org.bukkit.inventory.MenuType$Typed"
             );
-            var10000[Xqedii_5rk5h3b.Xqedii_1w1rncrndsf09(373123613, 8)] = var17;
+            var10000[1] = var17;
             Class[] var1 = var10000;
             int var2 = var1.length;
 
-            for (int var3 = Xqedii_5rk5h3b.Xqedii_276k358rx0c1h(-60461632, 21); var3 < var2; var3++) {
+            for (int var3 = 0; var3 < var2; var3++) {
                Class var4 = var1[var3];
                Method[] var5 = var4.getMethods();
                int var6 = var5.length;
 
-               for (int var7 = Xqedii_5rk5h3b.Xqedii_1w1rncrndsf09(-1385979193, 21); var7 < var6; var7++) {
+               for (int var7 = 0; var7 < var6; var7++) {
                   Method var8 = var5[var7];
-                  if (Xqedii_5rk5h3b.Xqedii_1hbjoi2t94f06("xxmVnfrRz1ngKN1u4X3XwgGn2f+JFwyx27QHhpsiNGRzLY4FVlIhCw==").equals(var8.getName())
-                     && var8.getParameterCount() == Xqedii_5rk5h3b.Xqedii_4t1emhin8tos(-1823906330, 31)) {
+                  if ("create".equals(var8.getName())
+                     && var8.getParameterCount() == 2) {
                      Class[] var9 = var8.getParameterTypes();
-                     if (var9[Xqedii_5rk5h3b.Xqedii_4t1emhin8tos(-323577319, 6)].isAssignableFrom(Player.class)) {
-                        if (var9[Xqedii_5rk5h3b.Xqedii_17j0cui6dhu5e(-433003313, 21)] == String.class && Xqedii_3t8vlke == null) {
+                     if (var9[0].isAssignableFrom(Player.class)) {
+                        if (var9[1] == String.class && Xqedii_3t8vlke == null) {
                            Xqedii_3t8vlke = var8;
-                        } else if (var9[Xqedii_5rk5h3b.Xqedii_276k358rx0c1h(-1226801598, 4)].isAssignableFrom(Component.class) && Xqedii_6w46yaf == null) {
+                        } else if (var9[1].isAssignableFrom(Component.class) && Xqedii_6w46yaf == null) {
                            Xqedii_6w46yaf = var8;
                         }
                      }
@@ -95,48 +86,44 @@ public final class Xqedii_1ig2hdv {
          }
 
          try {
-            String var18 = Xqedii_5rk5h3b.Xqedii_1hbjoi2t94f06("P9coGkNlIPbKTJ95FlfRxBzUbzdJb/OQhB3SCFztoB5aI3bgJJMySgKcSYtlPw==");
-            Class[] var21 = new Class[Xqedii_5rk5h3b.Xqedii_1w1rncrndsf09(-173771688, 18)];
-            var21[Xqedii_5rk5h3b.Xqedii_17j0cui6dhu5e(-435100465, 30)] = Location.class;
-            var21[Xqedii_5rk5h3b.Xqedii_17j0cui6dhu5e(-435100467, 1)] = boolean.class;
+            String var18 = "openAnvil";
+            Class[] var21 = new Class[2];
+            var21[0] = Location.class;
+            var21[1] = boolean.class;
             Xqedii_4xgtm92 = HumanEntity.class.getMethod(var18, var21);
          } catch (Throwable var14) {
          }
 
          try {
             Xqedii_3ououc0 = Class.forName(
-               Xqedii_5rk5h3b.Xqedii_1hbjoi2t94f06(
-                  "dj/Ue0s39Bn6I4+cHs2rLbJLyj2PRU6UKUkhA0CiynMoSvuoDEZ/h228TLg25eJaMg+Zmuf2AscIe/2+Vbd9HdCrS5MDRbPEjKVGS1VX6fyCCTRTP9+9ytIjNoOMbYJvx6k="
-               )
+               "org.bukkit.inventory.view.AnvilView"
             );
             Xqedii_1rafb7l = Xqedii_3ououc0.getMethod(
-               Xqedii_5rk5h3b.Xqedii_1hbjoi2t94f06("vAo4+H4x0/gRae/hjXEDxnmA5yut9X2To3fa4xepV5r1O1TmbLZqdPlxOkTRqIA2kr1tHqvQ")
+               "getRenameText"
             );
          } catch (Throwable var13) {
          }
 
          try {
             Xqedii_1r0dpc8 = Class.forName(
-                  Xqedii_5rk5h3b.Xqedii_1hbjoi2t94f06(
-                     "Te9kptl2IS3tE7MfiiZCocxViy9NlUcLZls+OD506XNLqlJ6WUMzaXjIQ0i3qwvV1tr7Ns5P7sgY6XTPOqH045XVe1G1BpF9On4cJwwl75l6A8f6BPE4cZjpzSaKEagduec="
-                  )
+                  "org.bukkit.inventory.AnvilInventory"
                )
-               .getMethod(Xqedii_5rk5h3b.Xqedii_1hbjoi2t94f06("vAo4+H4x0/gRae/hjXEDxnmA5yut9X2To3fa4xepV5r1O1TmbLZqdPlxOkTRqIA2kr1tHqvQ"));
+               .getMethod("getRenameText");
          } catch (Throwable var12) {
          }
 
          try {
-            String var19 = Xqedii_5rk5h3b.Xqedii_1hbjoi2t94f06("JSz/0KRJnE7BDZ9eB5iSiinejq5hC9FUrmHRQkJRUmuiDxuHy631yqqsSC8ETZisKlx1/JJXV38=");
-            Class[] var22 = new Class[Xqedii_5rk5h3b.Xqedii_276k358rx0c1h(132393838, 16)];
-            var22[Xqedii_5rk5h3b.Xqedii_276k358rx0c1h(-1934772193, 26)] = boolean.class;
+            String var19 = "setHideTooltip";
+            Class[] var22 = new Class[1];
+            var22[0] = boolean.class;
             Xqedii_29pz87f = ItemMeta.class.getMethod(var19, var22);
          } catch (Throwable var11) {
          }
 
          try {
-            String var20 = Xqedii_5rk5h3b.Xqedii_1hbjoi2t94f06("a3M5YJ+JhppSmv2yOC/t+lctk9zMSM40MXESW2UhGUHM00mDL55I9bB9LNwW3DYZP9tPAw==");
-            Class[] var23 = new Class[Xqedii_5rk5h3b.Xqedii_1w1rncrndsf09(-1960921842, 7)];
-            var23[Xqedii_5rk5h3b.Xqedii_17j0cui6dhu5e(-435100465, 26)] = NamespacedKey.class;
+            String var20 = "setItemModel";
+            Class[] var23 = new Class[1];
+            var23[0] = NamespacedKey.class;
             Xqedii_2cs39d2 = ItemMeta.class.getMethod(var20, var23);
          } catch (Throwable var10) {
          }
@@ -144,35 +131,31 @@ public final class Xqedii_1ig2hdv {
    }
 
    public static boolean Xqedii_2y78c8j() {
-      if ((50500087 * (50500087 + 1) & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          Xqedii_oin15qb();
          return ((Xqedii_2r08ihn == null || Xqedii_6w46yaf == null && Xqedii_3t8vlke == null && Xqedii_4xgtm92 == null
-            ? Xqedii_5rk5h3b.Xqedii_1w1rncrndsf09(1797068349, 24)
-            : Xqedii_5rk5h3b.Xqedii_276k358rx0c1h(1119281278, 28)) != 0);
+            ? 0
+            : 1) != 0);
       }
    }
 
    public static boolean Xqedii_3uhcrgn(Player var0, String var1, ItemStack var2) {
-      if ((332550110 * 332550110 + 332550110 & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          Xqedii_oin15qb();
-         Object var3 = Xqedii_yb918vj(var0, var1 == null ? Xqedii_5rk5h3b.Xqedii_1hbjoi2t94f06("N+qIVvnYP2qzoWce+G8SqLNBGyaOlimwdzkJWA==") : var1);
+         Object var3 = Xqedii_yb918vj(var0, var1 == null ? "" : var1);
          if (var3 != null) {
             try {
                if (var2 != null && Xqedii_2r08ihn != null) {
                   Method var10000 = Xqedii_2r08ihn;
-                  Object[] var10002 = new Object[Xqedii_5rk5h3b.Xqedii_17j0cui6dhu5e(-1508842289, 29)];
-                  var10002[Xqedii_5rk5h3b.Xqedii_4t1emhin8tos(-323577319, 10)] = Xqedii_5rk5h3b.Xqedii_17j0cui6dhu5e(-435100465, 21);
-                  var10002[Xqedii_5rk5h3b.Xqedii_17j0cui6dhu5e(-502209329, 26)] = var2;
+                  Object[] var10002 = new Object[2];
+                  var10002[0] = 0;
+                  var10002[1] = var2;
                   var10000.invoke(var3, var10002);
                }
 
                var0.openInventory((InventoryView)var3);
                if (Xqedii_19p728w(var0)) {
-                  return (Xqedii_5rk5h3b.Xqedii_4t1emhin8tos(323577318, 26) != 0);
+                  return true;
                }
             } catch (Throwable var5) {
             }
@@ -181,32 +164,30 @@ public final class Xqedii_1ig2hdv {
          if (Xqedii_4xgtm92 != null) {
             try {
                Method var7 = Xqedii_4xgtm92;
-               Object[] var8 = new Object[Xqedii_5rk5h3b.Xqedii_276k358rx0c1h(-612239030, 6)];
-               var8[Xqedii_5rk5h3b.Xqedii_4t1emhin8tos(-323577319, 24)] = null;
-               var8[Xqedii_5rk5h3b.Xqedii_1w1rncrndsf09(1167022727, 6)] = Boolean.valueOf((Xqedii_5rk5h3b.Xqedii_276k358rx0c1h(364315634, 31) != 0));
+               Object[] var8 = new Object[2];
+               var8[0] = null;
+               var8[1] = Boolean.valueOf(true);
                var7.invoke(var0, var8);
                return Xqedii_19p728w(var0);
             } catch (Throwable var6) {
             }
          }
 
-         return (Xqedii_5rk5h3b.Xqedii_276k358rx0c1h(-602945962, 9) != 0);
+         return false;
       }
    }
 
    public static Object Xqedii_yb918vj(Player var0, String var1) {
-      if ((943910412 * 943910412 - 943910412 & 1) != 0) {
-         throw new IllegalStateException();
-      } else if (Xqedii_15jxoj8 == null) {
+      if (Xqedii_15jxoj8 == null) {
          return null;
       } else {
          if (Xqedii_6w46yaf != null) {
             try {
                Method var5 = Xqedii_6w46yaf;
                Object var6 = Xqedii_15jxoj8;
-               Object[] var7 = new Object[Xqedii_5rk5h3b.Xqedii_276k358rx0c1h(728631269, 0)];
-               var7[Xqedii_5rk5h3b.Xqedii_4t1emhin8tos(-323577319, 20)] = var0;
-               var7[Xqedii_5rk5h3b.Xqedii_1w1rncrndsf09(1357427179, 27)] = Component.text(var1);
+               Object[] var7 = new Object[2];
+               var7[0] = var0;
+               var7[1] = Component.text(var1);
                return var5.invoke(var6, var7);
             } catch (Throwable var4) {
             }
@@ -216,9 +197,9 @@ public final class Xqedii_1ig2hdv {
             try {
                Method var10000 = Xqedii_3t8vlke;
                Object var10001 = Xqedii_15jxoj8;
-               Object[] var10002 = new Object[Xqedii_5rk5h3b.Xqedii_1w1rncrndsf09(373123357, 8)];
-               var10002[Xqedii_5rk5h3b.Xqedii_276k358rx0c1h(-1057200787, 13)] = var0;
-               var10002[Xqedii_5rk5h3b.Xqedii_4t1emhin8tos(323577318, 4)] = var1;
+               Object[] var10002 = new Object[2];
+               var10002[0] = var0;
+               var10002[1] = var1;
                return var10000.invoke(var10001, var10002);
             } catch (Throwable var3) {
             }
@@ -229,61 +210,55 @@ public final class Xqedii_1ig2hdv {
    }
 
    public static boolean Xqedii_19p728w(Player var0) {
-      if ((-1111130620 * -1111130620 + -1111130620 & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          Xqedii_oin15qb();
          Object var1 = Xqedii_1xvmtoe(var0);
          if (var1 != null && Xqedii_bpnqp6l != null) {
             try {
                return ((Xqedii_bpnqp6l.invoke(var1) == InventoryType.ANVIL
-                  ? Xqedii_5rk5h3b.Xqedii_276k358rx0c1h(182157817, 30)
-                  : Xqedii_5rk5h3b.Xqedii_4t1emhin8tos(-323577319, 8)) != 0);
+                  ? 1
+                  : 0) != 0);
             } catch (Throwable var3) {
-               return (Xqedii_5rk5h3b.Xqedii_1w1rncrndsf09(373123869, 8) != 0);
+               return false;
             }
          } else {
-            return (Xqedii_5rk5h3b.Xqedii_276k358rx0c1h(-891584008, 30) != 0);
+            return false;
          }
       }
    }
 
    public static boolean Xqedii_3n9en78(Player var0, ItemStack var1) {
-      if (((-445856150 | 1) & 1) == 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          Xqedii_oin15qb();
          Object var2 = Xqedii_1xvmtoe(var0);
          if (var2 != null && Xqedii_2r08ihn != null) {
             try {
                Method var10000 = Xqedii_2r08ihn;
-               Object[] var10002 = new Object[Xqedii_5rk5h3b.Xqedii_276k358rx0c1h(1255899641, 30)];
-               var10002[Xqedii_5rk5h3b.Xqedii_276k358rx0c1h(1846010667, 8)] = Xqedii_5rk5h3b.Xqedii_276k358rx0c1h(66164151, 15);
-               var10002[Xqedii_5rk5h3b.Xqedii_1w1rncrndsf09(1167022727, 6)] = var1;
+               Object[] var10002 = new Object[2];
+               var10002[0] = 0;
+               var10002[1] = var1;
                var10000.invoke(var2, var10002);
-               return (Xqedii_5rk5h3b.Xqedii_17j0cui6dhu5e(-435100209, 8) != 0);
+               return true;
             } catch (Throwable var4) {
-               return (Xqedii_5rk5h3b.Xqedii_276k358rx0c1h(-967386097, 25) != 0);
+               return false;
             }
          } else {
-            return (Xqedii_5rk5h3b.Xqedii_1w1rncrndsf09(-1309976344, 11) != 0);
+            return false;
          }
       }
    }
 
    public static void Xqedii_ycmvisi(Player var0) {
-      if ((3270387 * (3270387 + 1) & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          Xqedii_oin15qb();
          Object var1 = Xqedii_1xvmtoe(var0);
          if (var1 != null && Xqedii_2r08ihn != null) {
-            for (int var2 = Xqedii_5rk5h3b.Xqedii_276k358rx0c1h(-602945962, 9); var2 <= Xqedii_5rk5h3b.Xqedii_1w1rncrndsf09(1492493428, 10); var2++) {
+            for (int var2 = 0; var2 <= 2; var2++) {
                try {
                   Method var10000 = Xqedii_2r08ihn;
-                  Object[] var10002 = new Object[Xqedii_5rk5h3b.Xqedii_17j0cui6dhu5e(-435099953, 8)];
-                  var10002[Xqedii_5rk5h3b.Xqedii_4t1emhin8tos(-323577319, 9)] = var2;
-                  var10002[Xqedii_5rk5h3b.Xqedii_1w1rncrndsf09(-173509544, 18)] = null;
+                  Object[] var10002 = new Object[2];
+                  var10002[0] = var2;
+                  var10002[1] = null;
                   var10000.invoke(var1, var10002);
                } catch (Throwable var4) {
                }
@@ -295,9 +270,7 @@ public final class Xqedii_1ig2hdv {
    }
 
    public static void Xqedii_2lmz55e(Player var0) {
-      if ((-1473234140 ^ -1473234140) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          try {
             var0.setItemOnCursor(null);
          } catch (Throwable var2) {
@@ -306,9 +279,7 @@ public final class Xqedii_1ig2hdv {
    }
 
    public static void Xqedii_mucytq3(Player var0) {
-      if ((1511550722 * 1511550722 - 1511550722 & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          try {
             var0.setItemOnCursor(Xqedii_1hixj2v());
          } catch (Throwable var2) {
@@ -317,9 +288,7 @@ public final class Xqedii_1ig2hdv {
    }
 
    public static ItemStack Xqedii_1hixj2v() {
-      if (((-2061013268 << 1 | 1) & 1) == 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          Xqedii_oin15qb();
          ItemStack var0 = new ItemStack(Material.FIRE_CHARGE);
          ItemMeta var1 = var0.getItemMeta();
@@ -327,12 +296,12 @@ public final class Xqedii_1ig2hdv {
             return var0;
          } else {
             Xqedii_nd6rkr3.Xqedii_2mrz7tr(var1, Component.empty());
-            var1.setCustomModelData(Xqedii_5rk5h3b.Xqedii_4t1emhin8tos(318510566, 12));
+            var1.setCustomModelData(7000);
             if (Xqedii_29pz87f != null) {
                try {
                   Method var10000 = Xqedii_29pz87f;
-                  Object[] var10002 = new Object[Xqedii_5rk5h3b.Xqedii_276k358rx0c1h(66196919, 15)];
-                  var10002[Xqedii_5rk5h3b.Xqedii_4t1emhin8tos(-323577319, 30)] = Boolean.valueOf((Xqedii_5rk5h3b.Xqedii_17j0cui6dhu5e(-435100529, 6) != 0));
+                  Object[] var10002 = new Object[1];
+                  var10002[0] = Boolean.valueOf(true);
                   var10000.invoke(var1, var10002);
                } catch (Throwable var3) {
                }
@@ -345,9 +314,7 @@ public final class Xqedii_1ig2hdv {
    }
 
    public static Object Xqedii_1xvmtoe(Player var0) {
-      if ((489448879 ^ 489448879) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          try {
             return var0.getOpenInventory();
          } catch (Throwable var2) {
@@ -357,16 +324,14 @@ public final class Xqedii_1ig2hdv {
    }
 
    public static String Xqedii_1pw5jey(InventoryEvent var0) {
-      if ((1937207066 * 1937207066 - 1937207066 & 1) != 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          Xqedii_oin15qb();
          if (Xqedii_1rafb7l != null) {
             try {
                InventoryView var1 = var0.getView();
                if (Xqedii_3ououc0.isInstance(var1)) {
                   Object var6 = Xqedii_1rafb7l.invoke(var1);
-                  return var6 == null ? Xqedii_5rk5h3b.Xqedii_1hbjoi2t94f06("N+qIVvnYP2qzoWce+G8SqLNBGyaOlimwdzkJWA==") : var6.toString();
+                  return var6 == null ? "" : var6.toString();
                }
             } catch (Throwable var3) {
             }
@@ -376,7 +341,7 @@ public final class Xqedii_1ig2hdv {
             try {
                Inventory var5 = var0.getInventory();
                Object var2 = Xqedii_1r0dpc8.invoke(var5);
-               return var2 == null ? Xqedii_5rk5h3b.Xqedii_1hbjoi2t94f06("N+qIVvnYP2qzoWce+G8SqLNBGyaOlimwdzkJWA==") : var2.toString();
+               return var2 == null ? "" : var2.toString();
             } catch (Throwable var4) {
             }
          }
@@ -386,9 +351,7 @@ public final class Xqedii_1ig2hdv {
    }
 
    public static ItemStack Xqedii_35vh4et(String var0) {
-      if (((1243283597 << 1 | 1) & 1) == 0) {
-         throw new IllegalStateException();
-      } else {
+      {
          Xqedii_oin15qb();
          ItemStack var1 = new ItemStack(Material.PAPER);
          ItemMeta var2 = var1.getItemMeta();
@@ -396,14 +359,14 @@ public final class Xqedii_1ig2hdv {
             return var1;
          } else {
             Xqedii_nd6rkr3.Xqedii_2mrz7tr(
-               var2, Component.text(var0 == null ? Xqedii_5rk5h3b.Xqedii_1hbjoi2t94f06("N+qIVvnYP2qzoWce+G8SqLNBGyaOlimwdzkJWA==") : var0)
+               var2, Component.text(var0 == null ? "" : var0)
             );
-            var2.setCustomModelData(Xqedii_5rk5h3b.Xqedii_17j0cui6dhu5e(-434288433, 7));
+            var2.setCustomModelData(7000);
             if (Xqedii_29pz87f != null) {
                try {
                   Method var10000 = Xqedii_29pz87f;
-                  Object[] var10002 = new Object[Xqedii_5rk5h3b.Xqedii_276k358rx0c1h(364315634, 31)];
-                  var10002[Xqedii_5rk5h3b.Xqedii_1w1rncrndsf09(746247738, 9)] = Boolean.valueOf((Xqedii_5rk5h3b.Xqedii_4t1emhin8tos(323577318, 14) != 0));
+                  Object[] var10002 = new Object[1];
+                  var10002[0] = Boolean.valueOf(true);
                   var10000.invoke(var2, var10002);
                } catch (Throwable var5) {
                }
@@ -412,9 +375,9 @@ public final class Xqedii_1ig2hdv {
             if (Xqedii_2cs39d2 != null) {
                try {
                   Method var6 = Xqedii_2cs39d2;
-                  Object[] var7 = new Object[Xqedii_5rk5h3b.Xqedii_1w1rncrndsf09(487996778, 0)];
-                  var7[Xqedii_5rk5h3b.Xqedii_17j0cui6dhu5e(-435100465, 25)] = NamespacedKey.minecraft(
-                     Xqedii_5rk5h3b.Xqedii_1hbjoi2t94f06("0IRLn903U1+T8xNKUPdbdr+ra+Bqi7zHYcKrYxNqqEIB/o+SYEcUbX7lZYi7kQ==")
+                  Object[] var7 = new Object[1];
+                  var7[0] = NamespacedKey.minecraft(
+                     "uui/empty"
                   );
                   var6.invoke(var2, var7);
                } catch (Throwable var4) {

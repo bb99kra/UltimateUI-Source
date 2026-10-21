@@ -1,7 +1,6 @@
 package dev.xqedii.ultimateUI;
 
 public final class Xqedii_1tv8uy8 {
-   public static final String Xqedii_2dllnwnvjro4k = "\n//\n// well well well, Hello!\n// Contact: https://xqedii.dev/dc\n//\n";
    public final String Xqedii_25epiou;
    public final String Xqedii_2es9n4d;
    public final String Xqedii_2p9p30n;
