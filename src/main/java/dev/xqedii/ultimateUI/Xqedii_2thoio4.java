@@ -13,44 +13,44 @@ public final class Xqedii_2thoio4 {
    public static final List<String> Xqedii_p2rt6hv;
    public static final List<String> Xqedii_2xrm6um;
    public final List<LexerToken> Xqedii_rty1vz4;
-   public final Xqedii_1kffk3z Xqedii_d4hvym9;
-   public final List<Xqedii_39jklon> Xqedii_1ukapu0;
-   public List<Xqedii_3vsk7zm> Xqedii_1ws39dv;
+   public final CompiledScript Xqedii_d4hvym9;
+   public final List<YamlLocation> Xqedii_1ukapu0;
+   public List<ScriptSyntaxException> Xqedii_1ws39dv;
    public int Xqedii_2d86asd;
    public int Xqedii_38gkvzl;
    public int Xqedii_1okvqlt;
 
-   public Xqedii_2thoio4(List<LexerToken> var1, Xqedii_1kffk3z var2, List<Xqedii_39jklon> var3) {
+   public Xqedii_2thoio4(List<LexerToken> var1, CompiledScript var2, List<YamlLocation> var3) {
       this.Xqedii_rty1vz4 = var1;
       this.Xqedii_d4hvym9 = var2;
       this.Xqedii_1ukapu0 = var3;
    }
 
-   public static Xqedii_1kffk3z Xqedii_2owkzy2(String var0, String var1, List<Xqedii_3vsk7zm> var2) {
+   public static CompiledScript Xqedii_2owkzy2(String var0, String var1, List<ScriptSyntaxException> var2) {
       {
-         Xqedii_1kffk3z var3 = new Xqedii_1kffk3z(var0);
+         CompiledScript var3 = new CompiledScript(var0);
 
          List var4;
          try {
             var4 = new Xqedii_3l1ke2c(var1).Xqedii_1lbczed();
-         } catch (Xqedii_3vsk7zm var9) {
+         } catch (ScriptSyntaxException var9) {
             var2.add(var9);
             return var3;
          }
 
-         ArrayList<Xqedii_39jklon> var5 = new ArrayList<>();
+         ArrayList<YamlLocation> var5 = new ArrayList<>();
          Xqedii_2thoio4 var6 = new Xqedii_2thoio4(var4, var3, var5);
          var6.Xqedii_19ahbp7(var2);
 
-         for (Xqedii_3tcqkw2 var8 : var3.Xqedii_39uxme9) {
+         for (ScriptEventHandlerDef var8 : var3.Xqedii_39uxme9) {
             if (var8.Xqedii_nyxmub2 == null && var3.Xqedii_lp3i5aj != null && Xqedii_1bczasj(var8.Xqedii_27kq3c6)) {
                var3.Xqedii_39uxme9.set(var3.Xqedii_39uxme9.indexOf(var8), Xqedii_1xmpkr7(var8, var3.Xqedii_lp3i5aj));
             }
          }
 
-         for (Xqedii_39jklon var11 : var5) {
+         for (YamlLocation var11 : var5) {
             if (!var3.Xqedii_3j5g4ep.containsKey(var11.name()) && !Xqedii_1iw7g71.Xqedii_2ln2q92(var11.name())) {
-               var2.add(new Xqedii_3vsk7zm(Xqedii_rds1654yvnow(var11.name(), var11.name()), var11.line(), var11.column()));
+               var2.add(new ScriptSyntaxException(Xqedii_rds1654yvnow(var11.name(), var11.name()), var11.line(), var11.column()));
             }
          }
 
@@ -69,9 +69,9 @@ public final class Xqedii_2thoio4 {
       }
    }
 
-   public static Xqedii_3tcqkw2 Xqedii_1xmpkr7(Xqedii_3tcqkw2 var0, String var1) {
+   public static ScriptEventHandlerDef Xqedii_1xmpkr7(ScriptEventHandlerDef var0, String var1) {
       {
-         Xqedii_3tcqkw2 var2 = new Xqedii_3tcqkw2(var0.Xqedii_1swqvpn, var0.Xqedii_27kq3c6, var0.Xqedii_2t32j8y, var1, var0.Xqedii_3e9f81u);
+         ScriptEventHandlerDef var2 = new ScriptEventHandlerDef(var0.Xqedii_1swqvpn, var0.Xqedii_27kq3c6, var0.Xqedii_2t32j8y, var1, var0.Xqedii_3e9f81u);
          var2.Xqedii_fw60fwr = var0.Xqedii_fw60fwr;
          var2.Xqedii_3gg5za6 = var0.Xqedii_3gg5za6;
          var2.Xqedii_ne1a52s = var0.Xqedii_ne1a52s;
@@ -80,7 +80,7 @@ public final class Xqedii_2thoio4 {
       }
    }
 
-   public void Xqedii_19ahbp7(List<Xqedii_3vsk7zm> var1) {
+   public void Xqedii_19ahbp7(List<ScriptSyntaxException> var1) {
       {
          this.Xqedii_1ws39dv = var1;
 
@@ -92,7 +92,7 @@ public final class Xqedii_2thoio4 {
 
                try {
                   this.Xqedii_hw7pztw();
-               } catch (Xqedii_3vsk7zm var4) {
+               } catch (ScriptSyntaxException var4) {
                   var1.add(var4);
                   this.Xqedii_1okvqlt = 0;
                   this.Xqedii_38gkvzl = 0;
@@ -249,9 +249,9 @@ public final class Xqedii_2thoio4 {
       }
    }
 
-   public Xqedii_3vsk7zm Xqedii_3sn28jz(LexerToken var1, String var2) {
+   public ScriptSyntaxException Xqedii_3sn28jz(LexerToken var1, String var2) {
       {
-         return new Xqedii_3vsk7zm(var2, var1.line(), var1.column());
+         return new ScriptSyntaxException(var2, var1.line(), var1.column());
       }
    }
 
@@ -410,12 +410,12 @@ public final class Xqedii_2thoio4 {
                   throw this.Xqedii_3sn28jz(var1, Xqedii_36dple85j8emh(var15));
                }
 
-               Xqedii_ev3jp8w var18 = null;
+               ExpressionAstNode var18 = null;
                if (this.Xqedii_1s3d88e("=")) {
                   var18 = this.Xqedii_3nv6toq();
                }
 
-               this.Xqedii_d4hvym9.Xqedii_2buerqn.put(var15, (Xqedii_ev3jp8w)(var18 == null ? new Xqedii_1z9wnlh(null, var1.line()) : var18));
+               this.Xqedii_d4hvym9.Xqedii_2buerqn.put(var15, (ExpressionAstNode)(var18 == null ? new LiteralExpressionNode(null, var1.line()) : var18));
                this.Xqedii_2n6e3pq();
                break;
             case 3:
@@ -424,9 +424,9 @@ public final class Xqedii_2thoio4 {
                break;
             case 5:
                this.Xqedii_1okvqlt = this.Xqedii_1okvqlt + 1;
-               Xqedii_ev3jp8w var14 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var14 = this.Xqedii_3nv6toq();
                this.Xqedii_1okvqlt = this.Xqedii_1okvqlt - 1;
-               if (!(var14 instanceof Xqedii_1z9wnlh var17) || !(var17.Xqedii_2azibg0 instanceof Double var19)) {
+               if (!(var14 instanceof LiteralExpressionNode var17) || !(var17.Xqedii_2azibg0 instanceof Double var19)) {
                   throw this.Xqedii_3sn28jz(
                      var1,
                      "every needs a plain number, like: every 2 seconds:"
@@ -437,7 +437,7 @@ public final class Xqedii_2thoio4 {
                String var10 = this.Xqedii_g1933gx("in")
                   ? this.Xqedii_swi2jwl("the page name")
                   : null;
-               Xqedii_3tcqkw2 var11 = new Xqedii_3tcqkw2(
+               ScriptEventHandlerDef var11 = new ScriptEventHandlerDef(
                   this.Xqedii_d4hvym9, "every", null, var10, var1.line()
                );
                var11.Xqedii_3gg5za6 = Math.max(1L, Math.round(var19 * var20));
@@ -463,7 +463,7 @@ public final class Xqedii_2thoio4 {
                var12 = var12.startsWith("/")
                   ? var12.substring(1)
                   : var12;
-               Xqedii_3tcqkw2 var16 = new Xqedii_3tcqkw2(
+               ScriptEventHandlerDef var16 = new ScriptEventHandlerDef(
                   this.Xqedii_d4hvym9, "command", null, null, var1.line()
                );
                var16.Xqedii_ne1a52s = var12.toLowerCase(Locale.ROOT);
@@ -508,7 +508,7 @@ public final class Xqedii_2thoio4 {
                   ")",
                   "after the parameters"
                );
-               Xqedii_2x2kkmf var7 = new Xqedii_2x2kkmf(var5, (String[])var6.toArray(new String[0]), var1.line());
+               ScriptFunctionDef var7 = new ScriptFunctionDef(var5, (String[])var6.toArray(new String[0]), var1.line());
                this.Xqedii_d4hvym9.Xqedii_3j5g4ep.put(var5, var7);
                var7.Xqedii_3476x5s = this.Xqedii_2vw9h4x();
                break;
@@ -829,21 +829,21 @@ public final class Xqedii_2thoio4 {
             var8 = this.Xqedii_swi2jwl("the page name");
          }
 
-         Xqedii_3tcqkw2 var7 = new Xqedii_3tcqkw2(this.Xqedii_d4hvym9, var3, var5, var8, var1.line());
+         ScriptEventHandlerDef var7 = new ScriptEventHandlerDef(this.Xqedii_d4hvym9, var3, var5, var8, var1.line());
          var7.Xqedii_fw60fwr = this.Xqedii_2vw9h4x();
          this.Xqedii_d4hvym9.Xqedii_39uxme9.add(var7);
       }
    }
 
-   public Xqedii_3nlck21[] Xqedii_2vw9h4x() {
+   public StatementAstNode[] Xqedii_2vw9h4x() {
       {
          this.Xqedii_3cuz73k(
             ":",
             "at the end of this line"
          );
          if (!this.Xqedii_2o6grdd().is(LexerTokenType.NEWLINE)) {
-            Xqedii_3nlck21 var5 = this.Xqedii_t3irkxz();
-            Xqedii_3nlck21[] var10000 = new Xqedii_3nlck21[1];
+            StatementAstNode var5 = this.Xqedii_t3irkxz();
+            StatementAstNode[] var10000 = new StatementAstNode[1];
             var10000[0] = var5;
             return var10000;
          } else {
@@ -872,7 +872,7 @@ public final class Xqedii_2thoio4 {
                         }
 
                         var1.add(this.Xqedii_t3irkxz());
-                     } catch (Xqedii_3vsk7zm var4) {
+                     } catch (ScriptSyntaxException var4) {
                         if (this.Xqedii_1ws39dv == null) {
                            throw var4;
                         }
@@ -887,32 +887,32 @@ public final class Xqedii_2thoio4 {
                   this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
                }
 
-               return (Xqedii_3nlck21[])var1.toArray(new Xqedii_3nlck21[0]);
+               return (StatementAstNode[])var1.toArray(new StatementAstNode[0]);
             }
          }
       }
    }
 
-   public Xqedii_ev3jp8w[] Xqedii_a87b8l9(Xqedii_ev3jp8w... var1) {
+   public ExpressionAstNode[] Xqedii_a87b8l9(ExpressionAstNode... var1) {
       {
          return var1;
       }
    }
 
-   public Xqedii_3nlck21 Xqedii_3vze4js(int var1, int var2, Xqedii_ev3jp8w... var3) {
+   public StatementAstNode Xqedii_3vze4js(int var1, int var2, ExpressionAstNode... var3) {
       {
          this.Xqedii_2n6e3pq();
          return new Xqedii_vc9adda(var1, var3, var2);
       }
    }
 
-   public Xqedii_ev3jp8w Xqedii_mdc50q8(String var1) {
+   public ExpressionAstNode Xqedii_mdc50q8(String var1) {
       {
          return this.Xqedii_g1933gx(var1) ? this.Xqedii_3nv6toq() : null;
       }
    }
 
-   public Xqedii_3nlck21 Xqedii_t3irkxz() {
+   public StatementAstNode Xqedii_t3irkxz() {
       {
          LexerToken var1 = this.Xqedii_2o6grdd();
          int var2 = var1.line();
@@ -943,13 +943,13 @@ public final class Xqedii_2thoio4 {
       }
    }
 
-   public Xqedii_3nlck21 Xqedii_118rlff(LexerToken var1, int var2) {
+   public StatementAstNode Xqedii_118rlff(LexerToken var1, int var2) {
       {
-         Xqedii_ev3jp8w var3 = this.Xqedii_3nv6toq();
+         ExpressionAstNode var3 = this.Xqedii_3nv6toq();
          if (this.Xqedii_2o6grdd().is(LexerTokenType.SYMBOL) && Xqedii_3ct77sg.contains(this.Xqedii_2o6grdd().text())) {
             String var4 = this.Xqedii_my78stx().text();
             this.Xqedii_35kxtal(var3, var1);
-            Xqedii_ev3jp8w var5 = this.Xqedii_3nv6toq();
+            ExpressionAstNode var5 = this.Xqedii_3nv6toq();
             this.Xqedii_2n6e3pq();
             int var8 = -1;
             switch (var4.hashCode()) {
@@ -980,17 +980,17 @@ public final class Xqedii_2thoio4 {
                case 3 -> 4;
                default -> 0;
             };
-            return new Xqedii_2v9d3jq(var3, var6, var5, var2);
-         } else if (var3 instanceof Xqedii_2ucjp8c && var1.is(LexerTokenType.NAME) && !this.Xqedii_32zt7zc()) {
+            return new CompoundAssignStatementNode(var3, var6, var5, var2);
+         } else if (var3 instanceof VariableExpressionNode && var1.is(LexerTokenType.NAME) && !this.Xqedii_32zt7zc()) {
             throw this.Xqedii_3sn28jz(var1, Xqedii_2br6gj5oh8vhc(var1.text(), Xqedii_180dthy(var1.text())));
-         } else if (!(var3 instanceof Xqedii_3ox0q7t) && !(var3 instanceof Xqedii_3wobtjl)) {
+         } else if (!(var3 instanceof SpecialIdentifierExpressionNode) && !(var3 instanceof MethodCallExpressionNode)) {
             throw this.Xqedii_3sn28jz(
                var1,
                "This line doesn't do anything. Did you mean: set ... to ..., or a command like send, show, hide?"
             );
          } else {
             this.Xqedii_2n6e3pq();
-            return new Xqedii_3kvftsk(var3, var2);
+            return new ExpressionStatementNode(var3, var2);
          }
       }
    }
@@ -1049,7 +1049,7 @@ public final class Xqedii_2thoio4 {
       }
    }
 
-   public void Xqedii_35kxtal(Xqedii_ev3jp8w var1, LexerToken var2) {
+   public void Xqedii_35kxtal(ExpressionAstNode var1, LexerToken var2) {
       if (!var1.Xqedii_25ddebp()) {
          throw this.Xqedii_3sn28jz(
             var2,
@@ -1058,7 +1058,7 @@ public final class Xqedii_2thoio4 {
       }
    }
 
-   public Xqedii_3nlck21 Xqedii_33hc29h(String var1, LexerToken var2, int var3) {
+   public StatementAstNode Xqedii_33hc29h(String var1, LexerToken var2, int var3) {
       {
          int var5 = -1;
          switch (var1.hashCode()) {
@@ -1298,67 +1298,67 @@ public final class Xqedii_2thoio4 {
                   throw this.Xqedii_3sn28jz(var2, Xqedii_32yx4q6co7il9(var33));
                }
 
-               Xqedii_ev3jp8w var51 = this.Xqedii_1s3d88e("=")
+               ExpressionAstNode var51 = this.Xqedii_1s3d88e("=")
                   ? this.Xqedii_3nv6toq()
                   : null;
                this.Xqedii_2n6e3pq();
-               return new Xqedii_1ral8wi(var33, var51, var3);
+               return new CommandStatementNode(var33, var51, var3);
             case 2:
-               Xqedii_ev3jp8w var32 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var32 = this.Xqedii_3nv6toq();
                this.Xqedii_35kxtal(var32, var2);
                this.Xqedii_2ugqkeg(
                   "to",
                   "(set ... to ...)"
                );
-               Xqedii_ev3jp8w var50 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var50 = this.Xqedii_3nv6toq();
                this.Xqedii_2n6e3pq();
-               return new Xqedii_2v9d3jq(var32, 0, var50, var3);
+               return new CompoundAssignStatementNode(var32, 0, var50, var3);
             case 3:
-               Xqedii_ev3jp8w var31 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var31 = this.Xqedii_3nv6toq();
                this.Xqedii_2ugqkeg(
                   "to",
                   "(add ... to ...)"
                );
-               Xqedii_ev3jp8w var49 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var49 = this.Xqedii_3nv6toq();
                this.Xqedii_35kxtal(var49, var2);
                this.Xqedii_2n6e3pq();
-               return new Xqedii_13ezdyt(true, var31, var49, var3);
+               return new AssignStatementNode(true, var31, var49, var3);
             case 4:
-               Xqedii_ev3jp8w var30 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var30 = this.Xqedii_3nv6toq();
                if (this.Xqedii_g1933gx("from")) {
-                  Xqedii_ev3jp8w var48 = this.Xqedii_3nv6toq();
+                  ExpressionAstNode var48 = this.Xqedii_3nv6toq();
                   this.Xqedii_35kxtal(var48, var2);
                   this.Xqedii_2n6e3pq();
-                  return new Xqedii_13ezdyt(false, var30, var48, var3);
+                  return new AssignStatementNode(false, var30, var48, var3);
                }
 
                this.Xqedii_2n6e3pq();
-               return new Xqedii_uv884vm(var30, var3);
+               return new ReturnStatementNode(var30, var3);
             case 5:
-               Xqedii_ev3jp8w var29 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var29 = this.Xqedii_3nv6toq();
                this.Xqedii_2n6e3pq();
-               return new Xqedii_uv884vm(var29, var3);
+               return new ReturnStatementNode(var29, var3);
             case 6:
                int var92 = 1;
-               Xqedii_ev3jp8w[] var122 = new Xqedii_ev3jp8w[1];
+               ExpressionAstNode[] var122 = new ExpressionAstNode[1];
                var122[0] = this.Xqedii_3nv6toq();
                return this.Xqedii_3vze4js(var92, var3, var122);
             case 7:
                int var91 = 2;
-               Xqedii_ev3jp8w[] var121 = new Xqedii_ev3jp8w[1];
+               ExpressionAstNode[] var121 = new ExpressionAstNode[1];
                var121[0] = this.Xqedii_3nv6toq();
                return this.Xqedii_3vze4js(var91, var3, var121);
             case 8:
                int var90 = 3;
-               Xqedii_ev3jp8w[] var120 = new Xqedii_ev3jp8w[1];
+               ExpressionAstNode[] var120 = new ExpressionAstNode[1];
                var120[0] = this.Xqedii_3nv6toq();
                return this.Xqedii_3vze4js(var90, var3, var120);
             case 9:
-               Xqedii_ev3jp8w var28 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var28 = this.Xqedii_3nv6toq();
                if (this.Xqedii_g1933gx("into")) {
-                  Xqedii_ev3jp8w var47 = this.Xqedii_3nv6toq();
+                  ExpressionAstNode var47 = this.Xqedii_3nv6toq();
                   int var89 = 32;
-                  Xqedii_ev3jp8w[] var119 = new Xqedii_ev3jp8w[3];
+                  ExpressionAstNode[] var119 = new ExpressionAstNode[3];
                   var119[0] = var28;
                   var119[1] = var47;
                   var119[2] = this.Xqedii_mdc50q8(
@@ -1375,15 +1375,15 @@ public final class Xqedii_2thoio4 {
                   );
                }
 
-               Xqedii_ev3jp8w var58 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var58 = this.Xqedii_3nv6toq();
                this.Xqedii_3cuz73k(
                   ",",
                   "between x and y"
                );
-               Xqedii_ev3jp8w var61 = this.Xqedii_3nv6toq();
-               Xqedii_ev3jp8w[] var62 = this.Xqedii_2bkvzcq(var3, false);
+               ExpressionAstNode var61 = this.Xqedii_3nv6toq();
+               ExpressionAstNode[] var62 = this.Xqedii_2bkvzcq(var3, false);
                int var88 = var46 ? 5 : 4;
-               Xqedii_ev3jp8w[] var118 = new Xqedii_ev3jp8w[5];
+               ExpressionAstNode[] var118 = new ExpressionAstNode[5];
                var118[0] = var28;
                var118[1] = var58;
                var118[2] = var61;
@@ -1391,20 +1391,20 @@ public final class Xqedii_2thoio4 {
                var118[4] = var62[1];
                return this.Xqedii_3vze4js(var88, var3, var118);
             case 10:
-               Xqedii_ev3jp8w var27 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var27 = this.Xqedii_3nv6toq();
                this.Xqedii_2ugqkeg(
                   "to",
                   "(resize \"id\" to width, height)"
                );
-               Xqedii_ev3jp8w var45 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var45 = this.Xqedii_3nv6toq();
                this.Xqedii_3cuz73k(
                   ",",
                   "between width and height"
                );
-               Xqedii_ev3jp8w var57 = this.Xqedii_3nv6toq();
-               Xqedii_ev3jp8w[] var60 = this.Xqedii_2bkvzcq(var3, false);
+               ExpressionAstNode var57 = this.Xqedii_3nv6toq();
+               ExpressionAstNode[] var60 = this.Xqedii_2bkvzcq(var3, false);
                int var87 = 6;
-               Xqedii_ev3jp8w[] var117 = new Xqedii_ev3jp8w[5];
+               ExpressionAstNode[] var117 = new ExpressionAstNode[5];
                var117[0] = var27;
                var117[1] = var45;
                var117[2] = var57;
@@ -1412,7 +1412,7 @@ public final class Xqedii_2thoio4 {
                var117[4] = var60[1];
                return this.Xqedii_3vze4js(var87, var3, var117);
             case 11:
-               Xqedii_ev3jp8w var26 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var26 = this.Xqedii_3nv6toq();
                LexerToken var44 = this.Xqedii_2o6grdd();
                String var56 = var44.is(LexerTokenType.NAME)
                   ? var44.text().toLowerCase(Locale.ROOT)
@@ -1428,8 +1428,8 @@ public final class Xqedii_2thoio4 {
 
                this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
                this.Xqedii_2ugqkeg("to", Xqedii_3g81ocn1cm0ob(var56));
-               Xqedii_ev3jp8w var59 = this.Xqedii_3nv6toq();
-               Xqedii_ev3jp8w var10 = null;
+               ExpressionAstNode var59 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var10 = null;
                if (var56.equals("position")
                   || var56.equals("size")) {
                   this.Xqedii_3cuz73k(
@@ -1441,11 +1441,11 @@ public final class Xqedii_2thoio4 {
                   var10 = this.Xqedii_3nv6toq();
                }
 
-               Xqedii_ev3jp8w[] var11 = this.Xqedii_2bkvzcq(var3, true);
+               ExpressionAstNode[] var11 = this.Xqedii_2bkvzcq(var3, true);
                int var86 = 33;
-               Xqedii_ev3jp8w[] var116 = new Xqedii_ev3jp8w[6];
+               ExpressionAstNode[] var116 = new ExpressionAstNode[6];
                var116[0] = var26;
-               var116[1] = new Xqedii_29jdaam(var56, var3);
+               var116[1] = new PlaceholderApiExpressionNode(var56, var3);
                var116[2] = var59;
                var116[3] = var10;
                var116[4] = var11[0];
@@ -1454,9 +1454,9 @@ public final class Xqedii_2thoio4 {
             case 12:
             case 13:
             case 14:
-               Xqedii_ev3jp8w var25 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var25 = this.Xqedii_3nv6toq();
                int var85 = 7;
-               Xqedii_ev3jp8w[] var115 = new Xqedii_ev3jp8w[2];
+               ExpressionAstNode[] var115 = new ExpressionAstNode[2];
                var115[0] = var25;
                var115[1] = this.Xqedii_mdc50q8(
                   "to"
@@ -1464,23 +1464,23 @@ public final class Xqedii_2thoio4 {
                return this.Xqedii_3vze4js(var85, var3, var115);
             case 15:
                int var84 = 8;
-               Xqedii_ev3jp8w[] var114 = new Xqedii_ev3jp8w[1];
+               ExpressionAstNode[] var114 = new ExpressionAstNode[1];
                var114[0] = this.Xqedii_3nv6toq();
                return this.Xqedii_3vze4js(var84, var3, var114);
             case 16:
-               Xqedii_ev3jp8w var24 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var24 = this.Xqedii_3nv6toq();
                int var83 = 9;
-               Xqedii_ev3jp8w[] var113 = new Xqedii_ev3jp8w[2];
+               ExpressionAstNode[] var113 = new ExpressionAstNode[2];
                var113[0] = var24;
                var113[1] = this.Xqedii_mdc50q8(
                   "to"
                );
                return this.Xqedii_3vze4js(var83, var3, var113);
             case 17:
-               Xqedii_ev3jp8w var23 = this.Xqedii_3nv6toq();
-               Xqedii_ev3jp8w var43 = this.Xqedii_mdc50q8("subtitle");
+               ExpressionAstNode var23 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var43 = this.Xqedii_mdc50q8("subtitle");
                int var82 = 10;
-               Xqedii_ev3jp8w[] var112 = new Xqedii_ev3jp8w[3];
+               ExpressionAstNode[] var112 = new ExpressionAstNode[3];
                var112[0] = var23;
                var112[1] = var43;
                var112[2] = this.Xqedii_mdc50q8(
@@ -1498,37 +1498,37 @@ public final class Xqedii_2thoio4 {
             case 20:
                if (this.Xqedii_g1933gx("console")) {
                   int var81 = 13;
-                  Xqedii_ev3jp8w[] var111 = new Xqedii_ev3jp8w[1];
+                  ExpressionAstNode[] var111 = new ExpressionAstNode[1];
                   var111[0] = this.Xqedii_3nv6toq();
                   return this.Xqedii_3vze4js(var81, var3, var111);
                }
 
                this.Xqedii_g1933gx("command");
                int var80 = 12;
-               Xqedii_ev3jp8w[] var110 = new Xqedii_ev3jp8w[1];
+               ExpressionAstNode[] var110 = new ExpressionAstNode[1];
                var110[0] = this.Xqedii_3nv6toq();
                return this.Xqedii_3vze4js(var80, var3, var110);
             case 21:
                int var79 = 12;
-               Xqedii_ev3jp8w[] var109 = new Xqedii_ev3jp8w[1];
+               ExpressionAstNode[] var109 = new ExpressionAstNode[1];
                var109[0] = this.Xqedii_3nv6toq();
                return this.Xqedii_3vze4js(var79, var3, var109);
             case 22:
                int var78 = 13;
-               Xqedii_ev3jp8w[] var108 = new Xqedii_ev3jp8w[1];
+               ExpressionAstNode[] var108 = new ExpressionAstNode[1];
                var108[0] = this.Xqedii_3nv6toq();
                return this.Xqedii_3vze4js(var78, var3, var108);
             case 23:
                if (this.Xqedii_g1933gx("input")) {
                   int var77 = 17;
-                  Xqedii_ev3jp8w[] var107 = new Xqedii_ev3jp8w[1];
+                  ExpressionAstNode[] var107 = new ExpressionAstNode[1];
                   var107[0] = this.Xqedii_3nv6toq();
                   return this.Xqedii_3vze4js(var77, var3, var107);
                }
 
                this.Xqedii_g1933gx("page");
                this.Xqedii_g1933gx("ui");
-               Xqedii_ev3jp8w var22 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var22 = this.Xqedii_3nv6toq();
                int var42 = 0;
                if (this.Xqedii_g1933gx("as")) {
                   this.Xqedii_2ugqkeg(
@@ -1538,9 +1538,9 @@ public final class Xqedii_2thoio4 {
                   var42 = 1;
                }
 
-               Xqedii_ev3jp8w var55 = this.Xqedii_mdc50q8("for");
+               ExpressionAstNode var55 = this.Xqedii_mdc50q8("for");
                int var76 = var42 != 0 ? 15 : 14;
-               Xqedii_ev3jp8w[] var106 = new Xqedii_ev3jp8w[2];
+               ExpressionAstNode[] var106 = new ExpressionAstNode[2];
                var106[0] = var22;
                var106[1] = var55;
                return this.Xqedii_3vze4js(var76, var3, var106);
@@ -1549,26 +1549,26 @@ public final class Xqedii_2thoio4 {
                   this.Xqedii_g1933gx("page");
                }
 
-               Xqedii_ev3jp8w var21 = !this.Xqedii_32zt7zc()
+               ExpressionAstNode var21 = !this.Xqedii_32zt7zc()
                      && !this.Xqedii_3i85ij1("for")
                   ? this.Xqedii_3nv6toq()
                   : null;
-               Xqedii_ev3jp8w var41 = this.Xqedii_mdc50q8("for");
+               ExpressionAstNode var41 = this.Xqedii_mdc50q8("for");
                int var75 = 16;
-               Xqedii_ev3jp8w[] var105 = new Xqedii_ev3jp8w[2];
+               ExpressionAstNode[] var105 = new ExpressionAstNode[2];
                var105[0] = var41;
                var105[1] = var21;
                return this.Xqedii_3vze4js(var75, var3, var105);
             case 25:
-               Xqedii_ev3jp8w var20 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var20 = this.Xqedii_3nv6toq();
                if (this.Xqedii_g1933gx("by")) {
-                  Xqedii_ev3jp8w var40 = this.Xqedii_3nv6toq();
+                  ExpressionAstNode var40 = this.Xqedii_3nv6toq();
                   this.Xqedii_3cuz73k(
                      ",",
                      "between x and y"
                   );
                   int var74 = 18;
-                  Xqedii_ev3jp8w[] var104 = new Xqedii_ev3jp8w[3];
+                  ExpressionAstNode[] var104 = new ExpressionAstNode[3];
                   var104[0] = var20;
                   var104[1] = var40;
                   var104[2] = this.Xqedii_3nv6toq();
@@ -1580,30 +1580,30 @@ public final class Xqedii_2thoio4 {
                   );
                   if (this.Xqedii_g1933gx("top")) {
                      int var73 = 20;
-                     Xqedii_ev3jp8w[] var103 = new Xqedii_ev3jp8w[1];
+                     ExpressionAstNode[] var103 = new ExpressionAstNode[1];
                      var103[0] = var20;
                      return this.Xqedii_3vze4js(var73, var3, var103);
                   } else if (this.Xqedii_g1933gx("bottom")) {
                      int var72 = 21;
-                     Xqedii_ev3jp8w[] var102 = new Xqedii_ev3jp8w[1];
+                     ExpressionAstNode[] var102 = new ExpressionAstNode[1];
                      var102[0] = var20;
                      return this.Xqedii_3vze4js(var72, var3, var102);
                   } else {
                      if (this.Xqedii_g1933gx("element")) {
                         int var71 = 30;
-                        Xqedii_ev3jp8w[] var101 = new Xqedii_ev3jp8w[2];
+                        ExpressionAstNode[] var101 = new ExpressionAstNode[2];
                         var101[0] = var20;
                         var101[1] = this.Xqedii_3nv6toq();
                         return this.Xqedii_3vze4js(var71, var3, var101);
                      }
 
-                     Xqedii_ev3jp8w var39 = this.Xqedii_3nv6toq();
+                     ExpressionAstNode var39 = this.Xqedii_3nv6toq();
                      this.Xqedii_3cuz73k(
                         ",",
                         "between x and y"
                      );
                      int var70 = 19;
-                     Xqedii_ev3jp8w[] var100 = new Xqedii_ev3jp8w[3];
+                     ExpressionAstNode[] var100 = new ExpressionAstNode[3];
                      var100[0] = var20;
                      var100[1] = var39;
                      var100[2] = this.Xqedii_3nv6toq();
@@ -1611,15 +1611,15 @@ public final class Xqedii_2thoio4 {
                   }
                }
             case 26:
-               Xqedii_ev3jp8w var19 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var19 = this.Xqedii_3nv6toq();
                this.Xqedii_2ugqkeg(
                   "as",
                   "(clone \"id\" as \"new_id\")"
                );
-               Xqedii_ev3jp8w var38 = this.Xqedii_3nv6toq();
-               Xqedii_ev3jp8w var54 = this.Xqedii_mdc50q8("into");
+               ExpressionAstNode var38 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var54 = this.Xqedii_mdc50q8("into");
                int var69 = 22;
-               Xqedii_ev3jp8w[] var99 = new Xqedii_ev3jp8w[4];
+               ExpressionAstNode[] var99 = new ExpressionAstNode[4];
                var99[0] = var19;
                var99[1] = var38;
                var99[2] = var54;
@@ -1631,75 +1631,75 @@ public final class Xqedii_2thoio4 {
                return this.Xqedii_2eglftz(var3);
             case 28:
                int var68 = 23;
-               Xqedii_ev3jp8w[] var98 = new Xqedii_ev3jp8w[1];
+               ExpressionAstNode[] var98 = new ExpressionAstNode[1];
                var98[0] = this.Xqedii_3nv6toq();
                return this.Xqedii_3vze4js(var68, var3, var98);
             case 29:
-               Xqedii_ev3jp8w var18 = this.Xqedii_3nv6toq();
-               Xqedii_ev3jp8w var37 = this.Xqedii_32zt7zc() ? null : this.Xqedii_3nv6toq();
+               ExpressionAstNode var18 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var37 = this.Xqedii_32zt7zc() ? null : this.Xqedii_3nv6toq();
                int var67 = 24;
-               Xqedii_ev3jp8w[] var97 = new Xqedii_ev3jp8w[2];
+               ExpressionAstNode[] var97 = new ExpressionAstNode[2];
                var97[0] = var18;
                var97[1] = var37;
                return this.Xqedii_3vze4js(var67, var3, var97);
             case 30:
                this.Xqedii_g1933gx("to");
                this.Xqedii_1okvqlt = this.Xqedii_1okvqlt + 1;
-               Xqedii_ev3jp8w var17 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var17 = this.Xqedii_3nv6toq();
                this.Xqedii_3cuz73k(
                   ",",
                   "between x and y"
                );
-               Xqedii_ev3jp8w var36 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var36 = this.Xqedii_3nv6toq();
                this.Xqedii_3cuz73k(
                   ",",
                   "between y and z"
                );
-               Xqedii_ev3jp8w var53 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var53 = this.Xqedii_3nv6toq();
                this.Xqedii_1okvqlt = this.Xqedii_1okvqlt - 1;
-               Xqedii_ev3jp8w var9 = null;
+               ExpressionAstNode var9 = null;
                if (this.Xqedii_g1933gx("in")) {
                   this.Xqedii_g1933gx("world");
                   var9 = this.Xqedii_3nv6toq();
                }
 
                int var66 = 25;
-               Xqedii_ev3jp8w[] var96 = new Xqedii_ev3jp8w[4];
+               ExpressionAstNode[] var96 = new ExpressionAstNode[4];
                var96[0] = var17;
                var96[1] = var36;
                var96[2] = var53;
                var96[3] = var9;
                return this.Xqedii_3vze4js(var66, var3, var96);
             case 31:
-               Xqedii_ev3jp8w var16 = this.Xqedii_3nv6toq();
-               Xqedii_ev3jp8w var35 = this.Xqedii_32zt7zc() ? null : this.Xqedii_3nv6toq();
-               if (var16 instanceof Xqedii_1z9wnlh var52 && var52.Xqedii_2azibg0 instanceof Double && var35 != null) {
+               ExpressionAstNode var16 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var35 = this.Xqedii_32zt7zc() ? null : this.Xqedii_3nv6toq();
+               if (var16 instanceof LiteralExpressionNode var52 && var52.Xqedii_2azibg0 instanceof Double && var35 != null) {
                   int var65 = 26;
-                  Xqedii_ev3jp8w[] var95 = new Xqedii_ev3jp8w[2];
+                  ExpressionAstNode[] var95 = new ExpressionAstNode[2];
                   var95[0] = var35;
                   var95[1] = var16;
                   return this.Xqedii_3vze4js(var65, var3, var95);
                }
 
                int var64 = 26;
-               Xqedii_ev3jp8w[] var94 = new Xqedii_ev3jp8w[2];
+               ExpressionAstNode[] var94 = new ExpressionAstNode[2];
                var94[0] = var16;
                var94[1] = var35;
                return this.Xqedii_3vze4js(var64, var3, var94);
             case 32:
-               Xqedii_ev3jp8w var15 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var15 = this.Xqedii_3nv6toq();
                double var34 = this.Xqedii_1qolmih(true);
                this.Xqedii_2n6e3pq();
-               return new Xqedii_1jxgido(var15, var34, var3);
+               return new WaitStatementNode(var15, var34, var3);
             case 33:
                return this.Xqedii_1fsxdm6(var3);
             case 34:
-               Xqedii_ev3jp8w var14 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var14 = this.Xqedii_3nv6toq();
                return new Xqedii_3vayq8t(var14, this.Xqedii_2txbn32(), var3);
             case 35:
-               Xqedii_ev3jp8w var13 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var13 = this.Xqedii_3nv6toq();
                this.Xqedii_g1933gx("times");
-               return new Xqedii_1mitiba(var13, this.Xqedii_2txbn32(), var3);
+               return new WhileStatementNode(var13, this.Xqedii_2txbn32(), var3);
             case 36:
                this.Xqedii_g1933gx("each");
                String var12 = this.Xqedii_34yikyz(
@@ -1709,9 +1709,9 @@ public final class Xqedii_2thoio4 {
                   "in",
                   "(for item in list:)"
                );
-               Xqedii_ev3jp8w var7 = this.Xqedii_3nv6toq();
-               Xqedii_ev3jp8w var8 = this.Xqedii_mdc50q8("to");
-               return new Xqedii_2uv99kq(var12, var7, var8, this.Xqedii_2txbn32(), var3);
+               ExpressionAstNode var7 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var8 = this.Xqedii_mdc50q8("to");
+               return new ForStatementNode(var12, var7, var8, this.Xqedii_2txbn32(), var3);
             case 37:
             case 38:
                if (this.Xqedii_38gkvzl == 0) {
@@ -1719,7 +1719,7 @@ public final class Xqedii_2thoio4 {
                }
 
                this.Xqedii_2n6e3pq();
-               return new Xqedii_1drddta(
+               return new JumpStatementNode(
                   var1.equals("break")
                      ? 1
                      : 2,
@@ -1727,20 +1727,20 @@ public final class Xqedii_2thoio4 {
                   var3
                );
             case 39:
-               Xqedii_ev3jp8w var6 = this.Xqedii_32zt7zc() ? null : this.Xqedii_3nv6toq();
+               ExpressionAstNode var6 = this.Xqedii_32zt7zc() ? null : this.Xqedii_3nv6toq();
                this.Xqedii_2n6e3pq();
-               return new Xqedii_1drddta(3, var6, var3);
+               return new JumpStatementNode(3, var6, var3);
             case 40:
                if (!this.Xqedii_g1933gx("animation")
                   && !this.Xqedii_g1933gx("animations")
                   && !this.Xqedii_g1933gx("animating")) {
                   this.Xqedii_2n6e3pq();
-                  return new Xqedii_1drddta(3, null, var3);
+                  return new JumpStatementNode(3, null, var3);
                }
 
                this.Xqedii_g1933gx("of");
                int var63 = 34;
-               Xqedii_ev3jp8w[] var93 = new Xqedii_ev3jp8w[1];
+               ExpressionAstNode[] var93 = new ExpressionAstNode[1];
                var93[0] = this.Xqedii_32zt7zc() ? null : this.Xqedii_3nv6toq();
                return this.Xqedii_3vze4js(var63, var3, var93);
             case 41:
@@ -1752,7 +1752,7 @@ public final class Xqedii_2thoio4 {
             case 43:
             case 44:
                int var10001 = 27;
-               Xqedii_ev3jp8w[] var10003 = new Xqedii_ev3jp8w[1];
+               ExpressionAstNode[] var10003 = new ExpressionAstNode[1];
                var10003[0] = this.Xqedii_3nv6toq();
                return this.Xqedii_3vze4js(var10001, var3, var10003);
             default:
@@ -1761,32 +1761,32 @@ public final class Xqedii_2thoio4 {
       }
    }
 
-   public Xqedii_ev3jp8w[] Xqedii_2bkvzcq(int var1, boolean var2) {
+   public ExpressionAstNode[] Xqedii_2bkvzcq(int var1, boolean var2) {
       {
          Object var3 = null;
-         Xqedii_ev3jp8w var4 = null;
+         ExpressionAstNode var4 = null;
          if (this.Xqedii_g1933gx("over")) {
-            Xqedii_ev3jp8w var5 = this.Xqedii_3nv6toq();
+            ExpressionAstNode var5 = this.Xqedii_3nv6toq();
             double var6 = this.Xqedii_1qolmih(true);
             var3 = var6 == Double.longBitsToDouble(4607182418800017408L)
                ? var5
-               : new Xqedii_3l5gjg9(3, var5, new Xqedii_1z9wnlh(var6, var1), var1);
+               : new BinaryOpExpressionNode(3, var5, new LiteralExpressionNode(var6, var1), var1);
          }
 
          if (this.Xqedii_g1933gx("with")) {
             LexerToken var8 = this.Xqedii_2o6grdd();
             var4 = this.Xqedii_3nv6toq();
-            if (var8.is(LexerTokenType.STRING) && var4 instanceof Xqedii_29jdaam && Xqedii_2awqdkk.Xqedii_1uh18ch(var8.text()) == null) {
-               throw this.Xqedii_3sn28jz(var8, Xqedii_2awqdkk.Xqedii_pzxldhl(var8.text()));
+            if (var8.is(LexerTokenType.STRING) && var4 instanceof PlaceholderApiExpressionNode && AnimationEasingFunctions.Xqedii_1uh18ch(var8.text()) == null) {
+               throw this.Xqedii_3sn28jz(var8, AnimationEasingFunctions.Xqedii_pzxldhl(var8.text()));
             }
          }
 
          if (var3 == null && (var4 != null || var2)) {
-            var3 = new Xqedii_1z9wnlh(Double.longBitsToDouble(4621819117588971520L), var1);
+            var3 = new LiteralExpressionNode(Double.longBitsToDouble(4621819117588971520L), var1);
          }
 
-         Xqedii_ev3jp8w[] var10000 = new Xqedii_ev3jp8w[2];
-         var10000[0] = (Xqedii_ev3jp8w)var3;
+         ExpressionAstNode[] var10000 = new ExpressionAstNode[2];
+         var10000[0] = (ExpressionAstNode)var3;
          var10000[1] = var4;
          return var10000;
       }
@@ -1794,7 +1794,7 @@ public final class Xqedii_2thoio4 {
 
    // $VF: Could not verify finally blocks. A semaphore variable has been added to preserve control flow.
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-   public Xqedii_3nlck21 Xqedii_2eglftz(int var1) {
+   public StatementAstNode Xqedii_2eglftz(int var1) {
       {
          LexerToken var2 = this.Xqedii_2o6grdd();
          if (!var2.is(LexerTokenType.NAME)) {
@@ -1804,7 +1804,7 @@ public final class Xqedii_2thoio4 {
          } else {
             this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
             ArrayList var3 = new ArrayList();
-            var3.add(new Xqedii_29jdaam(var2.text().toLowerCase(Locale.ROOT), var1));
+            var3.add(new PlaceholderApiExpressionNode(var2.text().toLowerCase(Locale.ROOT), var1));
             this.Xqedii_1okvqlt = this.Xqedii_1okvqlt + 1;
             boolean var12 = false /* VF: Semaphore variable */;
 
@@ -1847,31 +1847,31 @@ public final class Xqedii_2thoio4 {
 
                   switch (var7) {
                      case 0:
-                        var3.add(new Xqedii_29jdaam("x", var1));
+                        var3.add(new PlaceholderApiExpressionNode("x", var1));
                         var3.add(this.Xqedii_3nv6toq());
                         this.Xqedii_3cuz73k(
                            ",",
                            "between x and y"
                         );
-                        var3.add(new Xqedii_29jdaam("y", var1));
+                        var3.add(new PlaceholderApiExpressionNode("y", var1));
                         var3.add(this.Xqedii_3nv6toq());
                         break;
                      case 1:
-                        Xqedii_ev3jp8w var8 = this.Xqedii_3nv6toq();
-                        Xqedii_ev3jp8w var9 = this.Xqedii_1s3d88e(",")
+                        ExpressionAstNode var8 = this.Xqedii_3nv6toq();
+                        ExpressionAstNode var9 = this.Xqedii_1s3d88e(",")
                            ? this.Xqedii_3nv6toq()
                            : var8;
-                        var3.add(new Xqedii_29jdaam("width", var1));
+                        var3.add(new PlaceholderApiExpressionNode("width", var1));
                         var3.add(var8);
-                        var3.add(new Xqedii_29jdaam("height", var1));
+                        var3.add(new PlaceholderApiExpressionNode("height", var1));
                         var3.add(var9);
                         break;
                      case 2:
-                        var3.add(new Xqedii_29jdaam("hidden", var1));
-                        var3.add(new Xqedii_1z9wnlh(Boolean.TRUE, var1));
+                        var3.add(new PlaceholderApiExpressionNode("hidden", var1));
+                        var3.add(new LiteralExpressionNode(Boolean.TRUE, var1));
                         break;
                      default:
-                        var3.add(new Xqedii_29jdaam(var5, var1));
+                        var3.add(new PlaceholderApiExpressionNode(var5, var1));
                         var3.add(this.Xqedii_3nv6toq());
                   }
                }
@@ -1885,19 +1885,19 @@ public final class Xqedii_2thoio4 {
 
             this.Xqedii_1okvqlt = this.Xqedii_1okvqlt - 1;
             return this.Xqedii_3vze4js(
-               31, var1, (Xqedii_ev3jp8w[])var3.toArray(new Xqedii_ev3jp8w[0])
+               31, var1, (ExpressionAstNode[])var3.toArray(new ExpressionAstNode[0])
             );
          }
       }
    }
 
-   public Xqedii_3nlck21 Xqedii_38ata03(int var1) {
+   public StatementAstNode Xqedii_38ata03(int var1) {
       {
-         Xqedii_ev3jp8w var2 = this.Xqedii_3nv6toq();
-         Xqedii_ev3jp8w var3 = this.Xqedii_mdc50q8("volume");
-         Xqedii_ev3jp8w var4 = this.Xqedii_mdc50q8("pitch");
+         ExpressionAstNode var2 = this.Xqedii_3nv6toq();
+         ExpressionAstNode var3 = this.Xqedii_mdc50q8("volume");
+         ExpressionAstNode var4 = this.Xqedii_mdc50q8("pitch");
          int var10001 = 11;
-         Xqedii_ev3jp8w[] var10003 = new Xqedii_ev3jp8w[3];
+         ExpressionAstNode[] var10003 = new ExpressionAstNode[3];
          var10003[0] = var2;
          var10003[1] = var3;
          var10003[2] = var4;
@@ -1907,12 +1907,12 @@ public final class Xqedii_2thoio4 {
 
    // $VF: Could not verify finally blocks. A semaphore variable has been added to preserve control flow.
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-   public Xqedii_3nlck21[] Xqedii_2txbn32() {
+   public StatementAstNode[] Xqedii_2txbn32() {
       {
          this.Xqedii_38gkvzl = this.Xqedii_38gkvzl + 1;
          boolean var4 = false /* VF: Semaphore variable */;
 
-         Xqedii_3nlck21[] var1;
+         StatementAstNode[] var1;
          try {
             var4 = true;
             var1 = this.Xqedii_2vw9h4x();
@@ -1928,13 +1928,13 @@ public final class Xqedii_2thoio4 {
       }
    }
 
-   public Xqedii_3nlck21 Xqedii_1fsxdm6(int var1) {
+   public StatementAstNode Xqedii_1fsxdm6(int var1) {
       {
          ArrayList var2 = new ArrayList();
          ArrayList var3 = new ArrayList();
          var2.add(this.Xqedii_3nv6toq());
          var3.add(this.Xqedii_2vw9h4x());
-         Xqedii_3nlck21[] var4 = null;
+         StatementAstNode[] var4 = null;
 
          while (true) {
             int var5 = this.Xqedii_2d86asd;
@@ -1965,40 +1965,40 @@ public final class Xqedii_2thoio4 {
             }
          }
 
-         return new Xqedii_3cpwyhm(
-            (Xqedii_ev3jp8w[])var2.toArray(new Xqedii_ev3jp8w[0]),
-            (Xqedii_3nlck21[][])var3.toArray(new Xqedii_3nlck21[0][]),
+         return new IfStatementNode(
+            (ExpressionAstNode[])var2.toArray(new ExpressionAstNode[0]),
+            (StatementAstNode[][])var3.toArray(new StatementAstNode[0][]),
             var4,
             var1
          );
       }
    }
 
-   public Xqedii_ev3jp8w Xqedii_3nv6toq() {
+   public ExpressionAstNode Xqedii_3nv6toq() {
       {
          return this.Xqedii_1km16he();
       }
    }
 
-   public Xqedii_ev3jp8w Xqedii_1km16he() {
+   public ExpressionAstNode Xqedii_1km16he() {
       {
-         Xqedii_ev3jp8w var1 = this.Xqedii_3oo4k6o();
+         ExpressionAstNode var1 = this.Xqedii_3oo4k6o();
          if (this.Xqedii_3kqvbrx("?")) {
             int var2 = this.Xqedii_my78stx().line();
-            Xqedii_ev3jp8w var3 = this.Xqedii_1km16he();
+            ExpressionAstNode var3 = this.Xqedii_1km16he();
             this.Xqedii_3cuz73k(
                ":",
                "in a ? b : c"
             );
-            Xqedii_ev3jp8w var4 = this.Xqedii_1km16he();
-            return new Xqedii_1putpcp(var1, var3, var4, var2);
+            ExpressionAstNode var4 = this.Xqedii_1km16he();
+            return new TernaryExpressionNode(var1, var3, var4, var2);
          } else {
             return var1;
          }
       }
    }
 
-   public Xqedii_ev3jp8w Xqedii_3oo4k6o() {
+   public ExpressionAstNode Xqedii_3oo4k6o() {
       {
          Object var1 = this.Xqedii_2d29s5k();
 
@@ -2007,14 +2007,14 @@ public final class Xqedii_2thoio4 {
                || this.Xqedii_3kqvbrx("||")
          ) {
             int var2 = this.Xqedii_my78stx().line();
-            var1 = new Xqedii_1a78ac9(false, (Xqedii_ev3jp8w)var1, this.Xqedii_2d29s5k(), var2);
+            var1 = new LogicalOpExpressionNode(false, (ExpressionAstNode)var1, this.Xqedii_2d29s5k(), var2);
          }
 
-         return (Xqedii_ev3jp8w)var1;
+         return (ExpressionAstNode)var1;
       }
    }
 
-   public Xqedii_ev3jp8w Xqedii_2d29s5k() {
+   public ExpressionAstNode Xqedii_2d29s5k() {
       {
          Object var1 = this.Xqedii_vtgtmsh();
 
@@ -2023,24 +2023,24 @@ public final class Xqedii_2thoio4 {
                || this.Xqedii_3kqvbrx("&&")
          ) {
             int var2 = this.Xqedii_my78stx().line();
-            var1 = new Xqedii_1a78ac9(true, (Xqedii_ev3jp8w)var1, this.Xqedii_vtgtmsh(), var2);
+            var1 = new LogicalOpExpressionNode(true, (ExpressionAstNode)var1, this.Xqedii_vtgtmsh(), var2);
          }
 
-         return (Xqedii_ev3jp8w)var1;
+         return (ExpressionAstNode)var1;
       }
    }
 
-   public Xqedii_ev3jp8w Xqedii_vtgtmsh() {
+   public ExpressionAstNode Xqedii_vtgtmsh() {
       if (!this.Xqedii_3i85ij1("not")
          && !this.Xqedii_3kqvbrx("!")) {
          return this.Xqedii_9c1u1yf();
       } else {
          int var1 = this.Xqedii_my78stx().line();
-         return new Xqedii_1fva3u6(false, this.Xqedii_vtgtmsh(), var1);
+         return new UnaryOpExpressionNode(false, this.Xqedii_vtgtmsh(), var1);
       }
    }
 
-   public Xqedii_ev3jp8w Xqedii_9c1u1yf() {
+   public ExpressionAstNode Xqedii_9c1u1yf() {
       {
          Object var1 = this.Xqedii_g6hkqz0();
 
@@ -2065,7 +2065,7 @@ public final class Xqedii_2thoio4 {
                   var3 = this.Xqedii_g1933gx("not")
                      ? 13
                      : 12;
-                  var1 = new Xqedii_3l5gjg9(var3, (Xqedii_ev3jp8w)var1, this.Xqedii_g6hkqz0(), var2.line());
+                  var1 = new BinaryOpExpressionNode(var3, (ExpressionAstNode)var1, this.Xqedii_g6hkqz0(), var2.line());
                   continue;
                }
 
@@ -2078,7 +2078,7 @@ public final class Xqedii_2thoio4 {
                      || !this.Xqedii_1ns9xu6(1)
                         .isWord("in")
                      || this.Xqedii_1okvqlt != 0) {
-                     return (Xqedii_ev3jp8w)var1;
+                     return (ExpressionAstNode)var1;
                   }
 
                   this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
@@ -2087,12 +2087,12 @@ public final class Xqedii_2thoio4 {
             }
 
             this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
-            var1 = new Xqedii_3l5gjg9(var3, (Xqedii_ev3jp8w)var1, this.Xqedii_g6hkqz0(), var2.line());
+            var1 = new BinaryOpExpressionNode(var3, (ExpressionAstNode)var1, this.Xqedii_g6hkqz0(), var2.line());
          }
       }
    }
 
-   public Xqedii_ev3jp8w Xqedii_g6hkqz0() {
+   public ExpressionAstNode Xqedii_g6hkqz0() {
       {
          Object var1 = this.Xqedii_3qpg4jp();
 
@@ -2104,14 +2104,14 @@ public final class Xqedii_2thoio4 {
             int var3 = var2.text().equals("+")
                ? 1
                : 2;
-            var1 = new Xqedii_3l5gjg9(var3, (Xqedii_ev3jp8w)var1, this.Xqedii_3qpg4jp(), var2.line());
+            var1 = new BinaryOpExpressionNode(var3, (ExpressionAstNode)var1, this.Xqedii_3qpg4jp(), var2.line());
          }
 
-         return (Xqedii_ev3jp8w)var1;
+         return (ExpressionAstNode)var1;
       }
    }
 
-   public Xqedii_ev3jp8w Xqedii_3qpg4jp() {
+   public ExpressionAstNode Xqedii_3qpg4jp() {
       {
          Object var1 = this.Xqedii_3amps4a();
 
@@ -2139,45 +2139,45 @@ public final class Xqedii_2thoio4 {
                case 1 -> 4;
                default -> 5;
             };
-            var1 = new Xqedii_3l5gjg9(var3, (Xqedii_ev3jp8w)var1, this.Xqedii_3amps4a(), var2.line());
+            var1 = new BinaryOpExpressionNode(var3, (ExpressionAstNode)var1, this.Xqedii_3amps4a(), var2.line());
          }
 
-         return (Xqedii_ev3jp8w)var1;
+         return (ExpressionAstNode)var1;
       }
    }
 
-   public Xqedii_ev3jp8w Xqedii_3amps4a() {
+   public ExpressionAstNode Xqedii_3amps4a() {
       if (this.Xqedii_3kqvbrx("-")) {
          int var6 = this.Xqedii_my78stx().line();
-         Xqedii_ev3jp8w var2 = this.Xqedii_3amps4a();
-         return (Xqedii_ev3jp8w)(var2 instanceof Xqedii_1z9wnlh var3 && var3.Xqedii_2azibg0 instanceof Double var4
-            ? new Xqedii_1z9wnlh(-var4, var6)
-            : new Xqedii_1fva3u6(true, var2, var6));
+         ExpressionAstNode var2 = this.Xqedii_3amps4a();
+         return (ExpressionAstNode)(var2 instanceof LiteralExpressionNode var3 && var3.Xqedii_2azibg0 instanceof Double var4
+            ? new LiteralExpressionNode(-var4, var6)
+            : new UnaryOpExpressionNode(true, var2, var6));
       } else if (this.Xqedii_3kqvbrx("!")) {
          int var1 = this.Xqedii_my78stx().line();
-         return new Xqedii_1fva3u6(false, this.Xqedii_3amps4a(), var1);
+         return new UnaryOpExpressionNode(false, this.Xqedii_3amps4a(), var1);
       } else {
          return this.Xqedii_3vihs01();
       }
    }
 
-   public Xqedii_ev3jp8w Xqedii_3vihs01() {
+   public ExpressionAstNode Xqedii_3vihs01() {
       {
          Object var1 = this.Xqedii_2r3irt9();
 
          while (true) {
             while (!this.Xqedii_3kqvbrx(".")) {
                if (!this.Xqedii_3kqvbrx("[")) {
-                  return (Xqedii_ev3jp8w)var1;
+                  return (ExpressionAstNode)var1;
                }
 
                LexerToken var2 = this.Xqedii_my78stx();
-               Xqedii_ev3jp8w var3 = this.Xqedii_3nv6toq();
+               ExpressionAstNode var3 = this.Xqedii_3nv6toq();
                this.Xqedii_3cuz73k(
                   "]",
                   "to close the [ ]"
                );
-               var1 = new Xqedii_2p9runp((Xqedii_ev3jp8w)var1, var3, var2.line());
+               var1 = new IndexAccessExpressionNode((ExpressionAstNode)var1, var3, var2.line());
             }
 
             LexerToken var4 = this.Xqedii_my78stx();
@@ -2185,15 +2185,15 @@ public final class Xqedii_2thoio4 {
                "a property name after '.'"
             );
             if (this.Xqedii_3kqvbrx("(")) {
-               var1 = new Xqedii_3wobtjl((Xqedii_ev3jp8w)var1, var5, this.Xqedii_2cg4oho(), var4.line());
+               var1 = new MethodCallExpressionNode((ExpressionAstNode)var1, var5, this.Xqedii_2cg4oho(), var4.line());
             } else {
-               var1 = new Xqedii_v1f4ltd((Xqedii_ev3jp8w)var1, var5, var4.line());
+               var1 = new Xqedii_v1f4ltd((ExpressionAstNode)var1, var5, var4.line());
             }
          }
       }
    }
 
-   public Xqedii_ev3jp8w[] Xqedii_2cg4oho() {
+   public ExpressionAstNode[] Xqedii_2cg4oho() {
       {
          this.Xqedii_3cuz73k(
             "(",
@@ -2215,20 +2215,20 @@ public final class Xqedii_2thoio4 {
             ")",
             "to close the ( )"
          );
-         return (Xqedii_ev3jp8w[])var1.toArray(new Xqedii_ev3jp8w[0]);
+         return (ExpressionAstNode[])var1.toArray(new ExpressionAstNode[0]);
       }
    }
 
    // $VF: Unable to simplify switch on enum
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-   public Xqedii_ev3jp8w Xqedii_2r3irt9() {
+   public ExpressionAstNode Xqedii_2r3irt9() {
       {
          LexerToken var1 = this.Xqedii_2o6grdd();
          int var2 = var1.line();
          switch (dev.xqedii.ultimateUI.Xqedii_11jvjwo.Xqedii_2wwhkoz[var1.type().ordinal()]) {
             case 1:
                this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
-               return new Xqedii_1z9wnlh(Double.parseDouble(var1.text()), var2);
+               return new LiteralExpressionNode(Double.parseDouble(var1.text()), var2);
             case 2:
                this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
                return this.Xqedii_2pyrjto(var1);
@@ -2288,30 +2288,30 @@ public final class Xqedii_2thoio4 {
                   case 1:
                   case 2:
                      this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
-                     return new Xqedii_1z9wnlh(Boolean.TRUE, var2);
+                     return new LiteralExpressionNode(Boolean.TRUE, var2);
                   case 3:
                   case 4:
                   case 5:
                      this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
-                     return new Xqedii_1z9wnlh(Boolean.FALSE, var2);
+                     return new LiteralExpressionNode(Boolean.FALSE, var2);
                   case 6:
                   case 7:
                   case 8:
                      this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
-                     return new Xqedii_1z9wnlh(null, var2);
+                     return new LiteralExpressionNode(null, var2);
                   default:
                      if (this.Xqedii_1ns9xu6(1)
                         .isWord("of")) {
                         this.Xqedii_2d86asd = this.Xqedii_2d86asd + 2;
-                        return new Xqedii_2s364ds(var9, this.Xqedii_3amps4a(), var2);
+                        return new FieldAccessExpressionNode(var9, this.Xqedii_3amps4a(), var2);
                      } else {
                         this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
                         if (this.Xqedii_3kqvbrx("(")) {
-                           this.Xqedii_1ukapu0.add(new Xqedii_39jklon(var9, var2, var1.column()));
-                           return new Xqedii_3ox0q7t(var9, this.Xqedii_2cg4oho(), var2);
+                           this.Xqedii_1ukapu0.add(new YamlLocation(var9, var2, var1.column()));
+                           return new SpecialIdentifierExpressionNode(var9, this.Xqedii_2cg4oho(), var2);
                         }
 
-                        return new Xqedii_2ucjp8c(var9, var2);
+                        return new VariableExpressionNode(var9, var2);
                      }
                }
             case 4:
@@ -2319,7 +2319,7 @@ public final class Xqedii_2thoio4 {
                   this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
                   int var8 = this.Xqedii_1okvqlt;
                   this.Xqedii_1okvqlt = 0;
-                  Xqedii_ev3jp8w var10 = this.Xqedii_3nv6toq();
+                  ExpressionAstNode var10 = this.Xqedii_3nv6toq();
                   this.Xqedii_1okvqlt = var8;
                   this.Xqedii_3cuz73k(
                      ")",
@@ -2342,7 +2342,7 @@ public final class Xqedii_2thoio4 {
                      "]",
                      "to close the list"
                   );
-                  return new Xqedii_2m7nhbf((Xqedii_ev3jp8w[])var7.toArray(new Xqedii_ev3jp8w[0]), var2);
+                  return new ListLiteralExpressionNode((ExpressionAstNode[])var7.toArray(new ExpressionAstNode[0]), var2);
                } else if (var1.isSymbol("{")) {
                   this.Xqedii_2d86asd = this.Xqedii_2d86asd + 1;
                   ArrayList var3 = new ArrayList();
@@ -2373,9 +2373,9 @@ public final class Xqedii_2thoio4 {
                      "}",
                      "to close the { }"
                   );
-                  return new Xqedii_1i9eosk(
+                  return new MapLiteralExpressionNode(
                      (String[])var3.toArray(new String[0]),
-                     (Xqedii_ev3jp8w[])var4.toArray(new Xqedii_ev3jp8w[0]),
+                     (ExpressionAstNode[])var4.toArray(new ExpressionAstNode[0]),
                      var2
                   );
                }
@@ -2392,11 +2392,11 @@ public final class Xqedii_2thoio4 {
       }
    }
 
-   public Xqedii_ev3jp8w Xqedii_2pyrjto(LexerToken var1) {
+   public ExpressionAstNode Xqedii_2pyrjto(LexerToken var1) {
       {
          String var2 = var1.text();
          if (var2.indexOf(123) < 0) {
-            return new Xqedii_29jdaam(Xqedii_xm7zknp(var2), var1.line());
+            return new PlaceholderApiExpressionNode(Xqedii_xm7zknp(var2), var1.line());
          } else {
             ArrayList var3 = new ArrayList();
             StringBuilder var4 = new StringBuilder();
@@ -2446,12 +2446,12 @@ public final class Xqedii_2thoio4 {
                var3.add(Xqedii_xm7zknp(var4.toString()));
             }
 
-            return new Xqedii_1h5sfhl(var3.toArray(), var1.line());
+            return new InterpolatedStringExpressionNode(var3.toArray(), var1.line());
          }
       }
    }
 
-   public Xqedii_ev3jp8w Xqedii_v4mtmbd(String var1, LexerToken var2) {
+   public ExpressionAstNode Xqedii_v4mtmbd(String var1, LexerToken var2) {
       if (var1.isBlank()) {
          throw this.Xqedii_3sn28jz(
             var2,
@@ -2461,7 +2461,7 @@ public final class Xqedii_2thoio4 {
          List<LexerToken> var3;
          try {
             var3 = new Xqedii_3l1ke2c(var1).Xqedii_1lbczed();
-         } catch (Xqedii_3vsk7zm var7) {
+         } catch (ScriptSyntaxException var7) {
             throw this.Xqedii_3sn28jz(var2, Xqedii_1onuw514fh88p(var7.getMessage()));
          }
 
@@ -2472,7 +2472,7 @@ public final class Xqedii_2thoio4 {
          }
 
          Xqedii_2thoio4 var8 = new Xqedii_2thoio4(var4, this.Xqedii_d4hvym9, this.Xqedii_1ukapu0);
-         Xqedii_ev3jp8w var9 = var8.Xqedii_3nv6toq();
+         ExpressionAstNode var9 = var8.Xqedii_3nv6toq();
 
          while (var8.Xqedii_2o6grdd().is(LexerTokenType.NEWLINE) || var8.Xqedii_2o6grdd().is(LexerTokenType.DEDENT)) {
             var8.Xqedii_2d86asd = var8.Xqedii_2d86asd + 1;

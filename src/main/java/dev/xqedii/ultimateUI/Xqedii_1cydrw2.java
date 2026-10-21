@@ -104,7 +104,7 @@ public final class Xqedii_1cydrw2 extends Xqedii_1ks3mne {
             }
          }
 
-         Xqedii_3boar8q var17 = new Xqedii_3boar8q(
+         BedrockPackTextureExporter var17 = new BedrockPackTextureExporter(
             new File(
                this.Xqedii_ef13m9a, "contents/images"
             ),

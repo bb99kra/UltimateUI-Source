@@ -17,7 +17,7 @@ public abstract class Xqedii_piddhjw extends Xqedii_162huh6 {
       super(var1);
    }
 
-   public Map<String, Object> Xqedii_36hjqhg(Xqedii_2kb1ns6 var1, Xqedii_3boar8q var2, String var3, List<String> var4, Map<String, Object> var5, boolean var6) throws IOException {
+   public Map<String, Object> Xqedii_36hjqhg(Xqedii_2kb1ns6 var1, BedrockPackTextureExporter var2, String var3, List<String> var4, Map<String, Object> var5, boolean var6) throws IOException {
       {
          Xqedii_39t0x33 var7 = new Xqedii_39t0x33(var1, var2, var3, var4, var5, var6);
          Map var8 = Xqedii_29ge1r6.Xqedii_15tec8i();

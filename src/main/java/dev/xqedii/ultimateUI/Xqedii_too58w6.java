@@ -20,9 +20,9 @@ public final class Xqedii_too58w6 {
    public static final int Xqedii_2oc3n3e = 64;
    public final UltimateUI Xqedii_1wn2twf;
    public final Xqedii_1nc5hgr Xqedii_scp8re9;
-   public final Xqedii_1aatyko Xqedii_1mu1bzp;
+   public final BedrockFormHandler Xqedii_1mu1bzp;
 
-   public Xqedii_too58w6(UltimateUI var1, Xqedii_1nc5hgr var2, Xqedii_1aatyko var3) {
+   public Xqedii_too58w6(UltimateUI var1, Xqedii_1nc5hgr var2, BedrockFormHandler var3) {
       this.Xqedii_1wn2twf = var1;
       this.Xqedii_scp8re9 = var2;
       this.Xqedii_1mu1bzp = var3;

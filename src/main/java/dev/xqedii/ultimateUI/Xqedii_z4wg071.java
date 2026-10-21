@@ -32,7 +32,7 @@ public final class Xqedii_z4wg071 {
          return var9
             ? "true"
             : "false";
-      } else if (var0 instanceof Xqedii_11itj63 var8) {
+      } else if (var0 instanceof UiElementId var8) {
          return var8.id();
       } else if (var0 instanceof Player var7) {
          return var7.getName();
@@ -103,11 +103,11 @@ public final class Xqedii_z4wg071 {
                   var3.replace((char)44, (char)46)
                );
             } catch (NumberFormatException var5) {
-               throw new Xqedii_3vsk7zm(Xqedii_1dah1d1cgaw0h(var2), var1);
+               throw new ScriptSyntaxException(Xqedii_1dah1d1cgaw0h(var2), var1);
             }
          }
       } else {
-         throw new Xqedii_3vsk7zm(Xqedii_h925o1abzntk(Xqedii_yl2qf35(var0)), var1);
+         throw new ScriptSyntaxException(Xqedii_h925o1abzntk(Xqedii_yl2qf35(var0)), var1);
       }
    }
 
@@ -174,7 +174,7 @@ public final class Xqedii_z4wg071 {
             return ((var2.doubleValue() == var3.doubleValue()
                ? 1
                : 0) != 0);
-         } else if (var0 instanceof Xqedii_11itj63 || var1 instanceof Xqedii_11itj63 || var0 instanceof Player || var1 instanceof Player) {
+         } else if (var0 instanceof UiElementId || var1 instanceof UiElementId || var0 instanceof Player || var1 instanceof Player) {
             return Xqedii_2mlipa7(var0).equals(Xqedii_2mlipa7(var1));
          } else if (var0 instanceof Number && var1 instanceof String var5) {
             return Xqedii_2mlipa7(var0).equals(var5);
@@ -205,7 +205,7 @@ public final class Xqedii_z4wg071 {
    }
 
    public static Object Xqedii_hbc7zbp(Object var0, Object var1, int var2) {
-      if (var0 instanceof String || var1 instanceof String || var0 instanceof Xqedii_11itj63 || var1 instanceof Xqedii_11itj63) {
+      if (var0 instanceof String || var1 instanceof String || var0 instanceof UiElementId || var1 instanceof UiElementId) {
          return Xqedii_2v540j9kktkzw(Xqedii_2mlipa7(var0), Xqedii_2mlipa7(var1));
       } else if (var0 instanceof List var3) {
          ArrayList var4 = new ArrayList(var3);
@@ -260,12 +260,12 @@ public final class Xqedii_z4wg071 {
          return "list";
       } else if (var0 instanceof Map) {
          return "object";
-      } else if (var0 instanceof Xqedii_11itj63) {
+      } else if (var0 instanceof UiElementId) {
          return "element";
       } else if (var0 instanceof Player) {
          return "player";
       } else {
-         return var0 instanceof Xqedii_36oytze
+         return var0 instanceof ScriptEventContext
             ? "event"
             : "value";
       }

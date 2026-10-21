@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 public record Xqedii_39t0x33(
-   Xqedii_2kb1ns6 page, Xqedii_3boar8q baker, String solidTexture, List<String> warnings, Map<String, Object> namespace, boolean overlay
+   Xqedii_2kb1ns6 page, BedrockPackTextureExporter baker, String solidTexture, List<String> warnings, Map<String, Object> namespace, boolean overlay
 ) {
 
    public String collection() {
@@ -32,7 +32,7 @@ public record Xqedii_39t0x33(
 
    @Override
 
-   public Xqedii_3boar8q baker() {
+   public BedrockPackTextureExporter baker() {
       {
          return this.baker;
       }

@@ -367,7 +367,7 @@ public abstract class ResourcePackDelivery extends LangMessages {
       }
    }
 
-   public Xqedii_1pwigla deployPackToExternalPlugin() {
+   public CustomItemHookResult deployPackToExternalPlugin() {
       if (!this.getConfig()
          .getBoolean(
             "resource-pack.hosting.external-pack.enabled",

@@ -1,6 +1,6 @@
 package dev.xqedii.ultimateUI;
 
-public final class Xqedii_vc9adda extends Xqedii_3nlck21 {
+public final class Xqedii_vc9adda extends StatementAstNode {
    public static final int Xqedii_1cmfp8n = 1;
    public static final int Xqedii_10pftf5 = 2;
    public static final int Xqedii_1dg5bnd = 3;
@@ -36,16 +36,16 @@ public final class Xqedii_vc9adda extends Xqedii_3nlck21 {
    public static final int Xqedii_1szsoe5 = 33;
    public static final int Xqedii_2u05z2i = 34;
    public final int Xqedii_38q6lwp;
-   public final Xqedii_ev3jp8w[] Xqedii_2uctw9o;
+   public final ExpressionAstNode[] Xqedii_2uctw9o;
 
-   public Xqedii_vc9adda(int var1, Xqedii_ev3jp8w[] var2, int var3) {
+   public Xqedii_vc9adda(int var1, ExpressionAstNode[] var2, int var3) {
       super(var3);
       this.Xqedii_38q6lwp = var1;
       this.Xqedii_2uctw9o = var2;
    }
 
    @Override
-   public void Xqedii_3egc8pa(Xqedii_y5pr2ec var1) {
+   public void Xqedii_3egc8pa(ScriptExecutionContext var1) {
       {
          Object[] var2 = new Object[this.Xqedii_2uctw9o.length];
 

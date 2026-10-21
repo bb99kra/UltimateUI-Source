@@ -17,11 +17,11 @@ public final class Xqedii_2om8ulg {
    public final List<Path> Xqedii_23z7ald;
    public final Set<String> Xqedii_3eq8bxc;
    public final Set<String> Xqedii_18wf8zl;
-   public final Xqedii_3vpi3ac Xqedii_1qtmyyn;
+   public final ShaderConfiguration Xqedii_1qtmyyn;
    public int Xqedii_2j5wggn;
    public int Xqedii_q9b6pe4;
 
-   public Xqedii_2om8ulg(Path var1, List<Path> var2, Set<String> var3, Set<String> var4, Xqedii_3vpi3ac var5) {
+   public Xqedii_2om8ulg(Path var1, List<Path> var2, Set<String> var3, Set<String> var4, ShaderConfiguration var5) {
       this.Xqedii_2hw69rw = var1;
       this.Xqedii_23z7ald = var2;
       this.Xqedii_3eq8bxc = var3;

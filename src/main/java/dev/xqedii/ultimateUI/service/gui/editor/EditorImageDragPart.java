@@ -9,7 +9,7 @@ import dev.xqedii.ultimateUI.Xqedii_2t253qr;
 import dev.xqedii.ultimateUI.Xqedii_38o2zes;
 import dev.xqedii.ultimateUI.ChatColorUtil;
 import dev.xqedii.ultimateUI.Xqedii_3uxgwyg;
-import dev.xqedii.ultimateUI.Xqedii_kqmefnf;
+import dev.xqedii.ultimateUI.FontAtlasGlyphs;
 import dev.xqedii.ultimateUI.Xqedii_l2une6g;
 import dev.xqedii.ultimateUI.Xqedii_nd6rkr3;
 import dev.xqedii.ultimateUI.Xqedii_p92kfr8;
@@ -210,7 +210,7 @@ public abstract class EditorImageDragPart extends EditorOverlayPreviewPart {
                if (!this.equalsNullable(var2.alignToolbarHoverActionId, var21)) {
                   var2.alignToolbarHoverActionId = var21;
 
-                  for (String var23 : Xqedii_kqmefnf.Xqedii_32g98ba) {
+                  for (String var23 : FontAtlasGlyphs.Xqedii_32g98ba) {
                      this.setAlignToolbarActionVisual(var1, var23, this.equalsNullable(var23, var21));
                   }
                }
@@ -226,7 +226,7 @@ public abstract class EditorImageDragPart extends EditorOverlayPreviewPart {
          throw new IllegalStateException();
       } else {
          if (var1 != null) {
-            for (String var4 : Xqedii_kqmefnf.Xqedii_32g98ba) {
+            for (String var4 : FontAtlasGlyphs.Xqedii_32g98ba) {
                this.setAlignToolbarActionVisual(var1, var4, (Xqedii_p92kfr8.Xqedii_lmv0hkpfqrnh(949420731, 7) != 0));
             }
 
@@ -235,7 +235,7 @@ public abstract class EditorImageDragPart extends EditorOverlayPreviewPart {
                var1, Xqedii_p92kfr8.Xqedii_2bk7y6qkjw7ma("aDpjrzzFClSVWWQYVIQpWy0U/8gTmLkt1sP/78NrC/crz8tiFuN9sp2+t0JJf1dh6LS7rpuYuZrWnWc1LSV7K6ChbPPCwQ==")
             );
 
-            for (String var6 : Xqedii_kqmefnf.Xqedii_32g98ba) {
+            for (String var6 : FontAtlasGlyphs.Xqedii_32g98ba) {
                this.removeOverlayHud(var1, var6);
             }
          }
@@ -268,7 +268,7 @@ public abstract class EditorImageDragPart extends EditorOverlayPreviewPart {
                var6,
                var8
             )) {
-            for (String var11 : Xqedii_kqmefnf.Xqedii_32g98ba) {
+            for (String var11 : FontAtlasGlyphs.Xqedii_32g98ba) {
                if (this.isInsideShellBlock(var1, var11, var6, var8) || this.isInsideShellBlock(var1, Xqedii_2k09xutsx76k9(var11), var6, var8)) {
                   return (Xqedii_p92kfr8.Xqedii_1lu9r5ulbypuc(-596659717, 18) != 0);
                }
@@ -297,7 +297,7 @@ public abstract class EditorImageDragPart extends EditorOverlayPreviewPart {
          double var6 = var1.shellHitX(var2);
          double var8 = var1.shellHitY(var4);
 
-         for (String var11 : Xqedii_kqmefnf.Xqedii_32g98ba) {
+         for (String var11 : FontAtlasGlyphs.Xqedii_32g98ba) {
             EditorRect var12 = this.findShellBlockRect(var1, Xqedii_1y4oz9jctfxko(var11));
             if (var12 != null && var12.contains(var6, var8)) {
                return var11;
@@ -314,7 +314,7 @@ public abstract class EditorImageDragPart extends EditorOverlayPreviewPart {
       if (((2139729159 | 1) & 1) == 0) {
          throw new IllegalStateException();
       } else if (var1 != null && var2 != null && !var2.isBlank()) {
-         String[] var4 = (String[])Xqedii_kqmefnf.Xqedii_2ecdw82.get(var2);
+         String[] var4 = (String[])FontAtlasGlyphs.Xqedii_2ecdw82.get(var2);
          if (var4 != null && var4.length >= Xqedii_p92kfr8.Xqedii_lmv0hkpfqrnh(250405468, 25)) {
             String var10000;
             if (var3) {

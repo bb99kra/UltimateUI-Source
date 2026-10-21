@@ -1,0 +1,32 @@
+package dev.xqedii.ultimateUI;
+
+public final class InterpolatedStringExpressionNode extends ExpressionAstNode {
+   public final Object[] Xqedii_syideh7;
+
+   public InterpolatedStringExpressionNode(Object[] var1, int var2) {
+      super(var2);
+      this.Xqedii_syideh7 = var1;
+   }
+
+   @Override
+   public Object Xqedii_28g36j3(ScriptExecutionContext var1) {
+      {
+         StringBuilder var2 = new StringBuilder();
+         Object[] var3 = this.Xqedii_syideh7;
+         int var4 = var3.length;
+
+         for (int var5 = 0; var5 < var4; var5++) {
+            Object var6 = var3[var5];
+            if (var6 instanceof ExpressionAstNode var7) {
+               var2.append(Xqedii_z4wg071.Xqedii_2mlipa7(var7.Xqedii_28g36j3(var1)));
+            } else {
+               var2.append((String)var6);
+            }
+         }
+
+         return var1.Xqedii_3a9kp91.Xqedii_2fi2lg1 == null
+            ? var2.toString()
+            : var1.Xqedii_3a9kp91.Xqedii_2fi2lg1.Xqedii_14ikmfz(var1.Xqedii_3a9kp91.Xqedii_1v4ue4a, var2.toString());
+      }
+   }
+}

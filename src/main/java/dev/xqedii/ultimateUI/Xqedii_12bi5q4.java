@@ -39,7 +39,7 @@ public final class Xqedii_12bi5q4 {
       }
    }
 
-   public Xqedii_1pwigla Xqedii_278kok9(CustomItemPlugin var1, File var2) throws IOException {
+   public CustomItemHookResult Xqedii_278kok9(CustomItemPlugin var1, File var2) throws IOException {
       {
          File var3 = this.Xqedii_1kxrs0m(var1);
          if (var3 != null && var3.isDirectory()) {
@@ -60,7 +60,7 @@ public final class Xqedii_12bi5q4 {
                      );
                   this.Xqedii_26ro3w8(var9);
                   this.Xqedii_14n5qio(var2, var9, false);
-                  return new Xqedii_1pwigla(
+                  return new CustomItemHookResult(
                      var1,
                      var4,
                      List.of(
@@ -83,7 +83,7 @@ public final class Xqedii_12bi5q4 {
                   CopyOption[] var10002 = new CopyOption[1];
                   var10002[0] = StandardCopyOption.REPLACE_EXISTING;
                   Files.copy(var10000, var10001, var10002);
-                  return new Xqedii_1pwigla(
+                  return new CustomItemHookResult(
                      var1, var4, List.of("nexo reload")
                   );
                case ORAXEN:
@@ -99,7 +99,7 @@ public final class Xqedii_12bi5q4 {
                      var3.toPath().resolve("pack"),
                      true
                   );
-                  return new Xqedii_1pwigla(
+                  return new CustomItemHookResult(
                      var1, var4, List.of("oraxen reload")
                   );
                default:

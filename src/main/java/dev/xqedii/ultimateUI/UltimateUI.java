@@ -469,7 +469,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
                         this.rebuildUiImagesIntoResourcePack();
                         this.ensureGeneratedResourcePackArchive(true);
                         this.syncPackToXqediiSetups();
-                        Xqedii_1pwigla var2 = this.deployPackToExternalPlugin();
+                        CustomItemHookResult var2 = this.deployPackToExternalPlugin();
                         Xqedii_38o2zes.Xqedii_34mipix(
                            this,
                            () -> {
@@ -534,7 +534,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
 
    public boolean reloadPagesOnly(CommandSender var1) {
       {
-         Xqedii_1zgvf22 var2 = this.loadScripts(null);
+         ScriptCompilationResult var2 = this.loadScripts(null);
          this.refreshUiCommands();
          if (var2 == null) {
             ChatColorUtil.Xqedii_2dtmver(
@@ -662,7 +662,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
                            this.rebuildUiImagesIntoResourcePack();
                            this.ensureGeneratedResourcePackArchive(true);
                            this.syncPackToXqediiSetups();
-                           Xqedii_1pwigla var3x = this.deployPackToExternalPlugin();
+                           CustomItemHookResult var3x = this.deployPackToExternalPlugin();
                            Xqedii_38o2zes.Xqedii_34mipix(
                               this,
                               () -> {
@@ -687,7 +687,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
                                        var4x.add(ChatColorUtil.Xqedii_2d5sc5r(var10001, var10002));
                                     }
 
-                                    Xqedii_1zgvf22 var7 = this.loadScripts(null);
+                                    ScriptCompilationResult var7 = this.loadScripts(null);
                                     if (var7 != null) {
                                        var10001 = "Scripts compiled: {0}";
                                        var10002 = new Object[1];
@@ -751,7 +751,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
       }
    }
 
-   public void finishExternalPackDeploy(List<String> var1, Xqedii_1pwigla var2) {
+   public void finishExternalPackDeploy(List<String> var1, CustomItemHookResult var2) {
       if (var2 != null) {
          String var3 = var2.target().Xqedii_lho1nuv();
 
@@ -855,7 +855,7 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
                return;
             }
 
-            Xqedii_1pwigla var7 = var6 != 0 ? this.deployPackToExternalPlugin() : null;
+            CustomItemHookResult var7 = var6 != 0 ? this.deployPackToExternalPlugin() : null;
             Xqedii_38o2zes.Xqedii_34mipix(
                this,
                () -> {
@@ -908,13 +908,13 @@ public class UltimateUI extends WorldUiCommands implements CommandExecutor, TabC
       }
    }
 
-   public Xqedii_1zgvf22 loadScripts(CommandSender var1) {
+   public ScriptCompilationResult loadScripts(CommandSender var1) {
       {
          if (this.Xqedii_2nbb2r8 == null) {
-            this.Xqedii_2nbb2r8 = new Xqedii_2b3rrt2(this);
+            this.Xqedii_2nbb2r8 = new CustomScriptEngine(this);
          }
 
-         Xqedii_1zgvf22 var2;
+         ScriptCompilationResult var2;
          try {
             var2 = this.Xqedii_2nbb2r8.Xqedii_7murfs0();
          } catch (Throwable var4) {

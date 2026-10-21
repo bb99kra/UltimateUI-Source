@@ -124,7 +124,7 @@ public final class Xqedii_3s68w2g {
                return false;
             } else {
                try {
-                  Xqedii_q3cx0a5 var6 = this.Xqedii_5xza4zl(var4);
+                  PackSourceFile var6 = this.Xqedii_5xza4zl(var4);
                   String var7 = var6 == null ? Xqedii_3b4y8oj4w98ky(System.currentTimeMillis()) : var6.signature();
                   this.Xqedii_y72mhw6(var3, var2, var7);
                   this.Xqedii_1ldniqr(var4, var3);
@@ -188,7 +188,7 @@ public final class Xqedii_3s68w2g {
             Set var5 = this.Xqedii_390vif1(
                new File(var3, "pack.mcmeta")
             );
-            Xqedii_3vpi3ac var6 = this.Xqedii_1m7vvf7(var3.toPath(), var4);
+            ShaderConfiguration var6 = this.Xqedii_1m7vvf7(var3.toPath(), var4);
             if (var6 == null) {
                this.Xqedii_2ds4r1g
                   .getLogger()
@@ -246,7 +246,7 @@ public final class Xqedii_3s68w2g {
 
    public void Xqedii_1obpfd4(File var1, File var2) {
       {
-         Xqedii_q3cx0a5 var3 = this.Xqedii_5xza4zl(var1);
+         PackSourceFile var3 = this.Xqedii_5xza4zl(var1);
          if (var3 == null) {
             if (this.Xqedii_29giocr(var2).isEmpty()) {
                this.Xqedii_2ds4r1g
@@ -274,7 +274,7 @@ public final class Xqedii_3s68w2g {
       }
    }
 
-   public Xqedii_q3cx0a5 Xqedii_5xza4zl(File var1) {
+   public PackSourceFile Xqedii_5xza4zl(File var1) {
       {
          File var2 = var1.getParentFile();
          if (var2 == null) {
@@ -301,11 +301,11 @@ public final class Xqedii_3s68w2g {
                   )
                );
             if (var7 && this.Xqedii_leqvfr8(var6)) {
-               return new Xqedii_q3cx0a5(var6, false);
+               return new PackSourceFile(var6, false);
             } else if (var5.isFile()) {
-               return new Xqedii_q3cx0a5(var5, true);
+               return new PackSourceFile(var5, true);
             } else {
-               return this.Xqedii_leqvfr8(var6) ? new Xqedii_q3cx0a5(var6, false) : null;
+               return this.Xqedii_leqvfr8(var6) ? new PackSourceFile(var6, false) : null;
             }
          }
       }
@@ -734,7 +734,7 @@ public final class Xqedii_3s68w2g {
       }
    }
 
-   public Xqedii_3vpi3ac Xqedii_1m7vvf7(Path var1, List<Path> var2) {
+   public ShaderConfiguration Xqedii_1m7vvf7(Path var1, List<Path> var2) {
       {
          Iterator var3 = var2.iterator();
 
@@ -782,7 +782,7 @@ public final class Xqedii_3s68w2g {
                }
 
                if (var8.containsAll(Xqedii_2711xik)) {
-                  return new Xqedii_3vpi3ac(var7, var6, (var9 != 0));
+                  return new ShaderConfiguration(var7, var6, (var9 != 0));
                }
             }
          }

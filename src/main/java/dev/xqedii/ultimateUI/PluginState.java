@@ -63,7 +63,7 @@ public abstract class PluginState extends JavaPlugin {
    public BedrockUiService Xqedii_1yufpo0;
    public Xqedii_2cm61d8 Xqedii_391oru2;
    public BossbarRenderService Xqedii_1h4p7ey;
-   public Xqedii_2b3rrt2 Xqedii_2nbb2r8;
+   public CustomScriptEngine Xqedii_2nbb2r8;
    public YamlConfiguration Xqedii_389zivo;
    public PlatformCompat.CancellableTask Xqedii_1fzr9sp;
    public boolean Xqedii_1lguiuv = false;

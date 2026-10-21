@@ -9,10 +9,10 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
 public final class Xqedii_bflxzg9 extends Command implements PluginIdentifiableCommand {
-   public final Xqedii_3tcqkw2 Xqedii_26ue1tp;
-   public final Xqedii_2b3rrt2 Xqedii_2l6uj6z;
+   public final ScriptEventHandlerDef Xqedii_26ue1tp;
+   public final CustomScriptEngine Xqedii_2l6uj6z;
 
-   public Xqedii_bflxzg9(Xqedii_2b3rrt2 var1, String var2, Xqedii_3tcqkw2 var3) {
+   public Xqedii_bflxzg9(CustomScriptEngine var1, String var2, ScriptEventHandlerDef var3) {
       super(var2);
       this.Xqedii_2l6uj6z = var1;
       this.Xqedii_26ue1tp = var3;
@@ -30,7 +30,7 @@ public final class Xqedii_bflxzg9 extends Command implements PluginIdentifiableC
          ArrayList var4 = new ArrayList(var3.length);
          Collections.addAll(var4, var3);
          Player var5 = var1 instanceof Player var6 ? var6 : null;
-         Xqedii_36oytze var7 = new Xqedii_36oytze("command", null);
+         ScriptEventContext var7 = new ScriptEventContext("command", null);
          var7.Xqedii_a9in0yy = String.join(" ", var3);
          if (var5 != null && !Xqedii_38o2zes.Xqedii_269v6yv(var5)) {
             Xqedii_38o2zes.Xqedii_1avvt9e(this.Xqedii_2l6uj6z.Xqedii_1bs4d2x, var5, () -> {

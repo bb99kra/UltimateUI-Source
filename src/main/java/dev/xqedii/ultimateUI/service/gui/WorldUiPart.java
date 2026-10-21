@@ -9,7 +9,7 @@ import dev.xqedii.ultimateUI.Xqedii_2f78jo3;
 import dev.xqedii.ultimateUI.Xqedii_2pbx7s8;
 import dev.xqedii.ultimateUI.Xqedii_38o2zes;
 import dev.xqedii.ultimateUI.Xqedii_3bglnh9;
-import dev.xqedii.ultimateUI.Xqedii_3c3nhzv;
+import dev.xqedii.ultimateUI.HoverEffectTarget;
 import dev.xqedii.ultimateUI.Xqedii_3ep50li;
 import dev.xqedii.ultimateUI.ElementBounds;
 import dev.xqedii.ultimateUI.Xqedii_3ihqgc8;
@@ -2304,7 +2304,7 @@ public abstract class WorldUiPart extends ApiElements {
       if (((-218656875 | 1) & 1) == 0) {
          throw new IllegalStateException();
       } else {
-         Xqedii_3c3nhzv var5 = this.Xqedii_3gedfec(var1, var3);
+         HoverEffectTarget var5 = this.Xqedii_3gedfec(var1, var3);
          int var6 = var5 != null && var5.effect() != null
             ? Math.max(Xqedii_3ihqgc8.Xqedii_e85v2ofrfaac(2032366790, 19), var5.effect().durationTicks())
             : Xqedii_3ihqgc8.Xqedii_1yr2w71y595u6(1215043514, 16);
@@ -2326,7 +2326,7 @@ public abstract class WorldUiPart extends ApiElements {
       }
    }
 
-   public Xqedii_3c3nhzv Xqedii_3gedfec(Xqedii_1a2mt0h var1, Xqedii_2f78jo3 var2) {
+   public HoverEffectTarget Xqedii_3gedfec(Xqedii_1a2mt0h var1, Xqedii_2f78jo3 var2) {
       if ((281316445 * 281316445 + 281316445 & 1) != 0) {
          throw new IllegalStateException();
       } else {
@@ -2454,14 +2454,14 @@ public abstract class WorldUiPart extends ApiElements {
             double var21 = Double.isFinite(var13)
                ? (var13 + var17) / Double.longBitsToDouble(Xqedii_3ihqgc8.Xqedii_3q99a8e1nv4ng(-6346453226102113850L, 28))
                : Double.longBitsToDouble(Xqedii_3ihqgc8.Xqedii_g4b6gcmn35m1(-1820088612636155941L, 56));
-            return new Xqedii_3c3nhzv(var3, var7, var10, var23, var21);
+            return new HoverEffectTarget(var3, var7, var10, var23, var21);
          } else {
             return null;
          }
       }
    }
 
-   public WorldDisplays.WorldElementSpec Xqedii_kniw8o1(Xqedii_1a2mt0h var1, Xqedii_3j2w0l1 var2, Xqedii_3c3nhzv var3) {
+   public WorldDisplays.WorldElementSpec Xqedii_kniw8o1(Xqedii_1a2mt0h var1, Xqedii_3j2w0l1 var2, HoverEffectTarget var3) {
       if ((-1166230650 * -1166230650 + -1166230650 & 1) != 0) {
          throw new IllegalStateException();
       } else {

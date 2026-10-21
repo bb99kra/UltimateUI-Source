@@ -68,7 +68,7 @@ public final class Xqedii_3l1ke2c {
          }
 
          if (this.Xqedii_3jtzixm > 0) {
-            throw new Xqedii_3vsk7zm(
+            throw new ScriptSyntaxException(
                "A bracket was opened but never closed",
                this.Xqedii_2453gam,
                this.Xqedii_27fe156()
@@ -156,7 +156,7 @@ public final class Xqedii_3l1ke2c {
                   }
 
                   if (var1 != this.Xqedii_qge9b71.peek()) {
-                     throw new Xqedii_3vsk7zm(
+                     throw new ScriptSyntaxException(
                         "This line is indented differently from the lines above it",
                         this.Xqedii_2453gam,
                         this.Xqedii_1khowns - var2 + 1
@@ -264,7 +264,7 @@ public final class Xqedii_3l1ke2c {
             }
          }
 
-         throw new Xqedii_3vsk7zm(Xqedii_2pn0bba2cjx8w(var1), var2, var3);
+         throw new ScriptSyntaxException(Xqedii_2pn0bba2cjx8w(var1), var2, var3);
       }
    }
 
@@ -348,7 +348,7 @@ public final class Xqedii_3l1ke2c {
          }
 
          if ("+-*/%<>=!()[]{},.:?".indexOf(var1) < 0) {
-            throw new Xqedii_3vsk7zm(Xqedii_1klt28h5m72q(var1), this.Xqedii_2453gam, var2);
+            throw new ScriptSyntaxException(Xqedii_1klt28h5m72q(var1), this.Xqedii_2453gam, var2);
          } else {
             if (var1 == 91 || var1 == 123) {
                this.Xqedii_3jtzixm = this.Xqedii_3jtzixm + 1;

@@ -26,7 +26,7 @@ import org.bukkit.entity.Player;
 public final class Xqedii_148dm0t {
    public static final long Xqedii_j6u78zx = 24019146153017682L;
    public final UltimateUI Xqedii_22nea49;
-   public final Xqedii_1o1cvf4 Xqedii_3mi6i2t;
+   public final BossbarPacketSender Xqedii_3mi6i2t;
    public final Map<UUID, Xqedii_109qg45> Xqedii_2t443mo = new ConcurrentHashMap<>();
    public final Map<UUID, Component> Xqedii_i1xnec0 = new ConcurrentHashMap<>();
    public final Map<UUID, Integer> Xqedii_1127793 = new ConcurrentHashMap<>();
@@ -35,10 +35,10 @@ public final class Xqedii_148dm0t {
 
    public Xqedii_148dm0t(UltimateUI var1) {
       this.Xqedii_22nea49 = var1;
-      this.Xqedii_3mi6i2t = new Xqedii_11ahxwr(this);
+      this.Xqedii_3mi6i2t = new BossbarPacketSenderImpl(this);
    }
 
-   public Xqedii_148dm0t(UltimateUI var1, Xqedii_1o1cvf4 var2) {
+   public Xqedii_148dm0t(UltimateUI var1, BossbarPacketSender var2) {
       this.Xqedii_22nea49 = var1;
       this.Xqedii_3mi6i2t = var2;
    }
@@ -99,7 +99,7 @@ public final class Xqedii_148dm0t {
             int var10 = var6 != BossbarAction.ADD && var6 != BossbarAction.UPDATE_FLAGS
                ? 0
                : 1;
-            Xqedii_34z2igs var11 = new Xqedii_34z2igs(
+            BossbarPacketUpdate var11 = new BossbarPacketUpdate(
                var5.getUUID(), var6, var7, var8, var9 != 0 ? var5.getColor() : null, var9 != 0 ? var5.getOverlay() : null, var10 != 0 ? var5.getFlags() : null
             );
             if (this.Xqedii_ac46bu9(var3, var11)) {
@@ -109,7 +109,7 @@ public final class Xqedii_148dm0t {
       }
    }
 
-   public boolean Xqedii_ac46bu9(Player var1, Xqedii_34z2igs var2) {
+   public boolean Xqedii_ac46bu9(Player var1, BossbarPacketUpdate var2) {
       {
          UUID var3 = var1.getUniqueId();
          UUID var4 = var2.barId();

@@ -37,7 +37,7 @@ public final class Xqedii_2d07ocz {
 
    public static UltimateUIAPI api(int var0) {
       if (!UltimateUIAPI.isAvailable()) {
-         throw new Xqedii_3vsk7zm(
+         throw new ScriptSyntaxException(
             "UltimateUI is not ready yet",
             var0
          );
@@ -52,9 +52,9 @@ public final class Xqedii_2d07ocz {
       }
    }
 
-   public static Object Xqedii_2pszqr1(Xqedii_y5pr2ec var0, String var1, int var2) {
+   public static Object Xqedii_2pszqr1(ScriptExecutionContext var0, String var1, int var2) {
       {
-         Xqedii_1yqm9k3 var3 = var0.Xqedii_3a9kp91;
+         ScriptScopeContext var3 = var0.Xqedii_3a9kp91;
          int var5 = -1;
          switch (var1.hashCode()) {
             case -1349119146:
@@ -123,7 +123,7 @@ public final class Xqedii_2d07ocz {
                return var3.Xqedii_1v4ue4a;
             case 1:
                if (var3.Xqedii_34yybpr == null) {
-                  throw new Xqedii_3vsk7zm(
+                  throw new ScriptSyntaxException(
                      "There is no event here",
                      var2
                   );
@@ -166,7 +166,7 @@ public final class Xqedii_2d07ocz {
             case 11:
                return Double.longBitsToDouble(4614256656552045848L);
             default:
-               throw new Xqedii_3vsk7zm(Xqedii_32wj88dr8h8rr(var1, var1), var2);
+               throw new ScriptSyntaxException(Xqedii_32wj88dr8h8rr(var1, var1), var2);
          }
       }
    }
@@ -183,10 +183,10 @@ public final class Xqedii_2d07ocz {
       }
    }
 
-   public static Object get(Xqedii_y5pr2ec var0, Object var1, String var2, int var3) {
+   public static Object get(ScriptExecutionContext var0, Object var1, String var2, int var3) {
       {
          String var4 = var2.toLowerCase(Locale.ROOT);
-         if (var1 instanceof Xqedii_11itj63 var12) {
+         if (var1 instanceof UiElementId var12) {
             return Xqedii_1javj6e(var0, var12.id(), var2, var3);
          } else if (!(var1 instanceof Map var5)) {
             if (var1 instanceof List var11) {
@@ -232,7 +232,7 @@ public final class Xqedii_2d07ocz {
                   case 3 -> var11.isEmpty() ? null : var11.get(0);
                   case 4 -> var11.isEmpty() ? null : var11.get(var11.size() - 1);
                   case 5, 6 -> var11.isEmpty();
-                  default -> throw new Xqedii_3vsk7zm(Xqedii_2k9w5y9stitdd(var2), var3);
+                  default -> throw new ScriptSyntaxException(Xqedii_2k9w5y9stitdd(var2), var3);
                };
             } else if (var1 instanceof String var10) {
                int var7 = -1;
@@ -276,12 +276,12 @@ public final class Xqedii_2d07ocz {
                };
             } else if (var1 instanceof Player var9) {
                return Xqedii_266bjwx(var0, var9, var4, var3);
-            } else if (var1 instanceof Xqedii_36oytze var8) {
+            } else if (var1 instanceof ScriptEventContext var8) {
                return Xqedii_2j653hv(var8, var4, var3);
             } else if (var1 == null) {
-               throw new Xqedii_3vsk7zm(Xqedii_3en6apxrvep60(var2), var3);
+               throw new ScriptSyntaxException(Xqedii_3en6apxrvep60(var2), var3);
             } else {
-               throw new Xqedii_3vsk7zm(Xqedii_27orwbso07q2y(Xqedii_z4wg071.Xqedii_28xo6uq(var1), var2), var3);
+               throw new ScriptSyntaxException(Xqedii_27orwbso07q2y(Xqedii_z4wg071.Xqedii_28xo6uq(var1), var2), var3);
             }
          } else {
             Object var6 = var5.get(var2);
@@ -305,8 +305,8 @@ public final class Xqedii_2d07ocz {
       }
    }
 
-   public static void Xqedii_2a9tfw6(Xqedii_y5pr2ec var0, Object var1, String var2, Object var3, int var4) {
-      if (var1 instanceof Xqedii_11itj63 var12) {
+   public static void Xqedii_2a9tfw6(ScriptExecutionContext var0, Object var1, String var2, Object var3, int var4) {
+      if (var1 instanceof UiElementId var12) {
          Xqedii_3j2drjj(var0, var12.id(), var2, var3, var4);
       } else if (var1 instanceof Map var11) {
          var11.put(var2, var3);
@@ -315,7 +315,7 @@ public final class Xqedii_2d07ocz {
       } else if (var1 instanceof Player var9) {
          Xqedii_23nr37w(var9, var2.toLowerCase(Locale.ROOT), var3, var4);
       } else {
-         if (var1 instanceof Xqedii_36oytze var5) {
+         if (var1 instanceof ScriptEventContext var5) {
             String var6 = var2.toLowerCase(Locale.ROOT);
             if ((
                   var6.equals("text")
@@ -333,14 +333,14 @@ public final class Xqedii_2d07ocz {
             }
          }
 
-         throw new Xqedii_3vsk7zm(Xqedii_13qgd86wp1cq2(var2, Xqedii_z4wg071.Xqedii_28xo6uq(var1)), var4);
+         throw new ScriptSyntaxException(Xqedii_13qgd86wp1cq2(var2, Xqedii_z4wg071.Xqedii_28xo6uq(var1)), var4);
       }
    }
 
-   public static Object Xqedii_1sr2hld(Xqedii_y5pr2ec var0, Object var1, String var2, Object[] var3, int var4) {
+   public static Object Xqedii_1sr2hld(ScriptExecutionContext var0, Object var1, String var2, Object[] var3, int var4) {
       {
          String var5 = var2.toLowerCase(Locale.ROOT);
-         if (var1 instanceof Xqedii_11itj63 var15) {
+         if (var1 instanceof UiElementId var15) {
             return Xqedii_200p8tk(var0, var15.id(), var5, var3, var4);
          } else if (var1 instanceof String var14) {
             return Xqedii_2q74yw2(var0, var14, var5, var3, var4);
@@ -507,7 +507,7 @@ public final class Xqedii_2d07ocz {
                   }
                }
 
-               if (var1 instanceof Xqedii_36oytze var11) {
+               if (var1 instanceof ScriptEventContext var11) {
                   if (var5.equals("cancel")) {
                      var0.Xqedii_3a9kp91.Xqedii_3dy3w3c = true;
                      var11.cancel(true);
@@ -522,9 +522,9 @@ public final class Xqedii_2d07ocz {
                }
 
                if (var1 == null) {
-                  throw new Xqedii_3vsk7zm(Xqedii_1l750eeybvls4(var2), var4);
+                  throw new ScriptSyntaxException(Xqedii_1l750eeybvls4(var2), var4);
                } else {
-                  throw new Xqedii_3vsk7zm(Xqedii_ej4oup67z9in(Xqedii_z4wg071.Xqedii_28xo6uq(var1), var2), var4);
+                  throw new ScriptSyntaxException(Xqedii_ej4oup67z9in(Xqedii_z4wg071.Xqedii_28xo6uq(var1), var2), var4);
                }
             }
          }
@@ -542,15 +542,15 @@ public final class Xqedii_2d07ocz {
 
    public static Object Xqedii_1k661t2(Object[] var0, int var1, int var2) {
       if (var1 >= var0.length) {
-         throw new Xqedii_3vsk7zm(Xqedii_b0t15qhwpot6(var1 + 1), var2);
+         throw new ScriptSyntaxException(Xqedii_b0t15qhwpot6(var1 + 1), var2);
       } else {
          return var0[var1];
       }
    }
 
-   public static Object Xqedii_1javj6e(Xqedii_y5pr2ec var0, String var1, String var2, int var3) {
+   public static Object Xqedii_1javj6e(ScriptExecutionContext var0, String var1, String var2, int var3) {
       {
-         Xqedii_1yqm9k3 var4 = var0.Xqedii_3a9kp91;
+         ScriptScopeContext var4 = var0.Xqedii_3a9kp91;
          Player var5 = var4.Xqedii_25ge4f1(var3);
          var4.Xqedii_3u9m9cl();
          UltimateUIAPI var6 = api(var3);
@@ -755,12 +755,12 @@ public final class Xqedii_2d07ocz {
                return var6.isHovering(var5, var1);
             case 18:
                String var15 = var6.getElementParent(var5, var1);
-               return var15 != null && !var15.isEmpty() ? new Xqedii_11itj63(var15) : null;
+               return var15 != null && !var15.isEmpty() ? new UiElementId(var15) : null;
             case 19:
                ArrayList var14 = new ArrayList();
 
                for (String var12 : var6.getElementChildren(var5, var1)) {
-                  var14.add(new Xqedii_11itj63(var12));
+                  var14.add(new UiElementId(var12));
                }
 
                return var14;
@@ -808,12 +808,12 @@ public final class Xqedii_2d07ocz {
       }
    }
 
-   public static void Xqedii_3j2drjj(Xqedii_y5pr2ec var0, String var1, String var2, Object var3, int var4) {
+   public static void Xqedii_3j2drjj(ScriptExecutionContext var0, String var1, String var2, Object var3, int var4) {
       {
-         Xqedii_1yqm9k3 var5 = var0.Xqedii_3a9kp91;
+         ScriptScopeContext var5 = var0.Xqedii_3a9kp91;
          Player var6 = var5.Xqedii_25ge4f1(var4);
          String var7 = var2.toLowerCase(Locale.ROOT);
-         if (Xqedii_2awqdkk.Xqedii_1wy8z23.contains(var7)) {
+         if (AnimationEasingFunctions.Xqedii_1wy8z23.contains(var7)) {
             String[] var10002 = new String[1];
             var10002[0] = var7;
             Xqedii_1qsxv8z(var5, var1, var10002);
@@ -1046,13 +1046,13 @@ public final class Xqedii_2d07ocz {
          );
          return var10000;
       } else {
-         throw new Xqedii_3vsk7zm(Xqedii_3eufpwv72dpmh(Xqedii_z4wg071.Xqedii_yl2qf35(var0)), var1);
+         throw new ScriptSyntaxException(Xqedii_3eufpwv72dpmh(Xqedii_z4wg071.Xqedii_yl2qf35(var0)), var1);
       }
    }
 
-   public static Object Xqedii_200p8tk(Xqedii_y5pr2ec var0, String var1, String var2, Object[] var3, int var4) {
+   public static Object Xqedii_200p8tk(ScriptExecutionContext var0, String var1, String var2, Object[] var3, int var4) {
       {
-         Xqedii_1yqm9k3 var5 = var0.Xqedii_3a9kp91;
+         ScriptScopeContext var5 = var0.Xqedii_3a9kp91;
          int var7 = -1;
          switch (var2.hashCode()) {
             case -1335458389:
@@ -1236,7 +1236,7 @@ public final class Xqedii_2d07ocz {
                   var0, var1, Xqedii_z4wg071.Xqedii_2mlipa7(Xqedii_1k661t2(var3, 0, var4)), var4
                );
             default:
-               throw new Xqedii_3vsk7zm(Xqedii_cphtb7fherrv(var2), var4);
+               throw new ScriptSyntaxException(Xqedii_cphtb7fherrv(var2), var4);
          }
 
          var5.Xqedii_3u9m9cl();
@@ -1244,7 +1244,7 @@ public final class Xqedii_2d07ocz {
       }
    }
 
-   public static Object Xqedii_2q74yw2(Xqedii_y5pr2ec var0, String var1, String var2, Object[] var3, int var4) {
+   public static Object Xqedii_2q74yw2(ScriptExecutionContext var0, String var1, String var2, Object[] var3, int var4) {
       {
          int var6 = -1;
          switch (var2.hashCode()) {
@@ -1592,12 +1592,12 @@ public final class Xqedii_2d07ocz {
                var10002[0] = var0;
                return Xqedii_1iw7g71.Xqedii_2xeqrwc(null, var1, var10002, var3);
             default:
-               throw new Xqedii_3vsk7zm(Xqedii_2fymnobm4f2w3(var1), var3);
+               throw new ScriptSyntaxException(Xqedii_2fymnobm4f2w3(var1), var3);
          }
       }
    }
 
-   public static Object Xqedii_266bjwx(Xqedii_y5pr2ec var0, Player var1, String var2, int var3) {
+   public static Object Xqedii_266bjwx(ScriptExecutionContext var0, Player var1, String var2, int var3) {
       {
          int var5 = -1;
          switch (var2.hashCode()) {
@@ -1777,7 +1777,7 @@ public final class Xqedii_2d07ocz {
                String var6 = api(var3).getOpenGuiName(var1);
                return var6 == null ? "" : var6;
             default:
-               throw new Xqedii_3vsk7zm(Xqedii_38ghdp1cxzx5b(var2), var3);
+               throw new ScriptSyntaxException(Xqedii_38ghdp1cxzx5b(var2), var3);
          }
       }
    }
@@ -1862,7 +1862,7 @@ public final class Xqedii_2d07ocz {
                   var0.setGameMode(GameMode.valueOf(Xqedii_z4wg071.Xqedii_2mlipa7(var2).trim().toUpperCase(Locale.ROOT)));
                   break;
                } catch (IllegalArgumentException var7) {
-                  throw new Xqedii_3vsk7zm(Xqedii_1n98m4mgetpvl(Xqedii_z4wg071.Xqedii_2mlipa7(var2)), var3);
+                  throw new ScriptSyntaxException(Xqedii_1n98m4mgetpvl(Xqedii_z4wg071.Xqedii_2mlipa7(var2)), var3);
                }
             case 7:
                boolean var6 = Xqedii_z4wg071.Xqedii_2od1ceu(var2);
@@ -1873,12 +1873,12 @@ public final class Xqedii_2d07ocz {
                var0.setFlying(var6);
                break;
             default:
-               throw new Xqedii_3vsk7zm(Xqedii_1xd0w9g2p5mj4(var1), var3);
+               throw new ScriptSyntaxException(Xqedii_1xd0w9g2p5mj4(var1), var3);
          }
       }
    }
 
-   public static Object Xqedii_2j653hv(Xqedii_36oytze var0, String var1, int var2) {
+   public static Object Xqedii_2j653hv(ScriptEventContext var0, String var1, int var2) {
       {
          int var4 = -1;
          switch (var1.hashCode()) {
@@ -2063,19 +2063,19 @@ public final class Xqedii_2d07ocz {
             case 27 -> var0.Xqedii_2f19s3n;
             case 28 -> var0.Xqedii_1zx8kgx;
             case 29 -> var0.Xqedii_2edjbb0();
-            default -> throw new Xqedii_3vsk7zm(Xqedii_1vg1j9tmk6knx(var1), var2);
+            default -> throw new ScriptSyntaxException(Xqedii_1vg1j9tmk6knx(var1), var2);
          };
       }
    }
 
-   public static void Xqedii_biyycmb(Xqedii_1yqm9k3 var0, String var1, String var2, double[] var3, Object var4, Object var5, int var6) {
+   public static void Xqedii_biyycmb(ScriptScopeContext var0, String var1, String var2, double[] var3, Object var4, Object var5, int var6) {
       {
          Player var7 = var0.Xqedii_25ge4f1(var6);
          String var8 = var5 == null
             ? "smooth"
-            : Xqedii_2awqdkk.Xqedii_1uh18ch(Xqedii_z4wg071.Xqedii_2mlipa7(var5));
+            : AnimationEasingFunctions.Xqedii_1uh18ch(Xqedii_z4wg071.Xqedii_2mlipa7(var5));
          if (var8 == null) {
-            throw new Xqedii_3vsk7zm(Xqedii_2awqdkk.Xqedii_pzxldhl(Xqedii_z4wg071.Xqedii_2mlipa7(var5)), var6);
+            throw new ScriptSyntaxException(AnimationEasingFunctions.Xqedii_pzxldhl(Xqedii_z4wg071.Xqedii_2mlipa7(var5)), var6);
          } else {
             long var9 = Math.max(
                1L,
@@ -2088,7 +2088,7 @@ public final class Xqedii_2d07ocz {
             var0.Xqedii_3u9m9cl();
             double[] var11 = Xqedii_17ofwhd(var7, var1, var2, var6);
             if (var0.Xqedii_2fi2lg1 != null) {
-               var0.Xqedii_2fi2lg1.Xqedii_3uyxvgz(var7, new Xqedii_2awqdkk(var1, var2, var11, var3, var0.Xqedii_2fi2lg1.Xqedii_3b3clqv(), var9, var8));
+               var0.Xqedii_2fi2lg1.Xqedii_3uyxvgz(var7, new AnimationEasingFunctions(var1, var2, var11, var3, var0.Xqedii_2fi2lg1.Xqedii_3b3clqv(), var9, var8));
             }
          }
       }
@@ -2140,7 +2140,7 @@ public final class Xqedii_2d07ocz {
             case 1:
                double[] var12 = var4.getElementPosition(var0, var1);
                if (var12 == null) {
-                  throw new Xqedii_3vsk7zm(Xqedii_3m0c77eyl2f6c(var1), var3);
+                  throw new ScriptSyntaxException(Xqedii_3m0c77eyl2f6c(var1), var3);
                }
 
                double[] var14 = new double[1];
@@ -2154,7 +2154,7 @@ public final class Xqedii_2d07ocz {
             case 3:
                double[] var11 = var4.getElementSize(var0, var1);
                if (var11 == null) {
-                  throw new Xqedii_3vsk7zm(Xqedii_12gp7dojfpzr2(var1), var3);
+                  throw new ScriptSyntaxException(Xqedii_12gp7dojfpzr2(var1), var3);
                }
 
                double[] var13 = new double[1];
@@ -2175,13 +2175,13 @@ public final class Xqedii_2d07ocz {
                return var10000;
             case 6:
                Object var7 = var4.getElementValue(var0, var1, "color");
-               return Xqedii_2awqdkk.Xqedii_1ugf7tn(
+               return AnimationEasingFunctions.Xqedii_1ugf7tn(
                   var7 == null ? "ffffff" : String.valueOf(var7), var3
                );
             default:
-               throw new Xqedii_3vsk7zm(
+               throw new ScriptSyntaxException(
                   Xqedii_1oguuispvnqzj(
-                     var2, String.join(", ", Xqedii_2awqdkk.Xqedii_1wy8z23)
+                     var2, String.join(", ", AnimationEasingFunctions.Xqedii_1wy8z23)
                   ),
                   var3
                );
@@ -2189,7 +2189,7 @@ public final class Xqedii_2d07ocz {
       }
    }
 
-   public static void Xqedii_1qsxv8z(Xqedii_1yqm9k3 var0, String var1, String... var2) {
+   public static void Xqedii_1qsxv8z(ScriptScopeContext var0, String var1, String... var2) {
       {
          if (var0.Xqedii_2fi2lg1 != null && var0.Xqedii_1v4ue4a != null) {
             var0.Xqedii_2fi2lg1.Xqedii_3032p5i(var0.Xqedii_1v4ue4a, var1, var2);
@@ -2197,12 +2197,12 @@ public final class Xqedii_2d07ocz {
       }
    }
 
-   public static void Xqedii_1b5cndg(Xqedii_1yqm9k3 var0, Object[] var1, int var2) {
+   public static void Xqedii_1b5cndg(ScriptScopeContext var0, Object[] var1, int var2) {
       {
          String var3 = Xqedii_z4wg071.Xqedii_2mlipa7(Xqedii_25b6ies(var1, 0)).trim().toLowerCase(Locale.ROOT);
-         String var4 = Xqedii_11itj63.idOf(Xqedii_25b6ies(var1, 1), var2);
+         String var4 = UiElementId.idOf(Xqedii_25b6ies(var1, 1), var2);
          if (var4.isBlank()) {
-            throw new Xqedii_3vsk7zm(
+            throw new ScriptSyntaxException(
                "create needs an element id, like: create block \"my_box\"",
                var2
             );
@@ -2380,11 +2380,11 @@ public final class Xqedii_2d07ocz {
                      }
                      break;
                   case 9:
-                     var9 = var12 == null ? null : Xqedii_11itj63.idOf(var12, var2);
+                     var9 = var12 == null ? null : UiElementId.idOf(var12, var2);
                      break;
                   case 10:
                      if (!(var12 instanceof Map var15)) {
-                        throw new Xqedii_3vsk7zm(
+                        throw new ScriptSyntaxException(
                            "create ... with needs a { key: value } map",
                            var2
                         );
@@ -2415,9 +2415,9 @@ public final class Xqedii_2d07ocz {
       }
    }
 
-   public static void Xqedii_1rx201x(Xqedii_y5pr2ec var0, String var1, int var2) {
+   public static void Xqedii_1rx201x(ScriptExecutionContext var0, String var1, int var2) {
       {
-         Xqedii_1yqm9k3 var3 = var0.Xqedii_3a9kp91;
+         ScriptScopeContext var3 = var0.Xqedii_3a9kp91;
          var3.Xqedii_25ge4f1(var2);
          var3.Xqedii_o19wdzr(var1);
       }
@@ -2434,7 +2434,7 @@ public final class Xqedii_2d07ocz {
       }
    }
 
-   public static List<CommandSender> Xqedii_33lch1h(Xqedii_1yqm9k3 var0, Object var1, int var2) {
+   public static List<CommandSender> Xqedii_33lch1h(ScriptScopeContext var0, Object var1, int var2) {
       {
          ArrayList var3 = new ArrayList();
          if (var1 == null) {
@@ -2452,7 +2452,7 @@ public final class Xqedii_2d07ocz {
             } else {
                Player var7 = Bukkit.getPlayerExact(Xqedii_z4wg071.Xqedii_2mlipa7(var1));
                if (var7 == null) {
-                  throw new Xqedii_3vsk7zm(Xqedii_3uqj3wah1qjf0(Xqedii_z4wg071.Xqedii_2mlipa7(var1)), var2);
+                  throw new ScriptSyntaxException(Xqedii_3uqj3wah1qjf0(Xqedii_z4wg071.Xqedii_2mlipa7(var1)), var2);
                } else {
                   var3.add(var7);
                   return var3;
@@ -2468,7 +2468,7 @@ public final class Xqedii_2d07ocz {
       }
    }
 
-   public static List<Player> Xqedii_3671f3l(Xqedii_1yqm9k3 var0, Object var1, int var2) {
+   public static List<Player> Xqedii_3671f3l(ScriptScopeContext var0, Object var1, int var2) {
       if (var1 == null) {
          return List.of(var0.Xqedii_25ge4f1(var2));
       } else {
@@ -2484,7 +2484,7 @@ public final class Xqedii_2d07ocz {
       }
    }
 
-   public static Player Xqedii_18aycvq(Xqedii_1yqm9k3 var0, Object var1, int var2) {
+   public static Player Xqedii_18aycvq(ScriptScopeContext var0, Object var1, int var2) {
       if (var1 == null) {
          return var0.Xqedii_25ge4f1(var2);
       } else {
@@ -2494,7 +2494,7 @@ public final class Xqedii_2d07ocz {
             }
          }
 
-         throw new Xqedii_3vsk7zm(
+         throw new ScriptSyntaxException(
             "Expected a player", var2
          );
       }
@@ -2506,16 +2506,16 @@ public final class Xqedii_2d07ocz {
       }
    }
 
-   public static void Xqedii_37nn7q1(Xqedii_y5pr2ec var0, int var1, Object[] var2, int var3) {
+   public static void Xqedii_37nn7q1(ScriptExecutionContext var0, int var1, Object[] var2, int var3) {
       {
-         Xqedii_1yqm9k3 var4 = var0.Xqedii_3a9kp91;
+         ScriptScopeContext var4 = var0.Xqedii_3a9kp91;
          switch (var1) {
             case 1:
             case 2:
             case 3:
                Player var42 = var4.Xqedii_25ge4f1(var3);
                var4.Xqedii_3u9m9cl();
-               String var59 = Xqedii_11itj63.idOf(Xqedii_25b6ies(var2, 0), var3);
+               String var59 = UiElementId.idOf(Xqedii_25b6ies(var2, 0), var3);
                int var72 = var1 != 1
                      && (var1 != 3 || api(var3).isElementVisible(var42, var59))
                   ? 0
@@ -2524,7 +2524,7 @@ public final class Xqedii_2d07ocz {
                break;
             case 4:
                var4.Xqedii_25ge4f1(var3);
-               String var41 = Xqedii_11itj63.idOf(Xqedii_25b6ies(var2, 0), var3);
+               String var41 = UiElementId.idOf(Xqedii_25b6ies(var2, 0), var3);
                double var58 = Xqedii_z4wg071.Xqedii_3c9epia(Xqedii_25b6ies(var2, 1), var3);
                double var82 = Xqedii_z4wg071.Xqedii_3c9epia(Xqedii_25b6ies(var2, 2), var3);
                if (Xqedii_25b6ies(var2, 3) != null) {
@@ -2562,11 +2562,11 @@ public final class Xqedii_2d07ocz {
                break;
             case 5:
                Player var40 = var4.Xqedii_25ge4f1(var3);
-               String var57 = Xqedii_11itj63.idOf(Xqedii_25b6ies(var2, 0), var3);
+               String var57 = UiElementId.idOf(Xqedii_25b6ies(var2, 0), var3);
                var4.Xqedii_3u9m9cl();
                double[] var71 = api(var3).getElementPosition(var40, var57);
                if (var71 == null) {
-                  throw new Xqedii_3vsk7zm(Xqedii_155kzkdiknxdf(var57), var3);
+                  throw new ScriptSyntaxException(Xqedii_155kzkdiknxdf(var57), var3);
                }
 
                double var81 = var71[0]
@@ -2608,7 +2608,7 @@ public final class Xqedii_2d07ocz {
                break;
             case 6:
                var4.Xqedii_25ge4f1(var3);
-               String var39 = Xqedii_11itj63.idOf(Xqedii_25b6ies(var2, 0), var3);
+               String var39 = UiElementId.idOf(Xqedii_25b6ies(var2, 0), var3);
                double var56 = Xqedii_z4wg071.Xqedii_3c9epia(Xqedii_25b6ies(var2, 1), var3);
                double var80 = Xqedii_z4wg071.Xqedii_3c9epia(Xqedii_25b6ies(var2, 2), var3);
                if (Xqedii_25b6ies(var2, 3) != null) {
@@ -2749,7 +2749,7 @@ public final class Xqedii_2d07ocz {
             case 17:
                Player var29 = var4.Xqedii_25ge4f1(var3);
                var4.Xqedii_3u9m9cl();
-               api(var3).openInput(var29, Xqedii_11itj63.idOf(Xqedii_25b6ies(var2, 0), var3));
+               api(var3).openInput(var29, UiElementId.idOf(Xqedii_25b6ies(var2, 0), var3));
                break;
             case 18:
                Player var28 = var4.Xqedii_25ge4f1(var3);
@@ -2757,7 +2757,7 @@ public final class Xqedii_2d07ocz {
                api(var3)
                   .scrollBox(
                      var28,
-                     Xqedii_11itj63.idOf(Xqedii_25b6ies(var2, 0), var3),
+                     UiElementId.idOf(Xqedii_25b6ies(var2, 0), var3),
                      Xqedii_z4wg071.Xqedii_3c9epia(Xqedii_25b6ies(var2, 1), var3),
                      Xqedii_z4wg071.Xqedii_3c9epia(Xqedii_25b6ies(var2, 2), var3)
                   );
@@ -2768,7 +2768,7 @@ public final class Xqedii_2d07ocz {
                api(var3)
                   .setScroll(
                      var27,
-                     Xqedii_11itj63.idOf(Xqedii_25b6ies(var2, 0), var3),
+                     UiElementId.idOf(Xqedii_25b6ies(var2, 0), var3),
                      Xqedii_z4wg071.Xqedii_3c9epia(Xqedii_25b6ies(var2, 1), var3),
                      Xqedii_z4wg071.Xqedii_3c9epia(Xqedii_25b6ies(var2, 2), var3)
                   );
@@ -2776,21 +2776,21 @@ public final class Xqedii_2d07ocz {
             case 20:
                Player var26 = var4.Xqedii_25ge4f1(var3);
                var4.Xqedii_3u9m9cl();
-               api(var3).scrollToTop(var26, Xqedii_11itj63.idOf(Xqedii_25b6ies(var2, 0), var3));
+               api(var3).scrollToTop(var26, UiElementId.idOf(Xqedii_25b6ies(var2, 0), var3));
                break;
             case 21:
                Player var25 = var4.Xqedii_25ge4f1(var3);
                var4.Xqedii_3u9m9cl();
-               api(var3).scrollToBottom(var25, Xqedii_11itj63.idOf(Xqedii_25b6ies(var2, 0), var3));
+               api(var3).scrollToBottom(var25, UiElementId.idOf(Xqedii_25b6ies(var2, 0), var3));
                break;
             case 22:
                Player var24 = var4.Xqedii_25ge4f1(var3);
                var4.Xqedii_3u9m9cl();
-               String var47 = Xqedii_11itj63.idOf(Xqedii_25b6ies(var2, 0), var3);
-               String var63 = Xqedii_11itj63.idOf(Xqedii_25b6ies(var2, 1), var3);
+               String var47 = UiElementId.idOf(Xqedii_25b6ies(var2, 0), var3);
+               String var63 = UiElementId.idOf(Xqedii_25b6ies(var2, 1), var3);
                String var76 = Xqedii_25b6ies(var2, 2) == null
                   ? null
-                  : Xqedii_11itj63.idOf(Xqedii_25b6ies(var2, 2), var3);
+                  : UiElementId.idOf(Xqedii_25b6ies(var2, 2), var3);
                int var87 = Xqedii_25b6ies(var2, 3) == null
                   ? -1
                   : Xqedii_z4wg071.Xqedii_1x518al(Xqedii_25b6ies(var2, 3), var3);
@@ -2803,7 +2803,7 @@ public final class Xqedii_2d07ocz {
             case 23:
                Player var23 = var4.Xqedii_25ge4f1(var3);
                var4.Xqedii_3u9m9cl();
-               api(var3).clickElement(var23, Xqedii_11itj63.idOf(Xqedii_25b6ies(var2, 0), var3));
+               api(var3).clickElement(var23, UiElementId.idOf(Xqedii_25b6ies(var2, 0), var3));
                break;
             case 24:
                Player var22 = var4.Xqedii_25ge4f1(var3);
@@ -2814,7 +2814,7 @@ public final class Xqedii_2d07ocz {
 
                   for (Object var11 : var62) {
                      if (!(var11 instanceof Map var12)) {
-                        throw new Xqedii_3vsk7zm(
+                        throw new ScriptSyntaxException(
                            "An action list must only contain { type: ..., value: ... } maps",
                            var3
                         );
@@ -2855,7 +2855,7 @@ public final class Xqedii_2d07ocz {
                   ? var21.getWorld()
                   : Bukkit.getWorld(Xqedii_z4wg071.Xqedii_2mlipa7(Xqedii_25b6ies(var2, 3)));
                if (var45 == null) {
-                  throw new Xqedii_3vsk7zm(
+                  throw new ScriptSyntaxException(
                      Xqedii_14881br2ajd2g(Xqedii_z4wg071.Xqedii_2mlipa7(Xqedii_25b6ies(var2, 3))), var3
                   );
                }
@@ -2882,7 +2882,7 @@ public final class Xqedii_2d07ocz {
                   );
                Material var60 = Material.matchMaterial(var44);
                if (var60 == null || var60.isAir()) {
-                  throw new Xqedii_3vsk7zm(
+                  throw new ScriptSyntaxException(
                      Xqedii_22t96nuch9ayo(Xqedii_z4wg071.Xqedii_2mlipa7(Xqedii_25b6ies(var2, 0))), var3
                   );
                }
@@ -2923,8 +2923,8 @@ public final class Xqedii_2d07ocz {
                api(var3)
                   .scrollToElement(
                      var18,
-                     Xqedii_11itj63.idOf(Xqedii_25b6ies(var2, 0), var3),
-                     Xqedii_11itj63.idOf(Xqedii_25b6ies(var2, 1), var3)
+                     UiElementId.idOf(Xqedii_25b6ies(var2, 0), var3),
+                     UiElementId.idOf(Xqedii_25b6ies(var2, 1), var3)
                   );
                break;
             case 31:
@@ -2934,10 +2934,10 @@ public final class Xqedii_2d07ocz {
             case 32:
                Player var17 = var4.Xqedii_25ge4f1(var3);
                var4.Xqedii_3u9m9cl();
-               String var43 = Xqedii_11itj63.idOf(Xqedii_25b6ies(var2, 0), var3);
+               String var43 = UiElementId.idOf(Xqedii_25b6ies(var2, 0), var3);
                String var7 = Xqedii_25b6ies(var2, 1) == null
                   ? ""
-                  : Xqedii_11itj63.idOf(Xqedii_25b6ies(var2, 1), var3);
+                  : UiElementId.idOf(Xqedii_25b6ies(var2, 1), var3);
                int var73 = Xqedii_25b6ies(var2, 2) == null
                   ? -1
                   : Xqedii_z4wg071.Xqedii_1x518al(Xqedii_25b6ies(var2, 2), var3);
@@ -2945,7 +2945,7 @@ public final class Xqedii_2d07ocz {
                break;
             case 33:
                var4.Xqedii_25ge4f1(var3);
-               String var16 = Xqedii_11itj63.idOf(Xqedii_25b6ies(var2, 0), var3);
+               String var16 = UiElementId.idOf(Xqedii_25b6ies(var2, 0), var3);
                String var6 = Xqedii_z4wg071.Xqedii_2mlipa7(Xqedii_25b6ies(var2, 1));
                int var8 = -1;
                switch (var6.hashCode()) {
@@ -3031,7 +3031,7 @@ public final class Xqedii_2d07ocz {
                         var4,
                         var16,
                         "color",
-                        Xqedii_2awqdkk.Xqedii_1ugf7tn(
+                        AnimationEasingFunctions.Xqedii_1ugf7tn(
                            Xqedii_z4wg071.Xqedii_2mlipa7(Xqedii_25b6ies(var2, 2)), var3
                         ),
                         Xqedii_25b6ies(var2, 4),
@@ -3063,12 +3063,12 @@ public final class Xqedii_2d07ocz {
                         var5,
                         Xqedii_25b6ies(var2, 0) == null
                            ? null
-                           : Xqedii_11itj63.idOf(Xqedii_25b6ies(var2, 0), var3)
+                           : UiElementId.idOf(Xqedii_25b6ies(var2, 0), var3)
                      );
                }
                break;
             default:
-               throw new Xqedii_3vsk7zm(
+               throw new ScriptSyntaxException(
                   "Unknown command", var3
                );
          }

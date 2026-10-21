@@ -283,8 +283,8 @@ public final class Xqedii_21nanys {
                                  && !var17.contains("uuiBbCorner")
                                  )
                                {
-                                 boolean var18 = Xqedii_1wyzus8.Xqedii_1br3yjd(var16);
-                                 int var19 = Xqedii_1wyzus8.Xqedii_23ul7l2(var16, var17);
+                                 boolean var18 = GlslShaderInjector.Xqedii_1br3yjd(var16);
+                                 int var19 = GlslShaderInjector.Xqedii_23ul7l2(var16, var17);
                                  String var20 = this.Xqedii_19vvqh6(var16, var18, var19);
                                  String var21 = this.Xqedii_1hk8o8g(var17, var18, var19);
                                  if (var20 != null && var21 != null) {
@@ -318,13 +318,13 @@ public final class Xqedii_21nanys {
 
    public String Xqedii_19vvqh6(String var1, boolean var2, int var3) {
       {
-         return Xqedii_1wyzus8.Xqedii_2e9uhb4(var1, this.Xqedii_16gfg65, var2, var3);
+         return GlslShaderInjector.Xqedii_2e9uhb4(var1, this.Xqedii_16gfg65, var2, var3);
       }
    }
 
    public String Xqedii_1hk8o8g(String var1, boolean var2, int var3) {
       {
-         return Xqedii_1wyzus8.Xqedii_20ik0bw(
+         return GlslShaderInjector.Xqedii_20ik0bw(
             var1, this.Xqedii_2q432gd, this.Xqedii_1thwoqs.maskLeftProfiles(), this.Xqedii_1thwoqs.maskRightProfiles(), var2, var3
          );
       }

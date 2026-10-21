@@ -2,12 +2,12 @@
  * Decompiled with CFR 0.152.
  * 
  * Could not load the following classes:
- *  dev.xqedii.ultimateUI.Xqedii_2b3rrt2
+ *  dev.xqedii.ultimateUI.CustomScriptEngine
  *  org.bukkit.event.Listener
  */
 package dev.xqedii.ultimateUI;
 
-import dev.xqedii.ultimateUI.Xqedii_2b3rrt2;
+import dev.xqedii.ultimateUI.CustomScriptEngine;
 import org.bukkit.event.Listener;
 
 /*
@@ -17,6 +17,6 @@ public class Xqedii_31yrb5t
 implements Listener {
     private static transient /* synthetic */ String gnZtMMrgcG = "00000000000000000000000000000000000000000000";
 
-    public Xqedii_31yrb5t(Xqedii_2b3rrt2 xqedii_2b3rrt2) {
+    public Xqedii_31yrb5t(CustomScriptEngine xqedii_2b3rrt2) {
     }
 }

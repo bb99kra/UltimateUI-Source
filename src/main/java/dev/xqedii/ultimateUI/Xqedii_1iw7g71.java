@@ -43,12 +43,12 @@ public final class Xqedii_1iw7g71 {
          if (var3 instanceof List var4) {
             return var4;
          } else {
-            throw new Xqedii_3vsk7zm(Xqedii_18d8jher4vgib(Xqedii_z4wg071.Xqedii_yl2qf35(var3)), var2);
+            throw new ScriptSyntaxException(Xqedii_18d8jher4vgib(Xqedii_z4wg071.Xqedii_yl2qf35(var3)), var2);
          }
       }
    }
 
-   public static Object Xqedii_2xeqrwc(Xqedii_y5pr2ec var0, String var1, Object[] var2, int var3) {
+   public static Object Xqedii_2xeqrwc(ScriptExecutionContext var0, String var1, Object[] var2, int var3) {
       {
          String var4 = var1.toLowerCase(Locale.ROOT);
          int var6 = -1;
@@ -778,7 +778,7 @@ public final class Xqedii_1iw7g71 {
                   return var13;
                }
 
-               throw new Xqedii_3vsk7zm(
+               throw new ScriptSyntaxException(
                   "This range is too big", var3
                );
             case 45:
@@ -829,7 +829,7 @@ public final class Xqedii_1iw7g71 {
                   );
                }
 
-               throw new Xqedii_3vsk7zm(Xqedii_1fsc2mwflwvoe(Xqedii_z4wg071.Xqedii_yl2qf35(var28)), var3);
+               throw new ScriptSyntaxException(Xqedii_1fsc2mwflwvoe(Xqedii_z4wg071.Xqedii_yl2qf35(var28)), var3);
             case 52:
             case 53:
                return (double)System.currentTimeMillis();
@@ -841,7 +841,7 @@ public final class Xqedii_1iw7g71 {
                try {
                   return new SimpleDateFormat(var27).format(new Date());
                } catch (IllegalArgumentException var17) {
-                  throw new Xqedii_3vsk7zm(Xqedii_d6634fmwsb2i(var27), var3);
+                  throw new ScriptSyntaxException(Xqedii_d6634fmwsb2i(var27), var3);
                }
             case 55:
                return (double)Xqedii_38o2zes.Xqedii_316oplq();
@@ -852,8 +852,8 @@ public final class Xqedii_1iw7g71 {
                String var55 = Xqedii_2coa7to(var2, 0, var3);
                return var0 == null ? var55 : var0.Xqedii_3a9kp91.Xqedii_2fi2lg1.Xqedii_14ikmfz(var26, var55);
             case 57:
-               return new Xqedii_11itj63(
-                  Xqedii_11itj63.idOf(Xqedii_2d07ocz.Xqedii_1k661t2(var2, 0, var3), var3)
+               return new UiElementId(
+                  UiElementId.idOf(Xqedii_2d07ocz.Xqedii_1k661t2(var2, 0, var3), var3)
                );
             case 58:
                return Boolean.valueOf(
@@ -862,7 +862,7 @@ public final class Xqedii_1iw7g71 {
                         && Xqedii_2d07ocz.api(var3)
                            .hasElement(
                               var0.Xqedii_3a9kp91.Xqedii_1v4ue4a,
-                              Xqedii_11itj63.idOf(Xqedii_2d07ocz.Xqedii_1k661t2(var2, 0, var3), var3)
+                              UiElementId.idOf(Xqedii_2d07ocz.Xqedii_1k661t2(var2, 0, var3), var3)
                            )
                      ? 1
                      : 0) != 0)
@@ -873,7 +873,7 @@ public final class Xqedii_1iw7g71 {
                   var0.Xqedii_3a9kp91.Xqedii_3u9m9cl();
 
                   for (String var69 : Xqedii_2d07ocz.api(var3).getElementIds(var0.Xqedii_3a9kp91.Xqedii_1v4ue4a)) {
-                     var25.add(new Xqedii_11itj63(var69));
+                     var25.add(new UiElementId(var69));
                   }
                }
 
@@ -946,13 +946,13 @@ public final class Xqedii_1iw7g71 {
             case 69:
                if (var0 != null && var0.Xqedii_3a9kp91.Xqedii_1v4ue4a != null) {
                   var0.Xqedii_3a9kp91.Xqedii_3u9m9cl();
-                  String var22 = Xqedii_11itj63.idOf(Xqedii_2d07ocz.Xqedii_1k661t2(var2, 0, var3), var3);
+                  String var22 = UiElementId.idOf(Xqedii_2d07ocz.Xqedii_1k661t2(var2, 0, var3), var3);
                   if (var4.equals("scrollable")) {
                      return Xqedii_2d07ocz.api(var3).isScrollable(var0.Xqedii_3a9kp91.Xqedii_1v4ue4a, var22);
                   }
 
                   String var52 = Xqedii_2d07ocz.api(var3).getListContainer(var0.Xqedii_3a9kp91.Xqedii_1v4ue4a, var22);
-                  return var52 != null && !var52.isEmpty() ? new Xqedii_11itj63(var52) : null;
+                  return var52 != null && !var52.isEmpty() ? new UiElementId(var52) : null;
                }
 
                return var4.equals("scrollable")
@@ -974,7 +974,7 @@ public final class Xqedii_1iw7g71 {
             case 71:
                String var20 = Xqedii_2coa7to(var2, 0, var3).trim();
                if (var20.isEmpty()) {
-                  throw new Xqedii_3vsk7zm(
+                  throw new ScriptSyntaxException(
                      "newpage needs a page name, like: newpage(\"menu\")",
                      var3
                   );
@@ -1033,7 +1033,7 @@ public final class Xqedii_1iw7g71 {
             case 77:
                return Xqedii_z4wg071.Xqedii_28xo6uq(var2.length == 0 ? null : var2[0]);
             default:
-               throw new Xqedii_3vsk7zm(Xqedii_4pic1rqvmrfr(var1), var3);
+               throw new ScriptSyntaxException(Xqedii_4pic1rqvmrfr(var1), var3);
          }
       }
    }
@@ -1050,7 +1050,7 @@ public final class Xqedii_1iw7g71 {
       } else {
          Player var2 = Bukkit.getPlayerExact(Xqedii_z4wg071.Xqedii_2mlipa7(var0));
          if (var2 == null) {
-            throw new Xqedii_3vsk7zm(Xqedii_2nemum0fnv7jx(Xqedii_z4wg071.Xqedii_2mlipa7(var0)), var1);
+            throw new ScriptSyntaxException(Xqedii_2nemum0fnv7jx(Xqedii_z4wg071.Xqedii_2mlipa7(var0)), var1);
          } else {
             return var2;
          }

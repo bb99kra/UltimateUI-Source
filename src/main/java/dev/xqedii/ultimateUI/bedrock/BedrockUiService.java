@@ -11,8 +11,8 @@ import dev.xqedii.ultimateUI.Xqedii_2hdrgs5;
 import dev.xqedii.ultimateUI.Xqedii_2kb1ns6;
 import dev.xqedii.ultimateUI.Xqedii_2pn9w2s;
 import dev.xqedii.ultimateUI.Xqedii_38o2zes;
-import dev.xqedii.ultimateUI.Xqedii_3nmychi;
-import dev.xqedii.ultimateUI.Xqedii_3vb5gzo;
+import dev.xqedii.ultimateUI.UiImageLabel;
+import dev.xqedii.ultimateUI.BedrockFormHandlerImpl;
 import dev.xqedii.ultimateUI.Xqedii_too58w6;
 import dev.xqedii.ultimateUI.Xqedii_v7p1hqx;
 import dev.xqedii.ultimateUI.Xqedii_wq55eud;
@@ -86,7 +86,7 @@ public final class BedrockUiService {
       this.Xqedii_5tfok30 = var1;
       this.Xqedii_ipfyrwr = new Xqedii_2pn9w2s(var1.getLogger());
       this.Xqedii_3pmue8y = new Xqedii_2hdrgs5(var1.getLogger());
-      this.Xqedii_31t5ofi = new Xqedii_too58w6(var1, this.Xqedii_1o6ffne, new Xqedii_3vb5gzo(this));
+      this.Xqedii_31t5ofi = new Xqedii_too58w6(var1, this.Xqedii_1o6ffne, new BedrockFormHandlerImpl(this));
    }
 
    public void reload() {
@@ -566,7 +566,7 @@ public final class BedrockUiService {
          for (int var5 = Xqedii_1lbievo.Xqedii_3evul6ygeglfz(-267481042, 15); var5 < var2.Xqedii_b0fv9fz; var5++) {
             Xqedii_v7p1hqx var6 = var2.Xqedii_3fy8fnn(var5);
             var4.add(
-               Xqedii_3nmychi.text(
+               UiImageLabel.text(
                   var6 != null && !var6.Xqedii_221jxyb()
                      ? this.Xqedii_1o6ffne.Xqedii_1kcsuri(var1, var6.Xqedii_2zm1if4)
                      : Xqedii_1lbievo.Xqedii_3v78kfpx0mk8z("0hUwHvvg1IEP0m3FCavv45xjUVA35FNBuO6Clg==")
@@ -577,7 +577,7 @@ public final class BedrockUiService {
          Xqedii_v7p1hqx[] var9 = var2.Xqedii_3kvxaef();
 
          for (int var10 = Xqedii_1lbievo.Xqedii_3evul6ygeglfz(2004907137, 10); var10 < var9.length; var10++) {
-            var4.add(Xqedii_3nmychi.text(this.Xqedii_3nocluy(var1, var9[var10], var2.Xqedii_b0fv9fz + var10)));
+            var4.add(UiImageLabel.text(this.Xqedii_3nocluy(var1, var9[var10], var2.Xqedii_b0fv9fz + var10)));
          }
 
          for (Xqedii_v7p1hqx var7 : this.Xqedii_1xpy8cc(var2)) {
@@ -590,13 +590,13 @@ public final class BedrockUiService {
                )
             );
             this.Xqedii_1v03g02(var8);
-            var4.add(Xqedii_3nmychi.image(var8));
+            var4.add(UiImageLabel.image(var8));
          }
 
          if (var2.Xqedii_sytzb79 >= 0) {
             String var12 = this.Xqedii_3jte3ed(var1, var2, var3);
             this.Xqedii_2e0aui3(Xqedii_3pxhxylmqlsyb(var2.Xqedii_sytzb79, var12));
-            var4.add(Xqedii_3nmychi.text(var12));
+            var4.add(UiImageLabel.text(var12));
          }
 
          if (var4.size() != var2.Xqedii_1mt8sib()) {

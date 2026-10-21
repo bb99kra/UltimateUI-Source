@@ -528,7 +528,7 @@ public final class Xqedii_2pn9w2s {
       }
    }
 
-   public boolean Xqedii_5mpbqew(UUID var1, String var2, String var3, List<Xqedii_3nmychi> var4, IntConsumer var5, Runnable var6) {
+   public boolean Xqedii_5mpbqew(UUID var1, String var2, String var3, List<UiImageLabel> var4, IntConsumer var5, Runnable var6) {
       if (var1 != null && this.Xqedii_1148524()) {
          try {
             Object var7 = this.Xqedii_3glhone.invoke(null);
@@ -559,7 +559,7 @@ public final class Xqedii_2pn9w2s {
             if (var4 != null) {
                int var8 = 0;
 
-               for (Xqedii_3nmychi var10 : var4) {
+               for (UiImageLabel var10 : var4) {
                   String var11 = var10 != null && var10.text() != null
                      ? var10.text()
                      : "";
